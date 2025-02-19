@@ -1,4 +1,7 @@
 .header-container
+  margin: 0
+  height: 117px
+  width: 100%
   position: fixed
   top: 0
   right: 0
@@ -6,28 +9,36 @@
   display: flex
   justify-content: space-between
   align-items: center
-  background: rgb(255, 255, 255, 0.5)
-  backdrop-filter: blur(10px)
+  backdrop-filter: blur(65px)
  
 
 .header-navbar-container
+  width: 418px
+  height: 32px
   display: flex
   justify-content: space-between
-  margin-right: 30px
+
 
 .header-img-container
   display: flex
   align-items: center
+  margin-left: 100px
+  width: 64px
+  height: 69px
 
-.logo
-  margin-left: 20px
-  width: 90px
+.header-logo
 
-.logo:hover 
+  width: 64px
+  height: 69px
+
+.header-logo:hover 
   cursor: pointer
 
 .desktop-menu 
-  margin-top: 24px
+  width: 418px
+  height: 32px
+  display: flex
+  justify-content: space-between
 
 .desktop-menu ul 
   padding: 0
@@ -74,3 +85,4 @@
   .mobile-menu 
     right: 0
     transition: 0.4s ease-in-out
+    
