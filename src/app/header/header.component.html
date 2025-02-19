@@ -1,1 +1,21 @@
-<p>header works!</p>
+<header>
+    <div class="header-container">
+        <div class="header-img-container">
+            <div class="logo">
+                <img src="assets/img/icon/icon1.png" class="logo" alt="">
+            </div>
+        </div>
+        <div class="header-navbar-container">
+            <div class="mobile-menu" (click)="openMenu()">
+                <i class="{{menuIcon}}"></i>
+            </div>
+            <div class="desktop-menu" [class.mobile_menu]="menuValue">
+                <ul>
+                    <li (click)="closeMenu()">About me</li>
+                    <li (click)="closeMenu()">Skill set</li>
+                    <li (click)="closeMenu()">My work</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>   
