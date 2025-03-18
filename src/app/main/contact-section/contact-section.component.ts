@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact-section',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './contact-section.component.html',
   styleUrl: './contact-section.component.sass'
 })
