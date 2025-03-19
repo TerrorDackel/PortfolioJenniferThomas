@@ -17,4 +17,11 @@ export class HeaderComponent {
     this.menuValue = false;
     this.menuIcon = 'bi bi-list';
   }
+  switchToGerman() {
+    this.menuValue = true;
+  }
+  switchToEnglish() {
+    this.menuValue = false;
+  }
+  
 }

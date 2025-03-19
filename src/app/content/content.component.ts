@@ -8,12 +8,18 @@ import { RefSectionComponent } from './ref-section/ref-section.component';
 import { ContactSectionComponent } from './contact-section/contact-section.component';
 
 @Component({
-  selector: 'app-main',
+  selector: 'app-content',
   standalone: true,
-  imports: [HeroComponent, WorkTogetherComponent, SkillSetComponent, MyWorkComponent, MyProjectComponent,RefSectionComponent, ContactSectionComponent],
-  templateUrl: './main.component.html',
-  styleUrl: './main.component.sass'
+  imports: [
+    HeroComponent, 
+    WorkTogetherComponent, 
+    SkillSetComponent, 
+    MyWorkComponent, 
+    MyProjectComponent, 
+    RefSectionComponent, 
+    ContactSectionComponent
+  ],
+  templateUrl: './content.component.html',
+  styleUrl: './content.component.sass'
 })
-export class MainComponent {
-
-}
+export class ContentComponent { }
