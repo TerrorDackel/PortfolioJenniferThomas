@@ -1,0 +1,6 @@
+{
+    "": {
+      "hello": "hello {{value}}",
+      "title": "Translation Demo"
+    }
+  }

@@ -10,15 +10,13 @@
                 <i class="{{menuIcon}}"></i>
             </div>
             <div class="desktop-menu" [class.mobile_menu]="menuValue">
-                <ul>
+                <ul class="navbar">
                     <li (click)="closeMenu()">About me</li>
                     <li (click)="closeMenu()">Skill set</li>
                     <li (click)="closeMenu()">My work</li>
-                </ul>
-                <ul class="de-en-container">
-                    <li class="de-en" (click)="switchToGerman()">DE</li>
-                    <li class="de-en" >/</li>
-                    <li class="de-en" (click)="switchToEnglish()">EN</li>
+                    <li class="de" (click)="switchToGerman()">DE</li>
+                    <span class="cut">/</span>
+                    <li class="en"(click)="switchToEnglish()">EN</li>
                 </ul>
             </div>
         </div>
