@@ -1,67 +1,89 @@
-<div class="contact-section">
-  <div class="circle-13-container">
-    <div class="circle-13">
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="contact-section">
+    <div class="circle-13-container">
+      <div class="circle-13"></div>
     </div>
-  </div>
-  <div class="contact-title-and-container-left-right">
-    <div class="title-contact-container">
-      <p class="title-txt">
-        Contact
-      </p>
-    </div>
-    <div class="container-left-and-right">
-      <div class="container-left">
-        <div class="got-a-problem-title-container">
-          <p class="got-a-problem-title-txt">
-            Got a problem to solve?
-          </p>
-        </div>
-        <div class="got-a-problem-title-description-container">
-          <p class="got-a-problem-title-description-txt">
-            Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.
-          </p>
-        </div>
-        <div class="need-a-contact-me-container">
-          <p class="need-a-contact-me-txt">
-            Need a Frontend developer? Contact me!
-          </p>
-        </div>
-        <div class="circle-11-container">
-          <div class="circle-11">
+
+    <div class="contact-title-and-container-left-right">
+      <div class="title-contact-container">
+        <p class="title-txt">Contact</p>
+      </div>
+
+      <div class="container-left-and-right">
+        <div class="container-left">
+          <div class="got-a-problem-title-container">
+            <p class="got-a-problem-title-txt">Got a problem to solve?</p>
+          </div>
+          <div class="got-a-problem-title-description-container">
+            <p class="got-a-problem-title-description-txt">
+              Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.
+            </p>
+          </div>
+          <div class="need-a-contact-me-container">
+            <p class="need-a-contact-me-txt">Need a Frontend developer? Contact me!</p>
+          </div>
+          <div class="circle-11-container">
+            <div class="circle-11"></div>
+          </div>
+          <div class="go-up-container">
+            <div class="go-up">
+              <img class="arrow-up" src="./assets/img/icon/arrowup.png" alt="">
+            </div>
           </div>
         </div>
-        <div class="go-up-container">
-          <div class="go-up">
-            <img class="arrow-up" src="./assets/img/icon/arrowup.png" alt="">
+
+        <div class="container-right">
+          <div class="your-name-container">
+            <input type="text" class="name-textfield" id="inputName" placeholder="Dein Name" formControlName="name">
+          </div>
+          <div *ngIf="submitted && contactForm.get('name')?.invalid" class="error-msg">
+            Name ist erforderlich.
+          </div>
+
+          <div class="your-email-container">
+            <input type="email" class="email-textfield" id="inputEmail" placeholder="Deine E-Mail" formControlName="email">
+          </div>
+          <div *ngIf="submitted && contactForm.get('email')?.errors?.['required']" class="error-msg">
+            E-Mail ist erforderlich.
+          </div>
+          <div *ngIf="submitted && contactForm.get('email')?.errors?.['email']" class="error-msg">
+            Ungültige E-Mail-Adresse.
+          </div>
+
+          <div class="your-message-container">
+            <textarea class="message-textfield" id="inputMessage" rows="3" placeholder="Deine Nachricht" formControlName="message"></textarea>
+          </div>
+          <div *ngIf="submitted && contactForm.get('message')?.invalid" class="error-msg">
+            Nachricht ist erforderlich.
+          </div>
+          <div class="agree-privacypolice-check">
+            <input class="checkbox" type="checkbox" id="flexCheck" formControlName="privacy">
+            <label class="form-check-label" for="flexCheck">
+              Ich habe die <a [routerLink]="['/privacy-policy']">Datenschutzbestimmungen</a> gelesen und stimme ihnen ausdrücklich zu.
+            </label>
+          </div>
+          <div *ngIf="submitted && contactForm.get('privacy')?.invalid" class="error-msg">
+            Zustimmung zur Datenschutzerklärung ist erforderlich.
+          </div>
+
+          <div class="button-container">
+            <button type="submit" class="btn-contact" [disabled]="contactForm.invalid">
+              Say hello ;)
+            </button>
+          </div>
+
+          <div *ngIf="formSuccess" class="success-msg">
+            Vielen Dank! Deine Nachricht wurde gesendet.
+          </div>
+          <div *ngIf="formError" class="error-msg">
+            Leider ist ein Fehler aufgetreten. Bitte versuch es später erneut.
+          </div>
+
+          <div class="circle-14-container">
+            <div class="circle-14"></div>
           </div>
         </div>
       </div>
-      <div class="container-right">
-        <div class="your-name-container">
-          <input type="text" class="name-textfield" id="inputName" placeholder="Dein Name">
-        </div>
-        <div class="your-email-container">
-            <input type="email" class="email-textfield" id="inputEmail" placeholder="Deine E-Mail">
-        </div>
-        <div class="your-message-container">
-            <textarea class="message-textfield" id="inputMessage" rows="3" placeholder="Deine Nachricht"></textarea>
-        </div>
-        <div class="agree-privacypolice-check">
-          <input class="checkbox" type="checkbox" value="" id="flexCheck">
-          <label class="form-check-label" for="flexCheck">
-            I´ve read the 
-              <a [routerLink]="['/privacy-policy']" >privacy policy</a> 
-            and agree to the processing of my data as outlined.
-          </label>
-        </div>
-        <button type="submit" class="btn btn-primary">
-          Submit
-        </button>
-        <div class="circle-14-container">
-          <div class="circle-14">
-          </div>
-        </div>
-      </div>
     </div>
   </div>
-</div>
+</form>

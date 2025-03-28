@@ -11,12 +11,12 @@
             </div>
             <div class="desktop-menu" [class.mobile_menu]="menuValue">
                 <ul class="navbar">
-                    <li (click)="closeMenu()">About me</li>
-                    <li (click)="closeMenu()">Skill set</li>
-                    <li (click)="closeMenu()">My work</li>
-                    <li class="de" (click)="switchToGerman()">DE</li>
+                    <li><a href="#aboutMe">about me</a></li>
+                    <li><a href="#skillSet">skill set</a></li>
+                    <li><a href="myWork">my work</a></li>
+                    <li class="de" (click)="switchToGerman()">de</li>
                     <span class="cut">/</span>
-                    <li class="en"(click)="switchToEnglish()">EN</li>
+                    <li class="en"(click)="switchToEnglish()">en</li>
                 </ul>
             </div>
         </div>
