@@ -7,13 +7,7 @@ import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
 @Component({
   selector: 'app-contact-section',
   standalone: true,
-  imports: [
-    RouterLink,
-    TranslatePipe,
-    TranslateDirective,
-    ReactiveFormsModule,
-    HttpClientModule
-  ],
+  imports: [ RouterLink, TranslatePipe, TranslateDirective, ReactiveFormsModule, HttpClientModule ],
   templateUrl: './contact-section.component.html',
   styleUrl: './contact-section.component.sass'
 })
