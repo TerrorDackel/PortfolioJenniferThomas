@@ -34,14 +34,24 @@
 
         <div class="container-right">
           <div class="your-name-container">
-            <input type="text" class="name-textfield" id="inputName" placeholder="Dein Name" formControlName="name">
+            <input type="text"
+                  class="name-textfield"
+                  id="inputName"
+                  placeholder="Dein Name"
+                  formControlName="name"
+                  [class.invalid]="submitted && contactForm.get('name')?.invalid">
           </div>
           <div *ngIf="submitted && contactForm.get('name')?.invalid" class="error-msg">
             Name ist erforderlich.
           </div>
 
           <div class="your-email-container">
-            <input type="email" class="email-textfield" id="inputEmail" placeholder="Deine E-Mail" formControlName="email">
+            <input type="email"
+                  class="email-textfield"
+                  id="inputEmail"
+                  placeholder="Deine E-Mail"
+                  formControlName="email"
+                  [class.invalid]="submitted && contactForm.get('email')?.invalid">
           </div>
           <div *ngIf="submitted && contactForm.get('email')?.errors?.['required']" class="error-msg">
             E-Mail ist erforderlich.
@@ -51,23 +61,33 @@
           </div>
 
           <div class="your-message-container">
-            <textarea class="message-textfield" id="inputMessage" rows="3" placeholder="Deine Nachricht" formControlName="message"></textarea>
+            <textarea class="message-textfield"
+                      id="inputMessage"
+                      rows="3"
+                      placeholder="Deine Nachricht"
+                      formControlName="message"
+                      [class.invalid]="submitted && contactForm.get('message')?.invalid"></textarea>
           </div>
           <div *ngIf="submitted && contactForm.get('message')?.invalid" class="error-msg">
             Nachricht ist erforderlich.
           </div>
+
           <div class="agree-privacypolice-check">
-            <input class="checkbox" type="checkbox" id="flexCheck" formControlName="privacy">
+            <input class="checkbox"
+                  type="checkbox"
+                  id="flexCheck"
+                  formControlName="privacy"
+                  [class.invalid]="submitted && contactForm.get('privacy')?.invalid">
             <label class="form-check-label" for="flexCheck">
               Ich habe die <a [routerLink]="['/privacy-policy']">Datenschutzbestimmungen</a> gelesen und stimme ihnen ausdrücklich zu.
             </label>
           </div>
           <div *ngIf="submitted && contactForm.get('privacy')?.invalid" class="error-msg">
-            Zustimmung zur Datenschutzerklärung ist erforderlich.
+            Zustimmung erforderlich zum Absenden der Nachricht.
           </div>
 
           <div class="button-container">
-            <button type="submit" class="btn-contact" [disabled]="contactForm.invalid">
+            <button type="submit" class="btn-contact">
               Say hello ;)
             </button>
           </div>
