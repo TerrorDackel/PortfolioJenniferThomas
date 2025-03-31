@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
 
 @Component({
@@ -9,5 +9,6 @@ import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
   styleUrl: './programm-box.component.sass'
 })
 export class ProgrammBoxComponent {
-
+  @Input() iconSrc = '';
+  @Input() name = '';
 }

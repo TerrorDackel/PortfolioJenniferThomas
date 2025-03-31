@@ -10,6 +10,6 @@ import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
   styleUrl: './projects.component.sass'
 })
 export class ProjectsComponent {
-  projectImg = ['assets/img/join.png', 'assets/img/el-pollo-loco.png', 'assets/img/pokedex.png']
+  projectImg = ['assets/img/join.jpg', 'assets/img/el-pollo-loco.jpg', 'assets/img/pokedex.jpg']
   name = ['Join', 'El Pollo Loco', 'Pokedex']
 }

@@ -1,27 +1,25 @@
 
 <div class="project-infos-section">
-    @for (item of projects; track $index) {
         <div class="project-infos-txt-container">
             <div class="header-container">
                 <p class="header-txt">{{ projects[0].name }}</p>
             </div>
             <div class="programms-container"> 
                 <p class="programms-txt">
-                    {{ projects[0].usedProgramms[0] }} | {{ projects[0].usedProgramms[1] }} | {{ projects[0].usedProgramms[2] }} | {{ projects[0].usedProgramms[3] }} |  {{ projects[0].usedProgramms[4] }} 
+                    {{ projects[0].usedProgramms }}
                 </p>      
             </div>
             <div class="project-description-container">  
                 <span class="project-description-txt">
-                    {{ projects[0].description[0] }}
+                    {{ projects[0].description }}
                 </span>     
             </div>
         </div>
         <div class="project-github-btn-container-alignment">
             <div class="project-github-btn-container">
                 <button class="github-btn">
-                    <a href="{{ projects[0].gitLink[0] }}">Github</a>
+                    <a href="{{ projects[0].gitLink }} ">Github</a>
                 </button>   
             </div>
         </div>
-    }
 </div>

@@ -1,11 +1,11 @@
 <div class="programm-box-section">
     <div class="programm-box-container">
         <div class="programm-img-container">
-            <img class="programm-icon" src="" alt="">
+            <img class="programm-icon" [src]="iconSrc" [alt]="name" />
         </div>
         <div class="programm-name-container">
             <span class="programm-txt">
-                
+                {{ name | translate }}
             </span>
         </div>
     </div>

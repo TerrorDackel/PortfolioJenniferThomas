@@ -3,16 +3,6 @@
         <p class="header-txt">Skill set</p>
     </div>
     <div class="skill-set-components-container">
-        <app-programm-box></app-programm-box>
-        <app-programm-box></app-programm-box>
-        <app-programm-box></app-programm-box>
-        <app-programm-box></app-programm-box>
-        <app-programm-box></app-programm-box>
-        <app-programm-box></app-programm-box>
-        <app-programm-box></app-programm-box>
-        <app-programm-box></app-programm-box>
-        <app-programm-box></app-programm-box>
-        <app-programm-box></app-programm-box>
-        <app-programm-box></app-programm-box>
+        <app-programm-box *ngFor="let skill of skills" [iconSrc]="skill.iconSrc" [name]="skill.name"></app-programm-box>
     </div>
 </div>
