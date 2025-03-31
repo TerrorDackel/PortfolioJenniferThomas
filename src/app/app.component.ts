@@ -4,11 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
-import {
-  TranslateService,
-  TranslatePipe,
-  TranslateDirective
-} from "@ngx-translate/core";
+import { TranslateService, TranslatePipe, TranslateDirective } from "@ngx-translate/core";
 
 
 @Component({
@@ -24,5 +20,5 @@ export class AppComponent {
     this.translate.addLangs(['de', 'en']);
     this.translate.setDefaultLang('en');
     this.translate.use('de');
-}
+  }
 }
