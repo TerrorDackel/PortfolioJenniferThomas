@@ -1,25 +1,25 @@
 
 <div class="project-infos-section">
-        <div class="project-infos-txt-container">
-            <div class="header-container">
-                <p class="header-txt">{{ projects[0].name }}</p>
-            </div>
-            <div class="programms-container"> 
-                <p class="programms-txt">
-                    {{ projects[0].usedProgramms }}
-                </p>      
-            </div>
-            <div class="project-description-container">  
-                <span class="project-description-txt">
-                    {{ projects[0].description }}
-                </span>     
-            </div>
+    <div class="project-infos-txt-container">
+        <div class="header-container">
+            <p class="header-txt">{{ name }}</p>
         </div>
-        <div class="project-github-btn-container-alignment">
-            <div class="project-github-btn-container">
-                <span class="github-btn">
-                    <a href="{{ projects[0].gitLink }} ">Github</a>
-                </span>   
-            </div>
+        <div class="programms-container"> 
+            <p class="programms-txt">
+                {{ usedProgramms }}
+            </p>      
         </div>
+        <div class="project-description-container">  
+            <span class="project-description-txt">
+                {{ description }}
+            </span>     
+        </div>
+    </div>
+    <div class="project-github-btn-container-alignment">
+        <div class="project-github-btn-container">
+            <span class="github-btn">
+                <a href="{{ gitLink }} ">Github</a>
+            </span>   
+        </div>
+    </div>
 </div>
