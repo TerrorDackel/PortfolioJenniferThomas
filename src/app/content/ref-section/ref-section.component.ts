@@ -10,5 +10,12 @@ import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
   styleUrl: './ref-section.component.sass'
 })
 export class RefSectionComponent {
-
+  ref = [
+    { name: 'James Rugman', 
+      project: 'Project Kochwelt',
+      commit: 'commit Kochwelt von James commit Kochwelt von James commit Kochwelt von James' },
+    { name: 'Evi Huber',
+      project: 'Project Kochwelt',
+      commit: 'commit Kochwelt von Evi commit Kochwelt von Evi commit Kochwelt von Evi' }
+  ];
 }

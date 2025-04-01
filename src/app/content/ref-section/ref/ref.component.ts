@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
 
 @Component({
@@ -9,5 +9,7 @@ import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
   styleUrl: './ref.component.sass'
 })
 export class RefComponent {
-
+  @Input() name: string = '';
+  @Input() project: string = '';
+  @Input() commit: string = '';
 }
