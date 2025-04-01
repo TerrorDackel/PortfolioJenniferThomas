@@ -1,21 +1,23 @@
 <div class="ref-section">
-    <div class="header-and-text-container">
-        <div class="header-container">
-            <p>Need a teamplayer?</p>
+    <div class="ref-container">
+        <div class="header-and-text-container">
+            <div class="header-container">
+                <p>Need a teamplayer?</p>
+            </div>
+            <div class="second-header-container">
+                <p>Here what may colleagues said about me</p>
+            </div>
         </div>
-        <div class="second-header-container">
-            <p>Here what may colleagues said about me</p>
+        <div class="ref-posts">
+            <div class="ref-a-post">
+                <app-ref [name]="ref[0].name" [project]="ref[0].project" [commit]="ref[0].commit"></app-ref>
+            </div>
+            <div class="ref-a-post">
+                <app-ref [name]="ref[1].name" [project]="ref[1].project" [commit]="ref[1].commit"></app-ref>
+            </div>
+            <!-- <div class="ref-a-post">
+                <app-ref></app-ref>
+            </div> -->
         </div>
-    </div>
-    <div class="ref-posts">
-        <div class="ref-a-post">
-            <app-ref [name]="ref[0].name" [project]="ref[0].project" [commit]="ref[0].commit"></app-ref>
-        </div>
-        <div class="ref-a-post">
-            <app-ref [name]="ref[1].name" [project]="ref[1].project" [commit]="ref[1].commit"></app-ref>
-        </div>
-        <!-- <div class="ref-a-post">
-            <app-ref></app-ref>
-        </div> -->
     </div>
 </div>

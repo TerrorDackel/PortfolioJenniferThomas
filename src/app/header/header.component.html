@@ -1,23 +1,28 @@
 <header>
-    <div class="header-container">
-        <div class="header-img-container">
-            <div class="header-logo">
-                <img src="assets/img/icon/logo.png" class="logo-img" alt="">
+    <div class="header-section">
+        <div class="header-container">
+            <div class="header-img-container">
+                <div class="header-logo">
+                    <a href="/"><img src="assets/img/icon/logo.png" clas="logo-img" alt=""></a>
+                </div>
             </div>
-        </div>
-        <div class="header-navbar-container">
-            <div class="mobile-menu" (click)="openMenu()">
-                <i class="{{menuIcon}}"></i>
-            </div>
-            <div class="desktop-menu" [class.mobile_menu]="menuValue">
-                <ul class="navbar">
-                    <li><a href="#aboutMe">about me</a></li>
-                    <li><a href="#skillSet">skill set</a></li>
-                    <li><a href="#myWork">my work</a></li>
-                    <li class="de" (click)="switchToGerman()">DE</li>
-                    <span class="cut">/</span>
-                    <li class="en"(click)="switchToEnglish()">EN</li>
-                </ul>
+            <div class="header-navbar-container">
+                <div class="mobile-menu" (click)="openMenu()">
+                    <i class="{{menuIcon}}"></i>
+                </div>
+                <div class="desktop-menu" [class.mobile_menu]="menuValue">
+                    <ul class="navbar">
+                        <div class="burger-menu-icon">
+                            <img src="assets/img/icon/burger-menu.png" alt="menu icon">
+                        </div>
+                        <li><a href="#aboutMe">about me</a></li>
+                        <li><a href="#skillSet">skill set</a></li>
+                        <li><a href="#myWork">my work</a></li>
+                        <li class="de" (click)="switchToGerman()">DE</li>
+                        <span class="cut">/</span>
+                        <li class="en"(click)="switchToEnglish()">EN</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

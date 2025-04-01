@@ -7,7 +7,7 @@ a
   letter-spacing: 0%
   color: #5988FF
 
-.header-container
+.header-section
   width: 100%
   margin: 0
   height: 117px
@@ -19,7 +19,19 @@ a
   justify-content: space-between
   align-items: center
   backdrop-filter: blur(65px)
-  z-index: 3
+  background-color: rgba(99, 50, 212, 0.1)
+  z-index: 5
+
+.header-container
+  width: 100%
+  max-width: 1920px
+  height: 117px
+  margin: 0 auto
+  display: flex
+  justify-content: space-between
+  align-items: center
+  backdrop-filter: blur(65px)
+  z-index: 6
 
 .header-navbar-container
   width: 600px
@@ -96,16 +108,19 @@ a
   letter-spacing: 0%
   color: #5988FF
 
+#skillSet
+    scroll-margin-top: 200px
 
 .mobile-menu 
   display: none
 
 
-@media screen and (min-width: 128px) and (max-width: 650px) 
+@media screen and (min-width: 150px) and (max-width: 690px) 
   .desktop-menu 
     background: blur 65
     width: 280px
     height: 100%
+    z-index: 5
   
   .desktop-menu ul li 
     display: block
@@ -115,7 +130,7 @@ a
     border-bottom: 1px solid grey
     font-family: 'Montserrat', sans-serif
     font-weight: 400
-    font-size: 23px
+    font-size: 21px
     line-height: 120%
     letter-spacing: 0%
     color: #5988FF
@@ -130,4 +145,24 @@ a
     transition: 0.4s ease-in-out
     
   .header-container
-      backdrop-filter: blur(5px)
+    backdrop-filter: blur(0px)
+
+@media (max-width: 690px) 
+
+  .de 
+    display: none!important
+  
+  .cut
+    display: none!important
+
+  .en
+    display: none!important
+
+@media (min-width: 691px)
+  .burger-menu-icon
+    display: none
+
+@media (max-width: 460px)
+
+  .header-img-container
+    display: none

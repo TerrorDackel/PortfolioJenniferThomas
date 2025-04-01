@@ -1,10 +1,23 @@
+.hero-section
+    display: flex
+    justify-content: center
+    background: linear-gradient(0deg, rgba(234,240,255,1) 0%, rgba(245,248,255,1) 35%, rgba(255,255,255,1) 100%)
+    z-index: 1
+    margin: 0 auto
+    width: 100vw
+
 .hero-container
+    overflow: hidden
     width: 100%
     max-width: 1920px
-    height: 1029px
+    height: 100vh
     background: linear-gradient(0deg, rgba(234,240,255,1) 0%, rgba(245,248,255,1) 35%, rgba(255,255,255,1) 100%)
     display: flex
     z-index: 2
+
+.hero-img-txt-container
+    display: flex
+    width: 100%
 
 .circle-3-container
     width: 892px
@@ -20,14 +33,13 @@
     background-color: #5988FF
     background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%)
     display: flex
-    z-index: 1
+    z-index: 3
 
 .hero-img-container
     display: flex
     height: 917px
     width: 761px
-    margin-top: 110px
-    // background-color: #ac2727
+    margin-top: 113px
     object-fit: cover
 
 .hero-img
@@ -36,7 +48,7 @@
     justify-content: center
     margin-left: -200px
     object-fit: cover
-    z-index: 5
+    z-index: 4
 
 .hero-text-container
     display: flex
@@ -45,10 +57,11 @@
     margin-left: 731px
     max-width: 645px
     max-height: 282px
+    z-index: 5
 
 .hero-text-hello-container
     display: flex
-    margin-left: -500px
+    margin-left: -650px
     max-width: 645px
     max-height: 61px
 
@@ -65,7 +78,7 @@
 
 .hero-text-job-title-container
     display: flex
-    margin-left: -500px
+    margin-left: -650px
     flex-direction: column
     max-width: 645px
     max-height: 221px
@@ -95,16 +108,19 @@
     letter-spacing: -2.5%
     vertical-align: middle
 
-.scroll
-    display: flex
-    align-items: center
-    flex-direction: column
+.scroll-txt
     font-family: 'Montserrat', sans-serif
     font-weight: 500
     font-size: 23px
     line-height: 120%
     letter-spacing: 0%
     color: #5988FF
+    margin-right: 150px
+
+.scroll
+    display: flex
+    align-items: center
+    flex-direction: column
     margin-top: 100px
 
 .line-container
@@ -128,7 +144,8 @@
     height: 170px
     bottom: 50px
     right: 50px
-    margin-left: 50px
+    margin-left: 150px
+    margin-top: 30px
     justify-content: space-between
     align-items: center
 
@@ -138,3 +155,29 @@
     align-items: center
     width: 30px
     height: 30px
+
+@media screen and (min-width: 320px) and (max-width: 1430px)
+    .hero-img-txt-container
+        flex-direction: column
+    
+    .hero-img-container
+        display: flex
+        height: 400px
+        width: auto
+        margin-top: 113px
+        margin-left: 50px
+        object-fit: cover
+    
+    .hero-img
+        max-height: 400px
+        width: 100%
+        width: auto
+        z-index: 4
+
+    .hero-img
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-left: -200px
+        object-fit: cover
+        z-index: 4
