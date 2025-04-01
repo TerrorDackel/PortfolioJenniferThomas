@@ -114,55 +114,93 @@ a
 .mobile-menu 
   display: none
 
+@media (max-width: 1439px)
+  .header
+    width: 390px
+    margin: 0 auto
+    padding: 10px 20px
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 10px
 
-@media screen and (min-width: 150px) and (max-width: 690px) 
-  .desktop-menu 
-    background: blur 65
-    width: 280px
-    height: 100%
-    z-index: 5
+  .nav-container
+    flex-direction: column
+    align-items: center
+    gap: 15px
+
+  .logo
+    width: 100%
+    text-align: center
+
+  .nav-links
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 10px
+
+  .language-switch
+    display: none
+
+  .burger-menu
+    display: flex
+    justify-content: center
+    width: 100%
+
+  .burger-icon
+    width: 30px
+    height: 30px
+
+
+
+// @media screen and (min-width: 150px) and (max-width: 690px) 
+//   .desktop-menu 
+//     background: blur 65
+//     width: 280px
+//     height: 100%
+//     z-index: 5
   
-  .desktop-menu ul li 
-    display: block
-    text-align: left
-    margin: 0
-    padding: 10px 0 10px 26px
-    border-bottom: 1px solid grey
-    font-family: 'Montserrat', sans-serif
-    font-weight: 400
-    font-size: 21px
-    line-height: 120%
-    letter-spacing: 0%
-    color: #5988FF
+//   .desktop-menu ul li 
+//     display: block
+//     text-align: left
+//     margin: 0
+//     padding: 10px 0 10px 26px
+//     border-bottom: 1px solid grey
+//     font-family: 'Montserrat', sans-serif
+//     font-weight: 400
+//     font-size: 21px
+//     line-height: 120%
+//     letter-spacing: 0%
+//     color: #5988FF
   
-  .mobile-menu 
-    display: block
-    margin-right: 20px
-    color: white
-    font-size: 40px
-    padding-top: 10px
-    right: 0
-    transition: 0.4s ease-in-out
+//   .mobile-menu 
+//     display: block
+//     margin-right: 20px
+//     color: white
+//     font-size: 40px
+//     padding-top: 10px
+//     right: 0
+//     transition: 0.4s ease-in-out
     
-  .header-container
-    backdrop-filter: blur(0px)
+//   .header-container
+//     backdrop-filter: blur(0px)
 
-@media (max-width: 690px) 
+// @media (max-width: 690px) 
 
-  .de 
-    display: none!important
+//   .de 
+//     display: none!important
   
-  .cut
-    display: none!important
+//   .cut
+//     display: none!important
 
-  .en
-    display: none!important
+//   .en
+//     display: none!important
 
-@media (min-width: 691px)
-  .burger-menu-icon
-    display: none
+// @media (min-width: 691px)
+//   .burger-menu-icon
+//     display: none
 
-@media (max-width: 460px)
+// @media (max-width: 460px)
 
-  .header-img-container
-    display: none
+//   .header-img-container
+//     display: none

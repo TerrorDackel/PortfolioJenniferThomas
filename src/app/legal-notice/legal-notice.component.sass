@@ -1,13 +1,26 @@
 body
     background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%)
-    font-family: Arial, sans-serif
+    font-family: 'Montserrat', sans-serif
     line-height: 1.6
     margin: 0
     padding: 20px
 
+.legal-notice
+    display: flex
+    flex-direction: column
+    width: 100%
+    max-width: 1920px
+    height: auto
+    margin: 0 auto
+    margin-top: 50px
+    margin-bottom: 50px
+    padding: 50px
+    background-color: #fff
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+
 div
     display: block
-    margin-bottom: 20px
+    margin-bottom: 30px
     text-align: left
 
 h4
@@ -24,11 +37,7 @@ span
     color: #5988FF
 
 .legal-notice
-    margin-top: 20px
-    padding: 20px
-    background-color: #fff
-    border-radius: 8px
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+
 
 .legal-notice-header
     font-size: 32px
@@ -54,3 +63,18 @@ span
     list-style-type: disc
     font-size: 18px
     color: #555
+
+@media (max-width: 1439px)
+    .legal-notice
+        width: 390px
+        margin: 0 auto
+        margin-top: 50px
+        padding: 20px 10px
+        font-size: 14px
+        line-height: 1.6
+        text-align: left
+
+    .legal-notice h1,
+    .legal-notice h2,
+    .legal-notice h3
+        text-align: center

@@ -1,24 +1,54 @@
 body
     background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%)
-    font-family: Arial, sans-serif
+    font-family: 'Montserrat', sans-serif
     line-height: 1.6
     margin: 0
     padding: 20px
+    
+.privacy-policy
+    display: flex
+    flex-direction: column
+    width: 100%
+    max-width: 1920px
+    height: auto
+    margin: 0 auto
+    margin-top: 50px
+    margin-bottom: 50px
+    padding: 50px
+    background-color: #fff
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
 
 div
     display: block
-    margin-bottom: 20px
+    margin-bottom: 30px
     text-align: left
-
 
 h4
     font-family: 'Baloo 2', sans-serif
     font-size: 28px
-    font-weight: 700 
+    font-weight: 700  
+    color: #5988FF
     margin-bottom: 10px
 
-span
+p, span, li
     font-family: 'Montserrat', sans-serif
     font-size: 22px
     font-weight: 400
-    color: #5988FF
+    color: #000000
+
+a
+        color: #0043F0
+        text-decoration: underline
+
+@media (max-width: 1439px)
+    .privacy-policy
+        width: 390px
+        margin: 0 auto
+        padding: 20px 10px
+        font-size: 14px
+        line-height: 1.6
+        text-align: left
+
+        h1, h2, h3, h4
+        text-align: center
+
