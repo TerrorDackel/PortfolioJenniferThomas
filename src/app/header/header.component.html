@@ -2,28 +2,35 @@
     <div class="header-section">
         <div class="header-container">
             <div class="header-img-container">
-                <div class="header-logo">
-                    <a href="/"><img src="assets/img/icon/logo.png" clas="logo-img" alt=""></a>
-                </div>
+                    <div class="header-logo">
+                        <a href="/"><img src="assets/img/icon/logo.png" class="logo-img" alt="Logo"></a>
+                    </div>
             </div>
-            <div class="header-navbar-container">
-                <div class="mobile-menu" (click)="openMenu()">
-                    <i class="{{menuIcon}}"></i>
-                </div>
-                <div class="desktop-menu" [class.mobile_menu]="menuValue">
-                    <ul class="navbar">
-                        <div class="burger-menu-icon">
-                            <img src="assets/img/icon/burger-menu.png" alt="menu icon">
-                        </div>
-                        <li><a href="#aboutMe">about me</a></li>
-                        <li><a href="#skillSet">skill set</a></li>
-                        <li><a href="#myWork">my work</a></li>
-                        <li class="de" (click)="switchToGerman()">DE</li>
-                        <span class="cut">/</span>
-                        <li class="en"(click)="switchToEnglish()">EN</li>
-                    </ul>
-                </div>
+            <div class="desktop-menu">
+                <ul class="navbar">
+                    <li><a href="#aboutMe">about me</a></li>
+                    <li><a href="#skillSet">skill set</a></li>
+                    <li><a href="#myWork">my work</a></li>
+                    <!-- <li><a href="#contact">contact</a></li> -->
+                    <li class="de" (click)="switchToGerman()">DE</li>
+                    <span class="cut">/</span>
+                    <li class="en" (click)="switchToEnglish()">EN</li>
+                </ul>
             </div>
         </div>
+        <div class="burger-menu-icon" (click)="openMenu()">
+            <img src="assets/img/icon/burger-menu.png" alt="menu icon">
+        </div>
+        <div class="mobile-nav" *ngIf="menuValue">
+            <a href="#aboutMe" (click)="closeMenu()">about me</a>
+            <a href="#skillSet" (click)="closeMenu()">skill set</a>
+            <a href="#myWork" (click)="closeMenu()">my work</a>
+            <a href="#contact" (click)="closeMenu()">contact</a>
+            <!-- <div class="lang-switch">
+                <span class="de" (click)="switchToGerman()">DE</span>
+                <span class="cut"> / </span>
+                <span class="en" (click)="switchToEnglish()">EN</span>
+            </div> -->
+        </div>
     </div>
-</header>   
+</header> 

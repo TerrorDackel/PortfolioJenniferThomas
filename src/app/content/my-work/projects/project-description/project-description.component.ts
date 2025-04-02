@@ -14,4 +14,5 @@ export class ProjectDescriptionComponent {
   @Input() description: string = '';
   @Input() gitLink: string = '';
   @Input() projectImg: string = '';
+  @Input() livetest: string = '';
 }

@@ -1,6 +1,8 @@
+
+    
 .footer-section
     overflow: hidden
-    width: 100vw
+    width: 100%
     height: auto
     margin: 0 auto
     background: radial-gradient(71.18% 335.57% at 28.82% -124.4%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%)
@@ -86,29 +88,59 @@
     height: 30px
     padding: 25px
 
+.legal-notice-container-mobile
+    display: none
+
 @media (max-width: 1439px)
     .footer
-        width: 390px
-        margin: 0 auto
-        padding: 20px 10px
         display: flex
+        justify-content: center
+        width: 390px
+        height: 380px
+
+
+    .footer-section
+        width: 390px
+        height: 380px
+        margin: 0
+
+    .footer-container
+        display: flex
+        justify-content: center
         flex-direction: column
-        align-items: center
-        text-align: center
-        gap: 10px
+        width: 390px
+        height: 380px
+        margin: 0
+        margin-left: -40px
 
-    .footer-logo
-        width: 100%
-        max-width: 200px
+    .legal-notice-container-mobile
+        display: block
 
-    .footer-links
-        flex-direction: column
-        gap: 10px
+    .legal-notice-container
+        display: none
 
-    .footer-social
-        margin-top: 10px
-        gap: 15px
+    .logo-container
+        display: flex
+        justify-content: center
+        margin-right: 40px
 
-    .footer-legal
-        font-size: 12px
-        padding: 0 10px
+    .created-copyright-impressum-container
+        width: 300px
+        height: auto
+        display: flex
+        justify-content: center
+
+    .copyright-container
+        width: 300px
+        height: auto
+        padding: 20px
+        margin-left: 40px
+
+    .footer-iconlist-horizontal
+        width: 300px
+        height: auto
+        margin-left: 40px
+
+    a
+        color: #FFFFFF
+        margin-left: 50px
