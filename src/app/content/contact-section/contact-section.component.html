@@ -31,33 +31,18 @@
             </div>
             <div class="circle-11-container">
               <div class="circle-11"></div>
-            </div>
-            <div class="go-up-container">
-              <div class="go-up">
-                <img class="arrow-up" src="./assets/img/icon/arrowup.png" alt="">
-              </div>
-            </div>
+            </div>                   
           </div>
           <div class="container-right">
             <div class="your-name-container">
-              <input type="text"
-                    class="name-textfield"
-                    id="inputName"
-                    placeholder="Dein Name"
-                    formControlName="name"
-                    [class.invalid]="submitted && contactForm.get('name')?.invalid">
+              <input type="text" class="name-textfield" id="inputName" placeholder="Dein Name" formControlName="name" [class.invalid]="submitted && contactForm.get('name')?.invalid">
             </div>
             <div *ngIf="submitted && contactForm.get('name')?.invalid" class="error-msg">
               Name ist erforderlich.
             </div>
   
             <div class="your-email-container">
-              <input type="email"
-                    class="email-textfield"
-                    id="inputEmail"
-                    placeholder="Deine E-Mail"
-                    formControlName="email"
-                    [class.invalid]="submitted && contactForm.get('email')?.invalid">
+              <input type="email" class="email-textfield" id="inputEmail" placeholder="Deine E-Mail" formControlName="email" [class.invalid]="submitted && contactForm.get('email')?.invalid">
             </div>
             <div *ngIf="submitted && contactForm.get('email')?.errors?.['required']" class="error-msg">
               E-Mail ist erforderlich.
@@ -67,25 +52,16 @@
             </div>
   
             <div class="your-message-container">
-              <textarea class="message-textfield"
-                        id="inputMessage"
-                        rows="3"
-                        placeholder="Deine Nachricht"
-                        formControlName="message"
-                        [class.invalid]="submitted && contactForm.get('message')?.invalid"></textarea>
+              <textarea class="message-textfield" id="inputMessage" rows="3" placeholder="Deine Nachricht" formControlName="message" [class.invalid]="submitted && contactForm.get('message')?.invalid"></textarea>
             </div>
             <div *ngIf="submitted && contactForm.get('message')?.invalid" class="error-msg">
               Nachricht ist erforderlich.
             </div>
   
             <div class="agree-privacypolice-check">
-              <input class="checkbox"
-                    type="checkbox"
-                    id="flexCheck"
-                    formControlName="privacy"
-                    [class.invalid]="submitted && contactForm.get('privacy')?.invalid">
+              <input class="checkbox" type="checkbox" id="flexCheck" formControlName="privacy" [class.invalid]="submitted && contactForm.get('privacy')?.invalid">
               <label class="form-check-label" for="flexCheck">
-                Ich habe die <a [routerLink]="['/privacy-policy']">Datenschutzbestimmungen</a> gelesen und stimme ihnen ausdrücklich zu.
+                Ich habe die <a class="privacy-link" [routerLink]="['/privacy-policy']">Datenschutzbestimmungen</a> gelesen und stimme zu.
               </label>
             </div>
             <div *ngIf="submitted && contactForm.get('privacy')?.invalid" class="error-msg">
@@ -97,14 +73,19 @@
                 Say hello ;)
               </button>
             </div>
-  
+            
             <div *ngIf="formSuccess" class="success-msg">
               Vielen Dank! Deine Nachricht wurde gesendet.
             </div>
             <div *ngIf="formError" class="error-msg">
               Leider ist ein Fehler aufgetreten. Bitte versuch es später erneut.
             </div>
-  
+            <div class="go-up-container">
+              <a href="header">
+                <img src="assets/img/icon/arrowup.png" alt="Pfeil nach oben" class="arrow-up-img default">
+                <img src="assets/img/icon/arrowup-hover.png" alt="Pfeil nach oben beim Hover" class="arrow-up-img hover">
+              </a>
+            </div> 
             <div class="circle-14-container">
               <div class="circle-14"></div>
             </div>

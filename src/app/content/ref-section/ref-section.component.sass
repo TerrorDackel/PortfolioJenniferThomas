@@ -53,6 +53,7 @@
     max-width: 1035px
     height: 246px
     margin-top: 80px
+    gap: 50px
 
 .ref-a-post1
     display: flex
@@ -101,8 +102,6 @@
     .ref-deco
         display: none
 
-    .ref-a-post2
-        display: none
 
     .header-container
         display: flex
@@ -117,7 +116,26 @@
         font-size: 16px
         font-weight: normal
 
-    .ref-a-post1
+    .ref-posts
         display: flex
-        justify-content: center
-        margin-left: 50px
+        flex-direction: row
+        overflow-x: auto
+        overflow-y: hidden
+        width: 100%
+        gap: 0px
+        padding-left: 900px
+        padding-right: 700px         // Erzeugt den extra Scrollbereich rechts
+        -webkit-overflow-scrolling: touch
+        scroll-snap-type: x mandatory
+        scroll-padding-left: 0
+
+        &::-webkit-scrollbar
+            display: none
+        scrollbar-width: none
+        -ms-overflow-style: none
+
+    .ref-a-post
+        flex: 0 0 auto
+        width: 280px
+        height: 246px
+        scroll-snap-align: start
