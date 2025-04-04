@@ -1,39 +1,34 @@
-
-header
-    width: 1440px
-    height: 117px
-    position: absolute
-    margin: 0 auto
-    top: 0
-    left: 0
-    right: 0
-    
-content
-    width: 1440px
-    height: auto
+:host
     display: flex
     flex-direction: column
+    min-height: 100vh
     margin: 0
+    padding: 0
 
-footer
-    width: 1440px
-    height: 286px
-    margin: 0
-    left: 0
-    right: 0
-    bottom: 0
+.app-header
     display: flex
-    
+    justify-content: center
+    flex-grow: 0
+    flex-shrink: 0
+    flex-basis: auto
+    margin-top: 0
+    margin-left: 0
+    margin-right: 0
 
-@media (max-width: 1439px)
-    .privacy-policy
-        width: 390px
-        margin: 0 auto
-        font-size: 14px
-        line-height: 1.6
-        text-align: left
+.router-outlet-content
+    display: flex
+    justify-content: center
+    flex-grow: 1
+    flex-shrink: 1
+    flex-basis: auto
+    margin: 0
 
-    .privacy-policy h1,
-    .privacy-policy h2,
-    .privacy-policy h3
-        text-align: center
+.app-footer
+    display: flex
+    justify-content: center
+    flex-grow: 0
+    flex-shrink: 0
+    flex-basis: auto
+    margin-bottom: 0
+    margin-left: 0
+    margin-right: 0

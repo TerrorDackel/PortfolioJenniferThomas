@@ -1,54 +1,123 @@
-body
-    background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%)
-    font-family: 'Montserrat', sans-serif
-    line-height: 1.6
-    margin: 0
-    padding: 20px
-    
+
 .privacy-policy
     display: flex
+    align-items: center
     flex-direction: column
+    justify-content: center
     width: 100%
     max-width: 1920px
     height: auto
-    margin: 0 auto
-    margin-top: 50px
-    margin-bottom: 50px
-    padding: 50px
-    background-color: #fff
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
-
-div
-    display: block
-    margin-bottom: 30px
-    text-align: left
-
-h4
-    font-family: 'Baloo 2', sans-serif
-    font-size: 28px
-    font-weight: 700  
-    color: #5988FF
-    margin-bottom: 10px
-
-p, span, li
+    margin: 0
+    background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%)
     font-family: 'Montserrat', sans-serif
-    font-size: 22px
-    font-weight: 400
-    color: #000000
+    line-height: 1.6
 
-a
-        color: #0043F0
-        text-decoration: underline
-
-@media (max-width: 1439px)
-    .privacy-policy
-        width: 390px
-        margin: 0 auto
-        padding: 20px 10px
-        font-size: 14px
-        line-height: 1.6
+    div
+        display: block
         text-align: left
 
-        h1, h2, h3, h4
-        text-align: center
+    h4
+        font-family: 'Baloo 2', sans-serif
+        font-size: 1.75rem
+        font-weight: 700  
+        color: #5988FF
+        margin-bottom: 10px
 
+    span,
+    li,
+    p
+        display: flex
+        justify-content: center
+        width: 100%
+        height: auto
+        font-family: 'Montserrat', sans-serif
+        font-size: 1.125rem
+        font-weight: 400
+        color: #5988FF
+
+    h2
+        font-family: 'Baloo 2', sans-serif
+        font-size: 40px
+        font-weight: 700
+        color: #5988FF
+        margin-bottom: 10px
+
+.txt
+    display: flex
+    justify-content: center
+    padding: 150px
+
+.privacy-policy-item
+    margin-bottom: 15px
+
+    h4
+        font-size: 26px
+        font-weight: 700
+        color: #5988FF
+
+    span
+        display: flex
+        flex-direction: column
+        width: 100%
+        height: auto
+        font-family: 'Montserrat', sans-serif
+        font-size: 1.125rem
+        font-weight: 400
+        color: #5988FF
+
+
+.privacy-policy-header
+    h2
+        font-family: 'Baloo 2', sans-serif
+        font-size: 2.5rem
+        font-weight: 700
+        color: #5988FF
+        margin-bottom: 10px
+
+
+@media ( max-width: 800px )
+    .privacy-policy,
+    .privacy-policy-item,
+    .privacy-policy-header
+        h2
+            font-family: 'Baloo 2', sans-serif
+            font-size: 2rem
+            font-weight: 700
+            color: #5988FF
+            margin-bottom: 10px
+
+        h4
+            font-family: 'Baloo 2', sans-serif
+            font-size: 1.3rem
+            font-weight: 700  
+            color: #5988FF
+            margin-bottom: 10px
+
+        span
+            font-size: 1rem
+            color: #555
+            line-height: 1.6
+            
+        .txt
+            padding: min(3em, 15%)
+            margin-top: 100px
+
+@media ( max-width: 520px )
+    .privacy-policy,
+    .privacy-policy-item,
+    .privacy-policy-header
+        
+        h2
+            font-size: 1.1rem
+            font-weight: 400
+            margin-bottom: 10px
+
+        h4
+            font-size: 1rem
+            font-weight: 400  
+            margin-bottom: 10px
+
+        span
+            font-size: 0.9rem
+            line-height: 1
+            

@@ -1,80 +1,117 @@
-body
-    background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%)
-    font-family: 'Montserrat', sans-serif
-    line-height: 1.6
-    margin: 0
-    padding: 20px
-
 .legal-notice
     display: flex
+    align-items: center
     flex-direction: column
+    justify-content: center
     width: 100%
     max-width: 1920px
     height: auto
-    margin: 0 auto
-    margin-top: 50px
-    margin-bottom: 50px
-    padding: 50px
-    background-color: #fff
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
-
-div
-    display: block
-    margin-bottom: 30px
-    text-align: left
-
-h4
-    font-family: 'Baloo 2', sans-serif
-    font-size: 28px
-    font-weight: 700  
-    color: #5988FF
-    margin-bottom: 10px
-
-span
+    margin: 0
+    background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%)
     font-family: 'Montserrat', sans-serif
-    font-size: 22px
-    font-weight: 400
-    color: #5988FF
+    line-height: 1.6
 
-.legal-notice
+    div
+        display: block
+        text-align: left
 
+    h4
+        font-family: 'Baloo 2', sans-serif
+        font-size: 1.75rem
+        font-weight: 700  
+        color: #5988FF
+        margin-bottom: 10px
+
+    span
+        display: flex
+        justify-content: center
+        width: 100%
+        height: auto
+        font-family: 'Montserrat', sans-serif
+        font-size: 1.125rem
+        font-weight: 400
+        color: #5988FF
+
+    h2
+        font-family: 'Baloo 2', sans-serif
+        font-size: 2.5rem
+        font-weight: 700
+        color: #5988FF
+        margin-bottom: 10px
+
+.txt
+    display: flex
+    justify-content: center
+    padding: 150px
 
 .legal-notice-header
-    font-size: 32px
-    font-weight: 700
-    color: #5988FF
-    margin-bottom: 10px
+
+    h4
+        font-size: 32px
+        font-weight: 700
+        color: #5988FF
+        margin-bottom: 10px
+
 
 .legal-notice-item
     margin-bottom: 15px
 
-.legal-notice-item h4
-    font-size: 26px
-    font-weight: 700
-    color: #5988FF
+    h4
+        font-size: 26px
+        font-weight: 700
+        color: #5988FF
 
-.legal-notice-item span
-    font-size: 18px
-    color: #555
-    line-height: 1.6
-
-.legal-notice-item ul
-    margin-left: 20px
-    list-style-type: disc
-    font-size: 18px
-    color: #555
-
-@media (max-width: 1439px)
-    .legal-notice
-        width: 390px
-        margin: 0 auto
-        margin-top: 50px
-        padding: 20px 10px
-        font-size: 14px
+    span
+        font-size: 18px
+        color: #555
         line-height: 1.6
-        text-align: left
 
-    .legal-notice h1,
-    .legal-notice h2,
-    .legal-notice h3
-        text-align: center
+
+
+@media ( max-width: 800px )
+
+    .legal-notice,
+    .legal-notice-item,
+    .legal-notice-header
+        h2
+            font-family: 'Baloo 2', sans-serif
+            font-size: 2rem
+            font-weight: 700
+            color: #5988FF
+            margin-bottom: 10px
+
+        h4
+            font-family: 'Baloo 2', sans-serif
+            font-size: 1.3rem
+            font-weight: 700  
+            color: #5988FF
+            margin-bottom: 10px
+
+        span
+            font-size: 1rem
+            color: #555
+            line-height: 1.6
+            
+        .txt
+            padding: min(3em, 15%)
+            margin-top: 100px
+
+@media ( max-width: 520px )
+    .legal-notice,
+    .legal-notice-item,
+    .legal-notice-header
+        
+        h2
+            font-size: 1.1rem
+            font-weight: 400
+            margin-bottom: 10px
+
+        h4
+            font-size: 1rem
+            font-weight: 400  
+            margin-bottom: 10px
+
+        span
+            font-size: 0.9rem
+            line-height: 1
+            

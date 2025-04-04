@@ -8,5 +8,5 @@ export const routes: Routes = [
     { path: '', component: ContentComponent },
     { path: 'legal-notice', component: LegalNoticeComponent },
     { path: 'privacy-policy', component: PrivacyPolicyComponent },
-    { path: '**', redirectTo: '' } // optional: Fallback-Route
+    { path: '**', redirectTo: '' } 
 ];
