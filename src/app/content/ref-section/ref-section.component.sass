@@ -1,3 +1,5 @@
+@use '../../../styles/mixins' as m
+    
 .ref-section
     overflow: hidden
     display: flex
@@ -48,6 +50,9 @@
     text-align: center
 
 .ref-posts
+    @include m.hide-scrollbar
+    @include m.allow-horizontal-scroll
+    overflow-y: hidden
     display: flex
     justify-content: center
     max-width: 1035px
