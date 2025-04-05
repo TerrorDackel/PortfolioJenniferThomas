@@ -1,14 +1,17 @@
+:host
+    display: block
+    width: 100%
+    margin-left: 0
+    margin-right: 0
 
     
 .footer-section
     display: flex
     align-items: center
     justify-content: center
-    width: 100dvw
-    // width: 100%
+    width: 100%
+    height: auto
     margin: 0
-    min-height: 289px
-    max-height: 380px
     background: radial-gradient(71.18% 335.57% at 28.82% -124.4%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%)
     bottom: 0
     right: 0
@@ -139,49 +142,53 @@
 
 
 
-// @media (max-width: 650px)
-//     .footer-section
-//         display: flex
-//         justify-content: center
-//         align-items: center
-//         width: 100%
-//         height: 370px
-//         margin: 0
-//         bottom: 0
+@media (max-width: 520px)
+    .footer-section
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 370px
+        margin: 0
+        bottom: 0
 
-//     .footer-container
-//         display: flex
-//         justify-content: center
-//         flex-direction: column
-//         width: 100%
-//         height: 370px
+    .footer-container
+        display: flex
+        justify-content: center
+        flex-direction: column
+        width: 100%
+        height: 370px
 
-//     .logo-container
-//         display: flex
-//         justify-content: center
-
-
-//     .created-copyright-impressum-container
-//         display: flex
-//         justify-content: center
-
-//     .copyright-container
-//         width: 90%
-//         height: auto
-//         padding: 20px
+    .logo-container
+        display: flex
+        justify-content: center
+        align-items: center
 
 
-//     .footer-iconlist-horizontal
-//         width: 40dvw
-//         height: auto
+    .created-copyright-impressum-container
+        display: flex
+        justify-content: center
 
-//     a
-//         color: #FFFFFF
-//         margin-left: 50px
+    .copyright-container
+        width: 90%
+        height: auto
+        padding: 20px
 
-//     .legal-notice-container-mobile
-//         display: block
-//         padding: 3rem
 
-//     .legal-notice-container
-//         display: none    
+    .footer-iconlist-horizontal
+        width: 40dvw
+        height: auto
+
+    a
+        color: #FFFFFF
+        margin-left: 50px
+
+    .legal-notice-container-mobile
+        display: block
+        padding: 3rem
+
+    .legal-notice-container
+        display: none    
+
+    .over-copyright-container
+        display: none

@@ -1,5 +1,11 @@
 @use '../../../styles/mixins' as m
-    
+
+:host
+    display: block
+    width: 100%
+    margin-left: 0
+    margin-right: 0
+
 .ref-section
     overflow: hidden
     display: flex
@@ -70,77 +76,77 @@
     width: 301px
     height: 246px
 
-@media (max-width: 1439px)
-    .ref-section
-        width: 390px
-        margin: 0 auto
-        display: flex
-        align-items: center
+// @media (max-width: 1439px)
+//     .ref-section
+//         width: 390px
+//         margin: 0 auto
+//         display: flex
+//         align-items: center
 
-    .ref-container
-        flex-direction: column
-        align-items: center
+//     .ref-container
+//         flex-direction: column
+//         align-items: center
 
-    .ref-title
-        font-size: 28px
-        text-align: center
+//     .ref-title
+//         font-size: 28px
+//         text-align: center
 
-    .ref-description
-        font-size: 16px
-        text-align: center
-        padding: 0 10px
+//     .ref-description
+//         font-size: 16px
+//         text-align: center
+//         padding: 0 10px
 
-    .ref-card
-        width: 100%
-        max-width: 360px
-        padding: 10px
+//     .ref-card
+//         width: 100%
+//         max-width: 360px
+//         padding: 10px
 
-    .ref-image
-        width: 100%
-        height: auto
+//     .ref-image
+//         width: 100%
+//         height: auto
 
-    .ref-text
-        font-size: 14px
-        text-align: center
+//     .ref-text
+//         font-size: 14px
+//         text-align: center
 
-    .circle,
-    .ref-deco
-        display: none
+//     .circle,
+//     .ref-deco
+//         display: none
 
 
-    .header-container
-        display: flex
-        justify-content: center
-        font-size: 36px
-        font-weight: bold
-        text-align: center
+//     .header-container
+//         display: flex
+//         justify-content: center
+//         font-size: 36px
+//         font-weight: bold
+//         text-align: center
 
-    .second-header-container
-        display: flex
-        justify-content: center
-        font-size: 16px
-        font-weight: normal
+//     .second-header-container
+//         display: flex
+//         justify-content: center
+//         font-size: 16px
+//         font-weight: normal
 
-    .ref-posts
-        display: flex
-        flex-direction: row
-        overflow-x: auto
-        overflow-y: hidden
-        width: 100%
-        gap: 0px
-        padding-left: 900px
-        padding-right: 700px         // Erzeugt den extra Scrollbereich rechts
-        -webkit-overflow-scrolling: touch
-        scroll-snap-type: x mandatory
-        scroll-padding-left: 0
+//     .ref-posts
+//         display: flex
+//         flex-direction: row
+//         overflow-x: auto
+//         overflow-y: hidden
+//         width: 100%
+//         gap: 0px
+//         padding-left: 900px
+//         padding-right: 700px         // Erzeugt den extra Scrollbereich rechts
+//         -webkit-overflow-scrolling: touch
+//         scroll-snap-type: x mandatory
+//         scroll-padding-left: 0
 
-        &::-webkit-scrollbar
-            display: none
-        scrollbar-width: none
-        -ms-overflow-style: none
+//         &::-webkit-scrollbar
+//             display: none
+//         scrollbar-width: none
+//         -ms-overflow-style: none
 
-    .ref-a-post
-        flex: 0 0 auto
-        width: 280px
-        height: 246px
-        scroll-snap-align: start
+//     .ref-a-post
+//         flex: 0 0 auto
+//         width: 280px
+//         height: 246px
+//         scroll-snap-align: start
