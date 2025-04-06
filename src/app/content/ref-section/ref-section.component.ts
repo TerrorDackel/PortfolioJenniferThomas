@@ -13,9 +13,9 @@ export class RefSectionComponent {
   ref = [
     { name: 'James Rugman', 
       project: 'Project Kochwelt',
-      commit: 'Kommentar von James Rugman' },
+      commit: 'Kommentar von James Rugman klö bn jjhbv cvug bgki öoj ibvhjz trxd yxr ntj rmewm el' },
     { name: 'Evi Huber',
       project: 'Project Kochwelt',
-      commit: 'Kommentar von Evi Huber' }
+      commit: 'Kommentar von Evi Huber alös aasjd asjdjifj sjkf lsjflk jewuewru s jskyhjskch zu h u  fu fttz f    gt  g ' }
   ];
 }
