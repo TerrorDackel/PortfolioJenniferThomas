@@ -6,7 +6,7 @@ import { ProjectsTxtDescriptionComponent } from './projects-txt-description/proj
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [ ProjectsTxtDescriptionComponent ],
+  imports: [ProjectsTxtDescriptionComponent], 
     //, TranslatePipe, TranslateDirective
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.sass'

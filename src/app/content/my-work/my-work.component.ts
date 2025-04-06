@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 
+
 // import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-my-work',
   standalone: true,
-  imports: [ 
+  imports: [
     // TranslatePipe, TranslateDirective
   ],
   templateUrl: './my-work.component.html',
