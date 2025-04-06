@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
-import { ProjectDescriptionComponent } from './project-description/project-description.component';
-import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
+import { Component} from '@angular/core';
+import { ProjectsTxtDescriptionComponent } from './projects-txt-description/projects-txt-description.component';
+// import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
+
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [ProjectDescriptionComponent, TranslatePipe, TranslateDirective],
+  imports: [ ProjectsTxtDescriptionComponent ],
+    //, TranslatePipe, TranslateDirective
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.sass'
 })

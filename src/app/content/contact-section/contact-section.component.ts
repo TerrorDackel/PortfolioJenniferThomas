@@ -3,12 +3,16 @@ import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouterLink } from '@angular/router';
 import { NgClass, NgIf } from '@angular/common';
-import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
+// import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-section',
   standalone: true,
-  imports: [ RouterLink, TranslatePipe, TranslateDirective, ReactiveFormsModule, HttpClientModule,  NgIf, NgClass ],
+  imports: [ RouterLink, 
+    // TranslatePipe, TranslateDirective, 
+    ReactiveFormsModule, HttpClientModule,  NgIf, 
+    // NgClass 
+  ],
   templateUrl: './contact-section.component.html',
   styleUrl: './contact-section.component.sass'
 })

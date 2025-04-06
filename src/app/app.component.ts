@@ -7,10 +7,13 @@ import { FooterComponent } from './footer/footer.component';
 import { TranslateService, TranslatePipe, TranslateDirective } from "@ngx-translate/core";
 import { filter } from 'rxjs/operators';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, ContentComponent, FooterComponent, TranslatePipe, TranslateDirective],
+  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent, 
+    // TranslatePipe, TranslateDirective
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.sass'
 })

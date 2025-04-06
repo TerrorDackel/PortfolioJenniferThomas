@@ -1,14 +1,16 @@
 import { Component, Input } from '@angular/core';
-import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
+// import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-project-description',
   standalone: true,
-  imports: [TranslatePipe, TranslateDirective],
-  templateUrl: './project-description.component.html',
-  styleUrl: './project-description.component.sass'
+  imports: [
+    // TranslatePipe, TranslateDirective
+  ],
+  templateUrl: './projects-txt-description.component.html',
+  styleUrl: './projects-txt-description.component.sass'
 })
-export class ProjectDescriptionComponent {
+export class ProjectsTxtDescriptionComponent {
   @Input() name: string = '';
   @Input() usedProgramms!: string[];
   @Input() description: string = '';
