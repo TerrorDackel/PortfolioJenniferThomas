@@ -5,17 +5,30 @@
     margin-right: 0
     
 .projects-section
-    display: flex
-    justify-content: center
-    flex-direction: column
-    max-width: 1920px
     width: 100%
     height: auto
     margin: 0
-    gap: 1rem
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
 
-.first-project-container,
-.second-project-container,
+.first-project-container
+    display: flex
+    justify-content: center
+    margin: 0
+    width: 100%
+    max-width: 1920px
+    height: auto
+
+.second-project-container
+    display: flex
+    justify-content: center
+    margin: 0
+    width: 100%
+    max-width: 1920px
+    height: auto
+
 .third-project-container
     display: flex
     justify-content: center
@@ -24,18 +37,15 @@
     max-width: 1920px
     height: auto
 
-
 .container-left
     display: flex
     width: 50%
-    max-width: 960px
     height: auto
     justify-content: flex-end
 
 .container-right
     display: flex
     width: 50%
-    max-width: 960px
     height: auto
     justify-content: flex-start
 
@@ -51,9 +61,10 @@
     justify-content: flex-end
     align-items: center
     width: 100%
-    height: auto
+    height: 100%
     padding: 1rem
     gap: 1rem
+    object-fit: cover
     transition: transform 0.3s ease
     transform-origin: left center
     &:hover
@@ -65,9 +76,10 @@
     justify-content: flex-start
     align-items: center
     width: 100%
-    height: auto
+    height: 100%
     padding: 1rem
     gap: 1rem
+    object-fit: cover
     transition: transform 0.3s ease
     transform-origin: right center
     &:hover
@@ -87,6 +99,7 @@
     align-items: flex-end
     width: 100%
     height: auto
+    max-width: 960px
     margin: 0
     padding: 1rem
 
@@ -96,6 +109,7 @@
     align-items: flex-end
     width: 100%
     height: auto
+    max-width: 960px
     margin: 0
     padding: 1rem
     
@@ -105,9 +119,44 @@
 
     .first-project-container,
     .third-project-container 
+        width: 100%
         display: flex
         flex-direction: column
+        align-items: center
 
     .second-project-container
+        width: 100%
         display: flex
         flex-direction: column-reverse
+        align-items: center
+
+    .project-description-container-left
+        display: flex
+        margin: 0
+        justify-content: center
+        align-items: center
+
+    .project-description-container-right
+        display: flex
+        margin: 0
+        justify-content: center
+        align-items: center
+
+    .first-project-container,
+    .second-project-container,
+    .third-project-container
+        align-items: center
+        justify-content: center
+
+    .project-img-left,
+    .project-img-right
+        justify-content: center
+        transform-origin: center
+        height: 100%
+
+    .container-left,
+    .container-right
+        justify-content: center
+        width: 100%
+        margin: 0
+        padding: 0

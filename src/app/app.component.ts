@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet, Router, NavigationEnd, Event as RouterEvent } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
-import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
 import { TranslateService, TranslatePipe, TranslateDirective } from "@ngx-translate/core";
 import { filter } from 'rxjs/operators';

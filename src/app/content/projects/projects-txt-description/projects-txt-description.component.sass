@@ -1,5 +1,6 @@
 :host
     display: block
+    justify-content: center
     width: 100%
     margin-left: 0
     margin-right: 0
@@ -13,7 +14,7 @@
     max-width: 1920px
     height: auto
     margin: 0
-    gap: 1rem
+
 
 .project-infos-txt-container
     display: flex
@@ -74,6 +75,14 @@
     line-height: 120%
     letter-spacing: 0%
     color: #000000
+    span
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 100%
+        height: auto
+        gap: 1rem
+        padding: rem
 
 .btn-alignment
     display: flex
@@ -82,7 +91,6 @@
     display: flex
     width: 100%
     height: auto
-
 
 .project-github-btn-container
     display: flex
@@ -155,18 +163,21 @@
 
 .livetest-alignment
     display: none
-
-
-
-
     
-@media (max-width: 500px)
+@media (max-width: 600px)
     .project-infos-section
+        width: 100%
+        justify-content: center
+        align-items: center
+        margin: 0
+        gap: 1rem
+    
+    .project-infos-txt-container
         display: flex
         justify-content: center
+        align-items: center
         width: 100%
         height: auto
-        margin: 0
 
     .project-infos-txt-container
         display: flex
@@ -184,9 +195,13 @@
     .header-txt
         display: flex
         justify-content: center
+        align-items: center
         width: 100%
         height: auto
         margin: 0
+        p
+            justify-content: center
+            align-items: centerw
 
     .programms-container
         display: flex
@@ -207,51 +222,52 @@
     .project-description-container
         display: flex
         justify-content: center
-        width: 340px
+        align-items: center
+        width: 100%
         height: auto
-        margin: 0 auto
-        margin-left: -50px
+        margin: 0
+        
 
     .project-description-txt
         display: flex
         justify-content: center
-        margin: 0 auto
+        align-items: center
         width: 100%
         height: auto
         margin: 0
+        span
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 100%
+            height: auto
+            margin: 0
 
     .btn-alignment
         display: flex
-        justify-content: space-around
+        justify-content: center
+        align-items: center
         width: 100%
         height: auto
         margin: 0
-
+        gap: 1rem
 
     .project-github-btn-container-alignment
-        width: 100%
-        height: auto
-        margin: 0
         display: flex
         justify-content: center
-
+        align-items: center
 
     .project-github-btn-container
-        height: 30px
-        width: 120px
+        height: auto
+        width: auto
         display: flex
         justify-content: center
-        margin: 0 auto
-        padding-top: 15px
-        padding-right: 20px
-        padding-bottom: 15px
-        padding-left: 20px
+        margin: 0 
+        padding: 0.7rem
         border-radius: 10px
         border-color: #5988FF
         border-style: solid
         border-width: 2px
-        margin-top: 100px
-        margin-left: -35px
         
     .github-btn
         display: flex
@@ -266,32 +282,28 @@
         letter-spacing: 0%
 
     .livetest-alignment
-        width: 160px
+        width: 100%
         height: auto
+        margin: 0
         display: flex
         justify-content: center
-        margin: 0 auto
-        margin-top: 20px
 
     .livetest-btn-container
+        height: auto
+        width: auto
         display: flex
         justify-content: center
-        margin: 0 auto
-        padding-top: 15px
-        padding-right: 30px
-        padding-bottom: 15px
-        padding-left: 30px
+        margin: 0 
+        padding: 0.7rem
         border-radius: 10px
         border-color: #5988FF
         border-style: solid
         border-width: 2px
         background-color: #5988FF
-        margin-top: 100px
-        margin-left: -30px
     
     .livetest-btn
-        display: flex
-        justify-content: center
+        width: 100%
+        height: auto
         display: flex
         justify-content: center
         align-items: center
@@ -301,10 +313,8 @@
         line-height: 120%
         letter-spacing: 0%
 
+    .livetest-btn-container
+        width: 123.6px
 
-    .btn-alignment
-        width: 340px
-        height: auto
-        display: flex
-        align-items: center
-        margin-left: 40px
+
+
