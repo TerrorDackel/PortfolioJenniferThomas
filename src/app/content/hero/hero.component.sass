@@ -24,18 +24,19 @@
 
 .circle-3-container
     display: flex
-    
+
 .circle-3
     position: absolute
     width: 892px
     height: 892px
     top: -71px
-    left: -199px
+    left: 30rem
+    transform: translateX(50%)
     border-radius: 50%
     background-color: #5988FF
     background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%)
     display: flex
-    z-index: 3
+    z-index: 0
 
 .hero-img-txt-container
     display: flex
@@ -49,7 +50,7 @@
 .hero-img-container
     display: flex
     height: calc( 100vh - 117px )
-    width: auto
+    width: 50%
     margin-top: 117px
     margin-left: 25%
 
@@ -57,17 +58,16 @@
     display: flex
     align-items: center
     justify-content: center
-    margin-left: -200px
     object-fit: cover
     z-index: 4
 
 .hero-text-container
     display: flex
     flex-direction: column
-    margin-top: 200px
+    margin-top: 20%
+    margin-right: 15%
     max-width: 645px
     max-height: 282px
-    margin-right: 25%
     z-index: 5
 
 .hero-text-hello-container
@@ -76,12 +76,11 @@
     height: auto
     max-width: 645px
 
-
 .hero-text-hello
     display: flex
     margin: 0
     font-family: 'Montserrat', sans-serif
-    font-size: 64px
+    font-size: clamp(2.25rem, 2.5vw + 1rem, 4rem)
     font-weight: 400
     color: #5988FF
     letter-spacing: 0%
@@ -101,7 +100,7 @@
     margin: 0
     max-height: 114px
     font-family: 'Baloo 2', sans-serif
-    font-size: 128px
+    font-size: clamp(4.5625rem, 3.5vw + 2rem, 8rem)
     font-weight: 400
     color: #5988FF
     line-height: 120%
@@ -113,7 +112,7 @@
     margin: 0
     max-height: 114px
     font-family: 'Baloo 2', sans-serif
-    font-size: 128px
+    font-size: clamp(4.5625rem, 3.5vw + 2rem, 8rem)
     font-weight: 400
     color: #5988FF
     line-height: 120%
@@ -170,114 +169,151 @@
     &:hover
         margin-right: 15px
 
-
 @media (max-width: 1200px)
     .hero-img
         img
             width: auto
             height: 100%
-        
 
-@media (max-width: 1100px)
+@media (max-width: 1120px)
+    .scroll
+        margin-top: 5rem
+        z-index: 4
+
+@media (max-width: 1120px)
+    .scroll
+        margin-top: 8rem
+
+@media (max-width: 1000px)
+    .hero-text-job-title-container
+        margin-right: 2rem
+
+@media (max-width: 832px)
+    .hero-text-job-title-container
+        color:  #ffffff
+
+    .hero-img-txt-container
+        display: flex
+        flex-direction: column-reverse
+        align-items: center
+        justify-content: center
+        margin: 0 auto
+
+    .hero-img
+        display: flex
+        z-index: 6
+
+    .hero-text-container
+        z-index: 6
+
+    .scroll
+        display: none
+
+    .hero-section
+        margin: 0 auto
+        margin-top: -20px
+        width: 100%
+        height: auto
+        padding: 20px 10px
+        background: linear-gradient(0deg, rgba(234,240,255,1) 0%, rgba(245,248,255,1) 35%, rgba(255,255,255,1) 100%)
+        display: flex
+        justify-content: center
+        z-index: 2
+
+    .hero-img-container
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 0
+        height: 500px
+        width: auto
+        object-fit: cover
+
+    .hero-img
+        margin: 0 auto
+        display: flex
+        align-items: center
+        justify-content: center
+        max-height: 500px
+        width: auto
+        z-index: 4
+
+    .hero-text-hello
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-top: 4rem
+        font-family: Montserrat
+        font-weight: 400
+        font-size: 36px
+        line-height: 100%
+        letter-spacing: 0%
+        vertical-align: middle
+        color: #FFFFFF
+        width: 100%
+        padding: 0 20px
+
+    .hero-text-frontend,
+    .hero-text-developers
+        display: flex
+        justify-content: center
+        align-items: center
+        font-family: 'Baloo 2', sans-serif
+        font-weight: 400
+        font-size: 73px
+        line-height: 120%
+        letter-spacing: -2.5%
+        color: #FFFFFF
+        padding: 0 20px
+        width: 100%
+        margin: 0
+
+    .hero-text-job-title-container,
+    .hero-text-hello-container,
+    .hero-text-container,
+    .hero-img-container
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        max-height: none
+        margin: 0
+        margin-top: 4rem
+
+    .hero-text-job-title-container
+        margin-top: 0
+
+    .hero-text-hello-container
+        margin-top: 0
+
+@media only screen and (max-width: 831px) and (min-width: 300px)
     .circle-3
-        max-width: 612px
-        padding-top: 612px
-
-
-// @media (max-width: 1520px)
-
-
-// @media screen and (min-width: 0px) and (max-width: 1430px)
-//     .hero-section
-//         margin: 0 auto
-//         margin-top: -20px
-//         width: 390px
-//         height: 805px
-//         padding: 20px 10px
-//         background: linear-gradient(0deg, rgba(234,240,255,1) 0%, rgba(245,248,255,1) 35%, rgba(255,255,255,1) 100%)
-//         display: flex
-//         justify-content: center
-//         z-index: 2
-
-//     .circle-3
-//         position: absolute
-//         width: 612px
-//         height: 612px
-//         top: -22px
-//         left: -235px
-
-//     .hero-img-txt-container
-//         flex-direction: column-reverse
-//         margin-top: -85px
-//         margin-left: -50px
+        width: 612px
+        height: 612px
+        right: 307px
+        left: auto
+        transform: translateX(50%)
     
-//     .hero-img-container
-//         display: flex
-//         justify-content: center
-//         align-items: center
-//         margin-top: -35px
-//         height: 500px
-//         width: auto
-//         object-fit: cover
-//         margin-left: 70px
-    
-//     .hero-img
-//         margin: 0 auto
-//         display: flex
-//         align-items: center
-//         justify-content: center
-//         max-height: 500px
-//         width: auto
-//         z-index: 4
+    .hero-img
+        margin-top: -130px
 
-//     .hero-text-hello
-//         display: flex
-//         justify-content: center
-//         width: 370px
-//         padding: 20px
-//         margin-top: 30px
-//         margin-left: -88px
-//         color: #FFFFFF
-//         font-family: Montserrat
-//         font-weight: 400
-//         font-size: 36px
-//         line-height: 100%
-//         letter-spacing: 0%
-//         vertical-align: middle
+@media (max-width: 350px)
+    .hero-text-hello,
+    .hero-text-frontend,
+    .hero-text-developers
+        margin: 0
+        margin-left: 3px
+        text-align: left
+        justify-content: flex-start
 
-//     .hero-text-frontend
-//         display: flex
-//         justify-content: center
-//         width: 370px
-//         height: auto
-//         padding: 20px
-//         margin-left: -100px
-//         font-family: 'Baloo 2', sans-serif
-//         font-weight: 400
-//         font-size: 73px
-//         line-height: 120%
-//         letter-spacing: -2.5%
-//         color: #FFFFFF
+    .hero-text-hello
+        font-size: 34px 
+        margin-top: 90px
+        margin-left: -10px
+    .hero-text-frontend,
+    .hero-text-developers
+        font-size: 67px
 
-//     .hero-text-developers
-//         display: flex
-//         justify-content: center
-//         width: 370px
-//         height: auto
-//         padding: 20px
-//         margin-left: -85px
-//         margin-top: -60px
-//         font-family: 'Baloo 2', sans-serif
-//         font-weight: 400
-//         font-size: 73px
-//         line-height: 120%
-//         letter-spacing: -2.5%
-//         vertical-align: middle
-//         color: #FFFFFF
+    .hero-img
+        margin-bottom: -170px
 
-    
-//     .scroll-txt
-//         display: none
-
-//     .scroll
-//         display: none
