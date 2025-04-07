@@ -58,8 +58,8 @@
     max-width: 1920px
     height: 108px
     display: flex
-    width: 321px
-    height: 108px
+    width: 100%
+    height: auto
     font-family: 'Baloo 2', sans-serif
     font-weight: 400
     font-size: 90px
@@ -70,21 +70,24 @@
 .container-left-and-right
     width: 100%
     height: auto
+    margin: 0
     display: flex
     justify-content: center
-    margin-top: 30px
 
 .container-left
     display: flex
     flex-direction: column
-    margin-right: 25px
+    width: 50%
+    height: auto
+    gap: 1rem
+    padding: 1rem
 
 .got-a-problem-title-container
     display: flex
     align-items: center
-    width: 473px
-    height: 38px
-        gap: 10px
+    width: 100%
+    height: auto
+    gap: 1rem
     
 .got-a-problem-title-txt
     display: flex
@@ -100,40 +103,41 @@
     align-items: center
     padding-top: 25px
     padding-bottom: 20px
-    width: 473px
-    height: 57px
-    left: 1px
+    width: 100%
+    height: auto
+
 
 .got-a-problem-title-description-txt
     display: flex
     font-family: 'Montserrat', sans-serif
     font-weight: 400
-    font-size: 16px
+    font-size: 1rem
     line-height: 120%
     letter-spacing: 0%
 
 .need-a-contact-me-container
     display: flex
     align-items: center
-    width: 473px
-    height: 22px
-    left: 1px
+    width: 100%
+    height: auto
 
 .need-a-contact-me-txt
+    width: 100%
     display: flex
     font-family: "Poppins", sans-serif
     font-weight: 400
-    font-size: 16px
+    font-size: 0.9rem
     line-height: 120%
     letter-spacing: 0%
     color: #5988FF
-
+    p
+        width: 100%
 
 .circle-11-container
     display: flex
     justify-content: center
-    width: 204px
-    height: 204px
+    width: 100%
+    height: auto
     left: 242px
     angle: -0 deg
 
@@ -185,63 +189,66 @@
 .container-right
     display: flex
     flex-direction: column
-    width: 617px
-    margin-left: 25px
+    width: 50%
+    height: auto
+    gap: 1rem
+    padding: 1rem
 
 .your-name-container
     display: flex
-    width: 617px
-    height: 50px
+    width: 1005
+    height: auto
 
 .name-textfield
     display: flex
     width: 100%
-    border-radius: 10px
+    border-radius: 0.5rem
     border-width: 1px
     border: 1px solid #5988FF
-    padding-top: 15px
-    padding-right: 25px
-    padding-bottom: 15px
-    padding-left: 25px
+    padding-top: 1rem
+    padding-right: 1rem
+    padding-bottom: 1rem
+    padding-left: 1rem
 
 .your-email-container
     display: flex
-    width: 617px
-    height: 50px
-    margin-top: 10px
-    margin-bottom: 10px
+    width: 100%
+    height: auto
+    margin-top: 1rem
+    margin-bottom: 1rem
 
 .email-textfield
     display: flex
     width: 100%
-    border-radius: 10px
+    border-radius: 0.5rem
     border-width: 1px
     border: 1px solid #5988FF
-    padding-top: 15px
-    padding-right: 25px
-    padding-bottom: 15px
-    padding-left: 25px
+    padding-top: 1rem
+    padding-right: 1rem
+    padding-bottom: 1rem
+    padding-left: 1rem
 
 .your-message-container
     display: flex
-    width: 617px
-    height: 202px
+    width: 100%
+    height: auto
 
 .message-textfield
     display: flex
     width: 100%
-    border-radius: 10px
+    height: 7rem
+    border-radius: 0.5rem
     border-width: 1px
     border: 1px solid #5988FF
-    padding-top: 15px
-    padding-right: 25px
-    padding-bottom: 15px
-    padding-left: 25px
+    padding-top: 1rem
+    padding-right: 1rem
+    padding-bottom: 1rem
+    padding-left: 1rem
 
 .agree-privacypolice-check
     display: flex
-    width: 587px
-    height: 27px
+    width: 100%
+    height: auto
     gap: 8px
 
 .checkbox
@@ -359,141 +366,193 @@ a.privacy-link
         color: #0043F0
         font-weight: bold
 
-// @media (max-width: 1439px)
-//     #contact
-//         scroll-margin-top: 117px
 
-//     .contact-section
-//         width: 390px
-//         margin: 0 auto
-//         flex-direction: column
-//         overflow: visible
+@media (max-width: 911px)
+    .circle-13-container
+        width: 100%
+        height: auto
+        margin: 0
+    .contact-section
+        width: 100%
+        height: auto
+        justify-content: center
+        align-items: center
+        margin: 0
 
-//     .contact-container
-//         flex-direction: column
-//         align-items: center
-//         padding: 0 10px
+    .contact-container
+        width: 100%
+        height: auto
+        justify-content: center
+        align-items: center
+        margin: 0
 
-//     .contact-title-and-container-left-right
-//         flex-direction: column
-//         align-items: center
+    .need-a-contact-me-txt
+        width: 100%
+        display: flex
+        flex-direction: column
 
-//     .container-left-and-right
-//         flex-direction: column
-//         align-items: center
-//         gap: 30px
-//         margin-top: 20px
-
-//     .container-left
-//         width: 340px
-//         margin: 0
-
-//     .container-right
-//         width: 100%
-//         margin: 0
-//         margin-left: 40px
-
-//     .title-contact-container
-//         margin-left: 0
-//         align-items: center
-
-//     .title-txt
-//         display: flex
-//         margin-left: 35px
-//         font-weight: bold
-//         font-size: 45px
-//         text-align: center
-
-//     .got-a-problem-title-txt
-//         font-weight: 700
-//         font-size: 23px
-//         margin-top: -20px
-
-//     .got-a-problem-title-container,
-//     .got-a-title-description-txt,
-//     .got-a-problem-title-description-container,
-//     .need-a-contact-me-container
-//         width: 341px
-//         height: auto
-//         margin-bottom: -40px
-//         justify-content: center
-//         text-align: center
-
-//     .your-name-container
-//         display: flex
-//         justify-content: center
-//         width: 341px
-//         height: 50px
-
-//     .name-textfield
-//         display: flex
-//         justify-content: center
-//         width: 341px
-//         border-radius: 10px
-//         border-width: 1px
-//         border: 1px solid #5988FF
-//         padding-top: 15px
-//         padding-right: 25px
-//         padding-bottom: 15px
-//         padding-left: 25px
-
-//     .your-email-container
-//         display: flex
-//         justify-content: center
-//         width: 341px
-//         height: 50px
-//         margin-top: 10px
-//         margin-bottom: 10px
-
-//     .email-textfield
-//         display: flex
-//         justify-content: center
-//         width: 341px
-//         border-radius: 10px
-//         border-width: 1px
-//         border: 1px solid #5988FF
-//         padding-top: 15px
-//         padding-right: 25px
-//         padding-bottom: 15px
-//         padding-left: 25px
-
-//     .your-message-container
-//         display: flex
-//         justify-content: center
-//         width: 341px
-//         height: 202px
-
-//     .message-textfield
-//         display: flex
-//         justify-content: center
-//         width: 341px
-//         border-radius: 10px
-//         border-width: 1px
-//         border: 1px solid #5988FF
-//         padding-top: 15px
-//         padding-right: 25px
-//         padding-bottom: 15px
-//         padding-left: 25px
+    .contact-title-and-container-left-right
+        width: 100%
+        height: auto
+        justify-content: center
+        align-items: center
+        margin: 0
     
-//     .agree-privacypolice-check,
-//     .button-container
-//         width: 341px
-//         display: flex
-//         justify-content: center
+    .title-contact-container
+        width: 100%
+        height: auto
+        justify-content: center
+        align-items: center
+        margin: 0
 
-//     .btn-contact
-//         width: 180px
-//         margin-top: 40px
-//         margin-bottom: 100px
+    .title-txt
+        width: 100%
+        height: auto
+        justify-content: center
+        align-items: center
+        margin: 0
+        p
+            width: 100%
+            justify-content: center
+            align-items: center
 
-//     .circle-11-container,
-//     .circle-13-container,
-//     .circle-14-container
-//         display: none
+@media (max-width: 550px)
+    #contact
+        scroll-margin-top: 117px
 
-//     .arrow-up
-//         display: none
+    .contact-section
+        width: 390px
+        margin: 0 auto
+        flex-direction: column
+        overflow: visible
 
-//     .go-up-container
-//         margin-top: -90px
-//         margin-bottom: 50px
+    .contact-container
+        flex-direction: column
+        align-items: center
+        padding: 0 10px
+
+    .contact-title-and-container-left-right
+        flex-direction: column
+        align-items: center
+
+    .container-left-and-right
+        flex-direction: column
+        align-items: center
+        gap: 30px
+        margin-top: 20px
+
+    .container-left
+        width: 340px
+        margin: 0
+
+    .container-right
+        width: 100%
+        margin: 0
+        margin-left: 40px
+
+    .title-contact-container
+        margin: 0
+        display: flex
+        justify-content: center
+        align-items: center
+
+    .title-txt
+        display: flex
+        margin-left: 35px
+        font-weight: bold
+        font-size: 45px
+        text-align: center
+
+    .got-a-problem-title-txt
+        font-weight: 700
+        font-size: 23px
+        margin-top: -20px
+
+    .got-a-problem-title-container,
+    .got-a-title-description-txt,
+    .got-a-problem-title-description-container,
+    .need-a-contact-me-container
+        width: 341px
+        height: auto
+        margin-bottom: -40px
+        justify-content: center
+        text-align: center
+
+    .your-name-container
+        display: flex
+        justify-content: center
+        width: 341px
+        height: 50px
+
+    .name-textfield
+        display: flex
+        justify-content: center
+        width: 341px
+        border-radius: 10px
+        border-width: 1px
+        border: 1px solid #5988FF
+        padding-top: 15px
+        padding-right: 25px
+        padding-bottom: 15px
+        padding-left: 25px
+
+    .your-email-container
+        display: flex
+        justify-content: center
+        width: 341px
+        height: 50px
+        margin-top: 10px
+        margin-bottom: 10px
+
+    .email-textfield
+        display: flex
+        justify-content: center
+        width: 341px
+        border-radius: 10px
+        border-width: 1px
+        border: 1px solid #5988FF
+        padding-top: 15px
+        padding-right: 25px
+        padding-bottom: 15px
+        padding-left: 25px
+
+    .your-message-container
+        display: flex
+        justify-content: center
+        width: 341px
+        height: 202px
+
+    .message-textfield
+        display: flex
+        justify-content: center
+        width: 341px
+        border-radius: 10px
+        border-width: 1px
+        border: 1px solid #5988FF
+        padding-top: 15px
+        padding-right: 25px
+        padding-bottom: 15px
+        padding-left: 25px
+    
+    .agree-privacypolice-check,
+    .button-container
+        width: 341px
+        display: flex
+        justify-content: center
+
+    .btn-contact
+        width: 180px
+        margin-top: 40px
+        margin-bottom: 100px
+
+    .circle-11-container,
+    .circle-13-container,
+    .circle-14-container
+        display: none
+
+    .arrow-up
+        display: none
+
+    .go-up-container
+        margin-top: -90px
+        margin-bottom: 50px
