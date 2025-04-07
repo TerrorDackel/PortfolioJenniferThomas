@@ -28,7 +28,7 @@
     display: flex
     flex-direction: column
     align-items: center
-    width: 95%
+    width: 100%
     max-width: 1920px
 
 .header-container
@@ -39,7 +39,6 @@
         max-width: 1920px
         height: auto
         margin: 0
-
     p
         width: 100%
         max-width: 1920px
@@ -51,6 +50,8 @@
         letter-spacing: 0%
         color: #FFFFFF
         text-align: center
+        justify-content: center
+        padding-top: 2rem
 
 .second-header-container
     div
@@ -82,7 +83,7 @@
     overflow-y: hidden
     display: flex
     justify-content: center
-    max-width: 1035px
+    max-width: 700px
     height: auto
     gap: 2rem
 
@@ -96,77 +97,50 @@
     width: 301px
     height: auto
 
-// @media (max-width: 1439px)
-//     .ref-section
-//         width: 390px
-//         margin: 0 auto
-//         display: flex
-//         align-items: center
+@media (max-width: 500px)
 
-//     .ref-container
-//         flex-direction: column
-//         align-items: center
+    .header-container
+        display: flex
+        justify-content: center
+        font-size: 36px
+        font-weight: bold
+        text-align: center
+        padding-top: 1rem
 
-//     .ref-title
-//         font-size: 28px
-//         text-align: center
+    .second-header-container
+        display: flex
+        justify-content: center
+        font-size: 0.7rem
+        font-weight: normal
 
-//     .ref-description
-//         font-size: 16px
-//         text-align: center
-//         padding: 0 10px
+    .ref-posts
+        display: flex
+        flex-direction: row
+        overflow-x: auto  
+        overflow-y: hidden
+        width: 320px
+        gap: 1rem
+        padding: 1rem
+        margin: 0
+        -webkit-overflow-scrolling: touch
+        scroll-snap-type: x mandatory
+        scroll-padding-left: 100px
+        scroll-padding-right: 100px
+        &::-webkit-scrollbar
+            scrollbar-width: auto
+            -ms-overflow-style: auto
 
-//     .ref-card
-//         width: 100%
-//         max-width: 360px
-//         padding: 10px
+    .ref-a-post
+        display: flex
+        justify-content: center
+        height: auto
+        margin: 0
 
-//     .ref-image
-//         width: 100%
-//         height: auto
-
-//     .ref-text
-//         font-size: 14px
-//         text-align: center
-
-//     .circle,
-//     .ref-deco
-//         display: none
-
-
-//     .header-container
-//         display: flex
-//         justify-content: center
-//         font-size: 36px
-//         font-weight: bold
-//         text-align: center
-
-//     .second-header-container
-//         display: flex
-//         justify-content: center
-//         font-size: 16px
-//         font-weight: normal
-
-//     .ref-posts
-//         display: flex
-//         flex-direction: row
-//         overflow-x: auto
-//         overflow-y: hidden
-//         width: 100%
-//         gap: 0px
-//         padding-left: 900px
-//         padding-right: 700px         // Erzeugt den extra Scrollbereich rechts
-//         -webkit-overflow-scrolling: touch
-//         scroll-snap-type: x mandatory
-//         scroll-padding-left: 0
-
-//         &::-webkit-scrollbar
-//             display: none
-//         scrollbar-width: none
-//         -ms-overflow-style: none
-
-//     .ref-a-post
-//         flex: 0 0 auto
-//         width: 280px
-//         height: 246px
-//         scroll-snap-align: start
+    .ref-a-post1, 
+    .ref-a-post2
+        display: flex
+        flex-shrink: 0 
+        width: 4a0rem  
+        height: auto
+        padding: 1rem
+        gap: 1rem
