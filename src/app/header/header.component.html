@@ -12,27 +12,31 @@
                     <li><a href="#skillSet">Skill set</a></li>
                     <li><a href="#myWork">My work</a></li>
                     <!-- <li><a href="#contact">contact</a></li> -->
-                    <div class="de-cut-en">
+                    <!-- <div class="de-cut-en">
                         <li class="de" (click)="switchToGerman()">DE</li>
                         <span class="cut">/</span>
                         <li class="en" (click)="switchToEnglish()">EN</li>
-                    </div>
+                    </div> -->
                 </ul>
             </div>
         </div>
-        <div class="burger-menu-icon" (click)="openMenu()">
-            <img src="assets/img/icon/burger-menu.png" alt="menu icon">
-        </div>
-        <div class="mobile-nav" *ngIf="menuValue">
-            <a href="#aboutMe" (click)="closeMenu()">About me</a>
-            <a href="#skillSet" (click)="closeMenu()">Skill set</a>
-            <a href="#myWork" (click)="closeMenu()">My work</a>
-            <a href="#contact" (click)="closeMenu()">Contact</a>
-            <!-- <div class="lang-switch">
-                <span class="de" (click)="switchToGerman()">DE</span>
-                <span class="cut"> / </span>
-                <span class="en" (click)="switchToEnglish()">EN</span>
-            </div> -->
+        <div class="header-container-mobile">
+            <div class="burger-menu-icon" (click)="openMenu()">
+                <img class="burger-menu-img" src="assets/img/icon/burger-menu.png" alt="menu icon">
+            </div>
+            <div class="mobile-nav" [class.show]="menuValue" [class.hide]="!menuValue">
+                <div class="mobile-nav-links">
+                    <a href="#aboutMe" (click)="closeMenu()">About me</a><br>
+                    <a href="#skillSet" (click)="closeMenu()">Skill set</a><br>
+                    <a href="#myWork" (click)="closeMenu()">My work</a><br>
+                    <a href="#contact" (click)="closeMenu()">Contact</a>
+                </div>
+                <!-- <div class="lang-switch">
+                    <span class="de" (click)="switchToGerman()">DE</span>
+                    <span class="cut"> / </span>
+                    <span class="en" (click)="switchToEnglish()">EN</span>
+                </div> -->
+            </div>
         </div>
     </div>
 </header> 

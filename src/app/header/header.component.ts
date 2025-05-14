@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslatePipe, TranslateDirective } from "@ngx-translate/core";
-import { NgIf } from '@angular/common'; // 👈 Das ist der wichtige Zusatz!
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +8,7 @@ import { NgIf } from '@angular/common'; // 👈 Das ist der wichtige Zusatz!
   imports: [
     TranslatePipe,
     TranslateDirective,
-    NgIf // 👈 Hier hinzufügen
+    NgIf
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.sass'
