@@ -11,12 +11,12 @@
                     <li><a href="#aboutMe">About me</a></li>
                     <li><a href="#skillSet">Skill set</a></li>
                     <li><a href="#myWork">My work</a></li>
-                    <!-- <li><a href="#contact">contact</a></li> -->
-                    <!-- <div class="de-cut-en">
+                    <li><a href="#contact">contact</a></li>
+                    <div class="de-cut-en">
                         <li class="de" (click)="switchToGerman()">DE</li>
                         <span class="cut">/</span>
                         <li class="en" (click)="switchToEnglish()">EN</li>
-                    </div> -->
+                    </div>
                 </ul>
             </div>
         </div>
@@ -30,12 +30,12 @@
                     <a href="#skillSet" (click)="closeMenu()">Skill set</a><br>
                     <a href="#myWork" (click)="closeMenu()">My work</a><br>
                     <a href="#contact" (click)="closeMenu()">Contact</a>
+                    <div class="lang-switch">
+                        <span class="de" (click)="switchToGerman()">DE</span>
+                        <span class="cut"> / </span>
+                        <span class="en" (click)="switchToEnglish()">EN</span>
+                    </div>
                 </div>
-                <!-- <div class="lang-switch">
-                    <span class="de" (click)="switchToGerman()">DE</span>
-                    <span class="cut"> / </span>
-                    <span class="en" (click)="switchToEnglish()">EN</span>
-                </div> -->
             </div>
         </div>
     </div>

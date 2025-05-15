@@ -93,10 +93,7 @@ a:hover
   cursor: pointer
   transform: scale(1.15)
 
-.de,
-.cut,
-.en
-  width: 25px!important
+.de-cut-en
   text-decoration: none
   font-family: 'Montserrat', sans-serif
   font-weight: 400
@@ -105,19 +102,22 @@ a:hover
   letter-spacing: 0%
   color: #5988FF
 
+.de
+  width: 100%
+  height: auto
+  margin-left: -5px!important
+
 .en
+  width: 100%
+  height: auto
   margin-left: -5px!important
 
 .cut
+  width: 100%
+  height: auto
   margin-left: 5px
   padding: 8px
-  text-decoration: none
-  font-family: 'Montserrat', sans-serif
-  font-weight: 400
-  font-size: 23px
-  line-height: 120%
-  letter-spacing: 0%
-  color: #5988FF
+
 
 .header-container-mobile
   display: none
@@ -222,10 +222,35 @@ a:hover
     justify-content: flex-start
     align-items: center
     flex-direction: column
-    width: 130px
+    width: 100%
+    max-width: 130px
     height: auto
 
+  .lang-switch
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    text-decoration: none
+    font-family: 'Montserrat', sans-serif
+    width: 100%
+    max-width: 130px
+    height: auto
+    text-align: left
+    font-size: 1rem
+    color: #5988FF
 
+  .de
+    width: 100%
+    height: auto
+
+  .en
+    width: 100%
+    height: auto
+
+  .cut
+    width: 100%
+    height: auto
+    padding: 8px
 
 @media (min-width: 1440px)
   .burger-menu-icon
