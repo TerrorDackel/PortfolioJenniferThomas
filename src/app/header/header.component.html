@@ -1,42 +1,73 @@
-<header>
-    <div id="header" class="header-section">
-        <div class="header-container">
+
+<section id="header" class="header-section">
+    <div class="header-container">
+        <div class="header-logo-container">
             <div class="header-img-container">
-                    <div class="header-logo">
-                        <a href="#header"><img src="assets/img/icon/logo.png" class="logo-img" alt="Logo"></a>
-                    </div>
-            </div>
-            <div class="desktop-menu">
-                <ul class="navbar">
-                    <li><a href="#aboutMe">About me</a></li>
-                    <li><a href="#skillSet">Skill set</a></li>
-                    <li><a href="#myWork">My work</a></li>
-                    <li><a href="#contact">contact</a></li>
-                    <div class="de-cut-en">
-                        <li class="de" (click)="switchToGerman()">DE</li>
-                        <span class="cut">/</span>
-                        <li class="en" (click)="switchToEnglish()">EN</li>
-                    </div>
-                </ul>
+                <a (click)="scrollUp()">
+                    <img class="logo-img" src="assets/img/icon/logo.png" alt="Scroll to the top.">
+                </a>
             </div>
         </div>
-        <div class="header-container-mobile">
-            <div class="burger-menu-icon" (click)="openMenu()">
-                <img class="burger-menu-img" src="assets/img/icon/burger-menu.png" alt="menu icon">
+        <div class="header-navbar-container">
+            <div class="navbar-desktop">
+                <div class="navbar-desktop-links-container">
+                    <a class="navbar-desktop-link" href="#aboutMe">
+                        About me
+                    </a>
+                    <a class="navbar-desktop-link" href="#skillSet">
+                        Skill set
+                    </a>
+                    <a class="navbar-desktop-link" href="#myWork">
+                        My work
+                    </a>
+                    <a class="navbar-desktop-link" href="#contact">
+                        Contact
+                    </a>
+                    <div class="navbar-desktop-link" >
+                        <div class="navbar-desktop-de-en-container">
+                            <div class="de" (click)="switchToGerman()">
+                                De
+                            </div>
+                            <div class="cut">/</div>
+                            <div class="en" (click)="switchToEnglish()">
+                                En
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="mobile-nav" [class.show]="menuValue" [class.hide]="!menuValue">
-                <div class="mobile-nav-links">
-                    <a href="#aboutMe" (click)="closeMenu()">About me</a><br>
-                    <a href="#skillSet" (click)="closeMenu()">Skill set</a><br>
-                    <a href="#myWork" (click)="closeMenu()">My work</a><br>
-                    <a href="#contact" (click)="closeMenu()">Contact</a>
-                    <div class="lang-switch">
-                        <span class="de" (click)="switchToGerman()">DE</span>
-                        <span class="cut"> / </span>
-                        <span class="en" (click)="switchToEnglish()">EN</span>
+            <div class="navbar-mobile">
+                <div class="navbar-mobile-burger-icon" (click)="openMenu()">
+                    <img class="burger-menu-img" src="assets/img/icon/burger-menu.png" alt="Open or close the burger-menu.">
+                </div>
+                <div class="navbar-mobile-links-container" [class.show]="menuValue" [class.hide]="!menuValue">
+                    <a class="navbar-mobile-link" href="#aboutMe" (click)="closeMenu()">
+                        About me
+                    </a><br>
+                    <a class="navbar-mobile-link" href="#skillSet" (click)="closeMenu()">
+                        Skill set
+                    </a><br>
+                    <a class="navbar-mobile-link" href="#myWork" (click)="closeMenu()">
+                        My work
+                    </a><br>
+                    <a class="navbar-mobile-link" href="#contact" (click)="closeMenu()">
+                        Contact
+                    </a>
+                    <div class="navbar-mobile-link" >
+                        <div class="navbar-mobile-de-en-container">
+                            <span class="de" (click)="switchToGerman()">
+                                De
+                            </span>
+                            <span class="cut">
+                                /
+                            </span>
+                            <span class="en" (click)="switchToEnglish()">
+                                En
+                            </span>
+                    </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</header> 
+</section>
