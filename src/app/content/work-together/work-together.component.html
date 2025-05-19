@@ -12,16 +12,16 @@
             <div class="container-left">
                 <div class="lets-work-together-container">
                     <p class="lets-work-together-text">
-                        let's work
+                        {{ 'WORK_TOGETHER.LETS_WORK' | translate }}
                     </p>
                     <p class="lets-work-together-text">
-                        together
+                        {{ 'WORK_TOGETHER.TOGETHER' | translate }}
                     </p>
                 </div>
                 <div class="i-am-plus-info-container">
                     <div class="i-am-container">
                         <p class="i-am-text">
-                            I am
+                            {{ 'WORK_TOGETHER.I_AM' | translate }}
                         </p>
                     </div>
                     <div class="info-container">
@@ -31,29 +31,35 @@
                                     <img class="located-icon-img-default" src="assets/img/icon/located.png" alt="located icon" />
                                     <img class="located-icon-img-hover" src="assets/img/icon/located-hover.png" alt="located icon hover" />
                                 </a>
-                            </div>                              
-                            <p class="located-txt">located in Pilsting</p>
+                            </div>
+                            <p class="located-txt">
+                                {{ 'WORK_TOGETHER.LOCATED' | translate }}
+                            </p>
                         </div>
                         <div class="remote-icon-txt-container">
                             <div class="remote-icon">
                                 <img class="remote-icon-default" src="assets/img/icon/remote.png" alt="remote icon" />
                                 <img class="remote-icon-hover" src="assets/img/icon/remote-hover.png" alt="remote icon hover" />
                             </div>
-                            <p class="remote-txt">open to work remote</p>
-                        </div>                          
+                            <p class="remote-txt">
+                                {{ 'WORK_TOGETHER.REMOTE' | translate }}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="container-right">
                 <div class="information-about-me-container">
                     <p class="imformation-about-me-text">
-                        Es macht mir Freude, benutzerfreundliche Frontend-Lösungen zu entwickeln. Ich lerne neue Frameworks zügig und setze sie effektiv in meinen Projekten ein. Ob im Team oder remote, ich arbeite stets effizient. Mit kreativen Ideen und lösungsorientiertem Denken entwickle ich Interfaces, die sowohl funktional als auch ansprechend sind.
+                        {{ 'WORK_TOGETHER.ABOUT_ME' | translate }}
                     </p>
                 </div>
                 <div onclick="Contact(contactForm)" class="send-a-message-container">
                     <div class="send-a-message-btn">
                         <p class="send-a-message-btn-text">
-                            <a href="#contact">Send a message</a> 
+                            <a href="#contact">
+                                {{ 'WORK_TOGETHER.SEND' | translate }}
+                            </a>
                         </p>
                     </div>
                 </div>

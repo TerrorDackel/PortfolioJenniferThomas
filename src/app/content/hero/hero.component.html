@@ -1,9 +1,10 @@
 <section class="hero-section">
-    <div id="srollToHero" class="hero-container">
+    <div id="scrollToHero" class="hero-container">
         <div class="circle-3-container">
             <div class="circle-3">
             </div>
-            <div class="circle-3-resp"></div>
+            <div class="circle-3-resp">
+            </div>
         </div>
         <div class="hero-img-txt-container">
             <div class="hero-img-container">
@@ -11,11 +12,17 @@
             </div>
             <div id="scrollUp" class="hero-text-container">
                 <div class="hero-text-hello-container">
-                    <h2 class="hero-text-hello">Hello! I am Jenny</h2>
+                    <h2 class="hero-text-hello">
+                        {{ 'HERO.HELLO' | translate }}
+                    </h2>
                 </div>
                 <div class="hero-text-job-title-container">
-                    <h1 class="hero-text-frontend">Frontend</h1>
-                    <h1 class="hero-text-developers">Developer</h1>
+                    <h1 class="hero-text-frontend">
+                        Frontend
+                    </h1>
+                    <h1 class="hero-text-developers">
+                        Developer
+                    </h1>
                     <div class="scroll">
                         <span class="scroll-txt">
                             SCROLL
@@ -25,13 +32,19 @@
                             </div>
                             <div class="hero-iconlist-vertikal">
                                 <div class="hero-icon-container">
-                                    <a href="https://github.com/TerrorDackel?tab=repositories" target="_blank" ><img src="./assets/img/icon/github.png" alt=""></a>
+                                    <a href="https://github.com/TerrorDackel?tab=repositories" target="_blank">
+                                        <img src="./assets/img/icon/github.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="hero-icon-container">
-                                    <a href="mailto:82.jennifer.Thomas@gmail.com" target="_blank" ><img src="./assets/img/icon/email.png" alt=""></a>
+                                    <a href="mailto:82.jennifer.Thomas@gmail.com" target="_blank">
+                                        <img src="./assets/img/icon/email.png" alt="">
+                                    </a>
                                 </div>
                                 <div class="hero-icon-container">
-                                    <a href="https://de.linkedin.com" target="_blank" ><img src="./assets/img/icon/linkedin.png" alt=""></a>
+                                    <a href="https://de.linkedin.com" target="_blank">
+                                        <img src="./assets/img/icon/linkedin.png" alt="">
+                                    </a>
                                 </div>
                             </div>
                         </div>

@@ -1,6 +1,116 @@
 {
-    "app": {
-      "hello": "hello {{value}}",
-      "title": "Translation Demo"
+    "NAV": {
+        "ABOUT_ME": "About me",
+        "SKILL_SET": "Skill set",
+        "MY_WORK": "My work",
+        "CONTACT": "Contact"
+    },
+    "FOOTER": {
+        "LEGAL": "Legal Notice"
+    },
+    "LEGAL_NOTICE": {
+        "LINK": "Legal Notice",
+        "HEADER": "Legal Notice",
+        "COMPANY": "Information according to § 5 TMG",
+        "TAX_ID": "VAT Identification Number",
+        "CONTENT_RESPONSIBLE": "Responsible for content according to § 55 Abs. 2 RStV",
+        "CONTENT_PERSON": "Jennifer Thomas<br>Pfarrer-Müller-Str. 1<br>94431 Pilsting",
+        "DISCLAIMER_HEADER": "Disclaimer",
+        "DISCLAIMER_TEXT": "The content of our pages has been created with the utmost care...",
+        "LINK_HEADER": "Liability for links",
+        "LINK_TEXT": "Our website contains links to external websites of third parties...",
+        "COPYRIGHT_HEADER": "Copyright",
+        "COPYRIGHT_TEXT": "The content and works created by the site operators are subject to German copyright law..."
+    },
+    "PRIVACY_POLICY": {
+        "LINK": "Privacy Policy",
+        "HEADER": "Privacy Policy",
+        "INTRO_HEADER": "Introduction and Controller",
+        "INTRO_TEXT": "Protecting your personal data is important to us...",
+        "RESPONSIBLE_HEADER": "Controller:",
+        "COLLECTION_HEADER": "Collection and Processing of Personal Data",
+        "COLLECTION_TEXT": "We collect the following personal data when you send us a message via the contact form:",
+        "COLLECTION_CONTINUE": "These data are used solely to respond to your inquiry.",
+        "LEGAL_BASIS_HEADER": "Legal Basis of Processing",
+        "LEGAL_BASIS_TEXT": "Processing is based on your consent (Art. 6 para. 1 lit. a GDPR)...",
+        "DISCLOSURE_HEADER": "Disclosure of Data",
+        "DISCLOSURE_TEXT": "Your data will not be shared with third parties unless required by law...",
+        "THIRD_PARTY_HEADER": "Third-Party Services",
+        "THIRD_PARTY_TEXT": "We use third-party services on our website to improve the user experience...",
+        "RIGHTS_HEADER": "User Rights",
+        "RIGHTS_TEXT": "You have the right to obtain information about your stored data at any time...",
+        "SECURITY_HEADER": "Data Security",
+        "SECURITY_TEXT": "We use technical and organizational measures to protect your data...",
+        "COOKIES_HEADER": "Cookies and Tracking",
+        "COOKIES_TEXT": "We do not use cookies or tracking technologies unless explicitly stated.",
+        "CONTACT_HEADER": "Contact",
+        "CONTACT_TEXT": "If you have questions about data protection..."
+    },
+    "WORK_TOGETHER": {
+        "LETS_WORK": "Let's work",
+        "TOGETHER": "together",
+        "I_AM": "I am",
+        "LOCATED": "located in Pilsting",
+        "REMOTE": "open to work remote",
+        "ABOUT_ME": "I enjoy creating user-friendly frontend solutions. I quickly learn new frameworks and apply them effectively in my projects. Whether in a team or remote, I always work efficiently. With creative ideas and solution-oriented thinking, I develop interfaces that are both functional and visually appealing.",
+        "SEND": "Send a message"
+    },
+    "SKILL_SET": {
+        "HEADER": "Skill set"
+    },
+    "MY_WORK": {
+        "HEADER": "My work",
+        "DESCRIPTION": "Discover a selection of my work – interact with projects to see my skills in action."
+    },
+    "PROJECT": {
+        "LIVE_TEST": "Live Test"
+    },
+    "PROJECTS": {
+        "JOIN": {
+        "DESCRIPTION": "Task manager inspired by the Kanban system. Create and organize tasks using drag-and-drop and assign users and categories."
+        },
+        "POLLO": {
+        "DESCRIPTION": "Jump’n’Run game with throwing mechanics. Help Pepe collect coins and Tabasco to fight the crazy chicken."
+        },
+        "POKEDEX": {
+        "DESCRIPTION": "Based on the PokéAPI – a simple library to display and catalog Pokémon data."
+        }
+    },
+    "REF_SECTION": {
+        "TEAMPLAYER": "Need a teamplayer?",
+        "COLLEAGUES": "Here's what my colleagues said about me",
+        "FRANZ": {
+        "COMMIT": "Franz's translated comment"
+        },
+        "JAMES": {
+        "COMMIT": "James's translated comment"
+        },
+        "EVI": {
+        "COMMIT": "Evi's translated comment"
+        }
+    },
+    "HERO": {
+        "HELLO": "Hello! I am Jenny"
+    },
+    "CONTACT": {
+        "TITLE": "Contact",
+        "SUBTITLE": "Got a problem?",
+        "LABEL_NAME": "Name",
+        "PLACEHOLDER_NAME": "Your name",
+        "ERROR_NAME_REQUIRED": "Name is required.",
+        "LABEL_EMAIL": "Email",
+        "PLACEHOLDER_EMAIL": "Your email",
+        "ERROR_EMAIL_INVALID": "Please enter a valid email.",
+        "LABEL_CONFIRM": "Confirm Email",
+        "PLACEHOLDER_CONFIRM": "Confirm email",
+        "ERROR_CONFIRM_MISMATCH": "Emails must match.",
+        "LABEL_MESSAGE": "Message",
+        "PLACEHOLDER_MESSAGE": "Your message",
+        "ERROR_MESSAGE_REQUIRED": "Message is required.",
+        "LABEL_PRIVACY": "I agree to the privacy policy",
+        "ERROR_PRIVACY_REQUIRED": "You must agree before submitting.",
+        "BUTTON_SEND": "Send",
+        "SUCCESS": "Your message has been sent successfully!",
+        "ERROR": "Oops! Something went wrong. Please try again later."
     }
-  }
+}

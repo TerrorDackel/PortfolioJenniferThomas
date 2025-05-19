@@ -1,26 +1,31 @@
+
 import { Component } from '@angular/core';
 import { RefComponent } from './ref/ref.component';
-// import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
+import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
 
 @Component({
-  selector: 'app-ref-section',
-  standalone: true,
-  imports: [RefComponent, 
-    // TranslatePipe, TranslateDirective
-  ],
-  templateUrl: './ref-section.component.html',
-  styleUrl: './ref-section.component.sass'
+    selector: 'app-ref-section',
+    standalone: true,
+    imports: [RefComponent, TranslatePipe, TranslateDirective],
+    templateUrl: './ref-section.component.html',
+    styleUrl: './ref-section.component.sass'
 })
 export class RefSectionComponent {
-  ref = [
-    { name: 'James Rugman', 
-      project: 'Project Kochwelt',
-      commit: 'Kommentar von James Rugman' },
-    { name: 'Evi Huber',
-      project: 'Project Kochwelt',
-      commit: 'Kommentar von Evi Huber' },
-    { name: 'Franz Seidel',
-      project: 'Project Kochwelt',
-      commit: 'Kommentar von Franz Seidel' }
-];
+    ref = [
+        {
+            name: 'James Rugman',
+            project: 'Project Kochwelt',
+            commit: 'REF_SECTION.JAMES.COMMIT'
+        },
+        {
+            name: 'Evi Huber',
+            project: 'Project Kochwelt',
+            commit: 'REF_SECTION.EVI.COMMIT'
+        },
+        {
+            name: 'Franz Seidel',
+            project: 'Project Kochwelt',
+            commit: 'REF_SECTION.FRANZ.COMMIT'
+        }
+    ];
 }

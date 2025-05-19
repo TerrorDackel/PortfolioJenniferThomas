@@ -1,4 +1,3 @@
-
 <section id="header" class="header-section">
     <div class="header-container">
         <div class="header-logo-container">
@@ -12,24 +11,26 @@
             <div class="navbar-desktop">
                 <div class="navbar-desktop-links-container">
                     <a class="navbar-desktop-link" href="#aboutMe">
-                        About me
+                        {{ 'NAV.ABOUT_ME' | translate }}
                     </a>
                     <a class="navbar-desktop-link" href="#skillSet">
-                        Skill set
+                        {{ 'NAV.SKILL_SET' | translate }}
                     </a>
                     <a class="navbar-desktop-link" href="#myWork">
-                        My work
+                        {{ 'NAV.MY_WORK' | translate }}
                     </a>
                     <a class="navbar-desktop-link" href="#contact">
-                        Contact
+                        {{ 'NAV.CONTACT' | translate }}
                     </a>
-                    <div class="navbar-desktop-link" >
+                    <div class="navbar-desktop-link">
                         <div class="navbar-desktop-de-en-container">
-                            <div class="de" (click)="switchToGerman()">
+                            <div class="de" [ngClass]="{ 'active': currentLanguage === 'de' }" (click)="switchToGerman()">
                                 De
                             </div>
-                            <div class="cut">/</div>
-                            <div class="en" (click)="switchToEnglish()">
+                            <div class="cut">
+                                /
+                            </div>
+                            <div class="en" [ngClass]="{ 'active': currentLanguage === 'en' }" (click)="switchToEnglish()">
                                 En
                             </div>
                         </div>
@@ -42,29 +43,29 @@
                 </div>
                 <div class="navbar-mobile-links-container" [class.show]="menuValue" [class.hide]="!menuValue">
                     <a class="navbar-mobile-link" href="#aboutMe" (click)="closeMenu()">
-                        About me
-                    </a><br>
-                    <a class="navbar-mobile-link" href="#skillSet" (click)="closeMenu()">
-                        Skill set
-                    </a><br>
-                    <a class="navbar-mobile-link" href="#myWork" (click)="closeMenu()">
-                        My work
-                    </a><br>
-                    <a class="navbar-mobile-link" href="#contact" (click)="closeMenu()">
-                        Contact
+                        {{ 'NAV.ABOUT_ME' | translate }}
                     </a>
-                    <div class="navbar-mobile-link" >
+                    <a class="navbar-mobile-link" href="#skillSet" (click)="closeMenu()">
+                        {{ 'NAV.SKILL_SET' | translate }}
+                    </a>
+                    <a class="navbar-mobile-link" href="#myWork" (click)="closeMenu()">
+                        {{ 'NAV.MY_WORK' | translate }}
+                    </a>
+                    <a class="navbar-mobile-link" href="#contact" (click)="closeMenu()">
+                        {{ 'NAV.CONTACT' | translate }}
+                    </a>
+                    <div class="navbar-mobile-link">
                         <div class="navbar-mobile-de-en-container">
-                            <span class="de" (click)="switchToGerman()">
+                            <span class="de" [ngClass]="{ 'active': currentLanguage === 'de' }" (click)="switchToGerman()">
                                 De
                             </span>
                             <span class="cut">
                                 /
                             </span>
-                            <span class="en" (click)="switchToEnglish()">
+                            <span class="en" [ngClass]="{ 'active': currentLanguage === 'en' }" (click)="switchToEnglish()">
                                 En
                             </span>
-                    </div>
+                        </div>
                     </div>
                 </div>
             </div>

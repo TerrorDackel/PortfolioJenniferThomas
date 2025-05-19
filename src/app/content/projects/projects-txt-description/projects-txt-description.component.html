@@ -1,34 +1,39 @@
-
 <div class="project-infos-section">
     <div class="project-infos-txt-container">
         <div class="header-container">
-            <p class="header-txt">{{ name }}</p>
+            <p class="header-txt">
+                {{ name }}
+            </p>
         </div>
-        <div class="programms-container"> 
+        <div class="programms-container">
             <p class="programms-txt">
                 {{ usedProgramms }}
-            </p>      
+            </p>
         </div>
-        <div class="project-description-container">  
+        <div class="project-description-container">
             <span class="project-description-txt">
-                {{ description }}
-            </span>     
+                {{ description | translate }}
+            </span>
         </div>
     </div>
     <div class="btn-alignment">
         <div class="livetest-alignment">
             <div class="livetest-btn-container">
                 <span class="livetest-btn">
-                    <a href="{{ livetest }} " target="_blank" style="color: white;">live test</a>
-                </span>   
+                    <a href="{{ livetest }}" target="_blank" style="color: white;">
+                        {{ 'PROJECT.LIVE_TEST' | translate }}
+                    </a>
+                </span>
             </div>
-        </div>        
+        </div>
         <div class="project-github-btn-container-alignment">
             <div class="project-github-btn-container">
                 <span class="github-btn">
-                    <a href="{{ gitLink }} " target="_blank">Github</a>
-                </span>   
+                    <a href="{{ gitLink }}" target="_blank">
+                        Github
+                    </a>
+                </span>
             </div>
-        </div>        
+        </div>
     </div>
 </div>

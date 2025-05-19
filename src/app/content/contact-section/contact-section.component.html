@@ -8,71 +8,86 @@
             <div class="contact-title-and-container-left-right">
                 <div class="title-contact-container">
                     <p class="title-txt">
-                        Contact
+                        {{ 'CONTACT.TITLE' | translate }}
                     </p>
                 </div>
                 <div class="container-left-and-right">
                     <div class="container-left">
                         <div class="got-a-problem-title-container">
                             <p class="got-a-problem-txt">
-                                Got a problem?
+                                {{ 'CONTACT.SUBTITLE' | translate }}
                             </p>
                         </div>
                         <div class="input-container">
                             <label for="name">
-                                Name
+                                {{ 'CONTACT.LABEL_NAME' | translate }}
                             </label>
-                            <input id="name" formControlName="name" placeholder="Your name" />
-                            <div class="error" *ngIf="submitted && contactForm.get('name')?.invalid">
-                                Name is required.
-                            </div>
+                            <input id="name" formControlName="name" placeholder="{{ 'CONTACT.PLACEHOLDER_NAME' | translate }}" />
+                            @if (submitted && contactForm.get('name')?.invalid) {
+                                <div class="error">
+                                    {{ 'CONTACT.ERROR_NAME_REQUIRED' | translate }}
+                                </div>
+                            }
                         </div>
                         <div class="input-container">
                             <label for="email">
-                                Email
+                                {{ 'CONTACT.LABEL_EMAIL' | translate }}
                             </label>
-                            <input id="email" formControlName="email" placeholder="Your email" />
-                            <div class="error" *ngIf="submitted && contactForm.get('email')?.errors">
-                                Please enter a valid email.
-                            </div>
+                            <input id="email" formControlName="email" placeholder="{{ 'CONTACT.PLACEHOLDER_EMAIL' | translate }}" />
+                            @if (submitted && contactForm.get('email')?.errors) {
+                                <div class="error">
+                                    {{ 'CONTACT.ERROR_EMAIL_INVALID' | translate }}
+                                </div>
+                            }
                         </div>
                         <div class="input-container">
                             <label for="emailConfirm">
-                                Confirm Email
+                                {{ 'CONTACT.LABEL_CONFIRM' | translate }}
                             </label>
-                            <input id="emailConfirm" formControlName="emailConfirm" placeholder="Confirm email" />
-                            <div class="error" *ngIf="submitted && contactForm.get('emailConfirm')?.errors">
-                                Emails must match.
-                            </div>
+                            <input id="emailConfirm" formControlName="emailConfirm" placeholder="{{ 'CONTACT.PLACEHOLDER_CONFIRM' | translate }}" />
+                            @if (submitted && contactForm.get('emailConfirm')?.errors) {
+                                <div class="error">
+                                    {{ 'CONTACT.ERROR_CONFIRM_MISMATCH' | translate }}
+                                </div>
+                            }
                         </div>
                         <div class="input-container message-container">
-                            <label for="message">Message</label>
-                            <textarea id="message" formControlName="message" placeholder="Your message"></textarea>
-                            <div class="error" *ngIf="submitted && contactForm.get('message')?.invalid">
-                                Message is required.
-                            </div>
+                            <label for="message">
+                                {{ 'CONTACT.LABEL_MESSAGE' | translate }}
+                            </label>
+                            <textarea id="message" formControlName="message" placeholder="{{ 'CONTACT.PLACEHOLDER_MESSAGE' | translate }}"></textarea>
+                            @if (submitted && contactForm.get('message')?.invalid) {
+                                <div class="error">
+                                    {{ 'CONTACT.ERROR_MESSAGE_REQUIRED' | translate }}
+                                </div>
+                            }
                         </div>
                         <div class="input-container privacy-container">
                             <label>
                                 <input type="checkbox" formControlName="privacy" />
-                                I agree to the privacy policy
+                                {{ 'CONTACT.LABEL_PRIVACY' | translate }}
                             </label>
-                            <div class="error" *ngIf="submitted && contactForm.get('privacy')?.invalid">
-                                You must agree before submitting.
+                            @if (submitted && contactForm.get('privacy')?.invalid) {
+                                <div class="error">
+                                    {{ 'CONTACT.ERROR_PRIVACY_REQUIRED' | translate }}
+                                </div>
+                            }
+                        </div>
+                        <button type="submit">
+                            {{ 'CONTACT.BUTTON_SEND' | translate }}
+                        </button>
+                        @if (formSuccess) {
+                            <div class="success-msg">
+                                {{ 'CONTACT.SUCCESS' | translate }}
                             </div>
-                        </div>
-                        <button type="submit">Send</button>
-                        <div class="success-msg" *ngIf="formSuccess">
-                            Your message has been sent successfully!
-                        </div>
-                        <div class="error-msg" *ngIf="formError">
-                            Oops! Something went wrong. Please try again later.
-                        </div>
+                        }
+                        @if (formError) {
+                            <div class="error-msg">
+                                {{ 'CONTACT.ERROR' | translate }}
+                            </div>
+                        }
                         <div class="back-to-top">
-                            <a routerLink="/" fragment="header">
-                                <img src="assets/img/icon/arrowup.png" alt="Button to scroll to the top." class="arrow-up-img default"/>
-                                <img src="assets/img/icon/arrowup-hover.png" alt="Button to scroll to the top while hover." class="arrow-up-img hover"/>
-                            </a>
+                            <a class="back-to-top" routerLink="/" fragment="header" aria-label="Scroll to top"></a>
                         </div>
                         <div class="circle-14-container">
                             <div class="circle-14">

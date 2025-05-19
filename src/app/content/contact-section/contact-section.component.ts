@@ -4,13 +4,13 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouterLink } from '@angular/router';
 import { NgClass, NgIf } from '@angular/common';
 import { scrollUp } from '../../utils/scroll-to' 
-// import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
+import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-contact-section',
     standalone: true,
     imports: [ RouterLink, 
-        // TranslatePipe, TranslateDirective, 
+        TranslatePipe, TranslateDirective, 
         ReactiveFormsModule, HttpClientModule,  NgIf, 
         // NgClass 
     ],

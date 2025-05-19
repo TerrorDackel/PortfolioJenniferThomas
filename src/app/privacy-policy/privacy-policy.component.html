@@ -1,16 +1,23 @@
-<a [routerLink]="['/LegalNotice']">legal notice</a>
+<a [routerLink]="['/LegalNotice']">
+    {{ 'PRIVACY_POLICY.LINK' | translate }}
+</a>
 
 <div class="privacy-policy">
     <div class="txt">
-        <h2 class="privacy-policy-header">Datenschutzerklärung</h2>
+        <h2 class="privacy-policy-header">
+            {{ 'PRIVACY_POLICY.HEADER' | translate }}
+        </h2>
 
         <div class="privacy-policy-item">
-            <h4>Einleitung und Verantwortlicher</h4>
+            <h4>
+                {{ 'PRIVACY_POLICY.INTRO_HEADER' | translate }}
+            </h4>
             <span>
-                Der Schutz Ihrer personenbezogenen Daten ist uns ein besonderes Anliegen. In dieser Datenschutzerklärung informieren wir Sie darüber, wie wir Ihre personenbezogenen Daten im Rahmen der Nutzung unserer Webseite „Portfolio“ verarbeiten.
-                <br>
+                {{ 'PRIVACY_POLICY.INTRO_TEXT' | translate }}
             </span>
-            <h4>Verantwortlicher:</h4>
+            <h4>
+                {{ 'PRIVACY_POLICY.RESPONSIBLE_HEADER' | translate }}
+            </h4>
             <span>
                 Jennifer Thomas<br>
                 Pfarrer-Müller-Str. 1<br>
@@ -20,66 +27,81 @@
         </div>
 
         <div class="privacy-policy-item">
-            <h4>Erhebung und Verarbeitung personenbezogener Daten</h4>
+            <h4>
+                {{ 'PRIVACY_POLICY.COLLECTION_HEADER' | translate }}
+            </h4>
             <span>
-                Im Rahmen unserer Webseite erheben wir die folgenden personenbezogenen Daten, wenn Sie uns über das Kontaktformular eine Nachricht senden:
+                {{ 'PRIVACY_POLICY.COLLECTION_TEXT' | translate }}
                 <span>
                     Name<br>
                     E-Mail-Adresse<br>
                     Nachrichtentext<br>
                 </span>
-                Diese Daten werden ausschließlich zur Beantwortung Ihrer Anfrage und zur Kommunikation mit Ihnen genutzt.
+                {{ 'PRIVACY_POLICY.COLLECTION_CONTINUE' | translate }}
             </span>
         </div>
 
         <div class="privacy-policy-item">
-            <h4>Rechtsgrundlage der Verarbeitung</h4>
+            <h4>
+                {{ 'PRIVACY_POLICY.LEGAL_BASIS_HEADER' | translate }}
+            </h4>
             <span>
-            Die Verarbeitung Ihrer personenbezogenen Daten erfolgt auf Basis Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die Sie durch das Absenden des Kontaktformulars erteilen.
+                {{ 'PRIVACY_POLICY.LEGAL_BASIS_TEXT' | translate }}
             </span>
         </div>
 
         <div class="privacy-policy-item">
-            <h4>Weitergabe der Daten</h4>
+            <h4>
+                {{ 'PRIVACY_POLICY.DISCLOSURE_HEADER' | translate }}
+            </h4>
             <span>
-            Ihre personenbezogenen Daten werden nicht an Dritte weitergegeben, außer es ist zur Beantwortung Ihrer Anfrage oder aufgrund gesetzlicher Vorschriften erforderlich.
+                {{ 'PRIVACY_POLICY.DISCLOSURE_TEXT' | translate }}
             </span>
         </div>
 
         <div class="privacy-policy-item">
-            <h4>Drittanbieter-Dienste</h4>
+            <h4>
+                {{ 'PRIVACY_POLICY.THIRD_PARTY_HEADER' | translate }}
+            </h4>
             <span>
-            Wir verwenden Drittanbieter-Dienste auf unserer Webseite, um das Nutzererlebnis zu verbessern.<br> 
-            Google Fonts: Zum Laden von Schriftarten verwenden wir Google Fonts. Weitere Informationen finden Sie in der <a href="https://policies.google.com/privacy" target="_blank">Google</a>.
-            </span>
-
-        </div>
-
-        <div class="privacy-policy-item">
-            <h4>6. Rechte der Nutzer</h4>
-            <span>
-            Sie haben das Recht, jederzeit Auskunft über die bei uns gespeicherten personenbezogenen Daten zu erhalten. Ebenso können Sie die Berichtigung oder Löschung Ihrer Daten verlangen.
+                {{ 'PRIVACY_POLICY.THIRD_PARTY_TEXT' | translate }}
+                <a href="https://policies.google.com/privacy" target="_blank">Google</a>.
             </span>
         </div>
 
         <div class="privacy-policy-item">
-            <h4>7. Datensicherheit</h4>
+            <h4>
+                {{ 'PRIVACY_POLICY.RIGHTS_HEADER' | translate }}
+            </h4>
             <span>
-            Wir setzen technische und organisatorische Maßnahmen ein, um Ihre personenbezogenen Daten vor unbefugtem Zugriff, Verlust oder Zerstörung zu schützen.
+                {{ 'PRIVACY_POLICY.RIGHTS_TEXT' | translate }}
             </span>
         </div>
 
         <div class="privacy-policy-item">
-            <h4>8. Cookies und Tracking</h4>
+            <h4>
+                {{ 'PRIVACY_POLICY.SECURITY_HEADER' | translate }}
+            </h4>
             <span>
-            Unsere Webseite verwendet keine Cookies oder Tracking-Technologien, es sei denn, es wird ausdrücklich darauf hingewiesen.
+                {{ 'PRIVACY_POLICY.SECURITY_TEXT' | translate }}
             </span>
         </div>
 
         <div class="privacy-policy-item">
-            <h4>9. Kontakt</h4>
+            <h4>
+                {{ 'PRIVACY_POLICY.COOKIES_HEADER' | translate }}
+            </h4>
             <span>
-            Wenn Sie Fragen zum Datenschutz oder zur Verarbeitung Ihrer personenbezogenen Daten haben, können Sie uns jederzeit unter den oben genannten Kontaktdaten erreichen.
+                {{ 'PRIVACY_POLICY.COOKIES_TEXT' | translate }}
+            </span>
+        </div>
+
+        <div class="privacy-policy-item">
+            <h4>
+                {{ 'PRIVACY_POLICY.CONTACT_HEADER' | translate }}
+            </h4>
+            <span>
+                {{ 'PRIVACY_POLICY.CONTACT_TEXT' | translate }}
             </span>
         </div>
     </div>
