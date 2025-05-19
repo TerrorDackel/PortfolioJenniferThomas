@@ -26,14 +26,14 @@ a:hover
     right: 0
     left: 0
     backdrop-filter: blur(1rem)
-    background-color: rgba(109, 107, 148, 0.7)
+    background-color: rgba(220, 219, 255, 0.7)
     z-index: 100
 
     .header-container
         width: 100%
         max-width: 1920px
         height: auto
-        padding: 0 1rem
+        padding-left: 1rem
         display: flex
         justify-content: space-between
         align-items: center
@@ -73,15 +73,15 @@ a:hover
 
                 .navbar-desktop-links-container
                     display: flex
-                    justify-content: flex-end
+                    justify-content: centerS
                     align-items: center
                     gap: 0.5rem
+                    width: 100%
+
 
                     .navbar-desktop-link
                         display: inline-block
-                        padding: 0 
-                        min-width: 10rem
-                        white-space: nowrap
+                        padding: 0.5rem 0.5rem
                         text-align: center
                         color: #5988FF
                         font-family: 'Montserrat', sans-serif
@@ -91,22 +91,21 @@ a:hover
                         letter-spacing: 0%
                         transition: transform 0.5s ease
                         will-change: transform
+                        white-space: nowrap
 
                         &:hover
-                            font-weight: bold
+                            text-shadow: 0 0 0.6px #5988FF, 0 0 0.6px #5988FF
                             cursor: pointer
-                            transform: scale(1.15)
+                            transform: scale(1.1)
 
                         .navbar-desktop-de-en-container
                             display: flex
                             justify-content: center
                             align-items: center
-                            gap: 4px
 
                             .de,
                             .en
                                 width: 35px
-                                padding: 0 6px
                                 text-align: center
                                 font-family: 'Montserrat', sans-serif
                                 font-size: 23px
@@ -117,13 +116,14 @@ a:hover
                                 transform-origin: center
 
                                 &:hover
-                                    font-weight: bold
+                                    text-shadow: 0 0 0.6px #5988FF, 0 0 0.6px #5988FF
                                     transform: scale(1.15)
 
                                 &.active
                                     font-weight: bold
                                     transform: scale(1.15)
-
+                            .de
+                                padding: 0 6px
                             .cut
                                 width: 10px
                                 text-align: center
@@ -231,7 +231,7 @@ a:hover
                             pointer-events: none
 
 
-@media (max-width: 810px)
+@media (max-width: 800px)
     .header-section
         .header-container
             .header-navbar-container

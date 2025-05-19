@@ -1,15 +1,13 @@
 import { Component } from '@angular/core';
-import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
+import { TranslatePipe } from "@ngx-translate/core";
 
 @Component({
     selector: 'app-hero',
     standalone: true,
-    imports: [
-        TranslatePipe, TranslateDirective
-    ],
+    imports: [ TranslatePipe],
     templateUrl: './hero.component.html',
     styleUrl: './hero.component.sass'
 })
-export class HeroComponent {
 
+export class HeroComponent {
 }

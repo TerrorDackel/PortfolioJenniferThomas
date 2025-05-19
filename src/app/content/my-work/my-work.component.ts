@@ -4,7 +4,7 @@ import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
 @Component({
     selector: 'app-my-work',
     standalone: true,
-    imports: [ TranslatePipe, TranslateDirective ],
+    imports: [ TranslatePipe ],
     templateUrl: './my-work.component.html',
     styleUrl: './my-work.component.sass'
 })

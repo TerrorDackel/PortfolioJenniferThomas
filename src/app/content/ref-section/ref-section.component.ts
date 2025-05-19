@@ -6,7 +6,7 @@ import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
 @Component({
     selector: 'app-ref-section',
     standalone: true,
-    imports: [RefComponent, TranslatePipe, TranslateDirective],
+    imports: [RefComponent, TranslatePipe ],
     templateUrl: './ref-section.component.html',
     styleUrl: './ref-section.component.sass'
 })

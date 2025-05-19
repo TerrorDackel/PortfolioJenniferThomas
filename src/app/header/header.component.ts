@@ -1,19 +1,16 @@
 import { Component } from '@angular/core';
-import { TranslatePipe, TranslateDirective, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { scrollUp } from '../utils/scroll-to';
 
 @Component({
     selector: 'app-header',
     standalone: true,
-    imports: [
-        CommonModule,
-        TranslatePipe,
-        TranslateDirective
-    ],
+    imports: [ CommonModule, TranslatePipe ],
     templateUrl: './header.component.html',
     styleUrl: './header.component.sass'
 })
+
 export class HeaderComponent {
     menuValue: boolean = false;
     menuIcon: string = 'bi bi-list';
