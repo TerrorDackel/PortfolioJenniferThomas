@@ -18,64 +18,68 @@
                                 {{ 'CONTACT.SUBTITLE' | translate }}
                             </p>
                         </div>
-                        <div class="input-container">
-                            <label for="name">
-                                {{ 'CONTACT.LABEL_NAME' | translate }}
-                            </label>
-                            <input id="name" formControlName="name" placeholder="{{ 'CONTACT.PLACEHOLDER_NAME' | translate }}" />
+                        <div class="got-a-problem-title-description-container">
+                            <p class="got-a-problem-title-description-txt">
+                                {{ 'CONTACT.DESCRIPTION' | translate }}
+                            </p>
+                        </div>
+                        <div class="need-a-contact-me-container">
+                            <div class="need-a-contact-me-txt">
+                                <p class="need-a-contact-me-question">
+                                    {{ 'CONTACT.CALL_TO_ACTION' | translate }}
+                                </p>
+                                <p class="need-a-contact-me-answer">
+                                    {{ 'CONTACT.ANSWER_TO_ACTION' | translate }}
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="circle-11-container">
+                            <div class="circle-11">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-right">
+                        <div class="your-name-container">
+                            <input type="text" class="name-textfield" id="name" formControlName="name" placeholder="{{ 'CONTACT.PLACEHOLDER_NAME' | translate }}" />
                             @if (submitted && contactForm.get('name')?.invalid) {
-                                <div class="error">
+                                <div class="error-msg">
                                     {{ 'CONTACT.ERROR_NAME_REQUIRED' | translate }}
                                 </div>
                             }
                         </div>
-                        <div class="input-container">
-                            <label for="email">
-                                {{ 'CONTACT.LABEL_EMAIL' | translate }}
-                            </label>
-                            <input id="email" formControlName="email" placeholder="{{ 'CONTACT.PLACEHOLDER_EMAIL' | translate }}" />
+                        <div class="your-email-container">
+                            <input type="email" class="email-textfield" id="email" formControlName="email" placeholder="{{ 'CONTACT.PLACEHOLDER_EMAIL' | translate }}" />
                             @if (submitted && contactForm.get('email')?.errors) {
-                                <div class="error">
+                                <div class="error-msg">
                                     {{ 'CONTACT.ERROR_EMAIL_INVALID' | translate }}
                                 </div>
                             }
                         </div>
-                        <div class="input-container">
-                            <label for="emailConfirm">
-                                {{ 'CONTACT.LABEL_CONFIRM' | translate }}
-                            </label>
-                            <input id="emailConfirm" formControlName="emailConfirm" placeholder="{{ 'CONTACT.PLACEHOLDER_CONFIRM' | translate }}" />
-                            @if (submitted && contactForm.get('emailConfirm')?.errors) {
-                                <div class="error">
-                                    {{ 'CONTACT.ERROR_CONFIRM_MISMATCH' | translate }}
-                                </div>
-                            }
-                        </div>
-                        <div class="input-container message-container">
-                            <label for="message">
-                                {{ 'CONTACT.LABEL_MESSAGE' | translate }}
-                            </label>
-                            <textarea id="message" formControlName="message" placeholder="{{ 'CONTACT.PLACEHOLDER_MESSAGE' | translate }}"></textarea>
+                        <div class="your-message-container">
+                            <textarea class="message-textfield" id="message" formControlName="message" placeholder="{{ 'CONTACT.PLACEHOLDER_MESSAGE' | translate }}"></textarea>
                             @if (submitted && contactForm.get('message')?.invalid) {
-                                <div class="error">
+                                <div class="error-msg">
                                     {{ 'CONTACT.ERROR_MESSAGE_REQUIRED' | translate }}
                                 </div>
                             }
                         </div>
-                        <div class="input-container privacy-container">
-                            <label>
-                                <input type="checkbox" formControlName="privacy" />
+                        <div class="agree-privacypolice-check">
+                            <input class="checkbox" type="checkbox" id="privacy" formControlName="privacy" />
+                            <span>
                                 {{ 'CONTACT.LABEL_PRIVACY' | translate }}
-                            </label>
+                            </span>
                             @if (submitted && contactForm.get('privacy')?.invalid) {
-                                <div class="error">
+                                <div class="error-msg">
                                     {{ 'CONTACT.ERROR_PRIVACY_REQUIRED' | translate }}
                                 </div>
                             }
                         </div>
-                        <button type="submit">
-                            {{ 'CONTACT.BUTTON_SEND' | translate }}
-                        </button>
+                        <div class="button-container">
+                            <button type="submit" class="btn-contact" [class.btn-valid]="contactForm.valid">
+                                {{ 'CONTACT.BUTTON_SEND' | translate }}
+                            </button>
+                        </div>
                         @if (formSuccess) {
                             <div class="success-msg">
                                 {{ 'CONTACT.SUCCESS' | translate }}
@@ -86,8 +90,11 @@
                                 {{ 'CONTACT.ERROR' | translate }}
                             </div>
                         }
-                        <div class="back-to-top">
-                            <a class="back-to-top" routerLink="/" fragment="header" aria-label="Scroll to top"></a>
+                        <div class="go-up-container">
+                            <a href="header">
+                                <img src="assets/img/icon/arrowup.png" alt="Arrow up" class="arrow-up-img default" />
+                                <img src="assets/img/icon/arrowup-hover.png" alt="Arrow up hover" class="arrow-up-img hover" />
+                            </a>
                         </div>
                         <div class="circle-14-container">
                             <div class="circle-14">
