@@ -12,20 +12,30 @@ import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
 })
 export class RefSectionComponent {
     ref = [
-        {
-            name: 'James Rugman',
+                {
+            name: 'Catalina Acosta R.',
             project: 'Project Kochwelt',
-            commit: 'REF_SECTION.JAMES.COMMIT'
+            commit: 'REF_SECTION.CATALINA.COMMIT'
+        },
+                {
+            name: 'Caryen Song',
+            project: 'Project Kochwelt',
+            commit: 'REF_SECTION.CARYEN.COMMIT'
         },
         {
-            name: 'Evi Huber',
-            project: 'Project Kochwelt',
-            commit: 'REF_SECTION.EVI.COMMIT'
+            name: 'Patrick Frey',
+            project: 'Project Join',
+            commit: 'REF_SECTION.PATRICK.COMMIT'
         },
         {
-            name: 'Franz Seidel',
-            project: 'Project Kochwelt',
-            commit: 'REF_SECTION.FRANZ.COMMIT'
+            name: 'Stephanie Englberger',
+            project: 'Project Join',
+            commit: 'REF_SECTION.STEPHIE.COMMIT'
+        },
+        {
+            name: 'Jonathan Michutta',
+            project: 'Project Join',
+            commit: 'REF_SECTION.JON.COMMIT'
         }
     ];
 }

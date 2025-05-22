@@ -9,16 +9,15 @@
             </div>
         </div>
         <div class="ref-posts">
-            <div class="ref-a-post1">
-                <app-ref [name]="ref[2].name" [project]="ref[2].project" [commit]="ref[2].commit"></app-ref>
-            </div>
-            <div class="ref-a-post1">
-                <app-ref [name]="ref[0].name" [project]="ref[0].project" [commit]="ref[0].commit"></app-ref>
-            </div>
-            <div class="ref-a-post2">
-                <app-ref [name]="ref[1].name" [project]="ref[1].project" [commit]="ref[1].commit"></app-ref>
-            </div>
-
+            @for (entry of ref; track entry) {
+                <div class="ref-card">
+                <app-ref
+                    [name]="entry.name"
+                    [project]="entry.project"
+                    [commit]="entry.commit">
+                </app-ref>
+                </div>
+            }
         </div>
     </div>
 </div>

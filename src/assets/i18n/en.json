@@ -77,16 +77,22 @@
         }
     },
     "REF_SECTION": {
-        "TEAMPLAYER": "Need a teamplayer?",
-        "COLLEAGUES": "Here's what my colleagues said about me",
-        "FRANZ": {
-        "COMMIT": "Franz's translated comment"
+        "CATALINA": {
+        "COMMIT": "Jenny and I worked together on the Kochwelt project. I was positively impressed by her independent work style as well as her friendly and helpful nature. She brought strong frontend skills to the table and was always eager to learn new things. I would gladly work with Jenny again anytime."
         },
-        "JAMES": {
-        "COMMIT": "James's translated comment"
+        "CARYEN": {
+        "COMMIT": "Jenny carried out all tasks entrusted to her with great reliability and care. Her strong determination, deep interest, and remarkable diligence stood out. Working with her was extremely pleasant and enriching. I am confident that she will be a valuable asset in any future project as well."
         },
-        "EVI": {
-        "COMMIT": "Evi's translated comment"
+        "TEAMPLAYER": "Teamplayer gesucht?",
+        "COLLEAGUES": "Das sagen meine Kolleginnen und Kollegen",
+        "PATRICK": {
+        "COMMIT": "Jennifer was very independent and always focused – while bringing just the right touch of humor. The atmosphere within the team was relaxed and warm, which made working together truly enjoyable."
+        },
+        "STEPHIE": {
+        "COMMIT": "Jenny brought an incredible amount of joy and positive energy to the project. She was always reliable and enriched the team with her open and approachable nature. What impressed me most was how often she helped us move forward with fresh, unconventional ideas whenever we were stuck on a challenge. Her support was consistently dependable and motivating. Working with Jenny was truly a pleasure – thank you!"
+        },
+        "JON": {
+        "COMMIT": "Jennifer Thomas was a great asset to our final project at the Developer Akademie. She quickly found her footing, demonstrated strong technical skills, asked insightful questions, and maintained a clear overview even in challenging situations. Her positive attitude, sense of humor, and clear communication made her a highly valued team member. A wholehearted recommendation – both professionally and personally."
         }
     },
     "HERO": {
