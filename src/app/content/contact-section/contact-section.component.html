@@ -25,14 +25,13 @@
                         </div>
                         <div class="need-a-contact-me-container">
                             <div class="need-a-contact-me-txt">
-                                <p class="need-a-contact-me-question">
-                                    {{ 'CONTACT.CALL_TO_ACTION' | translate }}
-                                </p>
-                                <p class="need-a-contact-me-answer">
+                                <span class="need-a-contact-me-question">
+                                    {{ 'CONTACT.CALL_TO_ACTION' | translate }}&nbsp;
+                                </span>
+                                <span class="need-a-contact-me-answer">
                                     {{ 'CONTACT.ANSWER_TO_ACTION' | translate }}
-                                </p>
+                                </span>
                             </div>
-
                         </div>
                         <div class="circle-11-container">
                             <div class="circle-11">
@@ -65,14 +64,16 @@
                             }
                         </div>
                         <div class="agree-privacypolice-check">
-                            <input class="checkbox" type="checkbox" id="privacy" formControlName="privacy" />
-                            <span class="agree-privacypolice-check-txt">
-                                {{ 'CONTACT.PRIVACY_I' | translate }} 
-                                <a class="privacy-link" [routerLink]="['/privacy-policy']">
-                                    {{ 'CONTACT.PRIVACY_POLICY' | translate }}
-                                </a>
-                                {{ 'CONTACT.PRIVACY_AND' | translate }} 
-                            </span>
+                            <label for="privacy" class="agree-privacypolice-check-label">
+                                <div class="agree-privacypolice-check-div">
+                                    <input class="checkbox" type="checkbox" id="privacy" formControlName="privacy" />
+                                </div>
+                                <div class="agree-privacypolice-check-txt">
+                                    {{ 'CONTACT.PRIVACY_I' | translate }} 
+                                    <a class="privacy-link" [routerLink]="['/privacy-policy']"> {{ 'CONTACT.PRIVACY_POLICY' | translate }} </a> 
+                                    {{ 'CONTACT.PRIVACY_AND' | translate }}
+                                </div>
+                            </label>
                             @if (submitted && contactForm.get('privacy')?.invalid) {
                                 <div class="error-msg">
                                     {{ 'CONTACT.ERROR_PRIVACY_REQUIRED' | translate }}
@@ -94,9 +95,7 @@
                                 {{ 'CONTACT.ERROR' | translate }}
                             </div>
                         }
-                        <div class="back-to-top">
-                            <a href="header">
-                            </a>
+                        <div class="back-to-top" (click)="scrollUp()">
                         </div>
                         <div class="circle-14-container">
                             <div class="circle-14">

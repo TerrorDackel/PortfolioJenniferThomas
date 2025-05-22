@@ -1,18 +1,19 @@
 :host
     display: block
     width: 100%
-    margin-left: 0
-    margin-right: 0
+    margin: 0
+    background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%)
+
+#contact
+    scroll-margin-top: -115px
 
 .contact-section
     overflow: hidden
     width: 100%
     height: auto
-    margin: 0 
     display: flex
     justify-content: center
     align-items: center
-    background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%)
 
     .contact-container
         width: 100%
@@ -44,27 +45,22 @@
 
             .title-contact-container
                 max-width: 1920px
-                height: 108px
+                height: auto
                 display: flex
-                justify-content: center
                 flex-direction: column
                 align-items: flex-start
                 width: 100%
-                height: auto
                 left: 1px
 
                 .title-txt
                     max-width: 1920px
-                    height: 108px
-                    display: flex
-                    width: 100%
                     height: auto
                     font-family: 'Baloo 2', sans-serif
                     font-weight: 400
                     font-size: 90px
                     line-height: 120%
                     letter-spacing: 0%
-                    padding: 1rem
+                    padding: 0 1rem 0
                     color: #5988FF
 
             .container-left-and-right
@@ -85,10 +81,11 @@
 
                     .got-a-problem-title-container
                         display: flex
-                        align-items: center
+                        align-items: flex-start
+                        justify-content: flex-start
                         width: 100%
-                        height: auto
-                        gap: 1rem
+                        height: 108px
+                        padding: 0 1rem 0
 
                         .got-a-problem-txt
                             display: flex
@@ -98,12 +95,12 @@
                             line-height: 120%
                             letter-spacing: 0%
                             color: #5988FF
+                            margin: 0!important
 
                     .got-a-problem-title-description-container
                         display: flex
                         align-items: center
-                        padding-top: 25px
-                        padding-bottom: 20px
+                        padding: 0 1rem 0
                         width: 100%
                         height: auto
 
@@ -121,6 +118,7 @@
                         justify-content: flex-start
                         width: 100%
                         height: auto
+                        overflow: hidden
 
                         .need-a-contact-me-txt
                             width: 100%
@@ -132,12 +130,16 @@
                             line-height: 120%
                             letter-spacing: 0%
                             color: #5988FF
-
+                            margin: 0!important
+                            
                             .need-a-contact-me-question
-                                width: 100%
+                                display: flex
+                                white-space: nowrap
 
                             .need-a-contact-me-answer
-                                width: 100%
+                                display: flex
+                                white-space: nowrap
+
                                 font-weight: bold
 
                             .circle-11-container
@@ -158,6 +160,7 @@
                 .container-right
                     display: flex
                     flex-direction: column
+                    align-items: center
                     width: 50%
                     height: auto
                     gap: 1rem
@@ -185,21 +188,38 @@
 
                     .agree-privacypolice-check
                         display: flex
-                        flex-direction: column
                         width: 100%
                         height: auto
                         gap: 0.5rem
 
-                        .agree-privacypolice-check-txt
-                            font-family: Montserrat
-                            font-size: 1rem
-                            line-height: 120%
-                            letter-spacing: 0%
-
-                        .checkbox
+                        .agree-privacypolice-check-label
                             display: flex
-                            width: 24px
-                            height: 24px
+                            flex-direction: row
+
+                            .agree-privacypolice-check-div
+                                display: flex
+                                width: 50px
+
+                                .checkbox
+                                    display: flex
+                                    width: 24px
+                                    height: 24px
+
+                            .agree-privacypolice-check-txt
+                                margin: 0
+                                font-size: 0.9rem
+
+                                .privacy-link
+                                    color: #5988FF
+                                    text-decoration: none
+                                    margin: 0 3px
+                                    display: inline-block
+
+                            .agree-privacypolice-check-txt
+                                font-family: Montserrat
+                                font-size: 1rem
+                                line-height: 120%
+                                letter-spacing: 0%
 
                     .error-msg
                         color: red
@@ -300,50 +320,31 @@
 @media (max-width: 911px)
     .contact-section
         width: 100%
-        height: auto
-        justify-content: center
-        align-items: center
-        margin: 0
 
-    .contact-container
-        width: 100%
-        height: auto
-        justify-content: center
-        align-items: center
-        margin: 0
-
-    .contact-title-and-container-left-right
-        width: 100%
-        height: auto
-        justify-content: center
-        align-items: center
-        margin: 0
-
-        .title-contact-container
+        .contact-container
             width: 100%
-            height: auto
-            justify-content: center
-            align-items: center
-            margin: 0
 
-            .title-txt
+            .circle-13-container
+                display: none
+
+            .contact-title-and-container-left-right
                 width: 100%
-                height: auto
-                justify-content: center
-                align-items: center
-                margin: 0
 
-                p
+                .title-contact-container
                     width: 100%
-                    justify-content: center
-                    align-items: center
+
+                    .title-txt
+                        width: 100%
+
+                        p
+                            width: 100%
 
     .need-a-contact-me-txt
         width: 100%
         display: flex
-        flex-direction: column
 
-@media (max-width: 550px)
+
+@media (max-width: 700px)
     #contact
         scroll-margin-top: 117px
 
@@ -355,115 +356,139 @@
 
         .contact-container
             flex-direction: column
-            align-items: center
-            padding: 0 10px
+            padding: 0 1rem 0
 
             .contact-title-and-container-left-right
                 flex-direction: column
-                align-items: center
+
+                .title-contact-container
+                    margin: 0
+                    display: flex
+                    align-items: center
+
+                    .title-txt
+                        width: 100%
+                        max-width: 350px
+                        display: flex
+                        justify-content: start
+                        font-weight: bold
+                        font-size: 64px
+                        text-align: center
 
                 .container-left-and-right
                     flex-direction: column
                     align-items: center
-                    gap: 30px
-                    margin-top: 20px
+                    gap: 1.5rem
+                    margin-top: 1rem
 
                     .container-left
-                        width: 340px
-                        margin: 0
+                        width: 100%
+                        max-width: 340px
+                        height: auto
+
+                        .got-a-problem-title-container
+
+                            .got-a-problem-title-txt
+                                font-weight: 700
+                                font-size: 1.5rem
+                                margin-top: 1rem
+
+                        .got-a-problem-title-description-container
+
+                            .got-a-problem-title-description-txt
+
+                        .need-a-contact-me-container
+                            
+
+                            .need-a-contact-me-txt
+                                width: 100%
+
+                                .need-a-contact-me-question
+                                    white-space: nowrap
+
+
+                                .need-a-contact-me-answer
+                                    white-space: nowrap
+
+                        .circle-11-container
+                            display: none
 
                     .container-right
-                        display: flex
-                        justify-content: center
-                        align-items: center
                         width: 100%
-                        margin: 0
+                        max-width: 340px
+                        height: auto
 
+                        .your-name-container,
+                        .your-email-container,
+                        .your-message-container
+                            display: flex
+                            justify-content: center
+                            width: 341px
+
+                        .name-textfield,
+                        .email-textfield,
+                        .message-textfield
+                            display: flex
+                            justify-content: center
+                            width: 341px
+                            border-radius: 10px
+                            border-width: 1px
+                            border: 1px solid #5988FF
+                            padding: 15px 25px
+
+                        .message-textfield
+                            height: 202px
+
+                        .button-container
+                            width: 100%
+                            display: flex
+                            justify-content: center
+
+                            .btn-contact
+                                width: 180px
+                                margin-top: 40px
+                                margin-bottom: 50px
+
+                            .success-msg
+                                color: green
+                                text-align: center
+                                font-size: 1.2rem
+                                margin-top: 20px
+
+                            .error-msg
+                                color: red
+                                text-align: center
+                                font-size: 1.2rem
+                                margin-top: 20px
+
+                        .back-to-top
+                            display: block
+
+                        .circle-14-container
+                            display: none
+
+@media (max-width: 390px)
+    .contact-section
+        width: 300px
+    
     .title-contact-container
-        margin: 0
-        display: flex
-        justify-content: center
-        align-items: center
+        height: 80px
 
         .title-txt
-            display: flex
-            margin-left: 35px
-            font-weight: bold
-            font-size: 45px
-            text-align: center
+            margin: 0!important
+            padding: 1rem 0 0 0 
 
-    .got-a-problem-title-txt
-        font-weight: 700
-        font-size: 1.5rem
-        margin-top: -20px
-
-    .got-a-problem-title-container,
-    .got-a-title-description-txt,
-    .got-a-problem-title-description-container,
-    .need-a-contact-me-container
-        width: 341px
-        height: auto
-        margin-bottom: -40px
-        justify-content: center
-        text-align: center
+    .need-a-contact-me-txt
+        flex-direction: column
 
     .your-name-container,
     .your-email-container,
     .your-message-container
-        display: flex
-        justify-content: center
-        width: 341px
+        width: auto 
+        max-width: 290px
 
     .name-textfield,
     .email-textfield,
     .message-textfield
-        display: flex
-        justify-content: center
-        width: 341px
-        border-radius: 10px
-        border-width: 1px
-        border: 1px solid #5988FF
-        padding: 15px 25px
-
-    .message-textfield
-        height: 202px
-
-    .agree-privacypolice-check,
-    .button-container
-        width: 100%
-        display: flex
-        justify-content: center
-
-    .btn-contact
-        width: 180px
-        margin-top: 40px
-        margin-bottom: 100px
-
-    .circle-11-container,
-    .circle-13-container,
-    .circle-14-container
-        display: none
-
-    .arrow-up
-        display: none
-
-    .go-up-container
-        margin-top: -90px
-        margin-bottom: 50px
-
-@media (max-width: 374px)
-    .contact-section,
-    .container-right,
-    .container-left
-        width: 300px
-
-    .your-name-container,
-    .your-email-container,
-    .your-message-container
-        width: 280px
-
-    .got-a-problem-title-description-txt,
-    .contact-title-and-container-left-right,
-    .got-a-problem-title-container
-        width: 300px
-        padding-right: 60px
+        width: auto 
+        max-width: 290px
