@@ -33,20 +33,21 @@
     max-width: 1920px
 
 .header-container
-    div
-        display: flex
-        justify-content: center
-        width: 100%
-        max-width: 1920px
-        height: auto
-        margin: 0
-    p
+    display: flex
+    justify-content: center
+    width: 100%
+    max-width: 1920px
+    height: auto
+    margin: 0
+
+    .header-txt
         width: 100%
         max-width: 1920px
         height: auto
         margin: 0
         font-family: 'Baloo 2', sans-serif
         font-size: clamp(2.25rem, 3vw + 1rem, 2.8125rem)
+        font-weight: bold
         line-height: 141%
         letter-spacing: 0%
         color: #FFFFFF
@@ -55,16 +56,15 @@
         padding-top: 2rem
 
 .second-header-container
-    div
-        display: flex
-        justify-content: center
-        width: 100%
-        max-width: 1920px
-        height: auto
-        margin: 0
-        padding-bottom: 2em
+    display: flex
+    justify-content: center
+    width: 100%
+    max-width: 1920px
+    height: auto
+    margin: 0
+    padding-bottom: 1.5em
 
-    p
+    .second-header-txt
         width: 100%
         max-width: 1920px
         height: auto
@@ -76,6 +76,7 @@
         letter-spacing: 0%
         color: #FFFFFF
         text-align: center
+        padding: 1rem
 
 .ref-posts
     @include m.hide-scrollbar

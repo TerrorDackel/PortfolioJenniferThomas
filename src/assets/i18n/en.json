@@ -77,14 +77,14 @@
         }
     },
     "REF_SECTION": {
+        "TEAMPLAYER": "Need a teamplayer?",
+        "COLLEAGUES": "This is what my colleagues say about our collaboration:",
         "CATALINA": {
         "COMMIT": "Jenny and I worked together on the Kochwelt project. I was positively impressed by her independent work style as well as her friendly and helpful nature. She brought strong frontend skills to the table and was always eager to learn new things. I would gladly work with Jenny again anytime."
         },
         "CARYEN": {
         "COMMIT": "Jenny carried out all tasks entrusted to her with great reliability and care. Her strong determination, deep interest, and remarkable diligence stood out. Working with her was extremely pleasant and enriching. I am confident that she will be a valuable asset in any future project as well."
         },
-        "TEAMPLAYER": "Teamplayer gesucht?",
-        "COLLEAGUES": "Das sagen meine Kolleginnen und Kollegen",
         "PATRICK": {
         "COMMIT": "Jennifer was very independent and always focused – while bringing just the right touch of humor. The atmosphere within the team was relaxed and warm, which made working together truly enjoyable."
         },
