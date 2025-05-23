@@ -14,6 +14,7 @@
     height: auto
     margin: 0
     background: linear-gradient(128.94deg, #5988FF -33.96%, #5988FF 36.71%, #0043F0 112.25%)
+    backdrop-filter: blur(4px)
 
 .ref-container
     display: flex
@@ -62,7 +63,6 @@
     max-width: 1920px
     height: auto
     margin: 0
-    padding-bottom: 1.5em
 
     .second-header-txt
         width: 100%
@@ -84,6 +84,7 @@
     overflow-y: hidden
     display: flex
     flex-direction: row
+    align-items: center
     gap: 2rem
     width: calc(100% - 2rem)          
     max-width: 1920px
@@ -98,7 +99,7 @@
     max-width: 300px
     width: 100%
     scroll-snap-align: start
-
+    padding: 1rem
 
 @media (max-width: 500px)
     .header-container
@@ -131,3 +132,8 @@
         width: 300px
         scroll-snap-align: start
         flex-shrink: 0
+
+@media (max-width: 400px)
+
+    .ref-card
+        max-width: 250px
