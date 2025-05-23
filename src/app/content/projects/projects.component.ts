@@ -14,9 +14,9 @@ export class ProjectsComponent {
             name: 'Join',
             usedProgramms: ['Angular | TypeScript | HTML | CSS | Firebase'],
             description: 'PROJECTS.JOIN.DESCRIPTION',
-            gitLink: 'https://github.com/TerrorDackel/Join',
+            gitLink: 'https://github.com/TerrorDackel/DA_Join',
             projectImg: 'assets/img/join.png',
-            livetest: 'https://jennifer-thomas.developerakademie.net/Join/index.html'
+            livetest: 'https://jennifer-thomas.developerakademie.net/DA_Join/index.html'
         },
         {
             name: 'Pollo Loco',
