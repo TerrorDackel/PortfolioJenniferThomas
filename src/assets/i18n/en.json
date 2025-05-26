@@ -52,7 +52,8 @@
         "I_AM": "I am",
         "LOCATED": "located in Pilsting",
         "REMOTE": "open to work remote",
-        "ABOUT_ME": "I enjoy creating user-friendly frontend solutions. I quickly learn new frameworks and apply them effectively in my projects. Whether in a team or remote, I always work efficiently. With creative ideas and solution-oriented thinking, I develop interfaces that are both functional and visually appealing.",
+        "ABOUT_ME1": "I enjoy creating user-friendly frontend solutions. I quickly learn new frameworks and apply them effectively in my projects.",
+        "ABOUT_ME2": "Whether in a team or remote, I always work efficiently. With creative ideas and solution-oriented thinking, I develop interfaces that are both functional and visually appealing.",
         "SEND": "Send a message"
     },
     "SKILL_SET": {

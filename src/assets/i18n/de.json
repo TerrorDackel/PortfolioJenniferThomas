@@ -50,9 +50,10 @@
         "LETS_WORK": "Let's work",
         "TOGETHER": "together",
         "I_AM": "Ich bin",
-        "LOCATED": "in Pilsting",
+        "LOCATED": "ansässig in Pilsting",
         "REMOTE": "offen für Remote-Arbeit",
-        "ABOUT_ME": "Es macht mir Freude, benutzerfreundliche Frontend-Lösungen zu entwickeln. Ich lerne neue Frameworks zügig und setze sie effektiv in meinen Projekten ein. Ob im Team oder remote, ich arbeite stets effizient. Mit kreativen Ideen und lösungsorientiertem Denken entwickle ich Interfaces, die sowohl funktional als auch ansprechend sind.",
+        "ABOUT_ME1": "Es macht mir Freude, benutzerfreundliche Frontend-Lösungen zu entwickeln. Ich lerne neue Frameworks zügig und setze sie effektiv in meinen Projekten ein.",
+        "ABOUT_ME2": "Ob im Team oder remote, ich arbeite stets effizient. Mit kreativen Ideen und lösungsorientiertem Denken entwickle ich Interfaces, die sowohl funktional als auch ansprechend sind.",
         "SEND": "Nachricht senden"
     },
     "SKILL_SET": {
