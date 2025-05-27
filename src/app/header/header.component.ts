@@ -6,28 +6,17 @@ import { scrollUp } from '../utils/scroll-to';
 @Component({
     selector: 'app-header',
     standalone: true,
-    imports: [ CommonModule, TranslatePipe ],
+    imports: [CommonModule, TranslatePipe],
     templateUrl: './header.component.html',
     styleUrl: './header.component.sass'
 })
-
 export class HeaderComponent {
     menuValue: boolean = false;
     menuIcon: string = 'bi bi-list';
     currentLanguage: 'en' | 'de' = 'en';
 
     constructor(private translate: TranslateService) {
-        const storedLang = localStorage.getItem('lang') as 'en' | 'de' | null;
-
-        if (storedLang === 'de' || storedLang === 'en') {
-            this.currentLanguage = storedLang;
-            this.translate.use(this.currentLanguage);
-        } else {
-            this.currentLanguage = 'en';
-            this.translate.setDefaultLang('en');
-            this.translate.use('en');
-            localStorage.setItem('lang', 'en');
-        }
+        this.currentLanguage = this.translate.currentLang as 'en' | 'de';
     }
 
     openMenu() {

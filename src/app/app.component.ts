@@ -1,26 +1,25 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet, Router, NavigationEnd, Event as RouterEvent } from '@angular/router';
+import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { TranslateService, TranslatePipe, TranslateDirective } from "@ngx-translate/core";
+import { TranslateService } from '@ngx-translate/core';
 import { filter } from 'rxjs/operators';
-
 
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent, 
-        // TranslatePipe, TranslateDirective
-    ],
+    imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.sass'
 })
 export class AppComponent {
     constructor(translate: TranslateService, router: Router) {
+        const savedLang = localStorage.getItem('lang') || 'en';
+
         translate.addLangs(['de', 'en']);
         translate.setDefaultLang('en');
-        translate.use('de');
+        translate.use(savedLang);
 
         router.events.pipe(
         filter((e): e is NavigationEnd => e instanceof NavigationEnd)
