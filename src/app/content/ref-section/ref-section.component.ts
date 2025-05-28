@@ -13,7 +13,7 @@ import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
 export class RefSectionComponent {
     ref = [
                 {
-            name: 'Catalina Acosta R.',
+            name: 'Catalina Acosta',
             project: 'Project Kochwelt',
             commit: 'REF_SECTION.CATALINA.COMMIT'
         },
