@@ -2,6 +2,7 @@
     display: flex
     justify-content: center
     width: 100%
+    height: 100vh
     margin-left: 0
     margin-right: 0
     margin-top: 0
@@ -23,7 +24,7 @@
         display: flex
         flex-direction: column
         width: 100%
-        height: 100%
+        height: auto
         max-width: 120rem
         padding: 0 1rem
         box-sizing: border-box
@@ -57,61 +58,61 @@
                     background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%)
                     border: 2px solid darkgreen
 
-            .header-container
-                width: 50%
-                min-width: 570px
-                height: 100%
-                max-height: 350px
-                position: absolute
-                top: 117px
-                right: 0
-                z-index: 2
-                margin: 1rem 0 0 0
-                padding-right: 2rem
+        .header-container
+            width: 50%
+            min-width: 570px
+            height: 100%
+            max-height: 350px
+            position: absolute
+            top: 117px
+            right: 0
+            z-index: 3
+            margin: 1rem 0 0 0
+            padding-right: 2rem
+            display: flex
+            flex-direction: column
+            text-align: left
+            justify-content: space-between
+            align-items: center
+            border: 2px solid blue
+            object-fit: contain
+            
+            .header-alignement
                 display: flex
+                align-items: flex-start
                 flex-direction: column
-                text-align: left
-                justify-content: space-between
-                align-items: center
-                border: 2px solid blue
-                object-fit: contain
+                justify-items: center
+                width: 100%
+                max-width: 550px
+                height: auto
                 
-                .header-alignement
+                border: 2px solid green
+
+                .hero-txt-hallo
                     display: flex
-                    align-items: flex-start
-                    flex-direction: column
-                    justify-items: center
-                    width: 100%
-                    max-width: 550px
-                    height: auto
-                    
-                    border: 2px solid green
+                    padding: 0
+                    margin: 0
+                    font-family: 'Montserrat', sans-serif
+                    font-weight: 400
+                    font-size: clamp(2.25rem, 1.5rem + 2vw, 3.8125rem)
+                    line-height: 1
+                    letter-spacing: 0
+                    color: #5988FF
+                    vertical-align: middle
+                    white-space: nowrap
 
-                    .hero-txt-hallo
-                        display: flex
-                        padding: 0
-                        margin: 0
-                        font-family: 'Montserrat', sans-serif
-                        font-weight: 400
-                        font-size: clamp(2.25rem, 1.5rem + 2vw, 3.8125rem)
-                        line-height: 1
-                        letter-spacing: 0
-                        color: #5988FF
-                        vertical-align: middle
-                        white-space: nowrap
-
-                    .hero-text-frontend,
-                    .hero-text-developers
-                        display: flex
-                        padding: 0
-                        margin: 0
-                        font-family: 'Baloo 2'
-                        font-weight: bold
-                        font-size: clamp(4.5625rem, 2.5rem + 3vw, 8rem)
-                        line-height: 1
-                        letter-spacing: -0.125rem
-                        color: #5988FF
-                        vertical-align: middle
+                .hero-text-frontend,
+                .hero-text-developers
+                    display: flex
+                    padding: 0
+                    margin: 0
+                    font-family: 'Baloo 2'
+                    font-weight: bold
+                    font-size: clamp(4.5625rem, 2.5rem + 3vw, 8rem)
+                    line-height: 1
+                    letter-spacing: -0.125rem
+                    color: #5988FF
+                    vertical-align: middle
 
         .hero-bottom-img-scroll-iconlinks-container
             position: absolute
@@ -136,6 +137,7 @@
                     background-color: rgb(255, 255, 255, 0.1)
                     border-radius: 1rem
                     min-width: 16rem
+                    width: 100%
                     height: auto
                     position: relative
                     object-fit: cover
@@ -199,30 +201,30 @@
     .hero-section
         .hero-container
             .hero-top-circle-txt-container
-                .header-container
-                            
-                    .header-alignement
-                        margin: 0 -2rem 0 0
+            .header-container
+                        
+                .header-alignement
+                    margin: 0 -2rem 0 0
 
 @media (max-width: 1360px)
     .hero-section
         .hero-container
             .hero-top-circle-txt-container
-                .header-container
-                    align-items: flex-end
+            .header-container
+                align-items: flex-end
 
 @media (max-width: 1300px)
     .hero-section
         .hero-container
             .hero-top-circle-txt-container
-                .header-container
+            .header-container
+                margin: 0 -2rem 0 0
+                .header-alignement
+                    width: 100%
+                    max-width: 510px
+                    height: auto
+                    border: 2px solid green
                     margin: 0 -2rem 0 0
-                    .header-alignement
-                        width: 100%
-                        max-width: 510px
-                        height: auto
-                        border: 2px solid green
-                        margin: 0 -2rem 0 0
 
 @media (max-width: 1200px)
     .hero-section
@@ -258,23 +260,253 @@
                 .hero-iconlist-vertikal
                     display: none
 
-@media (max-width: 1190px)
+@media (max-width: 610px)
     .hero-section
+
         .hero-container
+            position: relative
+            display: flex
+            flex-direction: column
+            align-items: center
+            padding-top: 3rem
+            height: 100vh
+            width: 100%
+
             .hero-top-circle-txt-container
-                .header-container
-                    padding: 0.5rem
+                position: relative
+                width: 100%
+                height: auto
+                display: flex
 
-                    .hero-txt-hallo
-                        font-size: 2.25rem
-                        white-space: nowrap
+                .circle-3-container
+                    position: absolute
+                    top: -7rem
+                    left: -20rem
+                    z-index: 1
 
-                    .hero-text-frontend,
-                    .hero-text-developers
-                        font-size: 4.5625rem
+                    .circle-3
+                        width: 612px
+                        height: 612px
+
+            .header-container
+                position: relative
+                z-index: 4
+                display: flex
+                align-items: center
+                flex-direction: column
+                min-width: 200px
+                width: 90%
+                height: 200px!important
+                padding: 1rem
+                margin: 0!important                    
+
+                .header-alignement
+                    width: 100%
+                    height: 100%
+                    display: flex
+                    color: #FFFFFF
+                    margin: 0!important
+
+                    .header-txt-container
+                        width: 100%
+                        height: 100%
+                        display: flex
+                        flex-direction: column
+                        .hero-txt-hallo
+                            width: 100%
+                            height: auto
+                            font-size: 26px
+                            color: #FFFFFF
+                            padding-bottom: 0.5rem
+                            
+                        .hero-text-frontend
+                            width: 100%
+                            height: auto
+                            font-size: 64px
+                            color: #FFFFFF
+
+                        .hero-text-developers
+                            width: 100%
+                            height: auto
+                            font-size: 64px
+                            color: #FFFFFF
 
             .hero-bottom-img-scroll-iconlinks-container
+                position: relative
+                width: 100%
+                height: auto
+                margin-bottom: 0!important
+                display: flex
+                flex-direction: column
+                align-items: center
+                z-index: 2
+
                 .hero-img-container
+                    display: flex
+                    justify-content: flex-start
+                    height-max: 540px
+                    width: auto
+                    max-width: 90%
+                    z-index: 2
+                    margin-bottom: 0!important
+
                     .hero-img
+                        width: 100%
+                        height: auto
+                        object-fit: contain
+                        border-radius: 1rem
+                        margin-bottom: 0!important
 
+                .scroll-responsive
+                    position: absolute
+                    bottom: 0.2rem
+                    right: -15rem
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    justify-content: center
+                    z-index: 3
 
+                    .scroll-responsive-txt
+                        font-family: 'Montserrat', sans-serif
+                        font-weight: 500
+                        font-size: 1.4375rem
+                        line-height: 1.2
+                        letter-spacing: 0
+                        color: #5988FF
+                        margin-bottom: 1rem
+
+                    .line-container
+                        display: flex
+                        align-items: flex-start
+                        gap: 1.5rem
+
+                        .line
+                            width: 0.1rem
+                            height: 10rem
+                            background-color: #5988FF
+
+@media (max-width: 330px)
+    .hero-section
+        .hero-container
+            position: relative
+            display: flex
+            flex-direction: column
+            align-items: center
+            padding-top: 3rem
+            height: 100%
+            width: 100%
+
+            .hero-top-circle-txt-container
+                position: relative
+                width: 100%
+                height: auto
+                display: flex
+
+                .circle-3-container
+                    position: absolute
+                    top: -7rem
+                    left: -20rem
+                    z-index: 1
+
+                    .circle-3
+                        width: 612px
+                        height: 612px
+
+            .header-container
+                position: relative
+                z-index: 4
+                display: flex
+                align-items: center
+                flex-direction: column
+                min-width: 200px
+                width: 90%
+                height: 200px!important
+                padding: 1rem
+                margin: 0!important                    
+
+                .header-alignement
+                    width: 100%
+                    height: 100%
+                    display: flex
+                    color: #FFFFFF
+                    margin: 0!important
+
+                    .header-txt-container
+                        width: 100%
+                        height: 100%
+                        display: flex
+                        flex-direction: column
+                        .hero-txt-hallo
+                            width: 100%
+                            height: auto
+                            font-size: 26px
+                            color: #FFFFFF
+                            padding-bottom: 0.5rem
+                            
+                        .hero-text-frontend
+                            width: 100%
+                            height: auto
+                            font-size: 64px
+                            color: #FFFFFF
+
+                        .hero-text-developers
+                            width: 100%
+                            height: auto
+                            font-size: 64px
+                            color: #FFFFFF
+
+            .hero-bottom-img-scroll-iconlinks-container
+                position: relative
+                width: 100%
+                height: auto
+                margin-bottom: 0!important
+                display: flex
+                flex-direction: column
+                align-items: center
+                z-index: 2
+
+                .hero-img-container
+                    display: flex
+                    justify-content: flex-start
+                    height-max: 540px
+                    width: auto
+                    max-width: 90%
+                    z-index: 2
+                    margin-bottom: 0!important
+
+                    .hero-img
+                        width: 100%
+                        height: auto
+                        object-fit: contain
+                        border-radius: 1rem
+                        margin-bottom: 0!important
+
+                .scroll-responsive
+                    position: absolute
+                    bottom: 0.2rem
+                    right: -15rem
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    justify-content: center
+                    z-index: 3
+
+                    .scroll-responsive-txt
+                        font-family: 'Montserrat', sans-serif
+                        font-weight: 500
+                        font-size: 1.4375rem
+                        line-height: 1.2
+                        letter-spacing: 0
+                        color: #5988FF
+                        margin-bottom: 1rem
+
+                    .line-container
+                        display: flex
+                        align-items: flex-start
+                        gap: 1.5rem
+
+                        .line
+                            width: 0.1rem
+                            height: 10rem
+                            background-color: #5988FF
