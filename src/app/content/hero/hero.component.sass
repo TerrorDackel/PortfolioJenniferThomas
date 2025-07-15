@@ -72,7 +72,7 @@
                 flex-direction: column
                 text-align: left
                 justify-content: space-between
-                align-items: flex-end
+                align-items: center
                 border: 2px solid blue
                 object-fit: contain
                 
@@ -105,10 +105,10 @@
                         display: flex
                         padding: 0
                         margin: 0
-                        font-family: 'Baloo 2', sans-serif
+                        font-family: 'Baloo 2'
                         font-weight: bold
                         font-size: clamp(4.5625rem, 2.5rem + 3vw, 8rem)
-                        line-height: 1.2
+                        line-height: 1
                         letter-spacing: -0.125rem
                         color: #5988FF
                         vertical-align: middle
@@ -204,6 +204,13 @@
                     .header-alignement
                         margin: 0 -2rem 0 0
 
+@media (max-width: 1360px)
+    .hero-section
+        .hero-container
+            .hero-top-circle-txt-container
+                .header-container
+                    align-items: flex-end
+
 @media (max-width: 1300px)
     .hero-section
         .hero-container
@@ -217,13 +224,12 @@
                         border: 2px solid green
                         margin: 0 -2rem 0 0
 
-@media (max-width: 1200px)
+@media (max-width: 1190px)
     .hero-section
         .hero-container
             .hero-top-circle-txt-container
                 .header-container
-                    padding-right: 1rem
-
+                    padding: 0.5rem
 
                     .hero-txt-hallo
                         font-size: 2.25rem
@@ -233,8 +239,11 @@
                     .hero-text-developers
                         font-size: 4.5625rem
 
+            .hero-bottom-img-scroll-iconlinks-container
+                .hero-img-container
+                    .hero-img
 
-@media (max-width: 1070px)
+@media (max-width: 1170px)
     .hero-section
         .hero-container
             .hero-bottom-img-scroll-iconlinks-container
@@ -245,11 +254,16 @@
 
                 .scroll-responsive
                     display: block
-                    padding: 2rem
+                    width: 100%
+                    height: auto
+                    min-height: 10rem
                     z-index: 3
                     border: 2px solid teal
 
                     .scroll-responsive-txt
+                        display: flex
+                        align-items: center
+                        justify-content: center
                         font-family: 'Montserrat', sans-serif
                         font-weight: 500
                         font-size: 1.4375rem
@@ -257,7 +271,6 @@
                         letter-spacing: 0
                         color: #5988FF
                         transform: rotate(90deg)
-                        transform-origin: right bottom
                         border: 2px solid navy
                         white-space: nowrap
 
