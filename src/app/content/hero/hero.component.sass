@@ -1,3 +1,7 @@
+/** 
+ * :host wrapper for the entire hero component.
+ * Ensures full viewport usage and resets margins.
+ */
 :host
     display: flex
     justify-content: center
@@ -7,17 +11,23 @@
     margin-right: 0
     margin-top: 0
 
+/** 
+ * Fullscreen section with background gradient for hero area.
+ * Centers content both vertically and horizontally.
+ */
 .hero-section
     display: flex
     justify-content: center
     align-items: center
     background: linear-gradient(0deg, rgba(234,240,255,1) 0%, rgba(245,248,255,1) 35%, rgba(255,255,255,1) 100%)
     width: 100%
-    
     height: 100%
     overflow: hidden
-    // border: 2px solid red
 
+    /** 
+     * Main container for all hero content.
+     * Controls layout direction and max width.
+     */
     .hero-container
         display: flex
         justify-content: center
@@ -27,8 +37,11 @@
         height: 100%
         max-width: 1920px
         padding: 0 1rem
-        // border: 20px solid orange
 
+        /** 
+         * Contains the decorative circle top left.
+         * Positioned absolutely behind content.
+         */
         .hero-top-circle-container
             position: absolute
             top: -4.4rem
@@ -40,21 +53,25 @@
             justify-content: space-between
             align-items: center
             z-index: 1
-            // border: 2px solid yellow
 
+            /** 
+             * Wrapper for the large blue background circle.
+             */
             .circle-3-container
-                
                 width: auto
 
-                // border: 2px solid yellow
-
+                /** 
+                 * Main circular background element.
+                 */
                 .circle-3
                     width: 50rem
                     height: 50rem
                     border-radius: 50%
                     background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%)
-                    // border: 2px solid darkgreen
 
+        /** 
+         * Wrapper for left image and right header section.
+         */
         .hero-img-header-scroll-iconlist
             width: 100vw
             max-width: 1920px
@@ -64,8 +81,10 @@
             justify-content: space-around
             padding: 0
             z-index: 2
-            // border: 20px solid yellow
 
+            /** 
+             * Left side image container.
+             */
             .hero-img-container
                 width: 49%
                 min-width: 200px
@@ -76,18 +95,23 @@
                 display: flex
                 justify-content: center
                 align-items: flex-end
-                border: 5px solid hotpink
 
+                /** 
+                 * Image inside the container, styled for background blend.
+                 */
                 .hero-img
-                    background-color: rgb(255, 255, 255, 0.1)
-                    border-radius: 1rem
+                    background-color: rgb(255, 255, 255, 0.3)
+                    border-radius: 3rem
                     width: 100%
                     height: auto
                     display: flex
                     object-fit: scale-down
                     overflow: hidden
-                    // border: 2px solid purple
+                    margin-left: 1rem
 
+            /** 
+             * Right side header + scroll section.
+             */
             .hero-header-scroll-container
                 width: 49%
                 min-width: 200px
@@ -100,33 +124,40 @@
                 justify-content: flex-start
                 align-items: flex-end
                 flex-direction: column
-                border: 5px solid blue
 
+                /** 
+                 * Wraps the text header block vertically.
+                 */
                 .header-alignement
                     display: flex
                     flex-direction: column
-                    align-items: flex-start                   
+                    align-items: flex-start
                     width: 100%
                     max-width: 550px
                     height: 350px
-                    border: 2px solid green
 
+                    /** 
+                     * Wraps the main heading area.
+                     */
                     .header-txt-container
                         width: 100%
                         height: auto
                         display: flex
                         justify-content: flex-end
-                        border: 2px solid pink
 
+                        /** 
+                         * Contains all hero header texts (hello, frontend, developer).
+                         */
                         .header-txt-allignement
                             width: 100%
                             height: auto
                             display: flex
                             flex-direction: column
                             max-width: 510px
-                            border: 2px solid green
 
-
+                            /** 
+                             * Top header text ("hello").
+                             */
                             .hero-txt-hallo
                                 display: flex
                                 justify-content: flex-start
@@ -141,6 +172,9 @@
                                 vertical-align: middle
                                 white-space: nowrap
 
+                            /** 
+                             * Main bold hero header lines ("frontend", "developer").
+                             */
                             .hero-text-frontend,
                             .hero-text-developers
                                 display: flex
@@ -154,14 +188,19 @@
                                 color: #5988FF
                                 vertical-align: middle
 
+                /** 
+                 * Container for scroll animation and line.
+                 */
                 .scroll-container
                     display: flex
                     width: 100%
                     height: 50%
                     display: flex
                     justify-content: center
-                    // border: 2px solid blue
 
+                    /** 
+                     * Scroll design for large screens (vertical line and text).
+                     */
                     .scroll-desktop
                         width: 100%
                         height: 100%
@@ -170,8 +209,10 @@
                         align-items: center
                         justify-content: center
                         z-index: 2
-                        // border: 2px solid green
 
+                        /** 
+                         * "Scroll" text above the line.
+                         */
                         .scroll-txt
                             width: 10rem
                             height: auto
@@ -186,31 +227,39 @@
                             position: absolute
                             bottom: 20rem
                             margin-bottom: 1rem
-                            // border: 2px solid green
 
+                        /** 
+                         * Line and icons aligned below scroll text.
+                         */
                         .line-container
                             position: absolute
                             bottom: 0
                             gap: 1.5rem
-                            // border: 2px solid grey
 
                             .line
                                 width: 0.1rem
                                 height: 20rem
                                 background-color: #5988FF
-                                // border: 2px solid darkblue
 
+                    /** 
+                     * Scroll layout for smaller devices (initially hidden).
+                     */
                     .scroll-responsive
                         display: none
 
+                /** 
+                 * Social icon links aligned to bottom right.
+                 */
                 .hero-iconlinks-allignement-container
                     display: flex
                     justify-content: flex-end
                     width: 90%
                     height: auto
-                    margin-bottom: 3rem
-                    border: 5px solid green
+                    margin-bottom: 2rem
 
+                    /** 
+                     * Container for vertical icon link list.
+                     */
                     .hero-iconlinks-container
                         width: 10%
                         height: auto
@@ -218,8 +267,10 @@
                         justify-content: space-between
                         align-items: stretch
                         z-index: 3
-                        border: 5px solid deeppink
 
+                        /** 
+                         * Column layout for external link icons.
+                         */
                         .hero-iconlist-vertikal
                             display: flex
                             flex-direction: column
@@ -227,12 +278,13 @@
                             align-items: center
                             margin-left: 1rem
                             padding-right: 2rem
-                            // border: 2px solid purple
 
+                            /** 
+                             * Each icon container wrapping a link.
+                             */
                             .hero-icon-container
                                 width: 1.875rem
                                 height: 1.875rem
-                                // border: 2px solid turquoise
 
                                 a
                                     display: block
@@ -242,12 +294,20 @@
                                         height: 100%
                                         object-fit: contain
 
-@media (min-height: 1100px)
-    :host
-        height: 100dvh
+                                        /** 
+                                         * On hover, the icon slides 1rem to the left.
+                                         */
+                                        &:hover
+                                            transform: translateX(-1rem)
+                                            transition: transform 0.3s ease
 
 
-@media (min-width: 2000px) or (min-height: 1081px)
+/** 
+ * Media Query for large screens with both wide and tall dimensions 
+ * (min-width: 2000px and min-height: 1100px)
+ * Applies layout adjustments for very large displays
+ */
+@media (min-width: 2000px) and (min-height: 1100px)
     :host
         height: auto
 
@@ -282,6 +342,47 @@
                         width: auto
                         height: 100%
 
-@media (min-height: 1100px)
+/** 
+ * Media Query for wide but less tall screens 
+ * (min-width: 2000px and max-height: 1100px)
+ * Keeps layout contained within the viewport height
+ */
+@media (min-width: 2000px) and (max-height: 1100px)
     :host
-        height: 100dvh
+        height: 100vh
+
+    .hero-section
+        
+        .hero-container
+
+            .hero-top-circle-container
+                top: -25%
+                left: 20%
+                width: auto
+                padding: 0
+
+            .hero-img-header-scroll-iconlist
+
+                .hero-img-container
+
+                    .hero-img
+                        display: flex
+                        align-items: flex-end
+
+@media (max-width: 1125px)
+    .hero-container
+
+        .hero-img-header-scroll-iconlist
+
+            .hero-header-scroll-container
+
+                .header-alignement
+                    
+                    .header-txt-container
+
+                        .header-txt-allignement
+                            padding: 2rem
+                            padding-right: 5rem
+                            background-color: rgba(255, 255, 255, 0.5)
+                            border-radius: 3rem
+                            margin-right: 1rem
