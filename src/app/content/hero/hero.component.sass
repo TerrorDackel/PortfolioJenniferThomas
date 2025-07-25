@@ -1,7 +1,3 @@
-/** 
- * :host wrapper for the entire hero component.
- * Ensures full viewport usage and resets margins.
- */
 :host
     display: flex
     justify-content: center
@@ -11,41 +7,27 @@
     margin-right: 0
     margin-top: 0
 
-/** 
- * Fullscreen section with background gradient for hero area.
- * Centers content both vertically and horizontally.
- */
+// Mobile
 .hero-section
+    width: 100%
+    height: 100vh
     display: flex
     justify-content: center
-    align-items: center
     background: linear-gradient(0deg, rgba(234,240,255,1) 0%, rgba(245,248,255,1) 35%, rgba(255,255,255,1) 100%)
-    width: 100%
-    height: 100%
-    overflow: hidden
 
-    /** 
-     * Main container for all hero content.
-     * Controls layout direction and max width.
-     */
-    .hero-container
+    .hero-container-desktop
+        display: none
+
+    .hero-container-mobile
         display: flex
         justify-content: center
-        align-items: center
-        flex-direction: column
-        width: 100%
-        height: 100%
-        max-width: 1920px
-        padding: 0 1rem
+        margin: 0
 
-        /** 
-         * Contains the decorative circle top left.
-         * Positioned absolutely behind content.
-         */
         .hero-top-circle-container
             position: absolute
-            top: -4.4rem
-            left: -14rem
+            top: -15%
+            margin-right: 1rem
+            right: 10%
             width: auto
             height: 100%
             padding: 1rem
@@ -54,110 +36,47 @@
             align-items: center
             z-index: 1
 
-            /** 
-             * Wrapper for the large blue background circle.
-             */
             .circle-3-container
                 width: auto
 
-                /** 
-                 * Main circular background element.
-                 */
                 .circle-3
                     width: 50rem
                     height: 50rem
                     border-radius: 50%
                     background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%)
 
-        /** 
-         * Wrapper for left image and right header section.
-         */
-        .hero-img-header-scroll-iconlist
-            width: 100vw
-            max-width: 1920px
-            height: 100%
+        .hero-header-scroll
             display: flex
-            align-items: flex-start
-            justify-content: space-around
-            padding: 0
-            z-index: 2
+            align-items: center
+            flex-direction: column
 
-            /** 
-             * Left side image container.
-             */
-            .hero-img-container
-                width: 49%
-                min-width: 200px
-                max-width: 550px
-                margin-bottom: 0!important
-                height: 100%
-                z-index: 2
+            .hero-header-scroll-container
+                width: 100%
                 display: flex
                 justify-content: center
-                align-items: flex-end
 
-                /** 
-                 * Image inside the container, styled for background blend.
-                 */
-                .hero-img
-                    background-color: rgb(255, 255, 255, 0.3)
-                    border-radius: 3rem
+                .header-allignement
                     width: 100%
-                    height: auto
                     display: flex
-                    object-fit: scale-down
-                    overflow: hidden
-                    margin-left: 1rem
+                    justify-content: center
+                    margin-top: 117px
+                    background-color: #5988FF
+                    border-radius: 5rem
+                    padding: 0 1rem 0 1rem
 
-            /** 
-             * Right side header + scroll section.
-             */
-            .hero-header-scroll-container
-                width: 49%
-                min-width: 200px
-                max-width: 550px
-                margin-bottom: 0!important
-                margin-top: 9rem
-                height: 80%
-                z-index: 2
-                display: flex
-                justify-content: flex-start
-                align-items: flex-end
-                flex-direction: column
-
-                /** 
-                 * Wraps the text header block vertically.
-                 */
-                .header-alignement
-                    display: flex
-                    flex-direction: column
-                    align-items: flex-start
-                    width: 100%
-                    max-width: 550px
-                    height: 350px
-
-                    /** 
-                     * Wraps the main heading area.
-                     */
                     .header-txt-container
                         width: 100%
                         height: auto
                         display: flex
-                        justify-content: flex-end
+                        padding: 2rem 1rem
+                        flex-direction: column
+                        z-index: 3
 
-                        /** 
-                         * Contains all hero header texts (hello, frontend, developer).
-                         */
                         .header-txt-allignement
-                            width: 100%
-                            height: auto
                             display: flex
                             flex-direction: column
-                            max-width: 510px
+                            
 
-                            /** 
-                             * Top header text ("hello").
-                             */
                             .hero-txt-hallo
                                 display: flex
                                 justify-content: flex-start
@@ -165,155 +84,401 @@
                                 margin: 0
                                 font-family: 'Montserrat', sans-serif
                                 font-weight: 400
-                                font-size: clamp(2.25rem, 1.5rem + 2vw, 3.8125rem)
+                                font-size: clamp(2rem, 1.5rem + 2vw, 3.8125rem)
                                 line-height: 1
                                 letter-spacing: 0
-                                color: #5988FF
+                                color: white
                                 vertical-align: middle
                                 white-space: nowrap
 
-                            /** 
-                             * Main bold hero header lines ("frontend", "developer").
-                             */
                             .hero-text-frontend,
-                            .hero-text-developers
+                            .hero-text-developer
                                 display: flex
                                 padding: 0
                                 margin: 0
                                 font-family: 'Baloo 2'
                                 font-weight: bold
-                                font-size: clamp(4.5625rem, 2.5rem + 3vw, 9rem)
+                                font-size: clamp(4rem, 2.5rem + 3vw, 9rem)
                                 line-height: 1
                                 letter-spacing: -0.125rem
-                                color: #5988FF
+                                color: white
                                 vertical-align: middle
 
-                /** 
-                 * Container for scroll animation and line.
-                 */
                 .scroll-container
-                    display: flex
-                    width: 100%
-                    height: 50%
                     display: flex
                     justify-content: center
 
-                    /** 
-                     * Scroll design for large screens (vertical line and text).
-                     */
-                    .scroll-desktop
-                        width: 100%
-                        height: 100%
-                        display: flex
-                        flex-direction: column
-                        align-items: center
-                        justify-content: center
-                        z-index: 2
+                    .scroll-responsive
+                        position: absolute
+                        bottom: 10%
+                        display: block
+                        z-index: 3
+                        width: auto
+                        
 
-                        /** 
-                         * "Scroll" text above the line.
-                         */
-                        .scroll-txt
-                            width: 10rem
-                            height: auto
+                        .scroll-responsive-txt
                             display: flex
-                            justify-content: center
-                            font-family: 'Montserrat', sans-serif
-                            font-weight: 500
+                            transform: rotate(90deg)
+                            transform-origin: center
+                            font-family: 'Poppins'
+                            font-weight: 400
                             font-size: 1.4375rem
-                            line-height: 1.2
+                            line-height: 120%
                             letter-spacing: 0
                             color: #5988FF
-                            position: absolute
-                            bottom: 20rem
-                            margin-bottom: 1rem
+                            white-space: nowrap
+                            margin-right: 1.5rem
+                            background-color: #ffffff9a
+                            border-radius: 5rem
+                            padding: 0 1rem 0 1rem
 
-                        /** 
-                         * Line and icons aligned below scroll text.
-                         */
-                        .line-container
-                            position: absolute
-                            bottom: 0
-                            gap: 1.5rem
+            .hero-img-container
+                display: flex
+                justify-content: center
 
-                            .line
-                                width: 0.1rem
-                                height: 20rem
-                                background-color: #5988FF
-
-                    /** 
-                     * Scroll layout for smaller devices (initially hidden).
-                     */
-                    .scroll-responsive
-                        display: none
-
-                /** 
-                 * Social icon links aligned to bottom right.
-                 */
-                .hero-iconlinks-allignement-container
+                .hero-img
                     display: flex
-                    justify-content: flex-end
-                    width: 90%
-                    height: auto
-                    margin-bottom: 2rem
+                    justify-content: center
+                    position: absolute
+                    bottom: 0
+                    max-width: 95%                       
+                    max-height: 63%
+                    z-index: 2
 
-                    /** 
-                     * Container for vertical icon link list.
-                     */
-                    .hero-iconlinks-container
-                        width: 10%
+@media (max-width: 700px)
+    .hero-section
+        .hero-container-mobile
+            .hero-top-circle-container
+                margin-right: 0
+                padding-right: 0
+                right: 10%
+            .hero-header-scroll
+                .hero-header-scroll-container
+                    .header-allignement
+                        background-color: transparent
+
+@media (max-width: 600px)
+    .hero-section
+        .hero-container-mobile
+            .hero-top-circle-container
+                right: 6%
+
+@media (max-width: 550px)
+    .hero-section
+        .hero-container-mobile
+            .hero-top-circle-container
+                right: 3%
+
+@media (max-width: 430px)
+    .hero-section
+        .hero-container-mobile
+            .hero-top-circle-container
+                right: 1%
+            .hero-header-scroll
+                .hero-header-scroll-container
+                    .header-allignement
+                        .header-txt-container
+                            padding: 2rem 0 
+                            .header-txt-allignement
+                                .hero-txt-hallo
+                                    font-size: 1.7rem
+                                .hero-text-frontend,
+                                .hero-text-developer
+                                    font-size: 3rem
+
+@media (max-width: 370px)
+    .hero-section
+        .hero-container-mobile
+            .hero-top-circle-container
+                right: 0%
+            .hero-header-scroll
+                .hero-header-scroll-container
+                    .header-allignement
+                        .header-txt-container
+                            .header-txt-allignement
+                                .hero-txt-hallo
+                                    font-size: 1.4rem
+                                .hero-text-frontend,
+                                .hero-text-developer
+                                    font-size: 2.5rem
+
+@media (max-width: 310px)
+    .hero-section
+        .hero-container-mobile
+            .hero-header-scroll
+                .hero-header-scroll-container
+                    .header-allignement
+                        .header-txt-container
+                            .header-txt-allignement
+                                .hero-txt-hallo
+                                    font-size: 1.1rem
+                                .hero-text-frontend,
+                                .hero-text-developer
+                                    font-size: 2.5rem
+
+@media (max-width: 270px)
+    .hero-section
+        .hero-container-mobile
+            .hero-header-scroll
+                .hero-header-scroll-container
+                    .header-allignement
+                        .header-txt-container
+                            .header-txt-allignement
+                                .hero-txt-hallo
+                                    font-size: 1rem
+                                .hero-text-frontend,
+                                .hero-text-developer
+                                    font-size: 2.5rem
+
+@media (max-width: 250px)
+    .hero-section
+        .hero-container-mobile
+            .hero-header-scroll
+                .hero-header-scroll-container
+                    .header-allignement
+                        .header-txt-container
+                            .header-txt-allignement
+                                margin-left: -1.5rem
+                                .hero-txt-hallo
+                                    font-size: 1rem
+                                .hero-text-frontend,
+                                .hero-text-developer
+                                    font-size: 2.5rem
+
+// Desktop
+@media (min-width: 950px)
+    .hero-section
+        display: flex
+        justify-content: center
+        align-items: center
+        background: linear-gradient(0deg, rgba(234,240,255,1) 0%, rgba(245,248,255,1) 35%, rgba(255,255,255,1) 100%)
+        width: 100%
+        height: 100%
+        overflow: hidden
+
+        .hero-container-desktop
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            width: 100%
+            height: 100%
+            max-width: 1920px
+            padding: 0 1rem
+
+            .hero-top-circle-container
+                position: absolute
+                top: -15%
+                right: 50%
+                width: auto
+                height: 100%
+                padding: 1rem
+                display: flex
+                justify-content: space-between
+                align-items: center
+                z-index: 1
+
+                .circle-3-container
+                    width: auto
+
+                    .circle-3
+                        width: 50rem
+                        height: 50rem
+                        border-radius: 50%
+                        background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%)
+
+            .hero-img-header-scroll-iconlist
+                width: 100vw
+                max-width: 1920px
+                height: 100%
+                display: flex
+                align-items: flex-start
+                justify-content: space-around
+                padding: 0
+                z-index: 2
+
+                .hero-img-container
+                    width: 49%
+                    min-width: 200px
+                    max-width: 550px
+                    margin-bottom: 0!important
+                    height: 100%
+                    z-index: 2
+                    display: flex
+                    justify-content: center
+                    align-items: flex-end
+
+                    .hero-img
+                        // background-color: #5988ff7c
+                        // border-radius: 15rem
+                        // border: solid 0.1rem #272afc
+                        padding: 0
+                        width: 100%
                         height: auto
                         display: flex
-                        justify-content: space-between
-                        align-items: stretch
-                        z-index: 3
+                        object-fit: scale-down
+                        overflow: hidden
+                        margin-left: 1rem
 
-                        /** 
-                         * Column layout for external link icons.
-                         */
-                        .hero-iconlist-vertikal
+                .hero-header-scroll-container
+                    width: 49%
+                    min-width: 200px
+                    max-width: 550px
+                    margin-bottom: 0!important
+                    margin-top: 9rem
+                    height: 80%
+                    z-index: 2
+                    display: flex
+                    justify-content: flex-start
+                    align-items: flex-end
+                    flex-direction: column
+
+                    .header-allignement
+                        display: flex
+                        flex-direction: column
+                        align-items: flex-start
+                        width: 100%
+                        max-width: 550px
+                        height: 350px
+
+                        .header-txt-container
+                            width: 100%
+                            height: auto
+                            display: flex
+                            justify-content: flex-end
+
+                            .header-txt-allignement
+                                width: 100%
+                                height: auto
+                                display: flex
+                                flex-direction: column
+                                max-width: 510px
+                                // background-color: #5988ff7c
+                                // border-radius: 15rem
+                                // border: solid 0.1rem #272afc
+                                padding: 1rem 6rem
+
+                                .hero-txt-hallo
+                                    display: flex
+                                    justify-content: flex-start
+                                    padding: 0
+                                    margin: 0
+                                    font-family: 'Montserrat', sans-serif
+                                    font-weight: 400
+                                    font-size: clamp(2.25rem, 1.5rem + 2vw, 3.8125rem)
+                                    line-height: 1
+                                    letter-spacing: 0
+                                    color: #5988FF
+                                    vertical-align: middle
+                                    white-space: nowrap
+
+                                .hero-text-frontend,
+                                .hero-text-developer
+                                    display: flex
+                                    padding: 0
+                                    margin: 0
+                                    font-family: 'Baloo 2'
+                                    font-weight: bold
+                                    font-size: clamp(4.5625rem, 2.5rem + 3vw, 9rem)
+                                    line-height: 1
+                                    letter-spacing: -0.125rem
+                                    color: #5988FF
+                                    vertical-align: middle
+
+                    .scroll-container
+                        display: flex
+                        width: 100%
+                        height: 50%
+                        justify-content: center
+
+                        .scroll-desktop
+                            width: 100%
+                            height: 100%
                             display: flex
                             flex-direction: column
-                            gap: 1.5625rem
                             align-items: center
-                            margin-left: 1rem
-                            padding-right: 2rem
+                            justify-content: center
+                            z-index: 2
 
-                            /** 
-                             * Each icon container wrapping a link.
-                             */
-                            .hero-icon-container
-                                width: 1.875rem
-                                height: 1.875rem
+                            .scroll-txt
+                                // background-color: rgba(25, 0, 255, 0.3)
+                                // border-radius: 3rem
+                                // border: solid 1px #ffffff
+                                padding: 0.75rem
+                                width: 10rem
+                                height: auto
+                                display: flex
+                                justify-content: center
+                                font-family: 'Montserrat', sans-serif
+                                font-weight: 500
+                                font-size: 1.4375rem
+                                line-height: 1.2
+                                letter-spacing: 0
+                                color: #5988FF
+                                position: absolute
+                                bottom: 20rem
+                                margin-bottom: 1rem
 
-                                a
-                                    display: block
+                            .line-container
+                                position: absolute
+                                bottom: 0
+                                gap: 1.5rem
 
-                                    img
-                                        width: 100%
-                                        height: 100%
-                                        object-fit: contain
+                                .line
+                                    width: 0.1rem
+                                    height: 20rem
+                                    background-color: #5988FF
 
-                                        /** 
-                                         * On hover, the icon slides 1rem to the left.
-                                         */
-                                        &:hover
-                                            transform: translateX(-1rem)
-                                            transition: transform 0.3s ease
+                    .hero-iconlinks-allignement-container
+                        display: flex
+                        justify-content: flex-end
+                        width: 90%
+                        height: auto
+                        margin-bottom: 2rem
 
 
-/** 
- * Media Query for large screens with both wide and tall dimensions 
- * (min-width: 2000px and min-height: 1100px)
- * Applies layout adjustments for very large displays
- */
+                        .hero-iconlinks-container
+                            width: 10%
+                            height: auto
+                            display: flex
+                            justify-content: space-between
+                            align-items: stretch
+                            z-index: 3
+
+                            .hero-iconlist-vertikal
+                                display: flex
+                                flex-direction: column
+                                gap: 1.5625rem
+                                align-items: center
+                                margin-left: 1rem
+                                padding-right: 2rem
+
+                                .hero-icon-container
+                                    width: 1.875rem
+                                    height: 1.875rem
+
+                                    a
+                                        display: block
+
+                                        img
+                                            width: 100%
+                                            height: 100%
+                                            object-fit: contain
+
+                                            &:hover
+                                                transform: translateX(-1rem)
+                                                transition: transform 0.3s ease
+        .hero-container-mobile
+            display: none
+
+
 @media (min-width: 2000px) and (min-height: 1100px)
     :host
         height: auto
 
     .hero-section
         
-        .hero-container
+        .hero-container-desktop
 
             .hero-top-circle-container
                 top: -45%
@@ -342,11 +507,6 @@
                         width: auto
                         height: 100%
 
-/** 
- * Media Query for wide but less tall screens 
- * (min-width: 2000px and max-height: 1100px)
- * Keeps layout contained within the viewport height
- */
 @media (min-width: 2000px) and (max-height: 1100px)
     :host
         height: 100vh
@@ -362,27 +522,12 @@
                 padding: 0
 
             .hero-img-header-scroll-iconlist
+                display: flex
 
                 .hero-img-container
+                    display: flex
 
                     .hero-img
                         display: flex
                         align-items: flex-end
 
-@media (max-width: 1125px)
-    .hero-container
-
-        .hero-img-header-scroll-iconlist
-
-            .hero-header-scroll-container
-
-                .header-alignement
-                    
-                    .header-txt-container
-
-                        .header-txt-allignement
-                            padding: 2rem
-                            padding-right: 5rem
-                            background-color: rgba(255, 255, 255, 0.5)
-                            border-radius: 3rem
-                            margin-right: 1rem
