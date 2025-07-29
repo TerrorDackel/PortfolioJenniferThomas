@@ -172,12 +172,15 @@ a:hover
                     padding: 1rem
                     display: flex
                     flex-direction: column
+                    align-items: center
+                    justify-content: center
                     opacity: 0
                     transform: translateY(-20px)
                     transition: all 0.7s ease
                     z-index: 100
                     min-width: 10rem
-                
+                    width: 100%
+                    height: calc( 100vh - 117px )
                     white-space: nowrap
 
                     &.show
@@ -192,7 +195,7 @@ a:hover
                     .navbar-mobile-link
                         display: flex
                         align-items: flex-start
-                        padding: 0.5rem
+                        padding: 2rem
                         flex-direction: column
                         width: 10rem
                         height: auto
