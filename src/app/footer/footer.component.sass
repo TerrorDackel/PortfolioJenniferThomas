@@ -10,7 +10,8 @@
     align-items: center
     justify-content: center
     width: 100%
-    height: auto
+    height: 100%
+    max-height: 390px
     margin: 0
     background: radial-gradient(71.18% 335.57% at 28.82% -124.4%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%)
     bottom: 0
@@ -20,7 +21,7 @@
     .footer-container
         width: 100%
         max-width: 1920px
-        height: 200px
+        max-height: 240px
         display: flex
         align-items: center
         justify-content: space-between
@@ -30,7 +31,7 @@
             align-items: center
             justify-content: center
             height: 70px
-            width: 70px
+            width: 25%
             padding: 1rem
             color: white
 
@@ -45,7 +46,7 @@
                 height: 69px
 
         .created-copyright-impressum-container
-            width: 300px
+            width: 50%
             height: 210px
             display: flex
             justify-content: center
@@ -60,7 +61,7 @@
                 display: flex
                 justify-content: center
                 align-items: center
-                color: white
+                color: white /* already set above – redundant */
 
             .copyright-container
                 width: 100%
@@ -90,6 +91,13 @@
                     font-weight: normal
                     transition: font-weight 0.2s ease
 
+                    &:link,
+                    &:visited
+                        text-decoration: none
+                        color: white
+                        display: inline-block
+                        position: relative
+
                     &::after
                         content: ''
                         position: absolute
@@ -108,15 +116,8 @@
                         &::after
                             opacity: 1
 
-                    &:link,
-                    &:visited
-                        text-decoration: none
-                        color: white
-                        display: inline-block
-                        position: relative
-
         .footer-iconlist-horizontal
-            width: 200px
+            width: 25%
             height: 30px
             padding: 1rem
             display: flex
@@ -137,13 +138,14 @@
         .legal-notice-container-mobile
             display: none
 
-@media (max-width: 520px)
+@media (max-width: 500px)
     .footer-section
         display: flex
         justify-content: center
         align-items: center
         width: 100%
-        height: 370px
+        height: auto
+        max-height: 380px
         margin: 0
         margin-bottom: 0
 
@@ -152,35 +154,58 @@
             justify-content: center
             flex-direction: column
             width: 100%
-            height: 370px
+            max-height: 350px
+            padding: 1rem
 
             .logo-container
+                width: auto
+                max-height: 80px
+                height: 100%
                 display: flex
                 justify-content: center
                 align-items: center
 
             .created-copyright-impressum-container
+                width: 100%
+                max-height: 30px
+                height: 100%
                 display: flex
                 justify-content: center
 
-            .copyright-container
-                width: 90%
-                height: auto
-                padding: 20px
+                .over-copyright-container
+                    display: none
+
+                .copyright-container
+                    width: 90%
+                    height: auto
+                    padding: 20px
+
+                .legal-notice-container
+                    display: none
 
             .footer-iconlist-horizontal
-                width: 40dvw
-                height: auto
+                max-width: 200px
+                width: 100%
+                max-height: 40px
+                height: 100%
 
-            .legal-notice-container
-                display: none
+                .footer-icon-container
+                    width: auto
 
             .legal-notice-container-mobile
                 display: block
-                padding: 2.5rem
+                width: 100%
+                max-width: 130px
+                height: 45px
+                text-align: center
+                display: flex
+                justify-content: center
+                align-items: flex-start
 
-            .over-copyright-container
-                display: none
-
-        a
-            color: #FFFFFF
+                a
+                    color: #FFFFFF
+                    text-decoration: none
+                    position: relative
+                    display: inline-block
+                    font-weight: normal
+                    transition: font-weight 0.2s ease
