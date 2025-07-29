@@ -1,45 +1,43 @@
-<footer>
-    <section class="footer-section">
-        <div class="footer-container">
-            <div class="logo-container">
-                <a (click)="scrollUp()">
-                    <img src="assets/img/icon/logo.png" class="logo-img" alt="Scroll to the top.">
-                </a>
+<section class="footer-section">
+    <div class="footer-container">
+        <div class="logo-container">
+            <a (click)="scrollUp()">
+                <img src="assets/img/icon/logo.png" class="logo-img" alt="Scroll to the top.">
+            </a>
+        </div>
+        <div class="created-copyright-impressum-container">
+            <div class="over-copyright-container">
             </div>
-            <div class="created-copyright-impressum-container">
-                <div class="over-copyright-container">
-                </div>
-                <div class="copyright-container">
-                    © Jennifer Thomas 2025
-                </div>
-                <div class="legal-notice-container">
-                    <a [routerLink]="['/legal-notice']">
-                        {{ 'FOOTER.LEGAL' | translate }}
-                    </a>
-                </div>
+            <div class="copyright-container">
+                © Jennifer Thomas 2025
             </div>
-            <div class="footer-iconlist-horizontal">
-                <div class="footer-icon-container">
-                    <a href="https://github.com/TerrorDackel?tab=repositories" target="_blank">
-                        <img src="./assets/img/icon/1w.png" alt="icon for github">
-                    </a>
-                </div>
-                <div class="footer-icon-container">
-                    <a href="mailto:82.jennifer.@gmail.com" target="_blank">
-                        <img src="./assets/img/icon/2w.png" alt="icon for email me">
-                    </a>
-                </div>
-                <div class="footer-icon-container">
-                    <a href="https://www.linkedin.com/in/jennifer-thomas-595735360/" target="_blank">
-                        <img src="./assets/img/icon/3w.png" alt="icon for linkedin">
-                    </a>
-                </div>
-            </div>
-            <div class="legal-notice-container-mobile">
+            <div class="legal-notice-container">
                 <a [routerLink]="['/legal-notice']">
                     {{ 'FOOTER.LEGAL' | translate }}
                 </a>
             </div>
         </div>
-    </section>
-</footer>
+        <div class="footer-iconlist-horizontal">
+            <div class="footer-icon-container">
+                <a href="https://github.com/TerrorDackel?tab=repositories" target="_blank">
+                    <img src="./assets/img/icon/1w.png" alt="icon for github">
+                </a>
+            </div>
+            <div class="footer-icon-container">
+                <a href="mailto:82.jennifer.@gmail.com" target="_blank">
+                    <img src="./assets/img/icon/2w.png" alt="icon for email me">
+                </a>
+            </div>
+            <div class="footer-icon-container">
+                <a href="https://www.linkedin.com/in/jennifer-thomas-595735360/" target="_blank">
+                    <img src="./assets/img/icon/3w.png" alt="icon for linkedin">
+                </a>
+            </div>
+        </div>
+        <div class="legal-notice-container-mobile">
+            <a [routerLink]="['/legal-notice']">
+                {{ 'FOOTER.LEGAL' | translate }}
+            </a>
+        </div>
+    </div>
+</section>

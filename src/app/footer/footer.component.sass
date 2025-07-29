@@ -5,7 +5,6 @@
     margin-right: 0
     margin-bottom: 0
 
-    
 .footer-section
     display: flex
     align-items: center
@@ -17,129 +16,126 @@
     bottom: 0
     right: 0
     left: 0
-    
-.footer-container
-    width: 100%
-    max-width: 1920px
-    height: 200px
-    display: flex
-    align-items: center
-    justify-content: space-between
 
-.logo-container
-    display: flex
-    align-items: center
-    justify-content: center
-    height: 70px
-    width: 70px
-    padding: 1rem
-    display: flex
-    color: white
-    
-    &:hover
-        cursor: pointer
+    .footer-container
+        width: 100%
+        max-width: 1920px
+        height: 200px
+        display: flex
+        align-items: center
+        justify-content: space-between
 
-.logo-img
-    display: flex
-    justify-content: center
-    align-items: center
-    width: 64px
-    height: 69px
+        .logo-container
+            display: flex
+            align-items: center
+            justify-content: center
+            height: 70px
+            width: 70px
+            padding: 1rem
+            color: white
 
-.created-copyright-impressum-container
-    width: 300px
-    height: 210px
-    display: flex
-    justify-content: center
-    align-items: center
-    flex-direction: column
-    color: white
+            &:hover
+                cursor: pointer
 
-.over-copyright-container
-    width: 100%
-    height: 50px
-    padding: 1rem
-    display: flex
-    justify-content: center
-    align-items: center
-    color: white
-    
-.copyright-container
-    width: 100%
-    height: 50px
-    padding: 1rem
-    display: flex
-    justify-content: center
-    align-items: center
+            .logo-img
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 64px
+                height: 69px
 
-.legal-notice-container
-    width: 100%
-    height: 50px
-    padding: 1rem
-    display: flex
-    justify-content: center
-    align-items: center
-    font-family: Montserrat
-    font-weight: 400
-    font-size: 16px
-    line-height: 120%
-    letter-spacing: 0%
+        .created-copyright-impressum-container
+            width: 300px
+            height: 210px
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            color: white
 
-    a
-        text-decoration: none
-        position: relative
-        display: inline-block
-        font-weight: normal
-        transition: font-weight 0.2s ease
+            .over-copyright-container
+                width: 100%
+                height: 50px
+                padding: 1rem
+                display: flex
+                justify-content: center
+                align-items: center
+                color: white
 
-        &::after
-            content: ''
-            position: absolute
-            width: 50%
-            height: 2px
-            background: currentColor
-            left: 50%
-            bottom: -2px
-            transform: translateX(-50%)
-            opacity: 0
-            transition: opacity 0.2s ease
+            .copyright-container
+                width: 100%
+                height: 50px
+                padding: 1rem
+                display: flex
+                justify-content: center
+                align-items: center
 
-        &:hover
-            font-weight: bold
+            .legal-notice-container
+                width: 100%
+                height: 50px
+                padding: 1rem
+                display: flex
+                justify-content: center
+                align-items: center
+                font-family: Montserrat
+                font-weight: 400
+                font-size: 16px
+                line-height: 120%
+                letter-spacing: 0%
 
-            &::after
-                opacity: 1
+                a
+                    text-decoration: none
+                    position: relative
+                    display: inline-block
+                    font-weight: normal
+                    transition: font-weight 0.2s ease
 
-    a:link,
-    a:visited
-        text-decoration: none
-        color: white
-        display: inline-block
-        position: relative
+                    &::after
+                        content: ''
+                        position: absolute
+                        width: 50%
+                        height: 2px
+                        background: currentColor
+                        left: 50%
+                        bottom: -2px
+                        transform: translateX(-50%)
+                        opacity: 0
+                        transition: opacity 0.2s ease
 
+                    &:hover
+                        font-weight: bold
 
-.footer-iconlist-horizontal
-    width: 200px
-    height: 30px
-    padding: 1rem
-    display: flex
-    justify-content: space-around
-    align-items: center
+                        &::after
+                            opacity: 1
 
+                    &:link,
+                    &:visited
+                        text-decoration: none
+                        color: white
+                        display: inline-block
+                        position: relative
 
-.footer-icon-container
-    display: flex
-    justify-content: center
-    align-items: center
-    width: 30px
-    height: 30px
-    transition: transform 0.3s ease
+        .footer-iconlist-horizontal
+            width: 200px
+            height: 30px
+            padding: 1rem
+            display: flex
+            justify-content: space-around
+            align-items: center
 
-    img:hover
-        transform: scale(1.25)
+            .footer-icon-container
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 30px
+                height: 30px
+                transition: transform 0.3s ease
 
-.legal-notice-container-mobile
-    display: none
+                img:hover
+                    transform: scale(1.25)
+
+        .legal-notice-container-mobile
+            display: none
 
 @media (max-width: 520px)
     .footer-section
@@ -151,43 +147,40 @@
         margin: 0
         margin-bottom: 0
 
-    .footer-container
-        display: flex
-        justify-content: center
-        flex-direction: column
-        width: 100%
-        height: 370px
+        .footer-container
+            display: flex
+            justify-content: center
+            flex-direction: column
+            width: 100%
+            height: 370px
 
-    .logo-container
-        display: flex
-        justify-content: center
-        align-items: center
+            .logo-container
+                display: flex
+                justify-content: center
+                align-items: center
 
+            .created-copyright-impressum-container
+                display: flex
+                justify-content: center
 
-    .created-copyright-impressum-container
-        display: flex
-        justify-content: center
+            .copyright-container
+                width: 90%
+                height: auto
+                padding: 20px
 
-    .copyright-container
-        width: 90%
-        height: auto
-        padding: 20px
+            .footer-iconlist-horizontal
+                width: 40dvw
+                height: auto
 
+            .legal-notice-container
+                display: none
 
-    .footer-iconlist-horizontal
-        width: 40dvw
-        height: auto
+            .legal-notice-container-mobile
+                display: block
+                padding: 2.5rem
 
-    a
-        color: #FFFFFF
+            .over-copyright-container
+                display: none
 
-
-    .legal-notice-container-mobile
-        display: block
-        padding: 2.5rem
-
-    .legal-notice-container
-        display: none    
-
-    .over-copyright-container
-        display: none
+        a
+            color: #FFFFFF
