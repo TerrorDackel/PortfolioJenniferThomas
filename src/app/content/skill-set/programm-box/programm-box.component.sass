@@ -1,3 +1,10 @@
+:host
+    height: auto
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    
 .programm-box-section
     display: flex
     flex-wrap: wrap
@@ -5,106 +12,100 @@
     align-items: center
     width: 100%
     height: auto
-
-.programm-box-container
-    display: flex
-    justify-content: space-between
-    flex-direction: column
-    align-items: center
-    width: 86px
-    height: 150px
-    gap: 1.8rem
-    padding: 2.5rem
-
-.programm-img-container
-    display: flex
-    width: 70px
-    height: 75px
-    justify-content: center
-    align-items: center
-
-.programm-icon
-    display: flex
-    width: 70px
-    height: 75px
-    display: inline-block
-    transition: transform 0.3s ease
-    object-fit: contain
-
-.programm-icon:hover
-    transform: scale(1.15)
-
-.programm-name-container
-    display: flex
-    justify-content: center
-    width: 65px
-    height: 38px
-
-.programm-txt
-    display: flex
-    font-family: Montserrat
-    font-weight: 400
-    font-size: 16px
-    line-height: 120%
-    letter-spacing: 0%
-    text-align: center
-    color: #FFFFFF
-    display: inline-block
-    transition: transform 0.3s ease
-
-.programm-txt:hover
-    transform: scale(1.15)
-
-
-@media ( max-width: 1035px )
+    gap: 1rem
 
     .programm-box-container
-
-        width: 86px
-        height: 140px
-        gap: 1.3rem
-        padding: 2rem
+        display: flex
+        justify-content: space-between
+        flex-direction: column
+        align-items: center
+        max-width: 90px
+        max-height: 150px
         
-@media ( max-width: 850px )
+        padding: 2.5rem
 
-    .programm-box-container
+        .programm-img-container
+            display: flex
+            width: 70px
+            height: 75px
+            justify-content: center
+            align-items: center
 
-        width: 86px
-        height: 130px
-        gap: 1.1rem
-        padding: 1.8rem
-        
-@media ( max-width: 690px )
+            .programm-icon
+                width: 70px
+                height: 75px
+                display: inline-block
+                transition: transform 0.3s ease
+                object-fit: contain
 
-    .programm-box-container
+                &:hover
+                    transform: scale(1.15)
 
-        width: 86px
-        height: 120px
-        gap: 1rem
-        padding: 1.6rem
+        .programm-name-container
+            display: flex
+            justify-content: center
+            width: 65px
+            height: 38px
 
-@media ( max-width: 500px )
+            .programm-txt
+                font-family: Montserrat
+                font-weight: 400
+                font-size: 16px
+                line-height: 120%
+                letter-spacing: 0%
+                text-align: center
+                color: #FFFFFF
+                display: inline-block
+                transition: transform 0.3s ease
 
-    .programm-box-container
+                &:hover
+                    transform: scale(1.15)
+                    cursor: default!important
 
-        width: 86px
-        height: 100px
-        gap: 0.9rem
-        padding: 1rem
+@media (max-width: 1035px)
+    .programm-box-section
+        .programm-box-container
+            width: 86px
+            height: 140px
+            gap: 1.3rem
+            padding: 2rem
 
-    .programm-icon
-        width: 62px
-        height: 62px
+@media (max-width: 850px)
+    .programm-box-section
+        .programm-box-container
+            width: 86px
+            height: 130px
+            gap: 1.1rem
+            padding: 1.8rem
 
-@media ( max-width: 430px )
+@media (max-width: 690px)
+    .programm-box-section
+        .programm-box-container
+            width: 86px
+            height: 120px
+            gap: 1rem
+            padding: 1.6rem
 
-    .programm-box-container
+@media (max-width: 500px)
+    .programm-box-section
+        .programm-box-container
+            width: 86px
+            height: 100px
+            gap: 0.9rem
+            padding: 1rem
 
-        width: 80px
-        height: 100px
-        gap: 0.5rem
-        padding: 0.5rem
+        .programm-icon
+            width: 62px
+            height: 62px
 
-    .programm-icon
-        width: 60px
-        height: 60px
+@media (max-width: 430px)
+    .programm-box-section
+        .programm-box-container
+            width: 80px
+            height: 100px
+            gap: 0.5rem
+            padding: 0.5rem
+
+        .programm-icon
+            width: 60px
+            height: 60px
