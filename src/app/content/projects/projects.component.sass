@@ -4,7 +4,7 @@
     width: 100%
     margin-left: 0
     margin-right: 0
-    
+
 .projects-section
     width: 100%
     height: auto
@@ -16,164 +16,289 @@
     margin: 0
     padding: 1rem
 
+    .first-project-container
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 0
+        width: 100%
+        height: auto
+        padding: 2rem 1rem 2rem
+        gap: 1rem
 
-.first-project-container
-    display: flex
-    justify-content: center
-    align-items: center
-    margin: 0
-    width: 100%
-    height: auto
-    padding: 2rem 1rem 2rem
-    gap: 1rem
+        .container-left
+            display: flex
+            width: 100%
+            max-width: 620px
+            height: auto
+            justify-content: flex-start
+            align-items: flex-end
 
-.second-project-container
-    display: flex
-    justify-content: center
-    align-items: center    
-    margin: 0
-    width: 100%
-    height: auto
-    padding: 2rem 1rem 2rem
-    gap: 1rem
+            .project-img-container
+                display: flex
+                width: 100%
+                height: auto
 
-.third-project-container
-    display: flex
-    justify-content: center
-    align-items: center
-    margin: 0
-    width: 100%
-    height: auto
-    padding: 2rem 1rem 2rem
-    gap: 1rem
+                .project-img-left
+                    display: flex
+                    justify-content: flex-end
+                    align-items: center
+                    width: 100%
+                    max-width: 720px
+                    height: 100%
+                    gap: 1rem
+                    object-fit: cover
+                    transition: transform 0.3s ease
+                    transform-origin: left center
 
-.container-left
-    display: flex
-    width: 100%
-    max-width: 620px
-    height: auto
-    justify-content: flex-start
-    align-items: flex-end
+                    &:hover
+                        transform: scale(1.05)
 
-.container-right
-    display: flex
-    width: 100%
-    max-width: 620px
-    height: auto
-    justify-content: flex-end
-    align-items: flex-end
+                    .project-img
+                        display: flex
+                        width: 100%
+                        height: auto
+                        justify-content: center
+                        align-items: center
+                        object-fit: cover
 
-.project-img-container
-    display: flex
-    width: 100%
-    height: auto
+        .container-right
+            display: flex
+            width: 100%
+            max-width: 620px
+            height: auto
+            justify-content: flex-end
+            align-items: flex-end
 
-.project-img-left
-    display: flex
-    justify-content: flex-end
-    align-items: center
-    width: 100%
-    max-width: 720px
-    height: 100%
-    gap: 1rem
-    object-fit: cover
-    transition: transform 0.3s ease
-    transform-origin: left center
-    &:hover
-        transform: scale(1.05)
+            .project-description-container-right
+                display: flex
+                justify-content: flex-end
+                align-items: flex-end
+                width: 100%
+                height: auto
+                max-width: 532px
+                margin: 0
 
+    .second-project-container
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 0
+        width: 100%
+        height: auto
+        padding: 2rem 1rem 2rem
+        gap: 1rem
 
-.project-img-right
-    display: flex
-    justify-content: flex-start
-    align-items: center
-    width: 100%
-    max-width: 720px
-    height: 100%
-    gap: 1rem
-    object-fit: cover
-    transition: transform 0.3s ease
-    transform-origin: right center
-    &:hover
-        transform: scale(1.05)
+        .container-left
+            display: flex
+            width: 100%
+            max-width: 620px
+            height: auto
+            justify-content: flex-start
+            align-items: flex-end
 
-.project-img
-    display: flex
-    width: 100%
-    height: auto
-    justify-content: center
-    align-items: center
-    object-fit: cover
+            .project-description-container-left
+                display: flex
+                justify-content: flex-start
+                align-items: flex-end
+                width: 100%
+                height: auto
+                max-width: 532px
+                margin: 0
 
-.project-description-container-left
-    display: flex
-    justify-content: flex-start
-    align-items: flex-end
-    width: 100%
-    height: auto
-    max-width: 532px
-    margin: 0
+        .container-right
+            display: flex
+            width: 100%
+            max-width: 620px
+            height: auto
+            justify-content: flex-end
+            align-items: flex-end
 
+            .project-img-container
+                display: flex
+                width: 100%
+                height: auto
 
-.project-description-container-right
-    display: flex
-    justify-content: flex-end
-    align-items: flex-end
-    width: 100%
-    height: auto
-    max-width: 532px
-    margin: 0
+                .project-img-right
+                    display: flex
+                    justify-content: flex-start
+                    align-items: center
+                    width: 100%
+                    max-width: 720px
+                    height: 100%
+                    gap: 1rem
+                    object-fit: cover
+                    transition: transform 0.3s ease
+                    transform-origin: right center
 
-    
-@media (max-width: 600px)
-    .projects-section
+                    &:hover
+                        transform: scale(1.05)
 
+                    .project-img
+                        display: flex
+                        width: 100%
+                        height: auto
+                        justify-content: center
+                        align-items: center
+                        object-fit: cover
+
+    .third-project-container
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 0
+        width: 100%
+        height: auto
+        padding: 2rem 1rem 2rem
+        gap: 1rem
+
+        .container-left
+            display: flex
+            width: 100%
+            max-width: 620px
+            height: auto
+            justify-content: flex-start
+            align-items: flex-end
+
+            .project-img-container
+                display: flex
+                width: 100%
+                height: auto
+
+                .project-img-left
+                    display: flex
+                    justify-content: flex-end
+                    align-items: center
+                    width: 100%
+                    max-width: 720px
+                    height: 100%
+                    gap: 1rem
+                    object-fit: cover
+                    transition: transform 0.3s ease
+                    transform-origin: left center
+
+                    &:hover
+                        transform: scale(1.05)
+
+                    .project-img
+                        display: flex
+                        width: 100%
+                        height: auto
+                        justify-content: center
+                        align-items: center
+                        object-fit: cover
+
+        .container-right
+            display: flex
+            width: 100%
+            max-width: 620px
+            height: auto
+            justify-content: flex-end
+            align-items: flex-end
+
+            .project-description-container-right
+                display: flex
+                justify-content: flex-end
+                align-items: flex-end
+                width: 100%
+                height: auto
+                max-width: 532px
+                margin: 0
+
+    @media (max-width: 600px)
         gap: 0
         padding-left: 1rem
         padding-right: 1rem
 
-@media (max-width: 600px)
+        .first-project-container
+            width: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
 
-    .first-project-container,
-    .third-project-container 
-        width: 100%
-        display: flex
-        flex-direction: column
-        align-items: center
+            .container-left
+                justify-content: center
+                width: 100%
+                margin: 0
+                padding: 0
 
-    .second-project-container
-        width: 100%
-        display: flex
-        flex-direction: column-reverse
-        align-items: center
+                .project-img-container
+                    .project-img-left
+                        justify-content: center
+                        transform-origin: center
+                        height: 100%
 
-    .project-description-container-left
-        display: flex
-        margin: 0
-        justify-content: center
-        align-items: center
+            .container-right
+                justify-content: center
+                width: 100%
+                margin: 0
+                padding: 0
 
-    .project-description-container-right
-        display: flex
-        margin: 0
-        justify-content: center
-        align-items: center
+                .project-description-container-right
+                    display: flex
+                    margin: 0
+                    justify-content: center
+                    align-items: center
 
-    .first-project-container,
-    .second-project-container,
-    .third-project-container
-        align-items: center
-        justify-content: center
+        .second-project-container
+            width: 100%
+            display: flex
+            flex-direction: column-reverse
+            align-items: center
+            justify-content: center
 
-    .project-img-left,
-    .project-img-right
-        justify-content: center
-        transform-origin: center
-        height: 100%
+            .container-left
+                justify-content: center
+                width: 100%
+                margin: 0
+                padding: 0
 
-    .container-left,
-    .container-right
-        justify-content: center
-        width: 100%
-        margin: 0
-        padding: 0
+                .project-description-container-left
+                    display: flex
+                    margin: 0
+                    justify-content: center
+                    align-items: center
+
+            .container-right
+                justify-content: center
+                width: 100%
+                margin: 0
+                padding: 0
+
+                .project-img-container
+                    .project-img-right
+                        justify-content: center
+                        transform-origin: center
+                        height: 100%
+
+        .third-project-container
+            width: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+
+            .container-left
+                justify-content: center
+                width: 100%
+                margin: 0
+                padding: 0
+
+                .project-img-container
+                    .project-img-left
+                        justify-content: center
+                        transform-origin: center
+                        height: 100%
+
+            .container-right
+                justify-content: center
+                width: 100%
+                margin: 0
+                padding: 0
+
+                .project-description-container-right
+                    display: flex
+                    margin: 0
+                    justify-content: center
+                    align-items: center
