@@ -5,7 +5,7 @@
     background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%)
 
 #contact
-    scroll-margin-top: -115px
+    scroll-margin-top: -117px
 
 .contact-section
     overflow: hidden
@@ -22,6 +22,7 @@
         display: flex
         flex-direction: column
         align-items: center
+        padding: 2rem
 
         .circle-13-container
             display: flex
@@ -32,7 +33,7 @@
                 display: flex
                 width: 130px
                 height: 130px
-                margin-left: 930.5px
+                margin-left: 1%
                 angle: -81.57 deg
                 border-radius: 50%
                 background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%)
@@ -40,17 +41,21 @@
         .contact-title-and-container-left-right
             display: flex
             flex-direction: column
+            align-items: center
             max-width: 1920px
             width: 100%
+            height: auto
 
             .title-contact-container
-                max-width: 1920px
-                height: auto
                 display: flex
                 flex-direction: column
                 align-items: flex-start
-                width: 100%
-                left: 1px
+                justify-content: flex-start
+                max-width: 1920px
+                width: 95%
+                max-height: 180px
+                height: 100%
+                padding: 0 1rem
 
                 .title-txt
                     max-width: 1920px
@@ -60,37 +65,43 @@
                     font-size: 90px
                     line-height: 120%
                     letter-spacing: 0%
-                    padding: 0 1rem 0
                     color: #5988FF
 
+
             .container-left-and-right
-                width: 100%
+                width: 95%
+                max-width: 1700px
                 height: auto
                 margin: 0
                 display: flex
-                justify-content: center
+                justify-content: space-between
+                padding: 0 1rem
 
                 .container-left
                     display: flex
-                    align-items: center
+                    align-items: flex-start
                     flex-direction: column
-                    width: 50%
+                    width: 49%
+                    max-width: 800px
                     height: auto
-                    gap: 1rem
-                    padding: 1rem
+                    padding: 0
 
                     .got-a-problem-title-container
                         display: flex
                         align-items: flex-start
                         justify-content: flex-start
                         width: 100%
-                        height: 108px
-                        padding: 0 1rem 0
+                        max-width: 960px
+                        height: auto
+                        padding: 0
 
                         .got-a-problem-txt
                             display: flex
+                            align-items: center
+                            width: 100%
+                            min-height: 150px 
                             font-family: 'Montserrat', sans-serif
-                            font-weight: 700
+                            font-weight: 960
                             font-size: 32px
                             line-height: 120%
                             letter-spacing: 0%
@@ -100,8 +111,9 @@
                     .got-a-problem-title-description-container
                         display: flex
                         align-items: center
-                        padding: 0 1rem 0
-                        width: 100%
+                        padding: 0
+                        width: 97%
+                        min-height: 150px
                         height: auto
 
                         .got-a-problem-title-description-txt
@@ -131,7 +143,7 @@
                             letter-spacing: 0%
                             color: #5988FF
                             margin: 0!important
-                            
+
                             .need-a-contact-me-question
                                 display: flex
                                 white-space: nowrap
@@ -139,7 +151,6 @@
                             .need-a-contact-me-answer
                                 display: flex
                                 white-space: nowrap
-
                                 font-weight: bold
 
                             .circle-11-container
@@ -160,12 +171,12 @@
                 .container-right
                     display: flex
                     flex-direction: column
-                    align-items: center
+                    align-items: flex-start
                     justify-items: center
-                    width: 50%
+                    width: 49%
+                    max-width: 800px 
                     height: auto
-                    gap: 1rem
-                    padding: 1rem 3rem 0 0
+                    padding: 0 1rem 0 0
 
                     .your-name-container,
                     .your-email-container,
@@ -174,52 +185,56 @@
                         width: 100%
                         height: auto
                         flex-direction: column
-                        padding: 0.3rem 0
+                        padding: 1rem 0 1rem 0
 
-                    .name-textfield,
-                    .email-textfield,
-                    .message-textfield
-                        display: flex
-                        width: 100%
-                        border-radius: 0.5rem
-                        border-width: 1px
-                        border: 1px solid #5988FF
-                        padding: 1rem
+                        .name-textfield,
+                        .email-textfield,
+                        .message-textfield
+                            display: flex
+                            width: 100%
+                            border-radius: 0.5rem
+                            border: 1px solid #5988FF
+                            padding: 1rem 0 1rem 1rem
+                            background-color: #ffffff
+                            font-family: 'Poppins', sans-serif !important
 
-                    .message-textfield
-                        height: 7rem
+                        .message-textfield
+                            height: 7rem
 
                     .agree-privacypolice-check
                         display: flex
                         flex-direction: column
                         align-items: flex-start
-                        width: 100%
-                        height: auto
-                        gap: 0.5rem
+                        width: auto
+                        min-height: 20px
+                        height: 100%
+                        padding: 0 1rem 0 0
 
                         .agree-privacypolice-check-label
                             display: flex
                             flex-direction: row
                             justify-content: center
                             align-items: center
+                            padding: 0 
 
                             .agree-privacypolice-check-div
                                 display: flex
                                 width: 35px
 
-                                &:hover
-                                    cursor: pointer
 
                                 .checkbox
                                     display: flex
                                     width: 24px
                                     height: 24px
+                                    
+                                    &:hover
+                                        cursor: pointer
 
                             .agree-privacypolice-check-txt
                                 margin: 0
                                 font-size: 0.9rem
                                 display: flex
-                                
+
                                 p
                                     white-space: nowrap
                                     overflow: hidden
@@ -236,29 +251,32 @@
                                 font-size: 1rem
                                 line-height: 120%
                                 letter-spacing: 0%
+                                overflow-wrap: break-word
 
                     .error-msg
                         color: red
-                        font-size: 1rem
+                        font-family: "Poppins", sans-serif
+                        font-size: 1rem!important
                         margin-top: 0.5rem
 
                     .success-msg
                         color: green
-                        font-size: 1rem
+                        font-family: "Poppins", sans-serif
+                        font-size: 1rem!important
                         margin-top: 0.5rem
 
                     .button-container
                         display: flex
                         justify-content: center
+                        align-items: flex-end
+                        width: 100%
+                        height: 80px
 
                         .btn-contact
                             max-width: 181px
                             width: auto
                             height: 58px
-                            position: relative
-                            overflow: hidden
                             z-index: 0
-                            gap: 10px
                             border-radius: 10px
                             border: 2px solid #BBBBBB
                             padding: 15px 30px
@@ -326,7 +344,6 @@
                 display: flex
                 width: 100%
                 padding: 1rem
-                
 
                 .back-to-top-btn
                     width: 40px
@@ -342,53 +359,17 @@
                     &:hover
                         background-image: url('/assets/img/icon/arrowup-hover.png')
 
-@media (max-width: 1135px)
+@media (max-width: 1440px)
     .agree-privacypolice-check-txt
         flex-direction: column
 
-@media (max-width: 911px)
-    .contact-section
-        width: 100%
-
-        .contact-container
-            width: 100%
-
-            .circle-13-container
-                display: none
-
-            .contact-title-and-container-left-right
-                width: 100%
-
-                .title-contact-container
-                    width: 100%
-
-                    .title-txt
-                        width: 100%
-
-                        p
-                            width: 100%
-
-    .need-a-contact-me-txt
-        width: 100%
-        display: flex
-
+@media (max-width: 920px)
+    .agree-privacypolice-check-txt
+        overflow-wrap: break-word
+        
 @media (max-width: 760px)
-    .agree-privacypolice-check-label
-
-
-        .agree-privacypolice-check-txt
-            max-width: 320px
-            display: flex
-            overflow-wrap: break-word
-            flex-direction: column
-            p
-                white-space: nowrap
-                overflow: hidden
-                margin: 0!important
-
-@media (max-width: 740px)
     #contact
-        scroll-margin-top: 117px
+        scroll-margin-top: 50px
 
     .contact-section
         width: 390px
@@ -400,6 +381,13 @@
             flex-direction: column
             padding: 0 1rem 0
 
+            .circle-13-container
+                margin-left: 50%
+
+                .circle-13
+                    width: 70px
+                    height: 70px
+
             .contact-title-and-container-left-right
                 flex-direction: column
 
@@ -410,7 +398,7 @@
 
                     .title-txt
                         width: 100%
-                        margin: 0!important
+                        margin: 0 !important
                         padding: 2rem 1rem 0
                         max-width: 350px
                         display: flex
@@ -422,8 +410,8 @@
                 .container-left-and-right
                     flex-direction: column
                     align-items: center
-                    gap: 1.5rem
                     margin-top: 1rem
+                    padding: 0 0
 
                     .container-left
                         width: 100%
@@ -431,63 +419,126 @@
                         height: auto
 
                         .got-a-problem-title-container
+                            height: 100px
 
-                            .got-a-problem-title-txt
+                            .got-a-problem-txt
                                 font-weight: 700
                                 font-size: 1.5rem
                                 margin-top: 1rem
+                                
 
                         .got-a-problem-title-description-container
-
                             .got-a-problem-title-description-txt
-                                margin: 0!important
+                                margin: 0 !important
 
                         .need-a-contact-me-container
-                            
-
                             .need-a-contact-me-txt
                                 width: 100%
 
-                                .need-a-contact-me-question
-                                    white-space: nowrap
-
-
+                                .need-a-contact-me-question,
                                 .need-a-contact-me-answer
                                     white-space: nowrap
 
                         .circle-11-container
                             display: none
 
-                    .container-right
-                        width: 100%
-                        max-width: 340px
-                        height: auto
+                            .circle-11
 
-                        .your-name-container,
-                        .your-email-container,
+                    .container-right
+                        width: 95% !important
+                        max-width: none
+                        height: auto
+                        padding: 0
+
+                        .your-name-container
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            width: 100%
+                            padding: 1rem 0
+
+                            .name-textfield
+                                width: 95% !important
+                                max-width: none
+                                box-sizing: border-box
+                                padding: 15px 25px
+                                border: 1px solid #5988FF
+                                border-radius: 10px
+                                background-color: #FFFFFF
+                                display: flex
+                                align-items: center
+                                justify-content: center
+
+
+                        .your-email-container
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            width: 100%
+                            padding: 0 0 1rem 0
+
+                            .email-textfield
+                                width: 95% !important
+                                max-width: none
+                                box-sizing: border-box
+                                padding: 15px 25px
+                                border: 1px solid #5988FF
+                                border-radius: 10px
+                                background-color: #FFFFFF
+                                display: flex
+                                justify-content: center
+
                         .your-message-container
                             display: flex
                             justify-content: center
-                            width: 341px
+                            align-items: center
+                            width: 100%
+                            padding: 0 0 1rem 0
 
-                        .name-textfield,
-                        .email-textfield,
-                        .message-textfield
-                            display: flex
-                            justify-content: center
-                            width: 341px
-                            border-radius: 10px
-                            border-width: 1px
-                            border: 1px solid #5988FF
-                            padding: 15px 25px
+                            .message-textfield
+                                width: 95% !important
+                                max-width: none
+                                box-sizing: border-box
+                                padding: 15px 25px
+                                border: 1px solid #5988FF
+                                border-radius: 10px
+                                background-color: #FFFFFF
+                                display: flex
+                                justify-content: center
+                                height: 202px
 
-                        .message-textfield
-                            height: 202px
-                        
                         .agree-privacypolice-check
+                            height: auto
+                            width: 95% !important
+                            max-width: none
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            padding: 0 0.5rem
+
                             .agree-privacypolice-check-label
+                                height: auto
+                                width: 95% !important
+                                max-width: none
+
+                                .agree-privacypolice-check-div
+                                    .checkbox
+                                        width: 20px
+                                        height: 20px
+
                                 .agree-privacypolice-check-txt
-                                    word-break: break-all
+                                    max-width: 320px
+                                    display: flex
+                                    flex-direction: column
+                                    word-break: break-word
+                                    height: auto
+
+                                    .privacy-link
+                                        white-space: nowrap
+                                        overflow: hidden
+                                        margin: 0 !important
+                                        color: #5988FF
+                                        text-decoration: underline
 
                         .button-container
                             width: 100%
@@ -495,52 +546,35 @@
                             justify-content: center
 
                             .btn-contact
-                                width: 180px
-                                margin-top: 40px
-                                margin-bottom: 50px
+                                padding: 12px 20px
+                                font-size: 1rem
+                                background-color: #5988FF
+                                color: white
+                                border: none
+                                border-radius: 8px
+                                cursor: pointer
 
-                            .success-msg
-                                color: green
-                                text-align: center
-                                font-size: 1.2rem
-                                margin-top: 20px
+                            .btn-valid
+                                background-color: #3366cc
 
-                            .error-msg
-                                color: red
-                                text-align: center
-                                font-size: 1.2rem
-                                margin-top: 20px
+                        .success-msg
+                            color: green
+                            text-align: center
+                            font-size: 1.2rem
+                            margin-top: 20px
+
+                        .error-msg
+                            color: red
+                            text-align: center
+                            font-size: 1.2rem
+                            margin-top: 5px
 
                         .back-to-top
                             display: block
                             width: 100%
 
-
                         .circle-14-container
-                            display: none
 
-@media (max-width: 390px)
-    .contact-section
-        width: 300px
-    
-    .title-contact-container
-        height: 80px
-
-        .title-txt
-            margin: 0!important
-            padding: 1rem 0 0 0 
-
-    .need-a-contact-me-txt
-        flex-direction: column
-
-    .your-name-container,
-    .your-email-container,
-    .your-message-container
-        width: auto 
-        max-width: 290px
-
-    .name-textfield,
-    .email-textfield,
-    .message-textfield
-        width: auto 
-        max-width: 290px
+                            .circle-14
+                                width: 40px!important
+                                height: 40px!important

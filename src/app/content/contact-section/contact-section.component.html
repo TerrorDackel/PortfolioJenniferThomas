@@ -40,7 +40,7 @@
                     </div>
                     <div class="container-right">
                         <div class="your-name-container">
-                            <input type="text" class="name-textfield" id="name" formControlName="name" placeholder="{{ 'CONTACT.PLACEHOLDER_NAME' | translate }}" />
+                            <input type="text" class="name-textfield" id="name" formControlName="name" style="font-family: 'Poppins', sans-serif;" placeholder="{{ 'CONTACT.PLACEHOLDER_NAME' | translate }}" />
                             @if (submitted && contactForm.get('name')?.invalid) {
                                 <div class="error-msg">
                                     {{ 'CONTACT.ERROR_NAME_REQUIRED' | translate }}
@@ -74,7 +74,9 @@
                                             {{ 'CONTACT.PRIVACY_POLICY' | translate }} 
                                         </a> 
                                     </p>
-                                    <p>{{ 'CONTACT.PRIVACY_AND' | translate }}</p>
+                                    <p>
+                                        {{ 'CONTACT.PRIVACY_AND' | translate }}
+                                    </p>
                                 </div>
                             </label>
                             @if (submitted && contactForm.get('privacy')?.invalid) {
@@ -98,7 +100,6 @@
                                 {{ 'CONTACT.ERROR' | translate }}
                             </div>
                         }
-
                     </div>
                 </div>
                 <div class="circle-14-container">

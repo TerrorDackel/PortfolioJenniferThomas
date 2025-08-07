@@ -114,7 +114,7 @@
         "ERROR_PRIVACY_REQUIRED": "You must agree before submitting.",
         "PRIVACY_I": "I've read the",
         "PRIVACY_POLICY": "privacy policy",
-        "PRIVACY_AND": "and agree to the processing of my data as outlined.",
+        "PRIVACY_AND": "and agree to the processing of my data.",
         "BUTTON_SEND": "Say hello ;)",
         "SUCCESS": "Your message has been sent successfully!",
         "ERROR": "Oops! Something went wrong. Please try again later."
