@@ -15,6 +15,7 @@
     background-color: rgba(255, 255, 255, 0.1)
     backdrop-filter: blur(1px)
     transition: transform 0.3s ease, box-shadow 0.3s ease
+    position: relative
 
     &::after
         content: ''
@@ -34,62 +35,142 @@
         &::after
             left: 150%
 
-.name-project-container
-    display: flex
-    flex-direction: column
-    height: auto
-    width: auto
+    .name-project-container
+        display: flex
+        flex-direction: column
+        height: auto
+        width: auto
 
-.name
-    display: flex
-    justify-content: center
-    font-family: 'Montserrat', sans-serif
-    font-size: clamp(1.5rem, 1.5vw + 0.5rem, 2rem)
-    font-weight: 700
-    color: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%)
-    letter-spacing: 0%
-    line-height: 120%
+        .name
+            display: flex
+            justify-content: center
+            font-family: 'Montserrat', sans-serif
+            font-size: clamp(1.25rem, 1.5vw + 0.5rem, 2rem)
+            font-weight: 700
 
-.project
-    display: flex
-    justify-content: center
-    font-family: 'Montserrat', sans-serif
-    font-size: 16px
-    font-weight: 400
-    color: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%)
-    letter-spacing: 0%
-    line-height: 140%
-    padding: 0.5rem 0 0.5rem 
+            background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%)
+            -webkit-background-clip: text
+            background-clip: text
+            color: transparent
+            letter-spacing: 0%
+            line-height: 120%
 
-.ref-description-container
-    display: flex
-    justify-content: center
-    width: 100%
-    max-width: 340px
-    height: auto
-    font-family: 'Montserrat', sans-serif
-    font-weight: 400
-    font-size: 18px
-    line-height: 120%
-    letter-spacing: 0%
+        .project
+            display: flex
+            justify-content: center
+            font-family: 'Montserrat', sans-serif
+            font-size: 16px
+            font-weight: 400
+            background-color: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%)
+            color: #EAF0FF
+            letter-spacing: 0%
+            line-height: 140%
+            padding: 0.5rem 0 0.5rem
 
+    .ref-description-container
+        display: flex
+        justify-content: center
+        width: 100%
+        max-width: 340px
+        height: auto
+        font-family: 'Montserrat', sans-serif
+        font-weight: 400
+        font-size: 18px
+        line-height: 120%
+        letter-spacing: 0%
 
-.description
-    text-align: center
-    justify-content: center
-    width: 100%
-    height: auto
-    max-width: 340px
-    display: flex
-    font-family: 'Montserrat', sans-serif
-    font-size: 18px
-    font-weight: 400
-    color: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%)
-    letter-spacing: 0%
-    line-height: 120%
+        .description
+            text-align: center
+            justify-content: center
+            width: 100%
+            height: auto
+            max-width: 340px
+            display: flex
+            font-family: 'Montserrat', sans-serif
+            font-size: 18px
+            font-weight: 400
+            background-color: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%)
+            color: #FFFFFF
+            line-height: 120%
 
 @media (max-width: 400px)
     .ref-component-container
-            padding: 0.4rem
-    .description
-        max-width: 280px
+        padding: 0.75rem
+        max-width: 300px
+
+        .ref-description-container
+            max-width: 300px
+
+            .description
+                max-width: 280px
+                font-size: 16px
+
+@media (max-width: 330px)
+    .ref-component-container
+        padding: 0.5rem
+        max-width: 260px
+        gap: 0.75rem
+
+        .name-project-container
+            .name
+                font-size: clamp(1.1rem, 4vw, 1.4rem)
+
+            .project
+                font-size: 14px
+
+        .ref-description-container
+            max-width: 260px
+            font-size: 16px
+
+            .description
+                max-width: 240px
+                font-size: 15px
+                line-height: 130%
+
+@media (max-width: 300px)
+    .ref-component-container
+        padding: 0.4rem
+        max-width: 230px
+        gap: 0.5rem
+
+        .name-project-container
+            .name
+                font-size: clamp(1rem, 5vw, 1.25rem)
+
+            .project
+                font-size: 13px
+                line-height: 130%
+
+        .ref-description-container
+            max-width: 230px
+            font-size: 15px
+
+            .description
+                max-width: 210px
+                font-size: 14px
+
+@media (max-width: 270px)
+    .ref-component-container
+        padding: 0.3rem
+        max-width: 188px!important
+        gap: 0.1rem
+
+        .name-project-container
+            .name
+                font-size: 1rem
+
+            .project
+                font-size: 1rem
+
+        .ref-description-container
+            max-width: 210px
+
+            .description
+                max-width: 190px
+                font-size: 1rem
+                line-height: 135%
+
+@media (max-width: 240px)
+    .ref-card
+        max-width: 210px
+        padding: 0 0.5rem
