@@ -92,6 +92,21 @@
             scroll-padding-inline: 1rem
             scroll-snap-type: x mandatory
             box-sizing: border-box
+            -webkit-overflow-scrolling: touch
+            touch-action: pan-x
+            overscroll-behavior-x: contain
+            scrollbar-width: none
+            -ms-overflow-style: none
+
+            &::-webkit-scrollbar
+                display: none
+                
+            cursor: grab
+
+            &.dragging
+                cursor: grabbing
+                scroll-snap-type: none
+                user-select: none
 
             .ref-card
                 display: flex
@@ -99,6 +114,7 @@
                 max-width: 300px
                 width: 100%
                 scroll-snap-align: start
+                scroll-snap-stop: always 
                 padding: 0.8rem
 
 @media (max-width: 500px)
@@ -154,7 +170,7 @@
                 .ref-card
                     max-width: 260px
 
-@media (max-width: 300px)
+@media (max-width: 310px)
     .ref-section
         .ref-container
             padding: 0.5rem

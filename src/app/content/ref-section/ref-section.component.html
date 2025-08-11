@@ -2,20 +2,21 @@
     <div class="ref-container">
         <div class="header-and-text-container">
             <div class="header-container">
-            <p class="header-txt">{{ 'REF_SECTION.TEAMPLAYER' | translate }}</p>
+            <p class="header-txt">
+                {{ 'REF_SECTION.TEAMPLAYER' | translate }}
+            </p>
             </div>
             <div class="second-header-container">
-                <p class="second-header-txt">{{ 'REF_SECTION.COLLEAGUES' | translate }}</p>
+                <p class="second-header-txt">
+                    {{ 'REF_SECTION.COLLEAGUES' | translate }}
+                </p>
             </div>
         </div>
-        <div class="ref-posts">
+        <div class="ref-posts" dragScrollX>
             @for (entry of ref; track entry) {
                 <div class="ref-card">
-                <app-ref
-                    [name]="entry.name"
-                    [project]="entry.project"
-                    [commit]="entry.commit">
-                </app-ref>
+                    <app-ref [name]="entry.name" [project]="entry.project" [commit]="entry.commit">
+                    </app-ref>
                 </div>
             }
         </div>
