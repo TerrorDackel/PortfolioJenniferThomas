@@ -79,12 +79,38 @@
                                     </p>
                                 </div>
                             </label>
+                            
                             @if (submitted && contactForm.get('privacy')?.invalid) {
                                 <div class="error-msg">
                                     {{ 'CONTACT.ERROR_PRIVACY_REQUIRED' | translate }}
                                 </div>
                             }
                         </div>
+                        <div class="agree-privacypolice-check-mobile">
+                            <label for="privacy" class="agree-privacypolice-check-label">
+                                <div class="agree-privacypolice-check-div">
+                                    <input class="checkbox" type="checkbox" id="privacy" formControlName="privacy" />
+                                </div>
+                                <div class="agree-privacypolice-check-txt">
+                                    <p class="first-line">
+                                        {{ 'CONTACT.PRIVACY_I' | translate }}
+                                    </p>
+                                    <a class="privacy-link" [routerLink]="['/privacy-policy']"> 
+                                        {{ 'CONTACT.PRIVACY_POLICY' | translate }} 
+                                    </a>
+                                    <p class="second-line">
+                                        {{ 'CONTACT.PRIVACY_AND' | translate }}
+                                    </p>
+                                </div>
+                            </label>
+                            @if (submitted && contactForm.get('privacy')?.invalid) {
+                            <div class="error-msg">
+                                {{ 'CONTACT.ERROR_PRIVACY_REQUIRED' | translate }}
+                            </div>
+                        }
+                        
+                        </div>
+
                         <div class="button-container">
                             <button type="submit" class="btn-contact" [class.btn-valid]="contactForm.valid">
                                 {{ 'CONTACT.BUTTON_SEND' | translate }}
