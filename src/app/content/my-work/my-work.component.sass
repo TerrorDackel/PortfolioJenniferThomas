@@ -3,130 +3,155 @@
     width: 100%
     margin-left: 0
     margin-right: 0
-    
+
 .my-work-section
     width: 100%
     height: auto
     margin: 0
     display: flex
     justify-content: center
-    
-.my-work-container
-    display: flex
-    justify-content: center
-    align-items: center
-    flex-direction: column
-    width: 100%
-    max-width: 1920px
-    margin: 0
-    padding: 1rem
-    height: auto
 
-.my-work-head-container
-    display: flex
-    justify-content: center
-    width: 100%
-    max-width: 1920px
-    height: auto
-    margin: 0
-    gap: 1rem
-
-
-.container-left
-    display: flex
-    flex-direction: column
-    width: 50%
-    height: auto
-
-.my-work-circle-7-container
-    display: flex
-    align-items: center
-    justify-content: flex-end
-    width: 100%
-    height: auto
-
-
-.circle-7
-    display: flex
-    width: 108px
-    height: 108px
-    border-radius: 50%
-    background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%)
-
-.header-container
-    display: flex
-    justify-content: flex-start
-    width: 100%
-    height: auto
-
-.header-txt
-    display: flex
-    margin: 0
-    font-family: 'Baloo 2', sans-serif
-    font-size: clamp(4rem, 4vw + 2rem, 6rem)
-    font-weight: 400
-    color: #5988FF
-    line-height: 100%
-    letter-spacing: 1%
-    p
-        font-family: 'Baloo 2', sans-serif
-        font-size: clamp(4rem, 4vw + 2rem, 6rem)
-        font-weight: 400
-        color: #5988FF
-        line-height: 100%
-        letter-spacing: 1%
-
-.description-container
-    display: flex
-    justify-content: flex-start
-    align-items: center
-    width: 100%
-    height: auto
-
-.description-txt
-    display: flex
-    margin: 0
-    font-family: 'Montserrat', sans-serif
-    font-size: clamp(1rem, 1.5vw + 0.5rem, 1.5rem)
-    font-weight: 400
-    color: #000000
-    letter-spacing: 0%
-    line-height: 120%
-    p
-        font-family: 'Montserrat', sans-serif
-        font-size: clamp(1rem, 1.5vw + 0.5rem, 1.5rem)
-        font-weight: 400
-        color: #000000
-        letter-spacing: 0%
-        line-height: 120%
-
-.container-right
-    display: flex
-    width: 50%
-    height: auto
-
-.my-work-circle-8-container
-    display: flex
-    justify-content: flex-end
-    align-items: flex-end
-    width: 100%
-    height: auto
-
-.circle-8
-    display: flex
-    width: 183px
-    height: 183px
-    border-radius: 50%
-    background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%)
-
-
-@media ( max-width: 700px )
-    .container-right
-        display: none
-
-    .my-work-head-container
+    .my-work-container
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
         width: 100%
-        padding: 3rem
-    
-    .container-left
-        width: 90%
+        max-width: 1920px
+        margin: 0
+        padding: 1rem
+        height: auto
+
+        .my-work-head-container
+            display: flex
+            justify-content: center
+            width: 100%
+            max-width: 1920px
+            height: auto
+            margin: 0
+            gap: 1rem
+
+            .container-left
+                display: flex
+                flex-direction: column
+                width: 50%
+                height: auto
+
+                .my-work-circle-7-container
+                    display: flex
+                    align-items: center
+                    justify-content: flex-end
+                    width: 100%
+                    height: auto
+
+                    .circle-7
+                        display: flex
+                        width: 108px
+                        height: 108px
+                        border-radius: 50%
+                        background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%)
+
+                .header-and-description-container
+                    .header-container
+                        display: flex
+                        justify-content: flex-start
+                        width: 100%
+                        height: auto
+
+                        .header-txt
+                            display: flex
+                            margin: 0
+                            font-family: 'Baloo 2', sans-serif
+                            font-size: clamp(4rem, 4vw + 2rem, 6rem)
+                            font-weight: 400
+                            color: #5988FF
+                            line-height: 100%
+                            letter-spacing: 1%
+
+                    .description-container
+                        display: flex
+                        justify-content: flex-start
+                        align-items: center
+                        width: 100%
+                        height: auto
+
+                        .description-txt
+                            display: flex
+                            margin: 0
+                            font-family: 'Montserrat', sans-serif
+                            font-size: clamp(1rem, 1.5vw + 0.5rem, 1.5rem)
+                            font-weight: 400
+                            color: #000000
+                            letter-spacing: 0%
+                            line-height: 120%
+
+                            p
+                                font-family: 'Montserrat', sans-serif
+                                font-size: clamp(1rem, 1.5vw + 0.5rem, 1.5rem)
+                                font-weight: 400
+                                color: #000000
+                                letter-spacing: 0%
+                                line-height: 120%
+
+            .container-right
+                display: flex
+                width: 50%
+                height: auto
+
+                .my-work-circle-8-container
+                    display: flex
+                    justify-content: flex-end
+                    align-items: flex-end
+                    width: 100%
+                    height: auto
+
+                    .circle-8
+                        display: flex
+                        width: 183px
+                        height: 183px
+                        border-radius: 50%
+                        background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%)
+
+@media (max-width: 700px)
+    .my-work-section
+        .my-work-container
+            .my-work-head-container
+                width: 100%
+                padding: 3rem
+
+                .container-right
+                    display: none
+
+                .container-left
+                    width: 90%
+
+@media (max-width: 500px)
+.my-work-section
+    .my-work-container
+        .my-work-head-container
+            .container-left
+                .my-work-circle-7-container
+                    .circle-7
+                        width: 45px
+                        height: 45px
+
+@media (max-width: 350px)
+.my-work-section
+    .my-work-container
+        .my-work-head-container
+            .container-left
+                .my-work-circle-7-container
+                    display: none
+
+@media (max-width: 290px)
+.my-work-section
+    .my-work-container
+        .my-work-head-container
+            .container-left
+                .header-and-description-container
+                    .header-container
+                        justify-content: center
+                        align-items: center
+
+                        .header-txt
+                            font-size: 3.2rem
