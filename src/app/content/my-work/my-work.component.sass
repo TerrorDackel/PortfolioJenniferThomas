@@ -109,23 +109,45 @@
         .my-work-container
             .my-work-head-container
                 width: 100%
-                padding: 3rem
 
                 .container-right
                     display: none
 
                 .container-left
-                    width: 90%
+                    width: 100%
+                    .my-work-circle-7-container
+
+                    .header-and-description-container
+                        padding: 1rem 0 0 0 
+
+                        .header-container
+                            justify-content: center
+
+                            .header-txt
+                                padding: 0 0 1rem 0
+
 
 @media (max-width: 500px)
     .my-work-section
         .my-work-container
             .my-work-head-container
+                padding: 0
                 .container-left
                     .my-work-circle-7-container
                         .circle-7
                             width: 45px
                             height: 45px
+
+@media (max-width: 430px)
+    .my-work-section
+        .my-work-container
+            .my-work-head-container
+                width: 100%
+                .container-left
+                    .header-and-description-container
+                        .header-container
+                            .header-txt
+                                font-size: 3.5rem
 
 @media (max-width: 380px)
     .my-work-section
@@ -135,7 +157,17 @@
                     .my-work-circle-7-container
                         display: none
 
-@media (max-width: 290px)
+@media (max-width: 340px)
+    .my-work-section
+        .my-work-container
+            .my-work-head-container
+                .container-left
+                    .header-and-description-container
+                        .header-container
+                            .header-txt
+                                font-size: 3rem
+
+@media (max-width: 295px)
     .my-work-section
         .my-work-container
             .my-work-head-container
@@ -146,4 +178,14 @@
                             align-items: center
 
                             .header-txt
-                                font-size: 3.2rem
+                                font-size: 2.6rem
+    
+@media (max-width: 260px)
+    .my-work-section
+        .my-work-container
+            .my-work-head-container
+                .container-left
+                    .header-and-description-container
+                        .header-container
+                            .header-txt
+                                font-size: 2.1rem

@@ -1,9 +1,8 @@
 :host
     display: flex
     justify-content: center
-    width: 100%
-    margin-left: 0
-    margin-right: 0
+    width: 100dvw
+    margin: 0
 
 .projects-section
     width: 100%
@@ -23,7 +22,7 @@
         margin: 0
         width: 100%
         height: auto
-        padding: 2rem 1rem 2rem
+        padding: 2rem 1rem 3rem 1rem
         gap: 1rem
 
         .container-left
@@ -45,22 +44,26 @@
                     align-items: center
                     width: 100%
                     max-width: 720px
-                    height: 100%
-                    gap: 1rem
-                    object-fit: cover
+                    height: auto
                     transition: transform 0.3s ease
                     transform-origin: left center
 
                     &:hover
-                        transform: scale(1.05)
+                        transform: scale(1.03)
 
-                    .project-img
-                        display: flex
+                    .a-img
                         width: 100%
-                        height: auto
+                        display: flex
                         justify-content: center
-                        align-items: center
-                        object-fit: cover
+
+                        .project-img
+                            display: block 
+                            width: 95%
+                            height: auto
+                            justify-content: center
+                            align-items: center
+                            object-fit: cover
+                            box-shadow: 5px 5px 15px 0px #00000026
 
         .container-right
             display: flex
@@ -79,6 +82,10 @@
                 max-width: 532px
                 margin: 0
 
+                app-projects-txt-description
+                    display: flex
+                    justify-content: center
+
     .second-project-container
         display: flex
         justify-content: center
@@ -86,7 +93,7 @@
         margin: 0
         width: 100%
         height: auto
-        padding: 2rem 1rem 2rem
+        padding: 2rem 1rem 3rem 1rem
         gap: 1rem
 
         .container-left
@@ -105,6 +112,10 @@
                 height: auto
                 max-width: 532px
                 margin: 0
+
+                app-projects-txt-description
+                    display: flex
+                    justify-content: center
 
         .container-right
             display: flex
@@ -125,22 +136,26 @@
                     align-items: center
                     width: 100%
                     max-width: 720px
-                    height: 100%
-                    gap: 1rem
-                    object-fit: cover
+                    height: auto
                     transition: transform 0.3s ease
                     transform-origin: right center
 
                     &:hover
-                        transform: scale(1.05)
+                        transform: scale(1.03)
 
-                    .project-img
-                        display: flex
+                    .a-img
                         width: 100%
-                        height: auto
+                        display: flex
                         justify-content: center
-                        align-items: center
-                        object-fit: cover
+
+                        .project-img
+                            display: block
+                            width: 95%
+                            height: auto
+                            justify-content: center
+                            align-items: center
+                            object-fit: cover
+                            box-shadow: 5px 5px 15px 0px #00000026
 
     .third-project-container
         display: flex
@@ -149,7 +164,7 @@
         margin: 0
         width: 100%
         height: auto
-        padding: 2rem 1rem 2rem
+        padding: 2rem 1rem 4rem 1rem
         gap: 1rem
 
         .container-left
@@ -172,21 +187,25 @@
                     width: 100%
                     max-width: 720px
                     height: 100%
-                    gap: 1rem
-                    object-fit: cover
                     transition: transform 0.3s ease
                     transform-origin: left center
 
                     &:hover
-                        transform: scale(1.05)
+                        transform: scale(1.03)
 
-                    .project-img
-                        display: flex
+                    .a-img
                         width: 100%
-                        height: auto
+                        display: flex
                         justify-content: center
-                        align-items: center
-                        object-fit: cover
+
+                        .project-img
+                            display: block
+                            width: 95%
+                            height: auto
+                            justify-content: center
+                            align-items: center
+                            object-fit: cover
+                            box-shadow: 5px 5px 15px 0px #00000026
 
         .container-right
             display: flex
@@ -205,10 +224,16 @@
                 max-width: 532px
                 margin: 0
 
-    @media (max-width: 600px)
+                app-projects-txt-description
+                    display: flex
+                    justify-content: center
+
+@media (max-width: 800px)
+    .projects-section
+        justify-content: center
         gap: 0
-        padding-left: 1rem
-        padding-right: 1rem
+        margin: 0
+        width: 100%
 
         .first-project-container
             width: 100%
@@ -216,18 +241,24 @@
             flex-direction: column
             align-items: center
             justify-content: center
+            margin: 0
+            padding: 0 1rem
 
             .container-left
                 justify-content: center
+                align-items: center
                 width: 100%
                 margin: 0
                 padding: 0
 
                 .project-img-container
                     .project-img-left
-                        justify-content: center
+                        
                         transform-origin: center
-                        height: 100%
+                        .a-img
+                            .project-img
+                                justify-content: center
+                                height: auto
 
             .container-right
                 justify-content: center
@@ -236,10 +267,15 @@
                 padding: 0
 
                 .project-description-container-right
+                    width: 100%
                     display: flex
                     margin: 0
                     justify-content: center
                     align-items: center
+
+                    app-projects-txt-description
+                        display: flex
+                        justify-content: center
 
         .second-project-container
             width: 100%
@@ -260,6 +296,10 @@
                     justify-content: center
                     align-items: center
 
+                    app-projects-txt-description
+                        display: flex
+                        justify-content: center
+
             .container-right
                 justify-content: center
                 width: 100%
@@ -268,9 +308,12 @@
 
                 .project-img-container
                     .project-img-right
-                        justify-content: center
-                        transform-origin: center
-                        height: 100%
+                        
+                        transform-origin: center 
+                        .a-img
+                            .project-img
+                                justify-content: center
+                                height: auto 
 
         .third-project-container
             width: 100%
@@ -287,9 +330,12 @@
 
                 .project-img-container
                     .project-img-left
-                        justify-content: center
+                        
                         transform-origin: center
-                        height: 100%
+                        .a-img
+                            .project-img
+                                justify-content: center
+                                height: auto
 
             .container-right
                 justify-content: center
@@ -302,3 +348,56 @@
                     margin: 0
                     justify-content: center
                     align-items: center
+
+                    app-projects-txt-description
+                        display: flex
+                        justify-content: center
+
+@media (max-width: 300px)
+    .projects-section
+        .first-project-container
+            .container-left
+                .project-img-container
+                    .project-img-left
+                        justify-content: center
+                        .a-img
+                            width: 95%
+                            
+                            .project-img
+                                width: 95%
+                                height: auto
+                                padding: 1rem
+            .container-right
+                .project-description-container-right
+                    app-projects-txt-description
+        .second-project-container
+            .container-left
+                .project-description-container-left
+                    app-projects-txt-description
+            .container-right
+                .project-img-container
+                    .project-img-right
+                        justify-content: center
+
+                        .a-img
+                            width: 95%
+                            
+                            .project-img
+                                width: 95%
+                                height: auto
+                                padding: 1rem
+        .third-project-container
+            .container-left
+                .project-img-container
+                    .project-img-left
+                        justify-content: center
+                        
+                        .a-img
+                            width: 95%
+                            .project-img
+                                width: 95%
+                                height: auto
+                                padding: 1rem
+            .container-right
+                .project-description-container-right
+                    app-projects-txt-description
