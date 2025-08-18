@@ -66,28 +66,30 @@ a
                 background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%)
 
         .about-me-infos-container
-            height: auto
             display: flex
             justify-content: center
+            align-items: center
             max-width: 1920px
-            margin: 0
             width: 100%
+            height: auto
+            margin: 0
 
             .container-left
                 display: flex
+                align-items: flex-start
                 flex-direction: column
                 justify-content: center
                 height: auto
-                width: 50%
-                height: auto
-                padding: 0 1rem 0 2rem
+                width: 45%
+                max-width: 620px
+                padding: 0 1rem 0 3rem
 
                 .lets-work-together-container
                     display: flex
                     flex-direction: column
                     justify-content: center
                     width: 100%
-                    padding: 1rem 0 0 0
+                    padding: 1rem 0 0 1rem
 
                     .lets-work-together-text
                         width: 100%
@@ -103,10 +105,15 @@ a
 
                 .i-am-plus-info-container
                     display: flex
-                    width: 90%
+                    width: 100%
                     flex-direction: column
 
                     .i-am-container
+                        width: 100%
+                        display: flex
+                        justify-content: center
+                        align-items: center
+
                         .i-am-text
                             display: flex
                             justify-content: center
@@ -120,18 +127,26 @@ a
 
                     .info-container
                         display: flex
-                        justify-content: space-around
-                        width: 90%
-                        height: 51px
+                        justify-content: flex-start
+                        align-items: center
+                        width: 100%
 
                         .located-icon-txt-container
                             display: flex
-                            justify-content: space-around
+                            justify-content: flex-start
                             align-items: center
-                            width: 154px
-                            height: 51px
+                            min-width: 230px
+                            width: 45%
+                            min-height: 55px
+                            padding: 0 0.5rem 0 0
 
                             .located-icon-container
+                                width: 100px
+                                height: 55px
+                                display: flex
+                                align-items: center
+                                justify-content: center
+                                
                                 .located-icon-link
                                     position: relative
                                     display: inline-block
@@ -142,10 +157,10 @@ a
                                         position: absolute
                                         top: 0
                                         left: 0
-                                        transition: opacity 0.2s ease-in-out
-                                        width: 100%
-                                        height: 100%
+                                        width: 32.5px
+                                        height: 40px
                                         object-fit: contain
+                                        transition: opacity 0.2s ease-in-out
 
                                     .located-icon-img-default
                                         opacity: 1
@@ -162,12 +177,13 @@ a
                                             opacity: 1
 
                             .located-txt
-                                width: 134px
-                                height: 46px
-                                top: 5px
-                                margin-left: 15px
+                                min-width: 160px
+                                width: 100%
+                                height: 55px
                                 display: flex
                                 align-items: center
+                                justify-content: flex-start
+                                margin-left: 1rem
                                 font-family: 'Montserrat', sans-serif
                                 font-size: clamp(0.9rem, 0.5vw + 0.5rem, 1.3rem)
                                 font-weight: 400
@@ -176,23 +192,25 @@ a
 
                         .remote-icon-txt-container
                             display: flex
-                            justify-content: space-between
+                            justify-content: flex-start
                             align-items: center
-                            width: 192px
-                            height: 51px
+                            min-width: 230px
+                            width: 45%
+                            min-height: 55px
+                            padding: 0 0 0 0.5rem
 
                             .remote-icon
                                 position: relative
                                 display: inline-block
-                                width: 53.5px
-                                height: 47px
+                                width: 100px
+                                height: 55px
 
                                 img
                                     position: absolute
                                     top: 0
                                     left: 0
-                                    width: 100%
-                                    height: 100%
+                                    width: 52px
+                                    height: 45px
                                     object-fit: contain
                                     transition: opacity 0.2s ease-in-out
 
@@ -211,14 +229,15 @@ a
                                         opacity: 1
 
                             .remote-txt
-                                width: 125px
-                                height: 42px
-                                top: 9px
-                                margin-left: 15px
+                                min-width: 160px
+                                width: 100%
+                                height: 55px
                                 display: flex
                                 align-items: center
+                                justify-content: flex-start
+                                margin-left: 1rem
                                 font-family: 'Montserrat', sans-serif
-                                font-size: clamp(0.9rem, 0.5vw + 0.5rem, 1.125rem)
+                                font-size: clamp(0.9rem, 0.5vw + 0.5rem, 1.3rem)
                                 font-weight: 400
                                 color: #5988FF
                                 line-height: 120%
@@ -227,9 +246,11 @@ a
                 display: flex
                 align-items: flex-start
                 flex-direction: column
+                justify-content: center
                 height: auto
-                width: 50%
-                padding: 0 2rem 0 1rem
+                width: 45%
+                max-width: 620px
+                padding: 0 3rem 0 1rem
 
                 .information-about-me-container
                     display: flex
@@ -279,7 +300,8 @@ a
 
                             .send-a-message-btn-text
                                 z-index: 2
-                                padding: 0 2rem
+                                padding: 0 1rem
+                                margin: 1rem 0
                                 transition: transform 0.15s ease
                                 will-change: transform
                                 font-family: "Poppins", sans-serif
@@ -329,91 +351,121 @@ a
             width: 100%
             height: 131px
 
-@media ( max-width: 800px )
-    .work-together-section
-        .about-me-section
-            .about-me-circles-container
-                .circle-placeholder
-                .circle-5
-                .circle-6
-            .about-me-infos-container
-                .container-left
-                    .lets-work-together-container
-                        .lets-work-together-text
-                    .i-am-plus-info-container
-                        .i-am-container
-                            .i-am-text
-                        .info-container
-                            .located-icon-txt-container
-                                .located-icon-container
-                                    .located-icon-link
-                                        .located-icon-img-default
-                                        .located-icon-img-hover
-                                .located-txt
-                            .remote-icon-txt-container
-                                .remote-icon
-                                    .remote-icon-default
-                                    .remote-icon-hover
-                                .remote-txt
-                .container-right
-                    .information-about-me-container
-                        .imformation-about-me-text
-                    .contact-me-container-alignement
-                        .send-a-message-container
-                            .send-a-message-btn
-                                .send-a-message-btn-text
-            .about-me-bottom
+@media (max-width: 1370px)
+    .information-about-me-container
+        padding: 1rem 0 0 0 
 
-@media ( max-width: 650px )
+@media (max-width: 1200px)
+    .info-container
+        flex-direction: column
+
+@media (max-width: 950px)
+    .information-about-me-container
+        padding: 2rem 0 0 0 
+
+@media (max-width: 790px)
+    .information-about-me-container
+        padding: 3rem 0 0 0 
+
+@media (max-width: 700px)
     .work-together-section
+        padding: 0 1rem
         .about-me-section
+            height: auto
+            margin: 0
             .about-me-infos-container
                 display: flex
                 flex-direction: column
                 align-items: center
+                justify-content: center
                 margin: 0
-                width: 90%
                 height: auto
                 padding: 2rem 1rem
 
-                .container-left
+                .container-left    
+                    padding: 1rem 1rem
+                    width: 90%
+                    
                     .lets-work-together-container
+                        flex-direction: row
+                        
                         .lets-work-together-text
-                            font-size: 40px
+                            width: 100%
+                            max-width: 290px
+                            font-size: clamp(64px, 8vw, 121px)
+
                     .i-am-plus-info-container
                         .i-am-container
                             .i-am-text
                                 font-size: 32px
                         .info-container
+                            width: 100%
+                            height: 100%
+                            padding-bottom: 1rem
+                            flex-direction: row
+                            justify-content: center
+                            align-items: flex-start
+
                             .located-icon-txt-container
+                                width: 100%
+                                min-width: 200px
+                                margin-left: 0.5rem
+                                
                                 .located-icon-container
+                                    justify-content: center
+                                    padding: 0 1rem
+                                    width: 55px
+                                    height: 55px
+
                                     .located-icon-link
                                         .located-icon-img-default
+                                            width: 32px
+                                            height: 40px
                                         .located-icon-img-hover
+                                            width: 32px
+                                            height: 40px
                                 .located-txt
-                            .remote-icon-txt-container
-                                .remote-icon
-                                    .remote-icon-default
-                                    .remote-icon-hover
-                                .remote-txt
+                                    width: 100%
+                                    min-width: 160px
+                                    margin: 0
+                                    margin: 0 0 0 0.5rem
 
+                            .remote-icon-txt-container
+                                width: 100%
+                                min-width: 200px
+                                margin-left: 0.5rem
+                                
+                                .remote-icon
+                                    justify-content: center
+                                    padding: 0 1rem
+                                    width: 55px
+                                    height: 55px
+                                    .remote-icon-default
+                                        width: 52px
+                                        height: 45px
+                                    .remote-icon-hover
+                                        width: 52px
+                                        height: 45px
+                                .remote-txt
+                                    width: 100%
+                                    min-width: 160px
+                                    margin: 0 0 0 0.5rem
+                                    
                 .container-right
-                    display: flex
+                    width: 90%
                     justify-content: center
                     align-items: center
                     margin: 0
-
+                    padding: 1rem
+                    
                     .information-about-me-container
                         display: flex
-                        justify-content: center
-                        align-items: center
                         margin: 0
+                        padding: 0 1rem 
+
                         .imformation-about-me-text
                             display: flex
-                            justify-content: center
-                            align-items: center
                             gap: 3rem
-
                     .contact-me-container-alignement
                         display: flex
                         justify-content: center
@@ -422,24 +474,74 @@ a
                         .send-a-message-container
                             .send-a-message-btn
                                 .send-a-message-btn-text
+                        
+            .about-me-bottom
+                height: 0
 
-            .about-me-section
-                height: auto
-                margin: 0
-
-@media (max-width: 385px)
+@media (max-width: 665px)
     .work-together-section
         .about-me-section
-            .about-me-circles-container
-                display: none
+            .about-me-infos-container
+                .container-left
+                    .lets-work-together-container
+                        flex-direction: column
+                        align-items: flex-start
+                        padding: 0 0 0 3rem
 
+@media (max-width: 600px)
+
+    .work-together-section
+        .about-me-section
+            
+            .about-me-circles-container
+                
             .about-me-infos-container
                 justify-content: center
                 text-align: center
                 padding: 2rem 1rem
-
+            
                 .container-left
                     .lets-work-together-container
+                        .lets-work-together-text
+                    .i-am-plus-info-container
+                        .i-am-container
+                            .i-am-text
+                        .info-container
+                            flex-direction: column
+                            align-items: center
+                            .located-icon-txt-container
+                                max-width: 260px
+                                .located-icon-container
+                                    .located-icon-link
+                                        .located-icon-img-default
+                                        .located-icon-img-hover
+                                .located-txt
+                            .remote-icon-txt-container
+                                max-width: 260px
+                                .remote-icon
+                                    .remote-icon-default
+                                    .remote-icon-hover
+                                .remote-txt
+                .container-right
+                    .information-about-me-container
+                        text-align: start
+                        padding: 0 3rem 
+                        .imformation-about-me-text
+                            padding: 0 3rem
+                    .contact-me-container-alignement
+                        .send-a-message-container
+                            .send-a-message-btn
+                                .send-a-message-btn-text
+            .about-me-bottom
+
+@media (max-width: 540px)
+    .work-together-section
+        .about-me-section
+            .about-me-circles-containere
+            .about-me-infos-container
+                .container-left
+                    .lets-work-together-container
+                        padding: 1rem
                         .lets-work-together-text
                     .i-am-plus-info-container
                         .i-am-container
@@ -456,14 +558,133 @@ a
                                     .remote-icon-default
                                     .remote-icon-hover
                                 .remote-txt
-
                 .container-right
                     .information-about-me-container
+                        padding: 0 1.5rem 
                         .imformation-about-me-text
-
+                            padding: 0 1.5rem 
                     .contact-me-container-alignement
                         .send-a-message-container
                             .send-a-message-btn
                                 .send-a-message-btn-text
-
             .about-me-bottom
+
+@media (max-width: 385px)
+    .work-together-section
+        .about-me-section
+            .about-me-circles-container
+            .about-me-infos-container
+                justify-content: center
+                text-align: center
+                padding: 2rem 1rem
+                .container-left
+                    align-items: center
+                    .lets-work-together-container
+                        width: 100%
+                        align-items: center
+                        .lets-work-together-text
+                            width: 280px
+                            padding: 1rem 0 0 0
+                            text-align: center
+                            justify-content: center
+                    .i-am-plus-info-container
+                        .i-am-container
+                            .i-am-text
+                        .info-container
+                            .located-icon-txt-container
+                                .located-icon-container
+                                    .located-icon-link
+                                        .located-icon-img-default
+                                        .located-icon-img-hover
+                                .located-txt
+                            .remote-icon-txt-container
+                                .remote-icon
+                                    .remote-icon-default
+                                    .remote-icon-hover
+                                .remote-txt
+                .container-right
+                    .information-about-me-container
+                        .imformation-about-me-text
+                    .contact-me-container-alignement
+                        .send-a-message-container
+                            .send-a-message-btn
+                                .send-a-message-btn-text
+            .about-me-bottom
+
+@media (max-width: 320px)
+    .work-together-section
+        .about-me-section
+            .about-me-circles-container
+            .about-me-infos-container
+                justify-content: center
+                text-align: center
+                padding: 2rem 1rem
+                .container-left
+                    align-items: center
+                    .lets-work-together-container
+                        width: 100%
+                        align-items: center
+                        .lets-work-together-text
+                            font-size: 50px
+                    .i-am-plus-info-container
+                        .i-am-container
+                            .i-am-text
+                        .info-container
+                            min-width: auto
+                            align-items: flex-start
+                            .located-icon-txt-container
+                                width: 190px!important
+                                margin: 0 0
+                                padding: 1rem 0
+                                .located-icon-container
+                                    .located-icon-link
+                                        .located-icon-img-default
+                                        .located-icon-img-hover
+                                .located-txt
+                                    min-width: auto
+                                    margin: 0
+                                    text-align: start
+                            .remote-icon-txt-container
+                                width: 190px!important
+                                margin: 0 0 0 0.1rem
+                                padding: 1rem 
+                                .remote-icon
+                                    .remote-icon-default
+                                    .remote-icon-hover
+                                .remote-txt
+                                    min-width: auto
+                                    margin: 0
+                                    text-align: start
+                .container-right
+                    .information-about-me-container
+                        .imformation-about-me-text
+                    .contact-me-container-alignement
+                        .send-a-message-container
+                            .send-a-message-btn
+                                .send-a-message-btn-text
+            .about-me-bottom
+
+@media (max-width: 250px)
+    .work-together-section
+        .about-me-section
+            .about-me-circles-container
+                .circle-placeholder
+                .circle-5
+                    background: none
+                .circle-6
+                    background: none
+
+
+@media (max-width: 235px)
+    .work-together-section
+        .about-me-section
+            .about-me-circles-container
+            .about-me-infos-container
+                .container-left
+                    .lets-work-together-container
+                        .lets-work-together-text
+                            font-size: 40px
+                    .i-am-plus-info-container
+                        .i-am-container
+                            .i-am-text
+                                font-size: 30px
