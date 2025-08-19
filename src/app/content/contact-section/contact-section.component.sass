@@ -67,7 +67,6 @@
                     letter-spacing: 0%
                     color: #5988FF
 
-
             .container-left-and-right
                 width: 95%
                 max-width: 1700px
@@ -99,7 +98,7 @@
                             display: flex
                             align-items: center
                             width: 100%
-                            min-height: 150px 
+                            min-height: 150px
                             font-family: 'Montserrat', sans-serif
                             font-weight: 960
                             font-size: 32px
@@ -174,7 +173,7 @@
                     align-items: flex-start
                     justify-content: center
                     width: 49%
-                    max-width: 800px 
+                    max-width: 800px
                     height: auto
                     padding: 0 1rem 0 0
 
@@ -201,6 +200,45 @@
                         .message-textfield
                             height: 7rem
 
+                    .your-name-container
+                        .error-slot
+                            min-height: 1.25rem
+                            display: block
+                            width: 100%
+                            align-self: stretch
+                        .error-msg
+                            color: red
+                            font-family: "Poppins", sans-serif
+                            font-size: 1rem!important
+                            margin-top: 0.5rem
+                            text-align: left
+
+                    .your-email-container
+                        .error-slot
+                            min-height: 1.25rem
+                            display: block
+                            width: 100%
+                            align-self: stretch
+                        .error-msg
+                            color: red
+                            font-family: "Poppins", sans-serif
+                            font-size: 1rem!important
+                            margin-top: 0.5rem
+                            text-align: left
+
+                    .your-message-container
+                        .error-slot
+                            min-height: 1.25rem
+                            display: block
+                            width: 100%
+                            align-self: stretch
+                        .error-msg
+                            color: red
+                            font-family: "Poppins", sans-serif
+                            font-size: 1rem!important
+                            margin-top: 0.5rem
+                            text-align: left
+
                     .agree-privacypolice-check
                         display: flex
                         flex-direction: column
@@ -215,7 +253,7 @@
                             flex-direction: row
                             justify-content: center
                             align-items: center
-                            padding: 0 
+                            padding: 0
 
                             .agree-privacypolice-check-div
                                 display: flex
@@ -230,7 +268,7 @@
                                     display: flex
                                     width: 24px
                                     height: 24px
-                                    
+
                                     &:hover
                                         cursor: pointer
 
@@ -259,14 +297,34 @@
                                 letter-spacing: 0%
                                 overflow-wrap: break-word
 
+                        .error-slot
+                            min-height: 1.25rem
+                            display: block
+                            width: 100%
+                            align-self: stretch
+
+                        .error-msg
+                            color: red
+                            font-family: "Poppins", sans-serif
+                            font-size: 1rem!important
+                            margin-top: 0.5rem
+                            text-align: left
+
                     .agree-privacypolice-check-mobile
                         display: none
 
-                    .error-msg
-                        color: red
-                        font-family: "Poppins", sans-serif
-                        font-size: 1rem!important
-                        margin-top: 0.5rem
+                        .error-slot
+                            min-height: 1.25rem
+                            display: block
+                            width: 100%
+                            align-self: stretch
+
+                        .error-msg
+                            color: red
+                            font-family: "Poppins", sans-serif
+                            font-size: 1rem!important
+                            margin-top: 0.5rem
+                            text-align: left
 
                     .success-msg
                         color: green
@@ -336,6 +394,19 @@
                                 &:hover::after
                                     transform: scale(1)
 
+                    .name-textfield.inline-error-active::placeholder,
+                    .email-textfield.inline-error-active::placeholder,
+                    .message-textfield.inline-error-active::placeholder
+                        color: #E53935
+                        opacity: 1
+
+                    .name-textfield:-webkit-autofill,
+                    .email-textfield:-webkit-autofill,
+                    .message-textfield:-webkit-autofill
+                        -webkit-text-fill-color: inherit
+                        -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset
+                        transition: background-color 9999s ease-out 0s
+
             .circle-14-container
                 display: flex
                 justify-content: flex-end
@@ -375,7 +446,7 @@
 @media (max-width: 920px)
     .agree-privacypolice-check-txt
         overflow-wrap: break-word
-        
+
 @media (max-width: 760px)
     #contact
         scroll-margin-top: 50px
@@ -435,7 +506,6 @@
                                 font-weight: 700
                                 font-size: 1.5rem
                                 margin-top: 1rem
-                                
 
                         .got-a-problem-title-description-container
                             .got-a-problem-title-description-txt
@@ -479,6 +549,18 @@
                                 align-items: center
                                 justify-content: center
 
+                            .error-slot
+                                min-height: 1.25rem
+                                display: block
+                                width: 95%
+                                align-self: flex-start
+
+                            .error-msg
+                                width: 95%
+                                color: red
+                                text-align: left
+                                font-size: 1.2rem
+                                margin-top: 5px
 
                         .your-email-container
                             display: flex
@@ -497,6 +579,19 @@
                                 background-color: #FFFFFF
                                 display: flex
                                 justify-content: center
+
+                            .error-slot
+                                min-height: 1.25rem
+                                display: block
+                                width: 95%
+                                align-self: flex-start
+
+                            .error-msg
+                                width: 95%
+                                color: red
+                                text-align: left
+                                font-size: 1.2rem
+                                margin-top: 5px
 
                         .your-message-container
                             display: flex
@@ -517,6 +612,19 @@
                                 justify-content: center
                                 height: 202px
 
+                            .error-slot
+                                min-height: 1.25rem
+                                display: block
+                                width: 95%
+                                align-self: flex-start
+
+                            .error-msg
+                                width: 95%
+                                color: red
+                                text-align: left
+                                font-size: 1.2rem
+                                margin-top: 5px
+
                         .agree-privacypolice-check
                             height: auto
                             width: 95% !important
@@ -532,12 +640,12 @@
                                 max-width: none
 
                                 .agree-privacypolice-check-div
-                                        display: flex
-                                        align-items: flex-start!important
-                                        justify-content: flex-start
-                                        width: 20px
-                                        height: 50px
-                                        margin-top: 0.1rem
+                                    display: flex
+                                    align-items: flex-start!important
+                                    justify-content: flex-start
+                                    width: 20px
+                                    height: 50px
+                                    margin-top: 0.1rem
 
                                 .agree-privacypolice-check-txt
                                     max-width: 320px
@@ -553,8 +661,20 @@
                                         margin: 0 !important
                                         color: #5988FF
                                         text-decoration: underline
-
                                         margin-bottom: -0.2rem!important
+
+                            .error-slot
+                                min-height: 1.25rem
+                                display: block
+                                width: 95%
+                                align-self: flex-start
+
+                            .error-msg
+                                width: 95%
+                                color: red
+                                text-align: left
+                                font-size: 1.2rem
+                                margin-top: 5px
 
                         .button-container
                             width: 100%
@@ -579,37 +699,23 @@
                             font-size: 1.2rem
                             margin-top: 20px
 
-                        .error-msg
-                            width: 100%
-                            color: red
-                            text-align: center
-                            font-size: 1.2rem
-                            margin-top: 5px
-
                         .back-to-top
                             display: block
                             width: 100%
 
                         .circle-14-container
-
                             .circle-14
                                 width: 40px!important
                                 height: 40px!important
-@media (max-width: 390px)
 
+@media (max-width: 390px)
     .contact-section
         width: 240px
         padding: 0 0
 
-
-
         .contact-container
             width: 220px
             padding: 0 0.5rem
-
-            .circle-13-container
-
-                .circle-13
 
             .contact-title-and-container-left-right
                 flex-direction: column
@@ -636,28 +742,6 @@
                             .got-a-problem-txt
                                 font-size: 1.4rem
 
-                        .got-a-problem-title-description-container
-
-                            .got-a-problem-title-description-txt
-
-                        .need-a-contact-me-container
-                            
-                            .need-a-contact-me-txt
-                                width: 95%!important
-                                min-height: 5rem
-                                justify-content: center
-                                align-items: center
-                                flex-direction: column
-
-                                .need-a-contact-me-question,
-                                .need-a-contact-me-answer
-
-
-                        .circle-11-container
-                            display: none
-
-                            .circle-11
-
                     .container-right
                         padding: 0
                         width: 220px!important
@@ -668,6 +752,18 @@
                             .name-textfield
                                 width: 220px!important
 
+                            .error-slot
+                                min-height: 1.25rem
+                                display: block
+                                width: 220px
+                                align-self: flex-start
+
+                            .error-msg
+                                width: 220px
+                                color: red
+                                text-align: left
+                                font-size: 1rem
+                                margin-top: 5px
 
                         .your-email-container
                             width: 220px
@@ -675,11 +771,37 @@
                             .email-textfield
                                 width: 220px!important
 
+                            .error-slot
+                                min-height: 1.25rem
+                                display: block
+                                width: 220px
+                                align-self: flex-start
+
+                            .error-msg
+                                width: 220px
+                                color: red
+                                text-align: left
+                                font-size: 1rem
+                                margin-top: 5px
+
                         .your-message-container
                             width: 220px
 
                             .message-textfield
                                 width: 220px!important
+
+                            .error-slot
+                                min-height: 1.25rem
+                                display: block
+                                width: 220px
+                                align-self: flex-start
+
+                            .error-msg
+                                width: 220px
+                                color: red
+                                text-align: left
+                                font-size: 1rem
+                                margin-top: 5px
 
                         .agree-privacypolice-check
                             display: none
@@ -723,12 +845,24 @@
                                         display: flex
                                         align-items: flex-start
                                         justify-content: flex-start
-                                    
+
                                     .privacy-link
                                         color: #5988FF
                                         text-decoration: underline
                                         font-size: 0.9rem!important
-                                        
+
+                            .error-slot
+                                min-height: 1.25rem
+                                display: block
+                                width: 220px
+                                align-self: flex-start
+
+                            .error-msg
+                                width: 220px
+                                color: red
+                                text-align: left
+                                font-size: 1rem
+                                margin-top: 5px
 
                         .button-container
                             width: 100%
@@ -753,18 +887,11 @@
                             font-size: 1rem
                             margin-top: 20px
 
-                        .error-msg
-                            color: red
-                            text-align: center
-                            font-size: 1rem
-                            margin-top: 5px
-
                         .back-to-top
                             display: block
                             width: 100%
 
                         .circle-14-container
-
                             .circle-14
                                 width: 40px!important
                                 height: 40px!important
@@ -774,8 +901,6 @@
         padding: 0 0!important
 
 @media (max-width: 240px)
-
-
     .contact-section
         width: 220px
         padding: 0 0
@@ -786,10 +911,6 @@
         .contact-container
             max-width: 210px
             padding: 0 0
-
-            .circle-13-container
-
-                .circle-13
 
             .contact-title-and-container-left-right
                 flex-direction: column
@@ -820,13 +941,12 @@
                                 font-size: 1.2rem!important
 
                         .got-a-problem-title-description-container
-
                             .got-a-problem-title-description-txt
                                 text-align: center
 
                         .need-a-contact-me-container
                             justify-content: center !important
-                            
+
                             .need-a-contact-me-txt
                                 max-width: 200px!important
                                 min-height: 5rem
@@ -849,10 +969,22 @@
                             .message-textfield
                                 max-width: 200px!important
 
+                            .error-slot
+                                min-height: 1.25rem
+                                display: block
+                                width: 200px
+                                align-self: flex-start
+
+                            .error-msg
+                                width: 200px
+                                color: red
+                                text-align: left
+                                font-size: 1rem
+                                margin-top: 5px
+
                         .agree-privacypolice-check-mobile
                             width: 100%
                             max-width: 200px
-
 
                             .agree-privacypolice-check-label
                                 max-width: 200px
@@ -863,11 +995,9 @@
 
                                 .agree-privacypolice-check-txt
                                     width: 182px
-                                    
+
                                     .first-line,
                                     .second-line
                                         font-size: 0.9rem!important
                                     .privacy-link
                                         font-size: 0.8rem!important
-
-
