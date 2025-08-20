@@ -1,0 +1,80 @@
+@media (max-width: 500px)
+    .ref-section
+        .ref-container
+            .header-and-text-container
+                .header-container
+                    display: flex
+                    justify-content: center
+                    font-size: 36px
+                    font-weight: bold
+                    text-align: center
+                    padding-top: 1rem
+
+                .second-header-container
+                    display: flex
+                    justify-content: center
+                    font-size: 0.7rem
+                    font-weight: normal
+
+            .ref-posts
+                flex-wrap: nowrap
+                overflow-x: auto
+                overflow-y: hidden
+                width: 100%
+                gap: 1rem
+                padding-inline: 1rem
+                margin: 0
+                -webkit-overflow-scrolling: touch
+                scroll-snap-type: x mandatory
+                scroll-padding-inline: 1rem
+
+                .ref-card
+                    width: 300px
+                    scroll-snap-align: start
+                    flex-shrink: 0
+
+@media (max-width: 400px)
+    .ref-section
+        .ref-container
+            .ref-posts
+                .ref-card
+                    max-width: 250px
+
+@media (max-width: 330px)
+    .ref-section
+        .ref-container
+            .ref-posts
+                gap: 0.75rem
+                padding-inline: 0.5rem
+                scroll-padding-inline: 0.5rem
+
+                .ref-card
+                    max-width: 260px
+
+@media (max-width: 310px)
+    .ref-section
+        .ref-container
+            padding: 0.5rem
+
+            .ref-posts
+                gap: 0.5rem
+                padding-inline: 0.25rem
+                scroll-padding-inline: 0.25rem
+
+                .ref-card
+                    max-width: 230px
+
+@media (max-width: 270px)
+    .ref-section
+        .ref-container
+            .ref-posts
+                .ref-card
+                    max-width: 220px
+
+@media (max-width: 240px)
+    .ref-section
+        .ref-container
+            .ref-posts
+                gap: 0.25rem
+                .ref-card
+                    max-width: 188px!important
