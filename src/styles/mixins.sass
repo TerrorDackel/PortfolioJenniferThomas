@@ -1,12 +1,145 @@
+// src/styles/mixins.sass
+
 @mixin hide-scrollbar
     overflow-y: auto
     overflow-x: hidden
     -ms-overflow-style: none
     scrollbar-width: none
-
     &::-webkit-scrollbar
         display: none
 
-
 @mixin allow-horizontal-scroll
     overflow-x: auto
+
+/* Flex: direction → justify → align → gap */
+@mixin flex-d-j-a-g($dir: row, $justify: flex-start, $align: stretch, $gap: null)
+    display: flex
+    flex-direction: $dir
+    justify-content: $justify
+    align-items: $align
+    @if $gap != null
+        gap: $gap
+
+/* Größen */
+@mixin size-w-h($w: null, $h: null)
+    @if $w != null
+        width: $w
+    @if $h != null
+        height: $h
+
+@mixin minsize-w-h($w: null, $h: null)
+    @if $w != null
+        min-width: $w
+    @if $h != null
+        min-height: $h
+
+@mixin maxsize-w-h($w: null, $h: null)
+    @if $w != null
+        max-width: $w
+    @if $h != null
+        max-height: $h
+
+/* width → height → min-width → min-height → max-width → max-height */
+@mixin boxsize-w-h-minw-minh-maxw-maxh($w: null, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
+    @if $w != null
+        width: $w
+    @if $h != null
+        height: $h
+    @if $minw != null
+        min-width: $minw
+    @if $minh != null
+        min-height: $minh
+    @if $maxw != null
+        max-width: $maxw
+    @if $maxh != null
+        max-height: $maxh
+
+/* Typografie: family → size → color → weight → line-height → letter-spacing → text-align */
+@mixin font-f-s-c-w-lh-ls-a($family: null, $size: null, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
+    @if $family != null
+        font-family: $family
+    @if $size != null
+        font-size: $size
+    @if $color != null
+        color: $color
+    @if $weight != null
+        font-weight: $weight
+    @if $lineHeight != null
+        line-height: $lineHeight
+    @if $letterSpacing != null
+        letter-spacing: $letterSpacing
+    @if $align != null
+        text-align: $align
+
+/* Border: width → style → color → radius */
+@mixin border-w-s-c-r($w: 1px, $style: solid, $color: #000000, $radius: null)
+    border: $w $style $color
+    @if $radius != null
+        border-radius: $radius
+
+/* Interaktion */
+@mixin clickable-prop-dur-ease($prop: all, $dur: 0.1s, $ease: ease-in-out)
+    cursor: pointer
+    transition: #{$prop} #{$dur} #{$ease}
+
+@mixin hover-scale-f($factor: 1.15)
+    &:hover
+        transform: scale(#{$factor})
+
+/* Farben/Decor */
+@mixin brandradial-size-x-y-c1-c2-c3($size: '74.22% 74.22%', $posx: 19.79%, $posy: 22.42%, $c1: #5988FF, $c2: #5988FF, $c3: #0043F0)
+    background: radial-gradient(#{$size} at #{$posx} #{$posy}, #{$c1} 6.25%, $c2 51.56%, $c3 100%)
+
+@mixin elevation-y-blur-spread-alpha($y: 5px, $blur: 15px, $spread: 0px, $alpha: 0.15)
+    box-shadow: 5px $y $blur $spread rgba(0, 0, 0, $alpha)
+
+@mixin bg-url-repeat-pos-size($url, $repeat: no-repeat, $position: center, $size: contain)
+    background-image: url(#{$url})
+    background-repeat: $repeat
+    background-position: $position
+    background-size: $size
+
+@mixin circle-size($size)
+    @include size-w-h($size, $size)
+    border-radius: 50%
+
+/* Aliase (Backwards-Compat) – lassen, bis alles umgestellt ist */
+@mixin flex($dir: row, $justify: flex-start, $align: stretch, $gap: null)
+    @include flex-d-j-a-g($dir, $justify, $align, $gap)
+
+@mixin size($w, $h: $w)
+    @include size-w-h($w, $h)
+
+@mixin min-size($w: null, $h: null)
+    @include minsize-w-h($w, $h)
+
+@mixin max-size($w: null, $h: null)
+    @include maxsize-w-h($w, $h)
+
+/* alter Name → neuer Name */
+@mixin boxsize-w-h-mw-mh-maxw-maxh($w: null, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
+    @include boxsize-w-h-minw-minh-maxw-maxh($w, $h, $minw, $minh, $maxw, $maxh)
+
+@mixin box-size($w: null, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
+    @include boxsize-w-h-minw-minh-maxw-maxh($w, $h, $minw, $minh, $maxw, $maxh)
+
+@mixin border($w: 1px, $style: solid, $color: #000000, $radius: null)
+    @include border-w-s-c-r($w, $style, $color, $radius)
+
+@mixin clickable($prop: all, $dur: 0.1s, $ease: ease-in-out)
+    @include clickable-prop-dur-ease($prop, $dur, $ease)
+
+@mixin hover-scale($factor: 1.15)
+    @include hover-scale-f($factor)
+
+@mixin brand-radial($size: '74.22% 74.22%', $pos-x: 19.79%, $pos-y: 22.42%, $start: #5988FF, $mid: #5988FF, $end: #0043F0)
+    @include brandradial-size-x-y-c1-c2-c3($size, $pos-x, $pos-y, $start, $mid, $end)
+
+@mixin elevation($y: 5px, $blur: 15px, $spread: 0px, $alpha: 0.15)
+    @include elevation-y-blur-spread-alpha($y, $blur, $spread, $alpha)
+
+@mixin bg($url, $repeat: no-repeat, $position: center, $size: contain)
+    @include bg-url-repeat-pos-size($url, $repeat, $position, $size)
+
+@mixin circle($size)
+    @include circle-size($size)
