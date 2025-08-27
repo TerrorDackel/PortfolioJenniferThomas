@@ -84,9 +84,8 @@
                         overflow: hidden
 
                         .need-a-contact-me-txt
+                            @include flex-d-j-a-g($justify: flex-start)
                             @include boxsize-w-h-minw-minh-maxw-maxh(100%)
-                            display: flex
-                            justify-content: flex-start
                             @include font-f-s-c-w-lh-ls-a('Poppins', 0.9rem, #5988FF, 400, 120%, 0)
                             margin: 0 !important
 
@@ -127,8 +126,7 @@
                         .message-textfield
                             display: flex
                             @include boxsize-w-h-minw-minh-maxw-maxh(100%)
-                            border-radius: 0.5rem
-                            border: 1px solid #5988FF
+                            @include border-w-s-c-r(1px, solid, #5988FF, 0.5rem)
                             padding: 1rem 0 1rem 1rem
                             background-color: #ffffff
                             font-family: 'Poppins', sans-serif !important
@@ -188,10 +186,10 @@
                                         cursor: pointer
 
                             .agree-privacypolice-check-txt
+                                display: flex
                                 @include boxsize-w-h-minw-minh-maxw-maxh(null, 50px)
                                 @include font-f-s-c-w-lh-ls-a('Montserrat', 1rem)
                                 margin: 0
-                                display: flex
 
                                 p
                                     white-space: nowrap
@@ -199,10 +197,10 @@
                                     margin: 0 !important
 
                                 .privacy-link
+                                    display: inline-block
                                     color: #5988FF
                                     text-decoration: none
                                     margin: 0 3px
-                                    display: inline-block
 
                             .agree-privacypolice-check-txt
                                 @include font-f-s-c-w-lh-ls-a('Montserrat', 1rem, null, null, 120%)
@@ -224,8 +222,7 @@
                         .error-slot
                             display: block
                             align-self: stretch
-                            @include boxsize-w-h-minw-minh-maxw-maxh(100%)
-                            @include minsize-w-h(null, 1.25rem)
+                            @include boxsize-w-h-minw-minh-maxw-maxh(100%, null, null, 1.25rem, null, null)
 
                         .error-msg
                             @include font-f-s-c-w-lh-ls-a('Poppins', 1rem, red, null, null, null, left)
@@ -240,22 +237,22 @@
                         @include boxsize-w-h-minw-minh-maxw-maxh(100%, 80px)
 
                         .btn-contact
-                            @include boxsize-w-h-minw-minh-maxw-maxh(auto, 58px, null, null, null, 181px)
                             z-index: 0
+                            @include boxsize-w-h-minw-minh-maxw-maxh(auto, 58px, null, null, null, 181px)
                             @include border-w-s-c-r(2px, solid, #BBBBBB, 10px)
-                            padding: 15px 30px
                             @include font-f-s-c-w-lh-ls-a('Poppins', 1rem, white, 500)
+                            padding: 15px 30px
                             background-color: #BBBBBB
                             @include clickable-prop-dur-ease(all, 0.1s)
                             @include elevation-y-blur-spread-alpha(5px, 15px, 0px, 0.15)
 
                             &::before,
                             &::after
+                                z-index: -1
                                 content: ''
                                 position: absolute
                                 @include boxsize-w-h-minw-minh-maxw-maxh(100%, 100%)
                                 background-color: #0043F0
-                                z-index: -1
                                 transform: scale(0)
                                 transition: transform 0.1s ease
 
