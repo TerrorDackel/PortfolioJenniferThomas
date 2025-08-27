@@ -1,3 +1,5 @@
+@use '../../../../styles/mixins' as *
+
 @media (max-width: 1440px)
     .agree-privacypolice-check-txt
         flex-direction: column
@@ -24,46 +26,36 @@
                 margin-left: 50%
 
                 .circle-13
-                    width: 70px
-                    height: 70px
+                    @include size-w-h($w: 70px, $h: 70px)
 
             .contact-title-and-container-left-right
                 flex-direction: column
 
                 .title-contact-container
                     margin: 0
-                    display: flex
-                    align-items: center
+                    @include flex-d-j-a-g( $align: center)
 
                     .title-txt
-                        width: 100%
+                        @include flex-d-j-a-g($dir: row, $justify: flex-start, $align: null, $gap: null)
+                        @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $maxw: 350px)
+                        @include font-f-s-c-w-lh-ls-a($size: 64px, $weight: bold, $align: center)
                         margin: 0 !important
                         padding: 2rem 1rem 0
-                        max-width: 350px
-                        display: flex
-                        justify-content: start
-                        font-weight: bold
-                        font-size: 64px
-                        text-align: center
 
                 .container-left-and-right
-                    flex-direction: column
-                    align-items: center
-                    margin-top: 1rem
-                    padding: 0 0
+                    @include flex-d-j-a-g($dir: column, $align: center)
+                    margin: 1rem 0 0 0 
+                    padding: 0 0 0 0
 
                     .container-left
-                        width: 100%
-                        max-width: 340px
-                        height: auto
+                        @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $maxw: 340px)
 
                         .got-a-problem-title-container
                             height: 100px
                             align-items: center
 
                             .got-a-problem-txt
-                                font-weight: 700
-                                font-size: 1.5rem
+                                @include font-f-s-c-w-lh-ls-a($size: 1.5rem, $weight: 700)
                                 margin-top: 1rem
 
                         .got-a-problem-title-description-container
@@ -81,138 +73,96 @@
                         .circle-11-container
                             display: none
 
-                            .circle-11
-
                     .container-right
-                        width: 100%
-                        max-width: none
-                        height: auto
+                        @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $maxh: null)
                         padding: 0
 
                         .your-name-container
-                            display: flex
-                            justify-content: center
-                            align-items: center
+                            @include flex-d-j-a-g($dir: column, $justify: center, $align: center)
                             width: 100%
                             padding: 1rem 0
 
                             .name-textfield
-                                width: 95% !important
-                                max-width: none
+                                @include flex-d-j-a-g($dir: row, $justify: center, $align: center)
+                                @include boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $h: auto, $maxw: null)
+                                @include border-w-s-c-r($w: 1px, $style: solid, $color: #5988FF, $radius: 10px)
                                 box-sizing: border-box
                                 padding: 15px 25px
-                                border: 1px solid #5988FF
-                                border-radius: 10px
                                 background-color: #FFFFFF
-                                display: flex
-                                align-items: center
-                                justify-content: center
 
                             .error-slot
-                                min-height: 1.25rem
                                 display: block
-                                width: 95%
                                 align-self: flex-start
+                                @include boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $minh: 1.25rem)
 
                             .error-msg
                                 width: 95%
-                                color: red
-                                text-align: left
-                                font-size: 1.2rem
-                                margin-top: 5px
+                                @include font-f-s-c-w-lh-ls-a($family: null, $size: 1rem, $color: red, $weight: null, $lineHeight: null, $letterSpacing: null, $align: left)
+                                margin: 5px 0 0 1rem
 
                         .your-email-container
-                            display: flex
-                            justify-content: center
-                            align-items: center
+                            @include flex-d-j-a-g($dir: column, $justify: center, $align: center)
                             width: 100%
                             padding: 0 0 1rem 0
 
                             .email-textfield
-                                width: 95% !important
-                                max-width: none
+                                @include flex-d-j-a-g($dir: row, $justify: center, $align: center)
+                                @include boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $h: auto, $maxw: null)
+                                @include border-w-s-c-r($w: 1px, $style: solid, $color: #5988FF, $radius: 10px)
                                 box-sizing: border-box
                                 padding: 15px 25px
-                                border: 1px solid #5988FF
-                                border-radius: 10px
                                 background-color: #FFFFFF
-                                display: flex
-                                justify-content: center
 
                             .error-slot
-                                min-height: 1.25rem
+                                @include  boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $minh: 1.25rem)
                                 display: block
-                                width: 95%
                                 align-self: flex-start
 
                             .error-msg
                                 width: 95%
-                                color: red
-                                text-align: left
-                                font-size: 1.2rem
-                                margin-top: 5px
+                                @include font-f-s-c-w-lh-ls-a($family: null, $size: 1rem, $color: red, $weight: null, $lineHeight: null, $letterSpacing: null, $align: left)
+                                margin: 5px 0 0 1rem
 
                         .your-message-container
-                            display: flex
-                            justify-content: center
-                            align-items: center
+                            @include flex-d-j-a-g($dir: column, $justify: center, $align: center)
                             width: 100%
                             padding: 0 0 1rem 0
 
                             .message-textfield
-                                width: 95% !important
-                                max-width: none
+                                @include flex-d-j-a-g($dir: row, $justify: center, $align: center)
+                                @include boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $h: 202px, $maxw: none)
+                                @include border-w-s-c-r($w: 1px, $style: solid, $color: #5988FF, $radius: 10px)
                                 box-sizing: border-box
                                 padding: 15px 25px
-                                border: 1px solid #5988FF
-                                border-radius: 10px
                                 background-color: #FFFFFF
-                                display: flex
-                                justify-content: center
-                                height: 202px
 
                             .error-slot
-                                min-height: 1.25rem
+                                @include  boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $minh: 1.25rem)
                                 display: block
-                                width: 95%
                                 align-self: flex-start
 
                             .error-msg
                                 width: 95%
-                                color: red
-                                text-align: left
-                                font-size: 1.2rem
-                                margin-top: 5px
+                                @include font-f-s-c-w-lh-ls-a($family: null, $size: 1rem, $color: red, $weight: null, $lineHeight: null, $letterSpacing: null, $align: left)
+                                margin: 5px 0 0 1rem
 
                         .agree-privacypolice-check
-                            height: auto
-                            width: 95% !important
-                            max-width: none
-                            display: flex
-                            align-items: center
-                            justify-content: center
-                            padding: 0 0.5rem
+                            @include flex-d-j-a-g($dir: columns, $justify: center, $align: flex-start, $gap: null)
+                            @include boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $h: auto, $minw: null, $minh: null, $maxw: none, $maxh: null)
+                            padding: 0 1rem
 
                             .agree-privacypolice-check-label
-                                height: auto
-                                width: 95% !important
-                                max-width: none
+                                @include boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $h: auto, $minw: null, $minh: null, $maxw: none, $maxh: null)
 
                                 .agree-privacypolice-check-div
-                                    display: flex
-                                    align-items: flex-start!important
-                                    justify-content: flex-start
-                                    width: 20px
-                                    height: 50px
+                                    @include flex-d-j-a-g($dir: row, $justify: flex-start, $align: flex-start)
+                                    @include boxsize-w-h-minw-minh-maxw-maxh($w: 20px, $h: 50px)
                                     margin-top: 0.1rem
 
                                 .agree-privacypolice-check-txt
-                                    max-width: 320px
-                                    height: 50px
-                                    display: flex
-                                    flex-direction: column
+                                    @include boxsize-w-h-minw-minh-maxw-maxh($w: null, $h: 50px, $minw: null, $minh: null, $maxw: null, $maxh: 320px)
+                                    @include flex-d-j-a-g($dir: column)
                                     word-break: break-word
-                                    height: auto
 
                                     .privacy-link
                                         white-space: nowrap
@@ -223,39 +173,31 @@
                                         margin-bottom: -0.2rem!important
 
                             .error-slot
-                                min-height: 1.25rem
+                                @include  boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $minh: 1.25rem)
                                 display: block
-                                width: 95%
                                 align-self: flex-start
 
                             .error-msg
                                 width: 95%
-                                color: red
-                                text-align: left
-                                font-size: 1.2rem
-                                margin-top: 5px
+                                @include font-f-s-c-w-lh-ls-a($family: null, $size: 1rem, $color: red, $weight: null, $lineHeight: null, $letterSpacing: null, $align: flex-start)
+                                margin: 0 0 1rem 0
 
                         .button-container
+                            @include flex-d-j-a-g($justify: center)
                             width: 100%
-                            display: flex
-                            justify-content: center
 
                             .btn-contact
-                                padding: 12px 20px
-                                font-size: 1rem
+                                @include font-f-s-c-w-lh-ls-a($family: null, $size: 1rem, $color: white, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
+                                @include border-w-s-c-r($w: none, $radius: 8px)
                                 background-color: #5988FF
-                                color: white
-                                border: none
-                                border-radius: 8px
                                 cursor: pointer
+                                padding: 12px 20px
 
                             .btn-valid
                                 background-color: #3366cc
 
                         .success-msg
-                            color: green
-                            text-align: center
-                            font-size: 1.2rem
+                            @include font-f-s-c-w-lh-ls-a($family: null, $size: 1.5rem, $color: green, $weight: null, $lineHeight: null, $letterSpacing: null, $align: center)
                             margin-top: 20px
 
                         .back-to-top
@@ -264,12 +206,11 @@
 
                         .circle-14-container
                             .circle-14
-                                width: 40px!important
-                                height: 40px!important
+                                @include maxsize-w-h($w: 40px, $h: 40px)
 
 @media (max-width: 390px)
     .contact-section
-        width: 240px
+        @include size-w-h($w: 240px, $h: null)
         padding: 0 0
 
         .contact-container
@@ -290,9 +231,7 @@
                     padding: 0 0
 
                     .container-left
-                        width: 220px
-                        max-width: 220px
-                        height: auto
+                        @include boxsize-w-h-minw-minh-maxw-maxh($w: 220px, $h: auto, $minw: null, $minh: null, $maxw: 220px, $maxh: null)
 
                         .got-a-problem-title-container
                             height: 100px
@@ -304,6 +243,7 @@
                     .container-right
                         padding: 0
                         width: 220px!important
+                        align-items: center
 
                         .your-name-container
                             width: 220px
@@ -312,16 +252,13 @@
                                 width: 220px!important
 
                             .error-slot
-                                min-height: 1.25rem
+                                @include boxsize-w-h-minw-minh-maxw-maxh($w: 220px, $minh: 1.25rem)
                                 display: block
-                                width: 220px
                                 align-self: flex-start
 
                             .error-msg
                                 width: 220px
-                                color: red
-                                text-align: left
-                                font-size: 1rem
+                                @include font-f-s-c-w-lh-ls-a($size: 1rem, $color: red, $align: left)
                                 margin-top: 5px
 
                         .your-email-container
@@ -331,16 +268,13 @@
                                 width: 220px!important
 
                             .error-slot
-                                min-height: 1.25rem
+                                @include boxsize-w-h-minw-minh-maxw-maxh($w: 220px, $minh: 1.25rem)
                                 display: block
-                                width: 220px
                                 align-self: flex-start
 
                             .error-msg
                                 width: 220px
-                                color: red
-                                text-align: left
-                                font-size: 1rem
+                                @include font-f-s-c-w-lh-ls-a($size: 1rem, $color: red, $align: left)
                                 margin-top: 5px
 
                         .your-message-container
@@ -350,45 +284,35 @@
                                 width: 220px!important
 
                             .error-slot
-                                min-height: 1.25rem
+                                @include boxsize-w-h-minw-minh-maxw-maxh($w: 220px, $minh: 1.25rem)
                                 display: block
-                                width: 220px
                                 align-self: flex-start
 
                             .error-msg
                                 width: 220px
-                                color: red
-                                text-align: left
-                                font-size: 1rem
+                                @include font-f-s-c-w-lh-ls-a($size: 1rem, $color: red, $align: left)
                                 margin-top: 5px
 
                         .agree-privacypolice-check
                             display: none
 
                         .agree-privacypolice-check-mobile
-                            display: flex
-                            flex-direction: column
-                            justify-content: center
-                            align-items: flex-start
-                            height: auto
-                            width: 100%
-                            max-width: 220px
-                            padding: 0 0
+                            @include flex-d-j-a-g($dir: column, $justify: center, $align: center)
+                            @include boxsize-w-h-minw-minh-maxw-maxh($w: auto, $h: auto, $maxw: auto)
+                            margin: 0 0 0 -0.5rem
 
                             .agree-privacypolice-check-label
-                                display: flex
+                                @include flex-d-j-a-g($justify: center)
+                                width: 100%
 
                                 .agree-privacypolice-check-div
-                                    width: 20px
-                                    height: 20px
-                                    height: auto
+                                    @include flex-d-j-a-g(row, flex-start, flex-start)
+                                    @include boxsize-w-h-minw-minh-maxw-maxh($w: 20px, $h: 50px, $minw: null, $minh: null, $maxw: null, $maxh: null)
+                                    margin-left: -0.3rem
                                     padding: 0.1rem 0 0 -0.1rem
-                                    align-items: flex-start!important
-                                    justify-content: flex-start!important
 
                                 .agree-privacypolice-check-txt
-                                    width: 192px
-                                    height: 85px
+                                    @include size-w-h($w: auto, $h: 85px)
                                     padding: 0 0 0 0.1rem
                                     font-family: 'Montserrat', sans-serif
 
@@ -396,14 +320,11 @@
                                     .second-line,
                                     p,
                                     a
+                                        @include flex-d-j-a-g($justify: flex-start, $align: flex-start)
+                                        @include size-w-h($w: auto, $h: auto)
                                         padding: 0 0 0.4rem 0!important
                                         margin: 0 0 0 0!important
-                                        width: auto
-                                        height: auto
                                         font-size: 1rem!important
-                                        display: flex
-                                        align-items: flex-start
-                                        justify-content: flex-start
 
                                     .privacy-link
                                         color: #5988FF
@@ -411,39 +332,31 @@
                                         font-size: 0.9rem!important
 
                             .error-slot
-                                min-height: 1.25rem
+                                @include boxsize-w-h-minw-minh-maxw-maxh($w: 220px, $minh: 1.25rem)
                                 display: block
-                                width: 220px
                                 align-self: flex-start
 
                             .error-msg
                                 width: 220px
-                                color: red
-                                text-align: left
-                                font-size: 1rem
-                                margin-top: 5px
+                                @include font-f-s-c-w-lh-ls-a($size: 1rem, $color: red, $align: center)
+                                margin: 5px 0 1rem 0
 
                         .button-container
+                            @include flex-d-j-a-g($justify: center)
                             width: 100%
-                            display: flex
-                            justify-content: center
 
                             .btn-contact
+                                @include font-f-s-c-w-lh-ls-a($size: 1rem, $color: white)
+                                @include border-w-s-c-r($w: none, $radius: 8px)
                                 padding: 12px 20px
-                                font-size: 1rem
                                 background-color: #5988FF
-                                color: white
-                                border: none
-                                border-radius: 8px
                                 cursor: pointer
 
                             .btn-valid
                                 background-color: #3366cc
 
                         .success-msg
-                            color: green
-                            text-align: center
-                            font-size: 1rem
+                            @include font-f-s-c-w-lh-ls-a($size: 1rem, $color: green, $align: center)
                             margin-top: 20px
 
                         .back-to-top
@@ -452,8 +365,7 @@
 
                         .circle-14-container
                             .circle-14
-                                width: 40px!important
-                                height: 40px!important
+                                @include maxsize-w-h($w: 40px, $h: 40px)
 
 @media (max-width: 260px)
     .contact-container
@@ -461,10 +373,9 @@
 
 @media (max-width: 240px)
     .contact-section
-        width: 220px
-        padding: 0 0
         justify-content: center
         width: 100%
+        padding: 0 0
         margin: 0
 
         .contact-container
@@ -486,18 +397,14 @@
                     padding: 0 0.5rem
 
                     .container-left
-                        max-width: 200px!important
-                        height: auto
+                        @include boxsize-w-h-minw-minh-maxw-maxh($h: auto, $maxw: 200px)
 
                         .got-a-problem-title-container
-                            height: 100px
-                            align-items: center
-                            max-width: 200px!important
-                            justify-content: center !important
+                            @include flex-d-j-a-g($justify: center, $align: center)
+                            @include boxsize-w-h-minw-minh-maxw-maxh($h: 100px, $maxw: 200px)
 
                             .got-a-problem-txt
-                                text-align: center
-                                font-size: 1.2rem!important
+                                @include font-f-s-c-w-lh-ls-a($size: 1.2rem, $align: center)
 
                         .got-a-problem-title-description-container
                             .got-a-problem-title-description-txt
@@ -507,56 +414,23 @@
                             justify-content: center !important
 
                             .need-a-contact-me-txt
-                                max-width: 200px!important
-                                min-height: 5rem
+                                @include maxsize-w-h($w: 200px, $h: 5rem)
 
                     .container-right
+                        justify-content: center !important
                         padding: 0 0.1rem!important
                         max-width: 200px!important
-                        justify-content: center !important
 
                         .your-name-container,
                         .your-email-container,
                         .your-message-container
+                            @include flex-d-j-a-g($justify: center)
                             max-width: 200px!important
                             margin: 0
-                            display: flex
-                            justify-content: center
 
                             .name-textfield,
                             .email-textfield,
                             .message-textfield
                                 max-width: 200px!important
 
-                            .error-slot
-                                min-height: 1.25rem
-                                display: block
-                                width: 200px
-                                align-self: flex-start
 
-                            .error-msg
-                                width: 200px
-                                color: red
-                                text-align: left
-                                font-size: 1rem
-                                margin-top: 5px
-
-                        .agree-privacypolice-check-mobile
-                            width: 100%
-                            max-width: 200px
-
-                            .agree-privacypolice-check-label
-                                max-width: 200px
-
-                                .agree-privacypolice-check-div
-                                    width: 18px
-                                    height: 18px
-
-                                .agree-privacypolice-check-txt
-                                    width: 182px
-
-                                    .first-line,
-                                    .second-line
-                                        font-size: 0.9rem!important
-                                    .privacy-link
-                                        font-size: 0.8rem!important

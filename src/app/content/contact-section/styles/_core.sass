@@ -1,4 +1,3 @@
-
 @use '../../../../styles/mixins' as *
 
 :host
@@ -174,13 +173,12 @@
                         padding: 0 1rem 0 0
 
                         .agree-privacypolice-check-label
-                            @include flex-d-j-a-g(row, center, center)
+                            @include flex-d-j-a-g(row, flex-start, center)
                             padding: 0
 
                             .agree-privacypolice-check-div
                                 @include flex-d-j-a-g(row, flex-start, flex-start)
                                 @include boxsize-w-h-minw-minh-maxw-maxh(20px, 50px)
-                                margin-top: -0.5rem
                                 margin-left: -0.3rem
 
                                 .checkbox
@@ -191,10 +189,9 @@
 
                             .agree-privacypolice-check-txt
                                 @include boxsize-w-h-minw-minh-maxw-maxh(null, 50px)
+                                @include font-f-s-c-w-lh-ls-a('Montserrat', 1rem)
                                 margin: 0
-                                font-size: 0.9rem
                                 display: flex
-                                font-family: 'Montserrat', sans-serif !important
 
                                 p
                                     white-space: nowrap

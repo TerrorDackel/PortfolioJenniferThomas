@@ -1,5 +1,3 @@
-// src/styles/mixins.sass
-
 @mixin hide-scrollbar
     overflow-y: auto
     overflow-x: hidden
@@ -11,7 +9,6 @@
 @mixin allow-horizontal-scroll
     overflow-x: auto
 
-/* Flex: direction → justify → align → gap */
 @mixin flex-d-j-a-g($dir: row, $justify: flex-start, $align: stretch, $gap: null)
     display: flex
     flex-direction: $dir
@@ -20,7 +17,6 @@
     @if $gap != null
         gap: $gap
 
-/* Größen */
 @mixin size-w-h($w: null, $h: null)
     @if $w != null
         width: $w
@@ -39,7 +35,6 @@
     @if $h != null
         max-height: $h
 
-/* width → height → min-width → min-height → max-width → max-height */
 @mixin boxsize-w-h-minw-minh-maxw-maxh($w: null, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
     @if $w != null
         width: $w
@@ -54,7 +49,6 @@
     @if $maxh != null
         max-height: $maxh
 
-/* Typografie: family → size → color → weight → line-height → letter-spacing → text-align */
 @mixin font-f-s-c-w-lh-ls-a($family: null, $size: null, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
     @if $family != null
         font-family: $family
@@ -71,13 +65,11 @@
     @if $align != null
         text-align: $align
 
-/* Border: width → style → color → radius */
 @mixin border-w-s-c-r($w: 1px, $style: solid, $color: #000000, $radius: null)
     border: $w $style $color
     @if $radius != null
         border-radius: $radius
 
-/* Interaktion */
 @mixin clickable-prop-dur-ease($prop: all, $dur: 0.1s, $ease: ease-in-out)
     cursor: pointer
     transition: #{$prop} #{$dur} #{$ease}
@@ -86,7 +78,6 @@
     &:hover
         transform: scale(#{$factor})
 
-/* Farben/Decor */
 @mixin brandradial-size-x-y-c1-c2-c3($size: '74.22% 74.22%', $posx: 19.79%, $posy: 22.42%, $c1: #5988FF, $c2: #5988FF, $c3: #0043F0)
     background: radial-gradient(#{$size} at #{$posx} #{$posy}, #{$c1} 6.25%, $c2 51.56%, $c3 100%)
 
@@ -103,7 +94,6 @@
     @include size-w-h($size, $size)
     border-radius: 50%
 
-/* Aliase (Backwards-Compat) – lassen, bis alles umgestellt ist */
 @mixin flex($dir: row, $justify: flex-start, $align: stretch, $gap: null)
     @include flex-d-j-a-g($dir, $justify, $align, $gap)
 
@@ -116,7 +106,6 @@
 @mixin max-size($w: null, $h: null)
     @include maxsize-w-h($w, $h)
 
-/* alter Name → neuer Name */
 @mixin boxsize-w-h-mw-mh-maxw-maxh($w: null, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
     @include boxsize-w-h-minw-minh-maxw-maxh($w, $h, $minw, $minh, $maxw, $maxh)
 
