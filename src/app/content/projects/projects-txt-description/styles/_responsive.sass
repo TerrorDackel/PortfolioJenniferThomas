@@ -1,87 +1,72 @@
+@use '../../../../../styles/mixins' as *
+
 @media (max-width: 800px)
-    .project-infos-section    
-        justify-content: center
-        align-items: center
+    .project-infos-section
+        @include flex-d-j-a-g($dir: column, $justify: center, $align: center, $gap: null)
+        @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: 1920px, $maxh: null)
         padding: 1rem
 
         .project-infos-txt-container
-            justify-content: center
-            align-items: center
+            @include flex-d-j-a-g($dir: column, $justify: center, $align: center, $gap: null)
 
             .header-container
-                justify-content: center
+                @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
 
                 .header-txt
-                    justify-content: center
-                    align-items: center
+                    @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+                    @include font-f-s-c-w-lh-ls-a($family: null, $size: null, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
                     margin: 0
 
             .programms-container
-                justify-content: center
+                @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
                 margin: 0
 
                 .programms-txt
-                    width: 100%
-                    height: auto
+                    @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
                     margin: 0
-                    justify-content: center
-                    text-align: center
+                    @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+                    @include font-f-s-c-w-lh-ls-a($family: null, $size: null, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: center)
 
             .project-description-container
-                text-align: center
-                justify-content: center
+                @include font-f-s-c-w-lh-ls-a($family: null, $size: null, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: center)
+                @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
 
                 .project-description-txt
-                    justify-content: center
+                    @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
                     margin: 0
-                    display: flex
-                    align-items: center
-                    text-align: center
-                    width: 100%
-                    height: auto
+                    @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
+                    @include font-f-s-c-w-lh-ls-a($family: null, $size: null, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: center)
 
         .btn-alignment
-            justify-content: center
-            align-items: center
-            max-width: 400px
-            width: 100%
-            height: auto
+            @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+            @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: 400px, $maxh: null)
             margin: 0
-            
             padding: 0 2rem
 
             .livetest-alignment
-                width: 50%
-                height: auto
+                @include boxsize-w-h-minw-minh-maxw-maxh($w: 50%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
                 margin: 0
+                @include flex-d-j-a-g($dir: row, $justify: flex-start, $align: center, $gap: null)
                 display: flex
-                justify-content: flex-start
 
                 .livetest-btn-container
-                    width: auto
-
-                    .livetest-btn
+                    @include boxsize-w-h-minw-minh-maxw-maxh($w: auto, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
 
             .project-github-btn-container-alignment
-                width: 50%
-                justify-content: flex-end
-                align-items: center
+                @include boxsize-w-h-minw-minh-maxw-maxh($w: 50%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
+                @include flex-d-j-a-g($dir: row, $justify: flex-end, $align: center, $gap: null)
 
                 .project-github-btn-container
                     margin: 0
                     padding: 0.7rem
 
                     .github-btn
-                        display: flex
-                        justify-content: center
-                        align-items: center
-                        font-size: 1.4375rem
-                        line-height: 120%
-                        letter-spacing: 0em
+                        @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+                        @include font-f-s-c-w-lh-ls-a($family: null, $size: 1.4375rem, $color: null, $weight: null, $lineHeight: 120%, $letterSpacing: 0, $align: null)
 
 @media (max-width: 420px)
     .project-infos-section
-        width: 95%
+        @include boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
 
 @media (max-width: 310px)
     .project-infos-section
@@ -89,11 +74,11 @@
             .livetest-alignment
                 .livetest-btn-container
                     .livetest-btn
-                        font-size: 1.4rem
+                        @include font-f-s-c-w-lh-ls-a($family: null, $size: 1.4rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
             .project-github-btn-container-alignment
                 .project-github-btn-container
                     .github-btn
-                        font-size: 1.4rem
+                        @include font-f-s-c-w-lh-ls-a($family: null, $size: 1.4rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
 @media (max-width: 270px)
     .project-infos-section
@@ -101,11 +86,11 @@
             .livetest-alignment
                 .livetest-btn-container
                     .livetest-btn
-                        font-size: 1.1rem
+                        @include font-f-s-c-w-lh-ls-a($family: null, $size: 1.1rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
             .project-github-btn-container-alignment
                 .project-github-btn-container
                     .github-btn
-                        font-size: 1.1rem
+                        @include font-f-s-c-w-lh-ls-a($family: null, $size: 1.1rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
 @media (max-width: 240px)
     .project-infos-section
@@ -113,8 +98,8 @@
             .livetest-alignment
                 .livetest-btn-container
                     .livetest-btn
-                        font-size: 1rem
+                        @include font-f-s-c-w-lh-ls-a($family: null, $size: 1rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
             .project-github-btn-container-alignment
                 .project-github-btn-container
                     .github-btn
-                        font-size: 1rem
+                        @include font-f-s-c-w-lh-ls-a($family: null, $size: 1rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
