@@ -130,7 +130,7 @@
 
                             .message-textfield
                                 @include flex-d-j-a-g($dir: row, $justify: center, $align: center)
-                                @include boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $h: 202px, $maxw: none)
+                                @include boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $h: 202px, $maxw: null)
                                 @include border-w-s-c-r($w: 1px, $style: solid, $color: #5988FF, $radius: 10px)
                                 box-sizing: border-box
                                 padding: 15px 25px
@@ -417,14 +417,14 @@
                                 @include maxsize-w-h($w: 200px, $h: 5rem)
 
                     .container-right
-                        justify-content: center !important
+                        justify-content: center!important
                         padding: 0 0.1rem!important
                         max-width: 200px!important
 
                         .your-name-container,
                         .your-email-container,
                         .your-message-container
-                            @include flex-d-j-a-g($justify: center)
+                            @include flex-d-j-a-g($dir: column, $justify: center)
                             max-width: 200px!important
                             margin: 0
 
