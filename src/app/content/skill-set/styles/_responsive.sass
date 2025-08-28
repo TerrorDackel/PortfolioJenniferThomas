@@ -1,20 +1,22 @@
+@use '../../../../styles/mixins' as *
+
 @media (max-width: 500px)
     .skill-set-section
         .skill-set-container
             .header-container
                 .header-txt
-                    font-size: 64px
+                    @include font-f-s-c-w-lh-ls-a($family: null, $size: 64px, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
 @media (max-width: 345px)
     .skill-set-section
         .skill-set-container
             .header-container
                 .header-txt
-                    font-size: 50px
+                    @include font-f-s-c-w-lh-ls-a($family: null, $size: 50px, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
 @media (max-width: 270px)
     .skill-set-section
         .skill-set-container
             .header-container
                 .header-txt
-                    font-size: 40px
+                    @include font-f-s-c-w-lh-ls-a($family: null, $size: 40px, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
