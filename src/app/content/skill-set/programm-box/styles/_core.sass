@@ -1,63 +1,38 @@
+@use '../../../../../styles/mixins' as *
+
 :host
-    height: auto
-    width: 100%
-    display: flex
-    justify-content: center
-    align-items: center
-    
+    @include flex-d-j-a-g(row, center, center)
+    @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
+
 .programm-box-section
-    display: flex
+    @include flex-d-j-a-g(row, center, center, 1rem)
+    @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
     flex-wrap: wrap
-    justify-content: center
-    align-items: center
-    width: 100%
-    height: auto
-    gap: 1rem
 
     .programm-box-container
-        display: flex
-        justify-content: space-between
-        flex-direction: column
-        align-items: center
-        max-width: 90px
-        max-height: 150px
-        
-        padding: 2.5rem
+        @include flex-d-j-a-g(column, space-between, center, 1rem)
+        @include boxsize-w-h-minw-minh-maxw-maxh(null, null, null, null, 90px, 150px)
+        padding: 2rem!important
 
         .programm-img-container
-            display: flex
-            width: 70px
-            height: 75px
-            justify-content: center
-            align-items: center
+            @include flex-d-j-a-g(row, center, center)
+            @include size-w-h(70px, 75px)
 
             .programm-icon
-                width: 70px
-                height: 75px
                 display: inline-block
+                @include size-w-h(70px, 75px)
                 transition: transform 0.1s ease
                 object-fit: contain
-
-                &:hover
-                    transform: scale(1.15)
+                @include hover-scale-f(1.15)
 
         .programm-name-container
-            display: flex
-            justify-content: center
-            width: 65px
-            height: 38px
+            @include flex-d-j-a-g(row, center, center)
+            @include size-w-h(65px, 38px)
 
             .programm-txt
-                font-family: Montserrat
-                font-weight: 400
-                font-size: 16px
-                line-height: 120%
-                letter-spacing: 0%
-                text-align: center
-                color: #FFFFFF
+                @include font-f-s-c-w-lh-ls-a('Montserrat', 16px, #FFFFFF, 400, 120%, 0, center)
                 display: inline-block
                 transition: transform 0.1s ease
-
+                @include hover-scale-f(1.15)
                 &:hover
-                    transform: scale(1.15)
-                    cursor: default!important
+                    cursor: default !important

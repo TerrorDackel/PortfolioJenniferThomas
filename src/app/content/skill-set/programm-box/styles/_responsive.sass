@@ -1,47 +1,46 @@
+@use '../../../../../styles/mixins' as *
+
 @media (max-width: 1035px)
     .programm-box-section
         .programm-box-container
-            width: 86px
-            height: 140px
+            @include boxsize-w-h-minw-minh-maxw-maxh($w: 86px, $h: 140px, $minw: null, $minh: null, $maxw: 86px, $maxh: 140px)
             gap: 1.3rem
             padding: 2rem
 
 @media (max-width: 850px)
     .programm-box-section
         .programm-box-container
-            width: 86px
-            height: 130px
+            @include boxsize-w-h-minw-minh-maxw-maxh($w: 86px, $h: 130px, $minw: null, $minh: null, $maxw: 86px, $maxh: 130px)
             gap: 1.1rem
             padding: 1.8rem
 
 @media (max-width: 690px)
     .programm-box-section
         .programm-box-container
-            width: 86px
-            height: 120px
+            @include boxsize-w-h-minw-minh-maxw-maxh($w: 86px, $h: 120px, $minw: null, $minh: null, $maxw: 86px, $maxh: 120px)
             gap: 1rem
             padding: 1.6rem
 
 @media (max-width: 500px)
     .programm-box-section
         .programm-box-container
-            width: 86px
-            height: 100px
+            @include boxsize-w-h-minw-minh-maxw-maxh($w: 86px, $h: 100px, $minw: null, $minh: null, $maxw: 86px, $maxh: 100px)
             gap: 0.9rem
             padding: 1rem
 
-        .programm-icon
-            width: 62px
-            height: 62px
+        .programm-box-container
+            .programm-img-container
+                .programm-icon
+                    @include size-w-h($w: 62px, $h: 62px)
 
 @media (max-width: 430px)
     .programm-box-section
         .programm-box-container
-            width: 80px
-            height: 100px
+            @include boxsize-w-h-minw-minh-maxw-maxh($w: 80px, $h: 100px, $minw: null, $minh: null, $maxw: 80px, $maxh: 100px)
             gap: 0.5rem
             padding: 0.5rem
 
-        .programm-icon
-            width: 60px
-            height: 60px
+        .programm-box-container
+            .programm-img-container
+                .programm-icon
+                    @include size-w-h($w: 60px, $h: 60px)
