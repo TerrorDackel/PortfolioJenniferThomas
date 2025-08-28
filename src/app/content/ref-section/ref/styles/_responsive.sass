@@ -1,3 +1,5 @@
+@use '../../../../../styles/mixins' as *
+    
 @media (max-width: 400px)
     .ref-component-container
         padding: 0.75rem
@@ -43,8 +45,7 @@
                 font-size: clamp(1rem, 5vw, 1.25rem)
 
             .project
-                font-size: 13px
-                line-height: 130%
+                @include font-f-s-c-w-lh-ls-a($family: 'Montserrat', $size: 0.82rem, $lineHeight: 140%)
 
         .ref-description-container
             max-width: 230px
@@ -72,6 +73,7 @@
 
             .description
                 max-width: 190px
+                @include font-f-s-c-w-lh-ls-a($size: 1rem, $lineHeight: 135%)
                 font-size: 1rem
                 line-height: 135%
 

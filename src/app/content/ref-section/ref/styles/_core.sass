@@ -1,29 +1,26 @@
+@use '../../../../../styles/mixins' as *
+
 .ref-component-container
-    overflow: hidden
-    display: flex
-    flex-direction: column
-    width: 100%
-    max-width: 340px
-    height: auto
+    @include flex-d-j-a-g(column, flex-start, flex-start)
+    @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 340px, null)
     margin: 0
-    color: #FFFFFF
+    @include font-f-s-c-w-lh-ls-a(null, null, #FFFFFF, null, null, null, null)
+    @include border-w-s-c-r(1px, solid, rgba(255, 255, 255, 0.1), 1rem)
     gap: 1rem
-    border: 1px solid rgba(255, 255, 255, 0.1)
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2)
-    border-radius: 1rem
     padding: 1rem
     background-color: rgba(255, 255, 255, 0.1)
     backdrop-filter: blur(1px)
     transition: transform 0.1s ease, box-shadow 0.1s ease
     position: relative
+    overflow: hidden
 
     &::after
         content: ''
         position: absolute
         top: 0
         left: -100%
-        width: 50%
-        height: 100%
+        @include boxsize-w-h-minw-minh-maxw-maxh(50%, 100%, null, null, null, null)
         background: linear-gradient(120deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.05) 100%)
         transform: skewX(-20deg)
         transition: left 0.1s ease
@@ -36,59 +33,29 @@
             left: 150%
 
     .name-project-container
-        display: flex
-        flex-direction: column
-        height: auto
-        width: auto
+        @include flex-d-j-a-g(column, flex-start, flex-start)
+        @include boxsize-w-h-minw-minh-maxw-maxh(auto, auto, null, null, null, null)
 
         .name
-            display: flex
-            justify-content: center
-            font-family: 'Montserrat', sans-serif
-            font-size: clamp(1.25rem, 1.5vw + 0.5rem, 2rem)
-            font-weight: 700
-
+            @include flex-d-j-a-g(row, center, stretch)
+            @include font-f-s-c-w-lh-ls-a('Montserrat', clamp(1.25rem, 1.5vw + 0.5rem, 2rem), transparent, 700, 120%, 0, null)
             background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%)
             -webkit-background-clip: text
             background-clip: text
-            color: transparent
-            letter-spacing: 0%
-            line-height: 120%
 
         .project
-            display: flex
-            justify-content: center
-            font-family: 'Montserrat', sans-serif
-            font-size: 16px
-            font-weight: 400
+            @include flex-d-j-a-g(row, center, stretch)
+            @include font-f-s-c-w-lh-ls-a('Montserrat', 16px, #EAF0FF, 400, 140%, 0, null)
             background-color: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%)
-            color: #EAF0FF
-            letter-spacing: 0%
-            line-height: 140%
             padding: 0.5rem 0 0.5rem
 
     .ref-description-container
-        display: flex
-        justify-content: center
-        width: 100%
-        max-width: 340px
-        height: auto
-        font-family: 'Montserrat', sans-serif
-        font-weight: 400
-        font-size: 18px
-        line-height: 120%
-        letter-spacing: 0%
+        @include flex-d-j-a-g(row, center, stretch)
+        @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 340px, null)
+        @include font-f-s-c-w-lh-ls-a('Montserrat', 18px, null, 400, 120%, 0, null)
 
         .description
-            text-align: center
-            justify-content: center
-            width: 100%
-            height: auto
-            max-width: 340px
-            display: flex
-            font-family: 'Montserrat', sans-serif
-            font-size: 18px
-            font-weight: 400
+            @include flex-d-j-a-g(row, center, stretch)
+            @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 340px, null)
+            @include font-f-s-c-w-lh-ls-a('Montserrat', 18px, #FFFFFF, 400, 120%, null, center)
             background-color: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%)
-            color: #FFFFFF
-            line-height: 120%
