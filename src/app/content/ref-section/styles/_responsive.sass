@@ -1,27 +1,24 @@
+@use '../../../../styles/mixins' as m
+
 @media (max-width: 500px)
     .ref-section
         .ref-container
             .header-and-text-container
                 .header-container
-                    display: flex
-                    justify-content: center
-                    font-size: 36px
-                    font-weight: bold
-                    text-align: center
+                    @include m.flex-d-j-a-g($dir: row, $justify: center, $align: stretch, $gap: null)
+                    @include m.font-f-s-c-w-lh-ls-a($family: null, $size: 36px, $color: null, $weight: bold, $lineHeight: null, $letterSpacing: null, $align: center)
                     padding-top: 1rem
 
                 .second-header-container
-                    display: flex
-                    justify-content: center
-                    font-size: 0.7rem
-                    font-weight: normal
+                    @include m.flex-d-j-a-g($dir: row, $justify: center, $align: stretch, $gap: null)
+                    @include m.font-f-s-c-w-lh-ls-a($family: null, $size: 0.7rem, $color: null, $weight: normal, $lineHeight: null, $letterSpacing: null, $align: null)
 
             .ref-posts
                 flex-wrap: nowrap
                 overflow-x: auto
                 overflow-y: hidden
-                width: 100%
-                gap: 1rem
+                @include m.boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
+                @include m.flex-d-j-a-g($dir: row, $justify: flex-start, $align: center, $gap: 1rem)
                 padding-inline: 1rem
                 margin: 0
                 -webkit-overflow-scrolling: touch
@@ -29,7 +26,7 @@
                 scroll-padding-inline: 1rem
 
                 .ref-card
-                    width: 300px
+                    @include m.boxsize-w-h-minw-minh-maxw-maxh($w: 300px, $h: null, $minw: null, $minh: null, $maxw: 300px, $maxh: null)
                     scroll-snap-align: start
                     flex-shrink: 0
 
@@ -38,18 +35,18 @@
         .ref-container
             .ref-posts
                 .ref-card
-                    max-width: 250px
+                    @include m.boxsize-w-h-minw-minh-maxw-maxh($w: null, $h: null, $minw: null, $minh: null, $maxw: 250px, $maxh: null)
 
 @media (max-width: 330px)
     .ref-section
         .ref-container
             .ref-posts
-                gap: 0.75rem
+                @include m.flex-d-j-a-g($dir: row, $justify: flex-start, $align: center, $gap: 0.75rem)
                 padding-inline: 0.5rem
                 scroll-padding-inline: 0.5rem
 
                 .ref-card
-                    max-width: 260px
+                    @include m.boxsize-w-h-minw-minh-maxw-maxh($w: null, $h: null, $minw: null, $minh: null, $maxw: 260px, $maxh: null)
 
 @media (max-width: 310px)
     .ref-section
@@ -57,24 +54,24 @@
             padding: 0.5rem
 
             .ref-posts
-                gap: 0.5rem
+                @include m.flex-d-j-a-g($dir: row, $justify: flex-start, $align: center, $gap: 0.5rem)
                 padding-inline: 0.25rem
                 scroll-padding-inline: 0.25rem
 
                 .ref-card
-                    max-width: 230px
+                    @include m.boxsize-w-h-minw-minh-maxw-maxh($w: null, $h: null, $minw: null, $minh: null, $maxw: 230px, $maxh: null)
 
 @media (max-width: 270px)
     .ref-section
         .ref-container
             .ref-posts
                 .ref-card
-                    max-width: 220px
+                    @include m.boxsize-w-h-minw-minh-maxw-maxh($w: null, $h: null, $minw: null, $minh: null, $maxw: 220px, $maxh: null)
 
 @media (max-width: 240px)
     .ref-section
         .ref-container
             .ref-posts
-                gap: 0.25rem
+                @include m.flex-d-j-a-g($dir: row, $justify: flex-start, $align: center, $gap: 0.25rem)
                 .ref-card
-                    max-width: 188px!important
+                    @include m.boxsize-w-h-minw-minh-maxw-maxh($w: null, $h: null, $minw: null, $minh: null, $maxw: 188px, $maxh: null)

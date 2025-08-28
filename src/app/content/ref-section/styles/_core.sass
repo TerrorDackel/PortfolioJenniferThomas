@@ -7,87 +7,50 @@
     margin-right: 0
 
 .ref-section
-    display: flex
-    flex-direction: column
-    align-items: center
-    width: 100%
-    height: auto
+    @include m.flex-d-j-a-g(column, flex-start, center)
+    @include m.boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
     margin: 0
     background: linear-gradient(128.94deg, #5988FF -33.96%, #5988FF 36.71%, #0043F0 112.25%)
     backdrop-filter: blur(4px)
 
     .ref-container
-        display: flex
-        flex-direction: column
-        align-items: center
-        width: 100%
-        max-width: 1920px
-        height: auto
-        color: white
+        @include m.flex-d-j-a-g(column, flex-start, center)
+        @include m.boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
+        @include m.font-f-s-c-w-lh-ls-a(null, null, #FFFFFF)
         padding: 1rem
 
         .header-and-text-container
-            display: flex
-            flex-direction: column
-            align-items: center
-            width: 100%
-            max-width: 1920px
+            @include m.flex-d-j-a-g(column, flex-start, center)
+            @include m.boxsize-w-h-minw-minh-maxw-maxh(100%, null, null, null, 1920px)
 
             .header-container
-                display: flex
-                justify-content: center
-                width: 100%
-                max-width: 1920px
-                height: auto
+                @include m.flex-d-j-a-g(row, center, stretch)
+                @include m.boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
                 margin: 0
 
                 .header-txt
-                    width: 100%
-                    max-width: 1920px
-                    height: auto
+                    @include m.boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
+                    @include m.font-f-s-c-w-lh-ls-a('Baloo 2', clamp(2.25rem, 3vw + 1rem, 2.8125rem), #FFFFFF, bold, 141%, 0, center)
                     margin: 0
-                    font-family: 'Baloo 2', sans-serif
-                    font-size: clamp(2.25rem, 3vw + 1rem, 2.8125rem)
-                    font-weight: bold
-                    line-height: 141%
-                    letter-spacing: 0%
-                    color: #FFFFFF
-                    text-align: center
-                    justify-content: center
                     padding-top: 2rem
 
             .second-header-container
-                display: flex
-                justify-content: center
-                width: 100%
-                max-width: 1920px
-                height: auto
+                @include m.flex-d-j-a-g(row, center, stretch)
+                @include m.boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
                 margin: 0
 
                 .second-header-txt
-                    width: 100%
-                    max-width: 1920px
-                    height: auto
+                    @include m.boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
+                    @include m.font-f-s-c-w-lh-ls-a('Montserrat', clamp(1rem, 4vw + 0.2rem, 2rem), #FFFFFF, normal, 141%, 0, center)
                     margin: 0
-                    font-family: 'Montserrat'
-                    font-weight: normal
-                    font-size: clamp(1rem, 4vw + 0.2rem, 2rem)
-                    line-height: 141%
-                    letter-spacing: 0%
-                    color: #FFFFFF
-                    text-align: center
                     padding: 1rem
 
         .ref-posts
             @include m.hide-scrollbar
             overflow-x: auto
             overflow-y: hidden
-            display: flex
-            flex-direction: row
-            align-items: center
-            gap: 2rem
-            width: calc(100% - 2rem)
-            max-width: 1920px
+            @include m.flex-d-j-a-g(row, flex-start, center, 2rem)
+            @include m.boxsize-w-h-minw-minh-maxw-maxh(calc(100% - 2rem))
             padding-inline: 1rem
             scroll-padding-inline: 1rem
             scroll-snap-type: x mandatory
@@ -100,7 +63,7 @@
 
             &::-webkit-scrollbar
                 display: none
-                
+
             cursor: grab
 
             &.dragging
@@ -109,10 +72,10 @@
                 user-select: none
 
             .ref-card
-                display: flex
+                @include m.flex-d-j-a-g(row, flex-start, stretch)
                 flex-shrink: 0
+                @include m.boxsize-w-h-minw-minh-maxw-maxh(100%)
                 max-width: 300px
-                width: 100%
                 scroll-snap-align: start
-                scroll-snap-stop: always 
+                scroll-snap-stop: always
                 padding: 0.8rem
