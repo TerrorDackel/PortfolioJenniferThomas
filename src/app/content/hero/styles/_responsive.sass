@@ -1,3 +1,5 @@
+@use '../../../../styles/mixins' as *
+
 @media (max-width: 700px)
     .hero-section
         .hero-container-mobile
@@ -31,13 +33,13 @@
                 .hero-header-scroll-container
                     .header-allignement
                         .header-txt-container
-                            padding: 2rem 0 
+                            padding: 2rem 0
                             .header-txt-allignement
                                 .hero-txt-hallo
-                                    font-size: 1.7rem
+                                    @include font-f-s-c-w-lh-ls-a($family: null, $size: 1.7rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
                                 .hero-text-frontend,
                                 .hero-text-developer
-                                    font-size: 3rem
+                                    @include font-f-s-c-w-lh-ls-a($family: null, $size: 3rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
 @media (max-width: 370px)
     .hero-section
@@ -50,10 +52,10 @@
                         .header-txt-container
                             .header-txt-allignement
                                 .hero-txt-hallo
-                                    font-size: 1.4rem
+                                    @include font-f-s-c-w-lh-ls-a($family: null, $size: 1.4rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
                                 .hero-text-frontend,
                                 .hero-text-developer
-                                    font-size: 2.5rem
+                                    @include font-f-s-c-w-lh-ls-a($family: null, $size: 2.5rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
 @media (max-width: 310px)
     .hero-section
@@ -64,10 +66,10 @@
                         .header-txt-container
                             .header-txt-allignement
                                 .hero-txt-hallo
-                                    font-size: 1.1rem
+                                    @include font-f-s-c-w-lh-ls-a($family: null, $size: 1.1rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
                                 .hero-text-frontend,
                                 .hero-text-developer
-                                    font-size: 2.5rem
+                                    @include font-f-s-c-w-lh-ls-a($family: null, $size: 2.5rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
 @media (max-width: 270px)
     .hero-section
@@ -77,11 +79,12 @@
                     .header-allignement
                         .header-txt-container
                             .header-txt-allignement
+                                margin-left: -1.5rem
                                 .hero-txt-hallo
-                                    font-size: 1rem
+                                    @include font-f-s-c-w-lh-ls-a($family: null, $size: 1rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
                                 .hero-text-frontend,
                                 .hero-text-developer
-                                    font-size: 2.5rem
+                                    @include font-f-s-c-w-lh-ls-a($family: null, $size: 2.5rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
 @media (max-width: 250px)
     .hero-section
@@ -93,10 +96,10 @@
                             .header-txt-allignement
                                 margin-left: -1.5rem
                                 .hero-txt-hallo
-                                    font-size: 1rem
+                                    @include font-f-s-c-w-lh-ls-a($family: null, $size: 1rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
                                 .hero-text-frontend,
                                 .hero-text-developer
-                                    font-size: 2.5rem
+                                    @include font-f-s-c-w-lh-ls-a($family: null, $size: 2.5rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
 @media (max-height: 700px)
     .hero-section
@@ -111,184 +114,110 @@
                                 border-radius: 4rem
                                 border: solid 0.1rem #272afc
                                 padding: 0.1rem 3.5rem 0 3.5rem
-                                    
                     .scroll-container
                         .scroll-responsive
                             .scroll-responsive-txt
-                                padding: 0 1rem 0 1rem
+                                padding: 0 1rem
                                 background-color: #272afc
                                 border-radius: 15rem
                                 border: solid 0.1rem #272afc
 
 @media (min-width: 950px)
     .hero-section
-        display: flex
-        justify-content: center
-        align-items: center
+        @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+        @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 100%, $minw: null, $minh: null, $maxw: null, $maxh: null)
         background: linear-gradient(0deg, rgba(234,240,255,1) 0%, rgba(245,248,255,1) 35%, rgba(255,255,255,1) 100%)
-        width: 100%
-        height: 100%
         overflow: hidden
 
         .hero-container-desktop
-            display: flex
-            justify-content: center
-            align-items: center
-            flex-direction: column
-            width: 100%
-            height: 100%
-            max-width: 1920px
+            @include flex-d-j-a-g($dir: column, $justify: center, $align: center, $gap: null)
+            @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 100%, $minw: null, $minh: null, $maxw: 1920px, $maxh: null)
             padding: 0 1rem
 
             .hero-top-circle-container
+                @include flex-d-j-a-g($dir: row, $justify: space-between, $align: center, $gap: null)
+                @include size-w-h($w: auto, $h: 100%)
+                padding: 1rem
                 position: absolute
                 top: -15%
                 right: 50%
-                width: auto
-                height: 100%
-                padding: 1rem
-                display: flex
-                justify-content: space-between
-                align-items: center
                 z-index: 1
 
                 .circle-3-container
-                    width: auto
+                    @include size-w-h($w: auto, $h: null)
 
                     .circle-3
-                        width: 50rem
-                        height: 50rem
-                        border-radius: 50%
-                        background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%)
+                        @include circle-size(50rem)
+                        @include brandradial-size-x-y-c1-c2-c3()
 
             .hero-img-header-scroll-iconlist
-                width: 100vw
-                max-width: 1920px
-                height: 100%
-                display: flex
-                align-items: flex-start
-                justify-content: space-around
+                @include flex-d-j-a-g($dir: row, $justify: space-around, $align: flex-start, $gap: null)
+                @include boxsize-w-h-minw-minh-maxw-maxh($w: 100vw, $h: 100%, $minw: null, $minh: null, $maxw: 1920px, $maxh: null)
                 padding: 0
                 z-index: 2
 
                 .hero-img-container
-                    width: 49%
-                    min-width: 200px
-                    max-width: 550px
-                    margin-bottom: 0!important
-                    height: 100%
+                    @include flex-d-j-a-g($dir: row, $justify: center, $align: flex-end, $gap: null)
+                    @include boxsize-w-h-minw-minh-maxw-maxh($w: 49%, $h: 100%, $minw: 200px, $minh: null, $maxw: 550px, $maxh: null)
+                    margin-bottom: 0 !important
                     z-index: 2
-                    display: flex
-                    justify-content: center
-                    align-items: flex-end
 
                     .hero-img
-                        // background-color: #5988ff7c
-                        // border-radius: 15rem
-                        // border: solid 0.1rem #272afc
+                        @include flex-d-j-a-g($dir: row, $justify: center, $align: stretch, $gap: null)
+                        @include size-w-h($w: 100%, $h: auto)
                         padding: 0
-                        width: 100%
-                        height: auto
-                        display: flex
                         object-fit: scale-down
                         overflow: hidden
                         margin-left: 1rem
 
                 .hero-header-scroll-container
-                    width: 49%
-                    min-width: 200px
-                    max-width: 550px
-                    margin-bottom: 0!important
+                    @include flex-d-j-a-g($dir: column, $justify: flex-end, $align: flex-end, $gap: null)
+                    @include boxsize-w-h-minw-minh-maxw-maxh($w: 49%, $h: 80%, $minw: 200px, $minh: null, $maxw: 550px, $maxh: null)
+                    margin-bottom: 0 !important
                     margin-top: 9rem
-                    height: 80%
                     z-index: 2
-                    display: flex
-                    justify-content: flex-start
-                    align-items: flex-end
-                    flex-direction: column
 
                     .header-allignement
-                        display: flex
-                        flex-direction: column
-                        align-items: flex-start
-                        width: 100%
-                        max-width: 550px
-                        height: 350px
+                        @include flex-d-j-a-g($dir: column, $justify: flex-start, $align: flex-start, $gap: null)
+                        @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 350px, $minw: null, $minh: null, $maxw: 550px, $maxh: null)
 
                         .header-txt-container
-                            width: 100%
-                            height: auto
-                            display: flex
-                            justify-content: flex-end
+                            @include flex-d-j-a-g($dir: row, $justify: flex-end, $align: stretch, $gap: null)
+                            @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
 
                             .header-txt-allignement
-                                width: 100%
-                                height: auto
-                                display: flex
-                                flex-direction: column
-                                max-width: 510px
-                                // background-color: #5988ff7c
-                                // border-radius: 15rem
-                                // border: solid 0.1rem #272afc
+                                @include flex-d-j-a-g($dir: column, $justify: flex-start, $align: stretch, $gap: null)
+                                @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: 510px, $maxh: null)
                                 padding: 1rem 6rem
 
                                 .hero-txt-hallo
-                                    display: flex
-                                    justify-content: flex-start
+                                    @include flex-d-j-a-g($dir: row, $justify: flex-start, $align: stretch, $gap: null)
+                                    @include font-f-s-c-w-lh-ls-a($family: 'Montserrat', $size: clamp(2.25rem, 1.5rem + 2vw, 3.8125rem), $color: #5988FF, $weight: 400, $lineHeight: 1, $letterSpacing: 0, $align: null)
                                     padding: 0
                                     margin: 0
-                                    font-family: 'Montserrat', sans-serif
-                                    font-weight: 400
-                                    font-size: clamp(2.25rem, 1.5rem + 2vw, 3.8125rem)
-                                    line-height: 1
-                                    letter-spacing: 0
-                                    color: #5988FF
-                                    vertical-align: middle
                                     white-space: nowrap
 
                                 .hero-text-frontend,
                                 .hero-text-developer
-                                    display: flex
+                                    @include flex-d-j-a-g($dir: row, $justify: flex-start, $align: stretch, $gap: null)
+                                    @include font-f-s-c-w-lh-ls-a($family: 'Baloo 2', $size: clamp(4.5625rem, 2.5rem + 3vw, 9rem), $color: #5988FF, $weight: 700, $lineHeight: 1, $letterSpacing: -0.125rem, $align: null)
                                     padding: 0
                                     margin: 0
-                                    font-family: 'Baloo 2'
-                                    font-weight: bold
-                                    font-size: clamp(4.5625rem, 2.5rem + 3vw, 9rem)
-                                    line-height: 1
-                                    letter-spacing: -0.125rem
-                                    color: #5988FF
-                                    vertical-align: middle
 
                     .scroll-container
-                        display: flex
-                        width: 100%
-                        height: 50%
-                        justify-content: center
+                        @include flex-d-j-a-g($dir: row, $justify: center, $align: stretch, $gap: null)
+                        @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 50%, $minw: null, $minh: null, $maxw: null, $maxh: null)
 
                         .scroll-desktop
-                            width: 100%
-                            height: 100%
-                            display: flex
-                            flex-direction: column
-                            align-items: center
-                            justify-content: center
+                            @include flex-d-j-a-g($dir: column, $justify: center, $align: center, $gap: null)
+                            @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 100%, $minw: null, $minh: null, $maxw: null, $maxh: null)
                             z-index: 2
 
                             .scroll-txt
-                                // background-color: rgba(25, 0, 255, 0.3)
-                                // border-radius: 3rem
-                                // border: solid 1px #ffffff
+                                @include flex-d-j-a-g($dir: row, $justify: center, $align: stretch, $gap: null)
+                                @include size-w-h($w: 10rem, $h: auto)
+                                @include font-f-s-c-w-lh-ls-a($family: 'Montserrat', $size: 1.4375rem, $color: #5988FF, $weight: 500, $lineHeight: 1.2, $letterSpacing: 0, $align: null)
                                 padding: 0.75rem
-                                width: 10rem
-                                height: auto
-                                display: flex
-                                justify-content: center
-                                font-family: 'Montserrat', sans-serif
-                                font-weight: 500
-                                font-size: 1.4375rem
-                                line-height: 1.2
-                                letter-spacing: 0
-                                color: #5988FF
                                 position: absolute
                                 bottom: 20rem
                                 margin-bottom: 1rem
@@ -299,48 +228,9 @@
                                 gap: 1.5rem
 
                                 .line
-                                    width: 0.1rem
-                                    height: 20rem
+                                    @include size-w-h($w: 0.1rem, $h: 20rem)
                                     background-color: #5988FF
 
-                    .hero-iconlinks-allignement-container
-                        display: flex
-                        justify-content: flex-end
-                        width: 90%
-                        height: auto
-                        margin-bottom: 2rem
-
-                        .hero-iconlinks-container
-                            width: 10%
-                            height: auto
-                            display: flex
-                            justify-content: space-between
-                            align-items: stretch
-                            z-index: 3
-
-                            .hero-iconlist-vertikal
-                                display: flex
-                                flex-direction: column
-                                gap: 1.5625rem
-                                align-items: center
-                                margin-left: 1rem
-                                padding-right: 2rem
-
-                                .hero-icon-container
-                                    width: 1.875rem
-                                    height: 1.875rem
-
-                                    a
-                                        display: block
-
-                                        img
-                                            width: 100%
-                                            height: 100%
-                                            object-fit: contain
-
-                                            &:hover
-                                                transform: translateX(-1rem)
-                                                transition: transform 0.1s ease
         .hero-container-mobile
             display: none
 
@@ -349,22 +239,17 @@
         height: auto
 
     .hero-section
-        
         .hero-container-desktop
-
             .hero-top-circle-container
                 top: -45%
                 left: 20%
-                width: auto
+                @include size-w-h($w: auto, $h: null)
                 padding: 0
 
                 .circle-3-container
-
                     .circle-3
-                        width: 50rem
-                        height: 50rem
-                        border-radius: 50%
-                        background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%)
+                        @include circle-size(50rem)
+                        @include brandradial-size-x-y-c1-c2-c3()
 
             .hero-img-header-scroll-iconlist
                 height: 100%
@@ -374,31 +259,27 @@
                     height: 100%
 
                     .hero-img
-                        background-color: rgb(255, 255, 255, 0.1)
+                        background-color: rgba(255, 255, 255, 0.1)
                         border-radius: 1rem
-                        width: auto
-                        height: 100%
+                        @include size-w-h($w: auto, $h: 100%)
 
 @media (min-width: 2000px) and (max-height: 1100px)
     :host
         height: 100vh
 
     .hero-section
-        
-        .hero-container
-
+        .hero-container-desktop
             .hero-top-circle-container
                 top: -25%
                 left: 20%
-                width: auto
+                @include size-w-h($w: auto, $h: null)
                 padding: 0
 
             .hero-img-header-scroll-iconlist
-                display: flex
+                @include flex-d-j-a-g($dir: row, $justify: flex-start, $align: stretch, $gap: null)
 
                 .hero-img-container
-                    display: flex
+                    @include flex-d-j-a-g($dir: row, $justify: flex-start, $align: stretch, $gap: null)
 
                     .hero-img
-                        display: flex
-                        align-items: flex-end
+                        @include flex-d-j-a-g($dir: row, $justify: flex-start, $align: flex-end, $gap: null)

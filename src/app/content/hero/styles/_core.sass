@@ -1,148 +1,107 @@
+@use '../../../../styles/mixins' as *
+
 :host
-    display: flex
-    justify-content: center
-    width: 100dvw
-    height: 100dvh
+    @include flex-d-j-a-g(row, center, stretch)
+    @include size-w-h(100dvw, 100dvh)
     margin-left: 0
     margin-right: 0
     margin-top: 0
 
 .hero-section
-    width: 100%
-    height: 100vh
-    display: flex
-    justify-content: center
+    @include flex-d-j-a-g(row, center, stretch)
+    @include size-w-h(100%, 100vh)
     background: linear-gradient(0deg, rgba(234,240,255,1) 0%, rgba(245,248,255,1) 35%, rgba(255,255,255,1) 100%)
 
     .hero-container-desktop
         display: none
 
     .hero-container-mobile
-        display: flex
-        justify-content: center
+        @include flex-d-j-a-g(row, center, stretch)
         margin: 0
 
         .hero-top-circle-container
+            @include flex-d-j-a-g(row, space-between, center)
+            @include size-w-h(auto, 100%)
+            padding: 1rem
+            margin-right: 1rem
             position: absolute
             top: -15%
-            margin-right: 1rem
             right: 10%
-            width: auto
-            height: 100%
-            padding: 1rem
-            display: flex
-            justify-content: space-between
-            align-items: center
             z-index: 1
 
             .circle-3-container
-                width: auto
+                @include size-w-h(auto, null)
 
                 .circle-3
-                    width: 50rem
-                    height: 50rem
-                    border-radius: 50%
-                    background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%)
+                    @include circle-size(50rem)
+                    @include brandradial-size-x-y-c1-c2-c3()
 
         .hero-header-scroll
-            display: flex
-            align-items: center
-            flex-direction: column
+            @include flex-d-j-a-g(column, flex-start, center)
 
             .hero-header-scroll-container
-                width: 100%
-                display: flex
-                justify-content: center
+                @include flex-d-j-a-g(row, center, stretch)
+                @include size-w-h(100%, null)
 
                 .header-allignement
-                    width: 100%
-                    display: flex
-                    justify-content: center
+                    @include flex-d-j-a-g(row, center, stretch)
+                    @include size-w-h(100%, null)
+                    padding: 0 1rem
                     margin-top: 115px
                     background-color: #5988FF
                     border-radius: 5rem
-                    padding: 0 1rem 0 1rem
 
                     .header-txt-container
-                        width: 100%
-                        height: auto
-                        display: flex
+                        @include flex-d-j-a-g(column, flex-start, stretch)
+                        @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
                         padding: 2rem 1rem
-                        flex-direction: column
                         z-index: 3
 
                         .header-txt-allignement
-                            display: flex
-                            flex-direction: column
-                            
+                            @include flex-d-j-a-g(column, flex-start, stretch)
 
                             .hero-txt-hallo
-                                display: flex
-                                justify-content: flex-start
+                                @include flex-d-j-a-g(row, flex-start, stretch)
                                 padding: 0
                                 margin: 0
-                                font-family: 'Montserrat', sans-serif
-                                font-weight: 400
-                                font-size: clamp(2rem, 1.5rem + 2vw, 3.8125rem)
-                                line-height: 1
-                                letter-spacing: 0
-                                color: white
-                                vertical-align: middle
-                                white-space: nowrap
+                                @include font-f-s-c-w-lh-ls-a('Montserrat', clamp(2rem, 1.5rem + 2vw, 3.8125rem), white, 400, 1, 0)
 
                             .hero-text-frontend,
                             .hero-text-developer
-                                display: flex
+                                @include flex-d-j-a-g(row, flex-start, stretch)
                                 padding: 0
                                 margin: 0
-                                font-family: 'Baloo 2'
-                                font-weight: bold
-                                font-size: clamp(4rem, 2.5rem + 3vw, 9rem)
-                                line-height: 1
-                                letter-spacing: -0.125rem
-                                color: white
-                                vertical-align: middle
+                                @include font-f-s-c-w-lh-ls-a('Baloo 2', clamp(4rem, 2.5rem + 3vw, 9rem), white, 700, 1, -0.125rem)
 
                 .scroll-container
-                    display: flex
-                    justify-content: center
+                    @include flex-d-j-a-g(row, center, stretch)
 
                     .scroll-responsive
+                        @include size-w-h(auto, null)
                         position: absolute
                         bottom: 10%
                         display: block
                         z-index: 3
-                        width: auto
-                        
 
                         .scroll-responsive-txt
-                            display: flex
-                            transform: rotate(90deg)
-                            transform-origin: center
-                            font-family: 'Poppins'
-                            font-weight: 400
-                            font-size: 1.4375rem
-                            line-height: 120%
-                            letter-spacing: 0
-                            color: #5988FF
-                            white-space: nowrap
+                            @include flex-d-j-a-g(row, flex-start, stretch)
+                            @include font-f-s-c-w-lh-ls-a('Poppins', 1.4375rem, #5988FF, 400, 120%, 0)
+                            padding: 0 1rem
                             margin-right: 4rem
                             margin-bottom: 2rem
-                            border-radius: 5rem
-                            padding: 0 1rem 0 1rem
+                            transform: rotate(90deg)
+                            transform-origin: center
+                            white-space: nowrap
                             background-color: #272afc
                             border-radius: 15rem
                             border: solid 0.1rem #272afc
 
             .hero-img-container
-                display: flex
-                justify-content: center
+                @include flex-d-j-a-g(row, center, stretch)
 
                 .hero-img
-                    display: flex
-                    justify-content: center
+                    @include flex-d-j-a-g(row, center, stretch)
+                    @include maxsize-w-h(95%, 63%)
                     position: absolute
                     bottom: 0
-                    max-width: 95%                       
-                    max-height: 63%
                     z-index: 2
