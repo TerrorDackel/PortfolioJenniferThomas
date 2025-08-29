@@ -1,3 +1,5 @@
+@use '../../../styles/mixins' as *
+
 @media (max-width: 800px)
     .legal-notice
         .txt
@@ -5,37 +7,28 @@
             margin-top: 100px
 
             h2
-                font-size: 2rem
-                font-weight: 700
-                color: #5988FF
+                @include font-f-s-c-w-lh-ls-a($family: 'Baloo 2', $size: 2rem, $color: #5988FF, $weight: 700, $lineHeight: null, $letterSpacing: null, $align: null)
                 margin-bottom: 10px
 
         .legal-notice-item
             h4
-                font-size: 1.3rem
-                font-weight: 700  
-                color: #5988FF
+                @include font-f-s-c-w-lh-ls-a($family: 'Baloo 2', $size: 1.3rem, $color: #5988FF, $weight: 700, $lineHeight: null, $letterSpacing: null, $align: null)
                 margin-bottom: 10px
 
             span
-                font-size: 1rem
-                color: #555
-                line-height: 1.6
+                @include font-f-s-c-w-lh-ls-a($family: 'Montserrat', $size: 1rem, $color: black, $weight: null, $lineHeight: 1.6, $letterSpacing: null, $align: null)
 
 @media (max-width: 520px)
     .legal-notice
         .txt
             h2
-                font-size: 1.1rem
-                font-weight: 400
+                @include font-f-s-c-w-lh-ls-a($family: 'Baloo 2', $size: 1.1rem, $color: null, $weight: 400, $lineHeight: null, $letterSpacing: null, $align: null)
                 margin-bottom: 10px
 
         .legal-notice-item
             h4
-                font-size: 1rem
-                font-weight: 400  
+                @include font-f-s-c-w-lh-ls-a($family: 'Baloo 2', $size: 1rem, $color: null, $weight: 400, $lineHeight: null, $letterSpacing: null, $align: null)
                 margin-bottom: 10px
 
             span
-                font-size: 0.9rem
-                line-height: 1
+                @include font-f-s-c-w-lh-ls-a($family: 'Montserrat', $size: 0.9rem, $color: null, $weight: null, $lineHeight: 1, $letterSpacing: null, $align: null)
