@@ -1,67 +1,45 @@
+@use '../../../styles/mixins' as *
 
 @media (max-width: 500px)
     .footer-section
-        display: flex
-        justify-content: center
-        align-items: center
-        width: 100%
-        height: auto
-        max-height: 380px
+        @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+        @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: 380px)
         margin: 0
         margin-bottom: 0
 
         .footer-container
-            display: flex
-            justify-content: center
-            flex-direction: column
-            width: 100%
-            max-height: 350px
+            @include flex-d-j-a-g($dir: column, $justify: center, $align: null, $gap: null)
+            @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: 350px)
             padding: 1rem
 
             .logo-container
-                width: auto
-                max-height: 80px
-                height: 100%
-                display: flex
-                justify-content: center
-                align-items: center
+                @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+                @include boxsize-w-h-minw-minh-maxw-maxh($w: auto, $h: 100%, $minw: null, $minh: null, $maxw: null, $maxh: 80px)
 
             .created-copyright-impressum-container
-                width: 100%
-                max-height: 30px
-                height: 100%
-                display: flex
-                justify-content: center
+                @include flex-d-j-a-g($dir: row, $justify: center, $align: null, $gap: null)
+                @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 100%, $minw: null, $minh: null, $maxw: auto, $maxh: 30px)
 
                 .over-copyright-container
                     display: none
 
                 .copyright-container
-                    width: 90%
-                    height: auto
-                    padding: 20px
+                    @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
+                    padding: 0
 
                 .legal-notice-container
                     display: none
 
             .footer-iconlist-horizontal
-                max-width: 200px
-                width: 100%
-                max-height: 40px
-                height: 100%
+                @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 100%, $minw: null, $minh: null, $maxw: 200px, $maxh: 40px)
 
                 .footer-icon-container
-                    width: auto
+                    @include boxsize-w-h-minw-minh-maxw-maxh($w: auto, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
 
             .legal-notice-container-mobile
-                display: block
-                width: 100%
-                max-width: 130px
-                height: 45px
+                @include flex-d-j-a-g($dir: row, $justify: center, $align: flex-start, $gap: null)
+                @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 45px, $minw: null, $minh: null, $maxw: 130px, $maxh: null)
                 text-align: center
-                display: flex
-                justify-content: center
-                align-items: flex-start
 
                 a
                     color: #FFFFFF

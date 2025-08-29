@@ -1,37 +1,27 @@
+@use '../../../styles/mixins' as *
+
 :host
-    display: block
-    width: 100%
+    @include boxsize-w-h-minw-minh-maxw-maxh(100%)
     margin-left: 0
     margin-right: 0
     margin-bottom: 0
 
 .footer-section
-    display: flex
-    align-items: center
-    justify-content: center
-    width: 100%
-    height: 100%
-    max-height: 390px
+    @include flex-d-j-a-g(row, center, center)
+    @include boxsize-w-h-minw-minh-maxw-maxh(100%, 100%, null, null, null, 390px)
     margin: 0
-    background: radial-gradient(71.18% 335.57% at 28.82% -124.4%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%)
+    @include brandradial-size-x-y-c1-c2-c3(71.18% 335.57%, 28.82%, -124.4%, #5988FF, #5988FF, #0043F0)
     bottom: 0
     right: 0
     left: 0
 
     .footer-container
-        width: 100%
-        max-width: 1920px
-        max-height: 240px
-        display: flex
-        align-items: center
-        justify-content: space-between
+        @include flex-d-j-a-g(row, space-between, center)
+        @include boxsize-w-h-minw-minh-maxw-maxh(100%, null, null, null, 1920px, 240px)
 
         .logo-container
-            display: flex
-            align-items: center
-            justify-content: flex-start
-            height: 70px
-            width: 25%
+            @include flex-d-j-a-g(row, flex-start, center)
+            @include boxsize-w-h-minw-minh-maxw-maxh(25%, 70px)
             padding: 2rem
             color: white
 
@@ -39,50 +29,30 @@
                 cursor: pointer
 
             .logo-img
-                display: flex
-                justify-content: center
-                align-items: center
-                width: 64px
-                height: 69px
+                @include flex-d-j-a-g(row, center, center)
+                @include size-w-h(64px, 69px)
 
         .created-copyright-impressum-container
-            width: 50%
-            height: 210px
-            display: flex
-            justify-content: center
-            align-items: center
-            flex-direction: column
+            @include flex-d-j-a-g(column, center, center)
+            @include boxsize-w-h-minw-minh-maxw-maxh(50%, 210px)
             color: white
 
             .over-copyright-container
-                width: 100%
-                height: 50px
+                @include flex-d-j-a-g(row, center, center)
+                @include boxsize-w-h-minw-minh-maxw-maxh(100%, 50px)
                 padding: 1rem
-                display: flex
-                justify-content: center
-                align-items: center
                 color: white
 
             .copyright-container
-                width: 100%
-                height: 50px
+                @include flex-d-j-a-g(row, center, center)
+                @include boxsize-w-h-minw-minh-maxw-maxh(100%, 50px)
                 padding: 1rem
-                display: flex
-                justify-content: center
-                align-items: center
 
             .legal-notice-container
-                width: 100%
-                height: 50px
+                @include flex-d-j-a-g(row, center, center)
+                @include boxsize-w-h-minw-minh-maxw-maxh(100%, 50px)
                 padding: 1rem
-                display: flex
-                justify-content: center
-                align-items: center
-                font-family: Montserrat
-                font-weight: 400
-                font-size: 1rem
-                line-height: 120%
-                letter-spacing: 0%
+                @include font-f-s-c-w-lh-ls-a(Montserrat, 1rem, null, 400, 120%, 0)
 
                 a
                     text-decoration: none
@@ -117,19 +87,13 @@
                             opacity: 1
 
         .footer-iconlist-horizontal
-            width: 25%
-            height: 30px
+            @include flex-d-j-a-g(row, space-around, center)
+            @include boxsize-w-h-minw-minh-maxw-maxh(25%, 30px)
             padding: 1rem
-            display: flex
-            justify-content: space-around
-            align-items: center
 
             .footer-icon-container
-                display: flex
-                justify-content: center
-                align-items: center
-                width: 30px
-                height: 30px
+                @include flex-d-j-a-g(row, center, center)
+                @include size-w-h(30px, 30px)
                 transition: transform 0.1s ease
 
                 img:hover
