@@ -2,20 +2,26 @@
 
 :host
     display: block
-    width: 100%
-    margin: 0
+    width: 100dvw
+    margin-left: 0
+    margin-right: 0
     background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%)
 
 #contact
     scroll-margin-top: -117px
 
+form
+    display: flex
+    justify-content: center
+
 .contact-section
     @include flex-d-j-a-g(row, center, center)
+    max-width: 1920px
     @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
     overflow: hidden
 
     .contact-container
-        @include flex-d-j-a-g(column, flex-start, center)
+        @include flex-d-j-a-g(column, center, center)
         @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, null, 1920px)
         padding: 0 2rem
 

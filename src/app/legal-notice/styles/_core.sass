@@ -1,36 +1,52 @@
 @use '../../../styles/mixins' as *
 
 :host
-    display: block
-    width: 100%
-    margin-left: 0
-    margin-right: 0
+    display: flex
+    justify-content: center
+    width: 100dvw
+    height: auto
+    margin: 0
+    padding: 0
+    background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%)
 
 .legal-notice
     @include flex-d-j-a-g(column, center, center)
-    @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
-    margin: 0 auto
-    background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%)
-    font-family: 'Montserrat', sans-serif
-    line-height: 1.6
+    @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1440px, null)
+    padding: 1rem
+    margin: 100px 0 0 0
+
 
     .txt
-        @include flex-d-j-a-g(column, center, center)
-        padding: 150px
+        @include flex-d-j-a-g(column, null, flex-start)
+        @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1440px, null)
+        text-align: left
+        padding: 1rem
+        white-space: normal
+        overflow-wrap: normal
+        word-break: keep-all
+        hyphens: none
 
         h2
-            @include font-f-s-c-w-lh-ls-a('Baloo 2', 2.5rem, #5988FF, 700, null, null, null)
+            @include flex-d-j-a-g(column, null, flex-start)
+            @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1000px, null)
+            @include font-f-s-c-w-lh-ls-a('Baloo 2', 90px, #5988FF, bold, 120%, 0%, left)
             margin-bottom: 10px
+            padding: 0 1rem
+
 
         .legal-notice-item
+            width: 100%
+            max-width: 1000px
+            margin-bottom: 10px
+            padding: 0 1rem
+            width: 100%
             margin-bottom: 15px
 
             h4
-                @include font-f-s-c-w-lh-ls-a('Baloo 2', 1.75rem, #5988FF, 700, null, null, null)
-                margin-bottom: 10px
+                @include font-f-s-c-w-lh-ls-a('Open Sans', 33px, #5988FF, bold, 120%, 0%, left)
+                padding: 0
 
             span
-                @include flex-d-j-a-g(row, flex-start, stretch)
+                @include flex-d-j-a-g(column, flex-start, stretch)
                 @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
-                @include font-f-s-c-w-lh-ls-a('Montserrat', 1.125rem, #5988FF, 400, null, null, null)
-                margin-left: 1rem
+                @include font-f-s-c-w-lh-ls-a('Open Sans', 1rem, black, 400, 120%, 0%, left)
