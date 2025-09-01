@@ -2,7 +2,7 @@
 
 :host
     display: block
-    @include boxsize-w-h-minw-minh-maxw-maxh(100%)
+    width: 100%
     margin-left: 0
     margin-right: 0
 
@@ -15,22 +15,22 @@
     line-height: 1.6
 
     .txt
-        @include flex-d-j-a-g(column, center, flex-start)
+        @include flex-d-j-a-g(column, center, center)
         padding: 150px
 
         h2
-            @include font-f-s-c-w-lh-ls-a('Baloo 2', 5.625rem, #5988FF, bold, 120%, 0%, left)
+            @include font-f-s-c-w-lh-ls-a('Baloo 2', 2.5rem, #5988FF, 700, null, null, null)
             margin-bottom: 10px
 
-    .legal-notice-item
-        margin-bottom: 15px
+        .legal-notice-item
+            margin-bottom: 15px
 
-        h4
-            @include font-f-s-c-w-lh-ls-a('Baloo 2', 1.75rem, #5988FF, bold, 120%, 0%, left)
-            margin-bottom: 10px
+            h4
+                @include font-f-s-c-w-lh-ls-a('Baloo 2', 1.75rem, #5988FF, 700, null, null, null)
+                margin-bottom: 10px
 
-        span
-            @include flex-d-j-a-g(row, flex-start)
-            @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
-            margin-left: 1rem
-            @include font-f-s-c-w-lh-ls-a('Montserrat', 1.125rem, black, 700, 120%, 0)
+            span
+                @include flex-d-j-a-g(row, flex-start, stretch)
+                @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
+                @include font-f-s-c-w-lh-ls-a('Montserrat', 1.125rem, #5988FF, 400, null, null, null)
+                margin-left: 1rem

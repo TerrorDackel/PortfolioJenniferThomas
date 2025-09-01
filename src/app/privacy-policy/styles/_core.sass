@@ -1,80 +1,54 @@
+@use '../../../styles/mixins' as *
+
 :host
-    display: block
-    width: 100%
-    margin-left: 0
-    margin-right: 0
+    display: flex
+    justify-content: center
+    width: 100dvw
+    height: auto
+    margin: 0
+    padding: 0
 
 .privacy-policy
-    display: flex
-    align-items: center
-    flex-direction: column
-    justify-content: center
-    width: 100%
-    max-width: 1920px
-    height: auto
-    margin: 0 auto
+    @include flex-d-j-a-g(column, center, center)
+    @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1440px, null)
+    padding: 1rem
+    margin: 100px 0 0 0
     background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%)
-    font-family: 'Montserrat', sans-serif
-    line-height: 1.6
-
-    div
-        display: block
-        text-align: left
-
-    h4
-        font-family: 'Baloo 2', sans-serif
-        font-size: 1.75rem
-        font-weight: 700
-        color: #5988FF
-        margin-bottom: 10px
-
-    span,
-    li,
-    p
-        display: flex
-        justify-content: center
-        width: 100%
-        height: auto
-        font-family: 'Montserrat', sans-serif
-        font-size: 1.125rem
-        font-weight: 400
-        color: #555
-
-    h2
-        font-family: 'Baloo 2', sans-serif
-        font-size: 40px
-        font-weight: 700
-        color: #5988FF
-        margin-bottom: 10px
 
     .txt
-        display: flex
-        flex-direction: column
-        justify-content: center
-        padding: 150px
+        @include flex-d-j-a-g(column, null, flex-start)
+        @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1440px, null)
+        text-align: left
+        padding: 1rem
+        white-space: normal
+        overflow-wrap: normal
+        word-break: keep-all
+        hyphens: none
 
         .privacy-policy-header
-            font-family: 'Baloo 2', sans-serif
-            font-size: 2.5rem
-            font-weight: 700
-            color: #5988FF
+            @include flex-d-j-a-g(column, null, flex-start)
+            @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1000px, null)
+            @include font-f-s-c-w-lh-ls-a('Baloo 2', 90px, #5988FF, bold, 120%, 0%, left)
             margin-bottom: 10px
+            padding: 0 1rem
 
         .privacy-policy-item
+            width: 100%
+            max-width: 1000px
+            margin-bottom: 10px
+            padding: 0 1rem
+            width: 100%
             margin-bottom: 15px
 
             h4
-                font-family: 'Baloo 2', sans-serif
-                font-size: 26px
-                font-weight: 700
-                color: #5988FF
+                @include font-f-s-c-w-lh-ls-a('Open Sans', 33px, #5988FF, bold, 120%, 0%, left)
+                padding: 0
 
             span
-                display: flex
-                flex-direction: column
-                width: 100%
-                height: auto
-                font-family: 'Montserrat', sans-serif
-                font-size: 1.125rem
-                font-weight: 400
-                color: #555
+                @include flex-d-j-a-g(column, flex-start, stretch)
+                @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
+                @include font-f-s-c-w-lh-ls-a('Open Sans', 1rem, black, 400, 120%, 0%, left)
+
+
+
+
