@@ -67,7 +67,11 @@
 @media (max-width: 420px)
     .project-infos-section
         @include boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
-
+        .btn-alignment
+            .livetest-alignment
+                .livetest-btn-container
+                    @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: 130px)
+                    text-align: center
 @media (max-width: 310px)
     .project-infos-section
         .btn-alignment
@@ -85,6 +89,7 @@
         .btn-alignment
             .livetest-alignment
                 .livetest-btn-container
+                    @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: 100px)
                     .livetest-btn
                         @include font-f-s-c-w-lh-ls-a($family: null, $size: 1.1rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
             .project-github-btn-container-alignment
