@@ -48,9 +48,10 @@
                     padding: 1rem 1rem
                     @include boxsize-w-h-minw-minh-maxw-maxh($w: 90%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
                     .lets-work-together-container
-                        @include flex-d-j-a-g($dir: row, $justify: null, $align: null, $gap: null)
+                        @include flex-d-j-a-g($dir: column, $justify: null, $align: center, $gap: null)
                         padding: 0
                         .lets-work-together-text
+                            @include flex-d-j-a-g($justify: center, $align: center)
                             @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: null, $minh: null, $maxw: 290px, $maxh: null)
                             font-size: clamp(64px, 8vw, 121px)
                     .i-am-plus-info-container
@@ -106,14 +107,6 @@
                         @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
             .about-me-bottom
                 height: 0
-
-@media (max-width: 665px)
-    .work-together-section
-        .about-me-section
-            .about-me-infos-container
-                .container-left
-                    .lets-work-together-container
-                        @include flex-d-j-a-g($dir: column, $justify: null, $align: center, $gap: null)
 
 @media (max-width: 600px)
     .work-together-section
