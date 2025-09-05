@@ -48,12 +48,12 @@
                     padding: 1rem 1rem
                     @include boxsize-w-h-minw-minh-maxw-maxh($w: 90%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
                     .lets-work-together-container
-                        @include flex-d-j-a-g($dir: column, $justify: null, $align: center, $gap: null)
+                        @include flex-d-j-a-g($dir: column, $justify: center, $align: center, $gap: null)
                         padding: 0
                         .lets-work-together-text
                             @include flex-d-j-a-g($justify: center, $align: center)
                             @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: null, $minh: null, $maxw: 290px, $maxh: null)
-                            font-size: clamp(64px, 8vw, 121px)
+                            @mixin font-f-s-c-w-lh-ls-a($size: clamp(64px, 8vw, 121px), $align: center)
                     .i-am-plus-info-container
                         .i-am-container
                             .i-am-text
