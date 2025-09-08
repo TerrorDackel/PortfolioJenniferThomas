@@ -12,7 +12,7 @@
                 © Jennifer Thomas 2025
             </div>
             <div class="legal-notice-container">
-                <a [routerLink]="['/legal-notice']">
+                <a (click)="navigateTo('/legal-notice')">
                     {{ 'FOOTER.LEGAL' | translate }}
                 </a>
             </div>
@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="legal-notice-container-mobile">
-            <a [routerLink]="['/legal-notice']">
+            <a (click)="navigateTo('/legal-notice')">
                 {{ 'FOOTER.LEGAL' | translate }}
             </a>
         </div>

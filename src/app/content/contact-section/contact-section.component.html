@@ -123,7 +123,7 @@
                                 <div class="agree-privacypolice-check-txt">
                                     <p>
                                         {{ 'CONTACT.PRIVACY_I' | translate }}
-                                        <a class="privacy-link" [routerLink]="['/privacy-policy']">
+                                        <a class="privacy-link" (click)="navigateTo('/privacy-policy')">
                                             {{ 'CONTACT.PRIVACY_POLICY' | translate }}
                                         </a>
                                     </p>
@@ -149,7 +149,7 @@
                                     <p class="first-line">
                                         {{ 'CONTACT.PRIVACY_I' | translate }}
                                     </p>
-                                    <a class="privacy-link" [routerLink]="['/privacy-policy']">
+                                    <a class="privacy-link" (click)="navigateTo('/privacy-policy')">
                                         {{ 'CONTACT.PRIVACY_POLICY' | translate }}
                                     </a>
                                     <p class="second-line">

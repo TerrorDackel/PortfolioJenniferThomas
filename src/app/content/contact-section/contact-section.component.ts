@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { scrollUp } from '../../utils/scroll-to';
+import { saveScrollPosition } from '../../utils/scroll-memory';
 import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
@@ -26,7 +27,7 @@ export class ContactSectionComponent {
 
     focusedField: 'name' | 'email' | 'message' | null = null;
 
-    constructor(private fb: FormBuilder, private http: HttpClient) {}
+    constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {}
 
     private isEmpty(ctrl: 'name'|'email'|'message'): boolean {
         const v = this.contactForm.get(ctrl)?.value as string | null | undefined;
@@ -83,5 +84,10 @@ export class ContactSectionComponent {
 
     scrollUp(): void {
         scrollUp('scrollUp', 100);
+    }
+
+    navigateTo(path: string): void {
+        saveScrollPosition('contact');
+        this.router.navigate([path]);
     }
 }
