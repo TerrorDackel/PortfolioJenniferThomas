@@ -5,7 +5,7 @@ import { TranslatePipe } from "@ngx-translate/core";
 @Component({
     selector: 'app-legal-notice',
     standalone: true,
-    imports: [ RouterLink, TranslatePipe ],
+    imports: [ TranslatePipe ],
     templateUrl: './legal-notice.component.html',
     styleUrl: './legal-notice.component.sass'
 })

@@ -5,7 +5,7 @@ import { TranslatePipe } from "@ngx-translate/core";
 @Component({
     selector: 'app-privacy-policy',
     standalone: true,
-    imports: [ RouterLink, TranslatePipe ],
+    imports: [ TranslatePipe ],
     templateUrl: './privacy-policy.component.html',
     styleUrl: './privacy-policy.component.sass'
 })
