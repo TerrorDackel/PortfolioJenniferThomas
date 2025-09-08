@@ -4,6 +4,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Router, RouterLink } from '@angular/router';
 import { scrollUp } from '../../utils/scroll-to';
 import { saveScrollPosition } from '../../utils/scroll-memory';
+import { setReturnAnchor } from '../../utils/scroll-memory';
 import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
@@ -87,7 +88,8 @@ export class ContactSectionComponent {
     }
 
     navigateTo(path: string): void {
-        saveScrollPosition('contact');
+        setReturnAnchor('contact');
         this.router.navigate([path]);
     }
+
 }
