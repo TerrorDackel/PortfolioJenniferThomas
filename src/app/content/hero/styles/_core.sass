@@ -41,7 +41,7 @@
 
             .hero-header-scroll-container
                 @include flex-d-j-a-g(row, center, stretch)
-                @include size-w-h(100%, null)
+                @include size-w-h(100%, 100%)
 
                 .header-allignement
                     @include flex-d-j-a-g(row, center, stretch)
@@ -79,19 +79,16 @@
                     .scroll-responsive
                         @include size-w-h(auto, null)
                         position: absolute
-                        bottom: 10%
+                        bottom: 12%
                         display: block
                         z-index: 3
 
                         .scroll-responsive-txt
-                            @include flex-d-j-a-g(row, flex-start, stretch)
+                            @include flex-d-j-a-g(row, center, stretch)
                             @include font-f-s-c-w-lh-ls-a('Poppins', 1.4375rem, #5988FF, 400, 120%, 0)
-                            padding: 0 1rem
-                            margin-right: 4rem
-                            margin-bottom: 2rem
+                            width: 100%
+                            padding: 0 0.5rem
                             transform: rotate(90deg)
-                            transform-origin: center
-                            white-space: nowrap
                             background-color: #272afc
                             border-radius: 15rem
                             border: solid 0.1rem #272afc

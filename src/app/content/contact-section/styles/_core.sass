@@ -139,38 +139,47 @@ form
                             @include size-w-h(null, 7rem)
 
                     .your-name-container
+                        height: 80px
+
                         .error-slot
                             display: block
                             align-self: stretch
                             @include boxsize-w-h-minw-minh-maxw-maxh(100%)
                             @include minsize-w-h(null, 1.25rem)
+
                         .error-msg
                             @include font-f-s-c-w-lh-ls-a('Poppins', 1rem, red, null, null, null, left)
                             margin-top: 0.5rem
 
                     .your-email-container
+                        height: 80px
+
                         .error-slot
                             display: block
                             align-self: stretch
                             @include boxsize-w-h-minw-minh-maxw-maxh(100%)
                             @include minsize-w-h(null, 1.25rem)
+
                         .error-msg
                             @include font-f-s-c-w-lh-ls-a('Poppins', 1rem, red, null, null, null, left)
                             margin-top: 0.5rem
 
                     .your-message-container
+                        height: 200px
+
                         .error-slot
                             display: block
                             align-self: stretch
                             @include boxsize-w-h-minw-minh-maxw-maxh(100%)
                             @include minsize-w-h(null, 1.25rem)
+
                         .error-msg
                             @include font-f-s-c-w-lh-ls-a('Poppins', 1rem, red, null, null, null, left)
                             margin-top: 0.5rem
 
                     .agree-privacypolice-check
                         @include flex-d-j-a-g(column, flex-start, flex-start)
-                        @include boxsize-w-h-minw-minh-maxw-maxh(auto, 100%)
+                        @include boxsize-w-h-minw-minh-maxw-maxh(auto, 100px)
                         @include minsize-w-h(null, 20px)
                         padding: 0 1rem 0 0
 
@@ -278,9 +287,11 @@ form
                             &.btn-valid
                                 border-color: #0043F0
                                 cursor: pointer
+
                                 &:hover
                                     color: #FFFFFF
                                     transform: scale(1.15)
+
                                 &:hover::before,
                                 &:hover::after
                                     transform: scale(1)
@@ -318,5 +329,6 @@ form
                     @include size-w-h(40px, 40px)
                     @include bg-url-repeat-pos-size('/assets/img/icon/arrowup.png')
                     @include clickable-prop-dur-ease(background-image, 0.1s)
+
                     &:hover
                         @include bg-url-repeat-pos-size('/assets/img/icon/arrowup-hover.png')
