@@ -25,12 +25,11 @@
             padding: 2rem
             color: white
 
-            &:hover
-                cursor: pointer
-
             .logo-img
                 @include flex-d-j-a-g(row, center, center)
                 @include size-w-h(64px, 69px)
+                &:hover
+                    cursor: pointer
 
         .created-copyright-impressum-container
             @include flex-d-j-a-g(column, center, center)
@@ -82,6 +81,7 @@
 
                     &:hover
                         font-weight: bold
+                        cursor: pointer
 
                         &::after
                             opacity: 1
