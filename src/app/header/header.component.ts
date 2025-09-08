@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
-import { scrollUp } from '../utils/scroll-to';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-header',
@@ -15,7 +15,7 @@ export class HeaderComponent {
     menuIcon: string = 'bi bi-list';
     currentLanguage: 'en' | 'de' = 'en';
 
-    constructor(private translate: TranslateService) {
+    constructor(private translate: TranslateService, private router: Router) {
         this.currentLanguage = this.translate.currentLang as 'en' | 'de';
     }
 
@@ -46,6 +46,12 @@ export class HeaderComponent {
     }
 
     scrollUp(): void {
-        scrollUp('scrollUp', 100);
+        if (this.router.url !== '/' && this.router.url !== '') {
+            this.router.navigateByUrl('/').then(() => {
+                requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: 'smooth' }));
+            });
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     }
 }
