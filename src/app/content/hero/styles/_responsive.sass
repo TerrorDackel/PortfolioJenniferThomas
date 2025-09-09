@@ -265,27 +265,5 @@
                     height: 100%
 
                     .hero-img
-                        background-color: rgba(255, 255, 255, 0.1)
                         border-radius: 1rem
                         @include size-w-h($w: auto, $h: 100%)
-
-@media (min-width: 2000px) and (max-height: 1100px)
-    :host
-        height: 100vh
-
-    .hero-section
-        .hero-container-desktop
-            .hero-top-circle-container
-                top: -25%
-                left: 20%
-                @include size-w-h($w: auto, $h: null)
-                padding: 0
-
-            .hero-img-header-scroll-iconlist
-                @include flex-d-j-a-g($dir: row, $justify: flex-start, $align: stretch, $gap: null)
-
-                .hero-img-container
-                    @include flex-d-j-a-g($dir: row, $justify: flex-start, $align: stretch, $gap: null)
-
-                    .hero-img
-                        @include flex-d-j-a-g($dir: row, $justify: flex-start, $align: flex-end, $gap: null)

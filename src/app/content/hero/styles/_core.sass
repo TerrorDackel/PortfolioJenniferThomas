@@ -48,7 +48,6 @@
                     @include size-w-h(100%, null)
                     padding: 0 1rem
                     margin-top: 115px
-                    background-color: #5988FF
                     border-radius: 5rem
 
                     .header-txt-container
@@ -99,7 +98,24 @@
 
                 .hero-img
                     @include flex-d-j-a-g(row, center, stretch)
-                    @include maxsize-w-h(95%, 63%)
+                    @include maxsize-w-h(95%, 60%)
                     position: absolute
                     bottom: 0
                     z-index: 2
+// ''
+// @keyframes hero-pulse
+//     0%, 100%
+//         transform: translateY(0)
+//         opacity: 1
+//     50%
+//         transform: translateY(-4px)
+//         opacity: 0.8
+
+// .scroll-desktop .scroll-txt, .hero-text-frontend, .hero-text-developer
+//     will-change: transform, opacity
+//     animation: hero-pulse 1s ease-in-out infinite
+
+// @media (prefers-reduced-motion: reduce)
+//     .scroll-desktop .scroll-txt,
+//     .scroll-responsive .scroll-responsive-txt
+//         animation: none''
