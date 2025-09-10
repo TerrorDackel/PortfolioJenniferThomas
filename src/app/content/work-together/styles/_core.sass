@@ -249,3 +249,18 @@ a
         .about-me-bottom
             @include flex-d-j-a-g(row, null, null)
             @include boxsize-w-h-minw-minh-maxw-maxh(100%, 131px)
+
+@keyframes zoomIn
+    from
+        opacity: 0
+        transform: scale(0.7)
+    to
+        opacity: 1
+        transform: scale(1)
+
+.reveal-zoom
+    opacity: 0
+    will-change: transform, opacity
+
+.reveal-zoom.in-view
+    animation: zoomIn 1s cubic-bezier(.2,.8,.2,1) var(--reveal-delay, 0ms) both

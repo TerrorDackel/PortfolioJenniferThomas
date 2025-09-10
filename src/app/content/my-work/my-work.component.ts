@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
-import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
+import { Component, AfterViewInit } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
+import { observeAnimationReveal } from '../../utils/scroll-animations';
 
 @Component({
     selector: 'app-my-work',
     standalone: true,
-    imports: [ TranslatePipe ],
+    imports: [TranslatePipe],
     templateUrl: './my-work.component.html',
     styleUrl: './my-work.component.sass'
 })
-export class MyWorkComponent {
-
+export class MyWorkComponent implements AfterViewInit {
+    ngAfterViewInit(): void {
+        observeAnimationReveal('reveal-zoom', 1000);
+    }
 }

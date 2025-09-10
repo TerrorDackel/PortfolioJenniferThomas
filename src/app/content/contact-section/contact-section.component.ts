@@ -1,20 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { Router, RouterLink } from '@angular/router';
-import { scrollUp } from '../../utils/scroll-to';
-import { saveScrollPosition } from '../../utils/scroll-memory';
-import { setReturnAnchor } from '../../utils/scroll-memory';
+import { Router } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
+
+import { scrollUp } from '../../utils/scroll-to';
+import { setReturnAnchor } from '../../utils/scroll-memory';
+import { observeAnimationReveal } from '../../utils/scroll-animations';
 
 @Component({
     selector: 'app-contact-section',
     standalone: true,
-    imports: [ TranslatePipe, ReactiveFormsModule, HttpClientModule ],
+    imports: [TranslatePipe, ReactiveFormsModule, HttpClientModule],
     templateUrl: './contact-section.component.html',
     styleUrl: './contact-section.component.sass'
 })
-export class ContactSectionComponent {
+export class ContactSectionComponent implements AfterViewInit {
     contactForm = this.fb.group({
         name: ['', Validators.required],
         email: ['', [Validators.required, Validators.email]],
@@ -29,6 +30,10 @@ export class ContactSectionComponent {
     focusedField: 'name' | 'email' | 'message' | null = null;
 
     constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {}
+
+    ngAfterViewInit(): void {
+        observeAnimationReveal('reveal-zoom', 1000);
+    }
 
     private isEmpty(ctrl: 'name'|'email'|'message'): boolean {
         const v = this.contactForm.get(ctrl)?.value as string | null | undefined;
@@ -62,14 +67,13 @@ export class ContactSectionComponent {
         }
 
         const formData = this.contactForm.value;
-
         const body = {
             name: formData.name,
             email: formData.email,
             message: formData.message
         };
-        const formspreeEndpoint = 'https://formspree.io/f/xyzedkbw';
 
+        const formspreeEndpoint = 'https://formspree.io/f/xyzedkbw';
         this.http.post(formspreeEndpoint, body).subscribe({
             next: () => {
                 this.formSuccess = true;
@@ -91,5 +95,4 @@ export class ContactSectionComponent {
         setReturnAnchor('contact');
         this.router.navigate([path]);
     }
-
 }

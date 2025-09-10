@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ProjectsTxtDescriptionComponent } from './projects-txt-description/projects-txt-description.component';
+import { RevealOnceDirective } from '../../utils/reveal-once.directive';
 
 @Component({
     selector: 'app-projects',
     standalone: true,
-    imports: [ProjectsTxtDescriptionComponent],
+    imports: [ProjectsTxtDescriptionComponent, RevealOnceDirective],
     templateUrl: './projects.component.html',
     styleUrl: './projects.component.sass'
 })

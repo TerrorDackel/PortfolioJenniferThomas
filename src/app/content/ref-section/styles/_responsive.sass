@@ -87,3 +87,9 @@
                 @include m.flex-d-j-a-g($dir: row, $justify: flex-start, $align: center, $gap: 0.25rem)
                 .ref-card
                     @include m.boxsize-w-h-minw-minh-maxw-maxh($w: null, $h: null, $minw: null, $minh: null, $maxw: 188px, $maxh: null)
+
+@media (prefers-reduced-motion: reduce)
+    .reveal-zoom
+        opacity: 1 !important
+        transform: none !important
+        animation: none !important

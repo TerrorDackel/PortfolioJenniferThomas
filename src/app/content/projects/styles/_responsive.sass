@@ -150,4 +150,15 @@
             .container-right
                 .project-description-container-right
                     app-projects-txt-description
-                        // keine Änderungen nötig (Layout bleibt flex/center)
+
+@media (prefers-reduced-motion: reduce)
+    .reveal-init
+        opacity: 1 !important
+        transform: none !important
+        animation: none !important
+
+@media screen and (max-width: 1280px)
+    .reveal-init
+        opacity: 1 !important
+        transform: none !important
+        animation: none !important

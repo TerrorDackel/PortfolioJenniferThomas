@@ -67,3 +67,9 @@
 
                 span
                     @include font-f-s-c-w-lh-ls-a($size: 1rem)
+    
+@media (prefers-reduced-motion: reduce)
+    .reveal-zoom
+        opacity: 1 !important
+        transform: none !important
+        animation: none !important

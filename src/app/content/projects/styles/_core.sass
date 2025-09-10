@@ -158,3 +158,39 @@
 
                 app-projects-txt-description
                     @include flex-d-j-a-g(row, center, stretch)
+
+    
+    
+@keyframes proj-slide-in-left
+    from
+        opacity: 0
+        transform: translateX(-600px) scale(.98)
+    to
+        opacity: 1
+        transform: translateX(0) scale(1)
+
+@keyframes proj-slide-in-right
+    from
+        opacity: 0
+        transform: translateX(600px) scale(.98)
+    to
+        opacity: 1
+        transform: translateX(0) scale(1)
+
+.reveal-init
+    opacity: 0
+    will-change: transform, opacity
+
+.reveal-init.reveal-from-left
+    transform: translateX(-600px) scale(.98)
+
+.reveal-init.reveal-from-right
+    transform: translateX(600px) scale(.98)
+
+.reveal-init.in-view.reveal-from-left
+    animation: proj-slide-in-left 600ms cubic-bezier(.2,.8,.2,1) var(--reveal-delay, 0ms) both
+
+.reveal-init.in-view.reveal-from-right
+    animation: proj-slide-in-right 600ms cubic-bezier(.2,.8,.2,1) var(--reveal-delay, 0ms) both
+
+
