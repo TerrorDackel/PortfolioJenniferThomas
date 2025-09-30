@@ -17,7 +17,7 @@ export class ProjectsComponent {
             description: 'PROJECTS.JOIN.DESCRIPTION',
             gitLink: 'https://github.com/TerrorDackel/DA_Join',
             projectImg: 'assets/img/join.png',
-            livetest: 'https://jennifer-thomas.de/join/index.html'
+            livetest: 'http://www.join/jennifer-thomas.de/index.html'
         },
         {
             name: 'Pollo Loco',
@@ -25,7 +25,7 @@ export class ProjectsComponent {
             description: 'PROJECTS.POLLO.DESCRIPTION',
             gitLink: 'https://github.com/TerrorDackel/El-Pollo-Loco',
             projectImg: 'assets/img/el-pollo-loco.png',
-            livetest: 'https://jennifer-thomas.de/el-pollo-loco/index.html'
+            livetest: 'http://www.el-pollo-loco.jennifer-thomas.de/index.html'
         },
         {
             name: 'Pokedex',
@@ -33,7 +33,7 @@ export class ProjectsComponent {
             description: 'PROJECTS.POKEDEX.DESCRIPTION',
             gitLink: 'https://github.com/TerrorDackel/Pokedex',
             projectImg: 'assets/img/pokedex.png',
-            livetest: 'https://jennifer-thomas.de/pokedex/index.html'
+            livetest: 'http://www.pokedex/jennifer-thomas.de/index.html'
         }
     ];
 }
