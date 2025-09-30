@@ -23,7 +23,7 @@ export class ProjectsComponent {
             name: 'Pollo Loco',
             usedProgramms: ['JavaScript | HTML | CSS'],
             description: 'PROJECTS.POLLO.DESCRIPTION',
-            gitLink: 'https://github.com/TerrorDackel/El-Pollo-Loco',
+            gitLink: 'https://github.com/TerrorDackel/el-pollo-loco-2025',
             projectImg: 'assets/img/el-pollo-loco.png',
             livetest: 'http://www.el-pollo-loco.jennifer-thomas.de/index.html'
         },
