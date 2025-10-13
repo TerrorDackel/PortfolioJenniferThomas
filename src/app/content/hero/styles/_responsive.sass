@@ -107,27 +107,6 @@
                                 .hero-text-developer
                                     @include font-f-s-c-w-lh-ls-a($family: null, $size: 2.5rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
-// @media (max-height: 700px)
-//     .hero-section
-//         .hero-container-mobile
-//             .hero-header-scroll
-//                 .hero-header-scroll-container
-//                     .header-allignement
-//                         .header-txt-container
-//                             .header-txt-allignement
-//                                 margin-top: -1.7rem
-//                                 background-color: #5988ff7c
-//                                 border-radius: 4rem
-//                                 border: solid 0.1rem #272afc
-//                                 padding: 0.1rem 3.5rem 0 3.5rem
-//                     .scroll-container
-//                         .scroll-responsive
-//                             .scroll-responsive-txt
-//                                 padding: 0 1rem
-//                                 background-color: #272afc
-//                                 border-radius: 15rem
-//                                 border: solid 0.1rem #272afc
-
 @media (min-width: 950px)
     .hero-section
         @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
@@ -170,7 +149,7 @@
 
                     .hero-img
                         @include flex-d-j-a-g($dir: row, $justify: center, $align: stretch, $gap: null)
-                        @include size-w-h($w: 100%, $h: auto)
+                        @include size-w-h($w: 90%, $h: 700px)
                         padding: 0
                         object-fit: scale-down
                         overflow: hidden
