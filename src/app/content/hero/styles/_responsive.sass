@@ -149,7 +149,7 @@
 
                     .hero-img
                         @include flex-d-j-a-g($dir: row, $justify: center, $align: stretch, $gap: null)
-                        @include size-w-h($w: 100%, $h: auto)
+                        @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: 650px)
                         padding: 0
                         object-fit: scale-down
                         overflow: hidden
