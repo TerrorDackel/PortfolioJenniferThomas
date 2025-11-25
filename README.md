@@ -1,27 +1,60 @@
-# PortfolioJenniferThomas
+# Portfolio – Jennifer Thomas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
+Personal portfolio website built with Angular 17 to showcase my work as a junior frontend developer, my technical stack, and selected projects.
 
-## Development server
+- Live site: https://www.jennifer-thomas.de  
+- Repository: https://github.com/TerrorDackel/PortfolioJenniferThomas  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Single-page portfolio built with Angular 17
+- Sections for hero, skills, projects and contact
+- Responsive layout for mobile, tablet and desktop
+- Modern styling with Sass and CSS variables
+- Smooth scrolling and subtle animations
+- External links to live demos and GitHub repositories of my projects
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Tech stack
 
-## Running unit tests
+- **Framework:** Angular 17 (standalone components)
+- **Languages:** TypeScript, HTML5, Sass
+- **Tooling:** Angular CLI, npm
+- **Version control:** Git & GitHub
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+## What I focused on
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Building a real-world Angular single-page application
+- Semantic HTML and accessible markup where possible
+- Creating a responsive layout with multiple breakpoints using Sass
+- Structuring styles to keep them maintainable as the project grows
+- Working with Angular’s modern template syntax (@if, @for where used)
+- Deploying an Angular app to a live server
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Project structure (high level)
+
+- `src/app` – Angular components, routing and main layout
+- `src/app/components` – UI components (hero, skills, projects, contact, …)
+- `src/assets` – images, icons and static assets
+- `src/styles` or `src/app/**/*.scss` – global and component styles
+
+---
+
+## Getting started
+
+### Prerequisites
+
+- Node.js (LTS)
+- npm (comes with Node.js)
+- Angular CLI installed globally (optional but recommended)
+
+```bash
+npm install -g @angular/cli
+
