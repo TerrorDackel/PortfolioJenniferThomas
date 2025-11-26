@@ -123,7 +123,12 @@
                                 <div class="agree-privacypolice-check-txt">
                                     <p>
                                         {{ 'CONTACT.PRIVACY_I' | translate }}
-                                        <a class="privacy-link" (click)="navigateTo('/privacy-policy')">
+                                        <a
+                                            class="privacy-link"
+                                            href="/privacy-policy"
+                                            [routerLink]="['/privacy-policy']"
+                                            (click)="rememberReturnAnchor()"
+                                        >
                                             {{ 'CONTACT.PRIVACY_POLICY' | translate }}
                                         </a>
                                     </p>
@@ -149,7 +154,12 @@
                                     <p class="first-line">
                                         {{ 'CONTACT.PRIVACY_I' | translate }}
                                     </p>
-                                    <a class="privacy-link" (click)="navigateTo('/privacy-policy')">
+                                    <a
+                                        class="privacy-link"
+                                        href="/privacy-policy"
+                                        [routerLink]="['/privacy-policy']"
+                                        (click)="rememberReturnAnchor()"
+                                    >
                                         {{ 'CONTACT.PRIVACY_POLICY' | translate }}
                                     </a>
                                     <p class="second-line">
@@ -186,9 +196,10 @@
                     <div class="circle-14">
                     </div>
                 </div>
-                <div class="back-to-top" (click)="scrollUp()">
-                    <div class="back-to-top-btn"></div>
-                </div>
+                <button type="button" class="back-to-top" (click)="scrollUp()">
+                    <div class="back-to-top-btn">
+                    </div>
+                </button>
             </div>
         </div>
     </div>

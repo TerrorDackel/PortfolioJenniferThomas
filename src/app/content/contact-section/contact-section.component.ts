@@ -1,7 +1,7 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 
 import { scrollUp } from '../../utils/scroll-to';
@@ -11,7 +11,7 @@ import { observeAnimationReveal } from '../../utils/scroll-animations';
 @Component({
     selector: 'app-contact-section',
     standalone: true,
-    imports: [TranslatePipe, ReactiveFormsModule, HttpClientModule],
+    imports: [TranslatePipe, ReactiveFormsModule, HttpClientModule, RouterLink],
     templateUrl: './contact-section.component.html',
     styleUrl: './contact-section.component.sass'
 })
@@ -29,7 +29,7 @@ export class ContactSectionComponent implements AfterViewInit {
 
     focusedField: 'name' | 'email' | 'message' | null = null;
 
-    constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {}
+    constructor(private fb: FormBuilder, private http: HttpClient) {}
 
     ngAfterViewInit(): void {
         observeAnimationReveal('reveal-zoom', 1000);
@@ -91,8 +91,7 @@ export class ContactSectionComponent implements AfterViewInit {
         scrollUp('scrollUp', 100);
     }
 
-    navigateTo(path: string): void {
+    rememberReturnAnchor(): void {
         setReturnAnchor('contact');
-        this.router.navigate([path]);
     }
 }
