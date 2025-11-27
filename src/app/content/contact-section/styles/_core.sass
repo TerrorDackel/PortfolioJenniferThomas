@@ -325,6 +325,13 @@ form
                 @include flex-d-j-a-g(row)
                 @include boxsize-w-h-minw-minh-maxw-maxh(100%)
                 padding: 1rem
+                border: none
+                background: transparent
+                cursor: pointer
+
+                &:focus-visible
+                    outline: 2px solid #0043F0
+                    outline-offset: 4px
 
                 .back-to-top-btn
                     display: flex

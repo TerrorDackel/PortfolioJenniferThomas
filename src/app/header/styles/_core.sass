@@ -36,8 +36,18 @@ a:hover
                 @include flex-d-j-a-g(row, center, center)
                 @include size-w-h(64px, 69px)
 
+                .logo-button
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    border: none
+                    background: transparent
+                    padding: 0
+                    cursor: pointer
+
                 .logo-img
                     @include size-w-h(64px, 69px)
+
                     &:hover
                         cursor: pointer
 
@@ -71,37 +81,43 @@ a:hover
                             cursor: pointer
                             transform: scale(1.1)
 
-                        .navbar-desktop-de-en-container
-                            @include flex-d-j-a-g(row, center, center)
-                            .de,
-                            .en
-                                width: 35px
-                                text-align: center
-                                @include font-f-s-c-w-lh-ls-a('Montserrat', 23px, #5988FF, 400, 120%, null, null)
-                                transition: transform 0.1s ease, font-weight 0.2s ease
-                                transform-origin: center
+                    .navbar-desktop-de-en-container
+                        @include flex-d-j-a-g(row, center, center)
 
-                                &:hover
-                                    text-shadow: 0 0 0.6px #5988FF, 0 0 0.6px #5988FF
-                                    transform: scale(1.15)
+                        .de,
+                        .en
+                            width: 35px
+                            text-align: center
+                            @include font-f-s-c-w-lh-ls-a('Montserrat', 23px, #5988FF, 400, 120%, null, null)
+                            transition: transform 0.1s ease, font-weight 0.2s ease
+                            transform-origin: center
+                            border: none
+                            background: transparent
+                            padding: 0
+                            cursor: pointer
 
-                                &.active
-                                    font-weight: bold
-                                    transform: scale(1.15)
+                            &:hover
+                                text-shadow: 0 0 0.6px #5988FF, 0 0 0.6px #5988FF
+                                transform: scale(1.15)
 
-                            .de
-                                padding: 0 6px
-                            .cut
-                                width: 10px
-                                text-align: center
-                                @include font-f-s-c-w-lh-ls-a('Montserrat', 23px, #5988FF, 400, 120%, null, null)
-                                pointer-events: none
+                            &.active
+                                font-weight: bold
+                                transform: scale(1.15)
+
+                        .de
+                            padding: 0 6px
+
+                        .cut
+                            width: 10px
+                            text-align: center
+                            @include font-f-s-c-w-lh-ls-a('Montserrat', 23px, #5988FF, 400, 120%, null, null)
+                            pointer-events: none
 
             .navbar-mobile
                 display: none
                 flex-direction: column
                 width: 100%
-                height: 60px                
+                height: 60px
                 margin-top: 0px
                 z-index: 10
 
@@ -110,6 +126,9 @@ a:hover
                     width: 100%
                     height: auto
                     cursor: pointer
+                    border: none
+                    background: transparent
+                    padding: 0
 
                     .burger-menu-img
                         position: fixed
@@ -166,6 +185,10 @@ a:hover
                             @include font-f-s-c-w-lh-ls-a('Montserrat', 23px, #5988FF, 400, 120%, null, null)
                             transition: transform 0.1s ease, font-weight 0.1s ease
                             transform-origin: center
+                            border: none
+                            background: transparent
+                            padding: 0
+                            cursor: pointer
 
                             &:hover
                                 text-shadow: 0 0 0.6px #5988FF, 0 0 0.6px #5988FF

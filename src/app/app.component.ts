@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
@@ -14,18 +14,22 @@ import { filter } from 'rxjs/operators';
     styleUrl: './app.component.sass'
 })
 export class AppComponent {
-    constructor(translate: TranslateService, router: Router) {
+    private translate = inject(TranslateService);
+    private router = inject(Router);
+
+    constructor() {
         const savedLang = localStorage.getItem('lang') || 'en';
 
-        translate.addLangs(['de', 'en']);
-        translate.setDefaultLang('en');
-        translate.use(savedLang);
+        this.translate.addLangs(['de', 'en']);
+        this.translate.setDefaultLang('en');
+        this.translate.use(savedLang);
 
-        router.events.pipe(
-        filter((e): e is NavigationEnd => e instanceof NavigationEnd)
-        ).subscribe(e => {
-        if (['/legal-notice', '/privacy-policy'].includes(e.urlAfterRedirects))
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+        this.router.events
+            .pipe(filter((e): e is NavigationEnd => e instanceof NavigationEnd))
+            .subscribe(e => {
+                if (['/legal-notice', '/privacy-policy'].includes(e.urlAfterRedirects)) {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
     }
 }

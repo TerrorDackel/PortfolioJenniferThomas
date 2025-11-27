@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, inject } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -16,12 +16,22 @@ import { observeAnimationReveal } from '../../utils/scroll-animations';
     styleUrl: './contact-section.component.sass'
 })
 export class ContactSectionComponent implements AfterViewInit {
-    contactForm = this.fb.group({
-        name: ['', Validators.required],
-        email: ['', [Validators.required, Validators.email]],
-        message: ['', Validators.required],
-        privacy: this.fb.control(false, { validators: Validators.requiredTrue, updateOn: 'change' })
-    }, { updateOn: 'blur' });
+    private fb = inject(FormBuilder);
+    private http = inject(HttpClient);
+    private router = inject(Router);
+
+    contactForm = this.fb.group(
+        {
+            name: ['', Validators.required],
+            email: ['', [Validators.required, Validators.email]],
+            message: ['', Validators.required],
+            privacy: this.fb.control(false, {
+                validators: Validators.requiredTrue,
+                updateOn: 'change'
+            })
+        },
+        { updateOn: 'blur' }
+    );
 
     submitted = false;
     formSuccess = false;
@@ -29,24 +39,35 @@ export class ContactSectionComponent implements AfterViewInit {
 
     focusedField: 'name' | 'email' | 'message' | null = null;
 
-    constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {}
-
     ngAfterViewInit(): void {
         observeAnimationReveal('reveal-zoom', 1000);
     }
 
-    private isEmpty(ctrl: 'name'|'email'|'message'): boolean {
+    private isEmpty(ctrl: 'name' | 'email' | 'message'): boolean {
         const v = this.contactForm.get(ctrl)?.value as string | null | undefined;
         return !v || v.trim() === '';
     }
 
-    showInlineRequired(ctrl: 'name'|'email'|'message'): boolean {
+    showInlineRequired(ctrl: 'name' | 'email' | 'message'): boolean {
         const c = this.contactForm.get(ctrl);
-        return !!(c && c.touched && c.invalid && this.isEmpty(ctrl) && this.focusedField !== ctrl);
+        return !!(
+            c &&
+            c.touched &&
+            c.invalid &&
+            this.isEmpty(ctrl) &&
+            this.focusedField !== ctrl
+        );
     }
 
-    onFocus(field: 'name'|'email'|'message') { this.focusedField = field; }
-    onBlur(field: 'name'|'email'|'message')  { this.focusedField = null; }
+    onFocus(field: 'name' | 'email' | 'message'): void {
+        this.focusedField = field;
+    }
+
+    onBlur(field: 'name' | 'email' | 'message'): void {
+        if (this.focusedField === field) {
+            this.focusedField = null;
+        }
+    }
 
     onPrivacyClick(): void {
         const el = document.activeElement as HTMLElement | null;
@@ -56,7 +77,28 @@ export class ContactSectionComponent implements AfterViewInit {
         this.contactForm.updateValueAndValidity();
     }
 
-    onSubmit() {
+    onPrivacyLinkClick(event: MouseEvent): void {
+        event.preventDefault();
+        this.navigateTo('/privacy-policy');
+    }
+
+    onPrivacyLinkKeydown(event: KeyboardEvent): void {
+        const key = event.key;
+        if (key === 'Enter' || key === ' ') {
+            event.preventDefault();
+            this.navigateTo('/privacy-policy');
+        }
+    }
+
+    onBackToTopKeydown(event: KeyboardEvent): void {
+        const key = event.key;
+        if (key === 'Enter' || key === ' ') {
+            event.preventDefault();
+            this.scrollUp();
+        }
+    }
+
+    onSubmit(): void {
         this.submitted = true;
         this.formSuccess = false;
         this.formError = false;
@@ -79,7 +121,9 @@ export class ContactSectionComponent implements AfterViewInit {
                 this.formSuccess = true;
                 this.contactForm.reset();
                 this.submitted = false;
-                setTimeout(() => { this.formSuccess = false; }, 5000);
+                setTimeout(() => {
+                    this.formSuccess = false;
+                }, 5000);
             },
             error: () => {
                 this.formError = true;

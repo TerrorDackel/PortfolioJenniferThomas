@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-header',
@@ -11,35 +11,39 @@ import { Router } from '@angular/router';
     styleUrl: './header.component.sass'
 })
 export class HeaderComponent {
-    menuValue: boolean = false;
-    menuIcon: string = 'bi bi-list';
-    currentLanguage: 'en' | 'de' = 'en';
+    private readonly translate = inject(TranslateService);
+    private readonly router = inject(Router);
 
-    constructor(private translate: TranslateService, private router: Router) {
-        this.currentLanguage = this.translate.currentLang as 'en' | 'de';
+    menuValue = false;
+    menuIcon = 'bi bi-list';
+    currentLanguage: 'en' | 'de';
+
+    constructor() {
+        const lang = this.translate.currentLang as 'en' | 'de' | undefined;
+        this.currentLanguage = lang === 'de' ? 'de' : 'en';
     }
 
-    openMenu() {
+    openMenu(): void {
         this.menuValue = !this.menuValue;
         this.menuIcon = this.menuValue ? 'bi bi-x' : 'bi bi-list';
     }
 
-    closeMenu() {
+    closeMenu(): void {
         this.menuValue = false;
         this.menuIcon = 'bi bi-list';
     }
 
-    switchToGerman() {
+    switchToGerman(): void {
         this.setLanguage('de');
         this.closeMenu();
     }
 
-    switchToEnglish() {
+    switchToEnglish(): void {
         this.setLanguage('en');
         this.closeMenu();
     }
 
-    private setLanguage(lang: 'en' | 'de') {
+    private setLanguage(lang: 'en' | 'de'): void {
         this.currentLanguage = lang;
         this.translate.use(lang);
         localStorage.setItem('lang', lang);
@@ -48,10 +52,48 @@ export class HeaderComponent {
     scrollUp(): void {
         if (this.router.url !== '/' && this.router.url !== '') {
             this.router.navigateByUrl('/').then(() => {
-                requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: 'smooth' }));
+                requestAnimationFrame(() => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
             });
         } else {
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }
+
+    onLogoClick(event: MouseEvent): void {
+        event.preventDefault();
+        this.scrollUp();
+    }
+
+    onLogoKeydown(event: KeyboardEvent | Event): void {
+        const keyEvent = event as KeyboardEvent;
+        const key = keyEvent.key;
+        if (key === 'Enter' || key === ' ') {
+            event.preventDefault();
+            this.scrollUp();
+        }
+    }
+
+    onBurgerKeydown(event: KeyboardEvent | Event): void {
+        const keyEvent = event as KeyboardEvent;
+        const key = keyEvent.key;
+        if (key === 'Enter' || key === ' ') {
+            event.preventDefault();
+            this.openMenu();
+        }
+    }
+
+    onLanguageKeydown(event: KeyboardEvent | Event, lang: 'en' | 'de'): void {
+        const keyEvent = event as KeyboardEvent;
+        const key = keyEvent.key;
+        if (key === 'Enter' || key === ' ') {
+            event.preventDefault();
+            if (lang === 'de') {
+                this.switchToGerman();
+            } else {
+                this.switchToEnglish();
+            }
         }
     }
 }

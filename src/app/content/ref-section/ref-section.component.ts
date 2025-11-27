@@ -1,6 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { RefComponent } from './ref/ref.component';
-import { TranslatePipe, TranslateDirective } from "@ngx-translate/core";
+import { TranslatePipe } from "@ngx-translate/core";
 import { DragScrollXDirective } from './drag-scroll-x.directive';
 import { observeAnimationReveal } from '../../utils/scroll-animations';
 
