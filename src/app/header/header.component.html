@@ -2,9 +2,14 @@
     <div class="header-container">
         <div class="header-logo-container">
             <div class="header-img-container">
-                <a (click)="scrollUp()">
+                <button
+                    type="button"
+                    class="logo-button"
+                    (click)="onLogoClick($event)"
+                    (keydown)="onLogoKeydown($event)"
+                >
                     <img class="logo-img" src="assets/img/icon/logo.png" alt="Scroll to the top.">
-                </a>
+                </button>
             </div>
         </div>
         <div class="header-navbar-container">
@@ -24,47 +29,97 @@
                     </a>
                     <div class="navbar-desktop-link">
                         <div class="navbar-desktop-de-en-container">
-                            <div class="de" [ngClass]="{ 'active': currentLanguage === 'de' }" (click)="switchToGerman()">
+                            <button
+                                type="button"
+                                class="de"
+                                [ngClass]="{ 'active': currentLanguage === 'de' }"
+                                (click)="switchToGerman()"
+                                (keydown)="onLanguageKeydown($event, 'de')"
+                            >
                                 De
-                            </div>
+                            </button>
                             <div class="cut">
                                 /
                             </div>
-                            <div class="en" [ngClass]="{ 'active': currentLanguage === 'en' }" (click)="switchToEnglish()">
+                            <button
+                                type="button"
+                                class="en"
+                                [ngClass]="{ 'active': currentLanguage === 'en' }"
+                                (click)="switchToEnglish()"
+                                (keydown)="onLanguageKeydown($event, 'en')"
+                            >
                                 En
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="navbar-mobile">
-                <div class="navbar-mobile-burger-icon" (click)="openMenu()">
+                <button
+                    type="button"
+                    class="navbar-mobile-burger-icon"
+                    (click)="openMenu()"
+                    (keydown)="onBurgerKeydown($event)"
+                    aria-label="Open or close the navigation menu"
+                >
                     <img class="burger-menu-img" src="assets/img/icon/burger-menu.png" alt="Open or close the burger-menu.">
-                </div>
+                </button>
                 <div class="navbar-mobile-links-container" [class.show]="menuValue" [class.hide]="!menuValue">
-                    <a class="navbar-mobile-link" href="#aboutMe" (click)="closeMenu()">
+                    <a
+                        class="navbar-mobile-link"
+                        href="#aboutMe"
+                        (click)="closeMenu()"
+                        (keydown.enter)="closeMenu()"
+                    >
                         {{ 'NAV.ABOUT_ME' | translate }}
                     </a>
-                    <a class="navbar-mobile-link" href="#skillSet" (click)="closeMenu()">
+                    <a
+                        class="navbar-mobile-link"
+                        href="#skillSet"
+                        (click)="closeMenu()"
+                        (keydown.enter)="closeMenu()"
+                    >
                         {{ 'NAV.SKILL_SET' | translate }}
                     </a>
-                    <a class="navbar-mobile-link" href="#myWork" (click)="closeMenu()">
+                    <a
+                        class="navbar-mobile-link"
+                        href="#myWork"
+                        (click)="closeMenu()"
+                        (keydown.enter)="closeMenu()"
+                    >
                         {{ 'NAV.MY_WORK' | translate }}
                     </a>
-                    <a class="navbar-mobile-link" href="#contact" (click)="closeMenu()">
+                    <a
+                        class="navbar-mobile-link"
+                        href="#contact"
+                        (click)="closeMenu()"
+                        (keydown.enter)="closeMenu()"
+                    >
                         {{ 'NAV.CONTACT' | translate }}
                     </a>
                     <div class="navbar-mobile-link">
                         <div class="navbar-mobile-de-en-container">
-                            <span class="de" [ngClass]="{ 'active': currentLanguage === 'de' }" (click)="switchToGerman()">
+                            <button
+                                type="button"
+                                class="de"
+                                [ngClass]="{ 'active': currentLanguage === 'de' }"
+                                (click)="switchToGerman()"
+                                (keydown)="onLanguageKeydown($event, 'de')"
+                            >
                                 De
-                            </span>
+                            </button>
                             <span class="cut">
                                 /
                             </span>
-                            <span class="en" [ngClass]="{ 'active': currentLanguage === 'en' }" (click)="switchToEnglish()">
+                            <button
+                                type="button"
+                                class="en"
+                                [ngClass]="{ 'active': currentLanguage === 'en' }"
+                                (click)="switchToEnglish()"
+                                (keydown)="onLanguageKeydown($event, 'en')"
+                            >
                                 En
-                            </span>
+                            </button>
                         </div>
                     </div>
                 </div>
