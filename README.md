@@ -57,4 +57,3 @@ Personal portfolio website built with Angular 17 to showcase my work as a junior
 
 ```bash
 npm install -g @angular/cli
-
