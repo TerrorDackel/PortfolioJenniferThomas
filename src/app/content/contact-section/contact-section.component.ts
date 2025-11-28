@@ -1,9 +1,9 @@
 import { Component, AfterViewInit, inject } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
-
+import { CommonModule } from '@angular/common';
 import { scrollUp } from '../../utils/scroll-to';
 import { setReturnAnchor } from '../../utils/scroll-memory';
 import { observeAnimationReveal } from '../../utils/scroll-animations';
@@ -11,7 +11,7 @@ import { observeAnimationReveal } from '../../utils/scroll-animations';
 @Component({
     selector: 'app-contact-section',
     standalone: true,
-    imports: [TranslatePipe, ReactiveFormsModule, HttpClientModule],
+    imports: [TranslatePipe, ReactiveFormsModule, HttpClientModule, CommonModule, RouterModule],
     templateUrl: './contact-section.component.html',
     styleUrl: './contact-section.component.sass'
 })
@@ -138,5 +138,9 @@ export class ContactSectionComponent implements AfterViewInit {
     navigateTo(path: string): void {
         setReturnAnchor('contact');
         this.router.navigate([path]);
+    }
+
+    rememberReturnAnchor(): void {
+        setReturnAnchor('contact');
     }
 }
