@@ -12,7 +12,7 @@ Personal portfolio website built with Angular 17 to showcase my work as a junior
 - Single-page portfolio built with Angular 17
 - Sections for hero, skills, projects and contact
 - Responsive layout for mobile, tablet and desktop
-- Modern styling with Sass and CSS variables
+- Modern styling with Sass and reusable mixins
 - Smooth scrolling and subtle animations
 - External links to live demos and GitHub repositories of my projects
 
@@ -30,20 +30,22 @@ Personal portfolio website built with Angular 17 to showcase my work as a junior
 ## What I focused on
 
 - Building a real-world Angular single-page application
-- Semantic HTML and accessible markup where possible
+- Using semantic HTML and improving accessibility where possible
 - Creating a responsive layout with multiple breakpoints using Sass
 - Structuring styles to keep them maintainable as the project grows
-- Working with Angular’s modern template syntax (@if, @for where used)
+- Working with Angular’s standalone components, routing and translations
 - Deploying an Angular app to a live server
 
 ---
 
 ## Project structure (high level)
 
-- `src/app` – Angular components, routing and main layout
-- `src/app/components` – UI components (hero, skills, projects, contact, …)
-- `src/assets` – images, icons and static assets
-- `src/styles` or `src/app/**/*.scss` – global and component styles
+- `src/app` – root component, routing and application shell
+- `src/app/header` – header, navigation and language switcher
+- `src/app/content` – main sections (hero, about me, skill set, projects, contact)
+- `src/app/footer` – footer with legal links
+- `src/assets` – images, icons and other static assets
+- `src/styles` – global styles, mixins and shared utilities
 
 ---
 
