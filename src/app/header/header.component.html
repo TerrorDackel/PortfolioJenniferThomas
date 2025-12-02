@@ -54,17 +54,32 @@
                     </div>
                 </div>
             </div>
-            <div class="navbar-mobile" role="navigation" aria-label="Mobile navigation">
+            <div 
+                class="navbar-mobile" 
+                role="navigation" 
+                aria-label="Mobile navigation"
+            >
                 <button
                     type="button"
                     class="navbar-mobile-burger-icon"
                     (click)="openMenu()"
                     (keydown)="onBurgerKeydown($event)"
                     aria-label="Open or close the navigation menu"
+                    [attr.aria-expanded]="menuValue ? 'true' : 'false'"
+                    aria-controls="navbar-mobile-links"
                 >
-                    <img class="burger-menu-img" src="assets/img/icon/burger-menu.png" alt="Open or close the burger-menu.">
+                    <img 
+                        class="burger-menu-img" 
+                        src="assets/img/icon/burger-menu.png" 
+                        alt="Open or close the burger-menu."
+                    >
                 </button>
-                <div class="navbar-mobile-links-container" [class.show]="menuValue" [class.hide]="!menuValue">
+                <div 
+                    id="navbar-mobile-links"
+                    class="navbar-mobile-links-container" 
+                    [class.show]="menuValue" 
+                    [class.hide]="!menuValue"
+                >
                     <a
                         class="navbar-mobile-link"
                         href="#aboutMe"
