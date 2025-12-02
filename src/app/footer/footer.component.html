@@ -1,43 +1,50 @@
-<section class="footer-section">
-    <div id="footer" class="footer-container">
-        <div class="logo-container">
-            <a (click)="scrollUp()">
-                <img class="logo-img" src="assets/img/icon/logo.png" alt="Scroll to the top.">
-            </a>
-        </div>
-        <div class="created-copyright-impressum-container">
-            <div class="over-copyright-container">
-            </div>
-            <div class="copyright-container">
-                © Jennifer Thomas 2025
-            </div>
-            <div class="legal-notice-container">
-                <a (click)="navigateTo('/legal-notice')">
-                    {{ 'FOOTER.LEGAL' | translate }}
-                </a>
-            </div>
-        </div>
-        <div class="footer-iconlist-horizontal">
-            <div class="footer-icon-container">
-                <a href="https://github.com/TerrorDackel?tab=repositories" target="_blank">
-                    <img src="./assets/img/icon/1w.png" alt="icon for github">
-                </a>
-            </div>
-            <div class="footer-icon-container">
-                <a href="mailto:82.jennifer.@gmail.com" target="_blank">
-                    <img src="./assets/img/icon/2w.png" alt="icon for email me">
-                </a>
-            </div>
-            <div class="footer-icon-container">
-                <a href="https://www.linkedin.com/in/jennifer-thomas-595735360/" target="_blank">
-                    <img src="./assets/img/icon/3w.png" alt="icon for linkedin">
-                </a>
-            </div>
-        </div>
-        <div class="legal-notice-container-mobile">
-            <a (click)="navigateTo('/legal-notice')">
-                {{ 'FOOTER.LEGAL' | translate }}
-            </a>
-        </div>
+<footer class="footer-section" role="contentinfo">
+  <div id="footer" class="footer-container">
+    <div class="logo-container">
+      <a (click)="scrollUp()">
+        <img class="logo-img" src="assets/img/icon/logo.png" alt="Scroll to the top." />
+      </a>
     </div>
-</section>
+    <div class="created-copyright-impressum-container">
+      <div class="over-copyright-container"></div>
+      <div class="copyright-container">
+        © Jennifer Thomas 2025
+      </div>
+      <div class="legal-notice-container">
+        <a (click)="navigateTo('/legal-notice')">
+          {{ 'FOOTER.LEGAL' | translate }}
+        </a>
+      </div>
+    </div>
+    <div class="footer-iconlist-horizontal" role="navigation" aria-label="Footer social links">
+      <div class="footer-icon-container">
+        <a
+          href="https://github.com/TerrorDackel?tab=repositories"
+          target="_blank"
+          aria-label="Open my GitHub profile in a new tab"
+        >
+          <img src="./assets/img/icon/1w.png" alt="" />
+        </a>
+      </div>
+      <div class="footer-icon-container">
+        <a href="mailto:82.jennifer.@gmail.com" target="_blank" aria-label="Send me an email">
+          <img src="./assets/img/icon/2w.png" alt="" />
+        </a>
+      </div>
+      <div class="footer-icon-container">
+        <a
+          href="https://www.linkedin.com/in/jennifer-thomas-595735360/"
+          target="_blank"
+          aria-label="Open my LinkedIn profile in a new tab"
+        >
+          <img src="./assets/img/icon/3w.png" alt="" />
+        </a>
+      </div>
+    </div>
+    <div class="legal-notice-container-mobile">
+      <a (click)="navigateTo('/legal-notice')">
+        {{ 'FOOTER.LEGAL' | translate }}
+      </a>
+    </div>
+  </div>
+</footer>
