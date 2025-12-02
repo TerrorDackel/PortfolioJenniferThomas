@@ -1,206 +1,246 @@
-<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
-    <div id="contact" class="contact-section">
-        <div class="contact-container">
-            <div class="circle-13-container">
-                <div class="circle-13">
-                </div>
-            </div>
-            <div class="contact-title-and-container-left-right">
-                <div class="title-contact-container">
-                    <h2 class="title-txt reveal-zoom">
-                        {{ 'CONTACT.TITLE' | translate }}
-                    </h2>
-                </div>
-                <div class="container-left-and-right">
-                    <div class="container-left">
-                        <div class="got-a-problem-title-container">
-                            <p class="got-a-problem-txt">
-                                {{ 'CONTACT.SUBTITLE' | translate }}
-                            </p>
-                        </div>
-                        <div class="got-a-problem-title-description-container">
-                            <p class="got-a-problem-title-description-txt">
-                                {{ 'CONTACT.DESCRIPTION' | translate }}
-                            </p>
-                        </div>
-                        <div class="need-a-contact-me-container">
-                            <div class="need-a-contact-me-txt">
-                                <span class="need-a-contact-me-question">
-                                    {{ 'CONTACT.CALL_TO_ACTION' | translate }}&nbsp;
-                                </span>
-                                <span class="need-a-contact-me-answer">
-                                    {{ 'CONTACT.ANSWER_TO_ACTION' | translate }}
-                                </span>
-                            </div>
-                        </div>
-                        <div class="circle-11-container">
-                            <div class="circle-11">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container-right">
-                        <div class="your-name-container">
-                            <input
-                                type="text"
-                                class="name-textfield"
-                                id="name"
-                                formControlName="name"
-                                style="font-family: 'Poppins'"
-                                (focus)="onFocus('name')"
-                                (blur)="onBlur('name')"
-                                [class.inline-error-active]="showInlineRequired('name')"
-                                [placeholder]="
-                                    focusedField==='name'
-                                        ? ''
-                                        : ( showInlineRequired('name')
-                                                ? ('CONTACT.ERROR_NAME_REQUIRED' | translate)
-                                                : ('CONTACT.PLACEHOLDER_NAME' | translate)
-                                        )
-                                " />
-                            <div class="error-slot">
-                                @if (!showInlineRequired('name') && contactForm.get('name')?.touched && contactForm.get('name')?.invalid) {
-                                    <div class="error-msg">
-                                        {{ 'CONTACT.ERROR_NAME_REQUIRED' | translate }}
-                                    </div>
-                                }
-                            </div>
-                        </div>
-                        <div class="your-email-container">
-                            <input
-                                type="email"
-                                class="email-textfield"
-                                id="email"
-                                formControlName="email"
-                                (focus)="onFocus('email')"
-                                (blur)="onBlur('email')"
-                                [class.inline-error-active]="showInlineRequired('email')"
-                                [placeholder]="
-                                    focusedField==='email'
-                                        ? ''
-                                        : ( showInlineRequired('email')
-                                                ? ('CONTACT.ERROR_EMAIL_INVALID' | translate)
-                                                : ('CONTACT.PLACEHOLDER_EMAIL' | translate)
-                                            )
-                                " />
-                            <div class="error-slot">
-                                @if (!showInlineRequired('email') && contactForm.get('email')?.touched && contactForm.get('email')?.errors) {
-                                    <div class="error-msg">
-                                        {{ 'CONTACT.ERROR_EMAIL_INVALID' | translate }}
-                                    </div>
-                                }
-                            </div>
-                        </div>
-                        <div class="your-message-container">
-                            <textarea
-                                class="message-textfield"
-                                id="message"
-                                formControlName="message"
-                                (focus)="onFocus('message')"
-                                (blur)="onBlur('message')"
-                                [class.inline-error-active]="showInlineRequired('message')"
-                                [placeholder]="
-                                    focusedField==='message'
-                                        ? ''
-                                        : ( showInlineRequired('message')
-                                                ? ('CONTACT.ERROR_MESSAGE_REQUIRED' | translate)
-                                                : ('CONTACT.PLACEHOLDER_MESSAGE' | translate)
-                                        )
-                                ">
-                            </textarea>
-                            <div class="error-slot">
-                                @if (!showInlineRequired('message') && contactForm.get('message')?.touched && contactForm.get('message')?.invalid) {
-                                    <div class="error-msg">
-                                        {{ 'CONTACT.ERROR_MESSAGE_REQUIRED' | translate }}
-                                    </div>
-                                }
-                            </div>
-                        </div>
-                        <div class="agree-privacypolice-check">
-                            <label for="privacy" class="agree-privacypolice-check-label">
-                                <div class="agree-privacypolice-check-div">
-                                    <input class="checkbox" type="checkbox" id="privacy" formControlName="privacy" (click)="onPrivacyClick()" />
-                                </div>
-                                <div class="agree-privacypolice-check-txt">
-                                    <p>
-                                        {{ 'CONTACT.PRIVACY_I' | translate }}
-                                        <a
-                                            class="privacy-link"
-                                            href="/privacy-policy"
-                                            [routerLink]="['/privacy-policy']"
-                                            (click)="rememberReturnAnchor()"
-                                        >
-                                            {{ 'CONTACT.PRIVACY_POLICY' | translate }}
-                                        </a>
-                                    </p>
-                                    <p>
-                                        {{ 'CONTACT.PRIVACY_AND' | translate }}
-                                    </p>
-                                </div>
-                            </label>
-                            <div class="error-slot">
-                                @if (contactForm.get('privacy')?.touched && contactForm.get('privacy')?.invalid) {
-                                    <div class="error-msg">
-                                        {{ 'CONTACT.ERROR_PRIVACY_REQUIRED' | translate }}
-                                    </div>
-                                }
-                            </div>
-                        </div>
-                        <div class="agree-privacypolice-check-mobile">
-                            <label for="privacy" class="agree-privacypolice-check-label">
-                                <div class="agree-privacypolice-check-div">
-                                    <input class="checkbox" type="checkbox" id="privacy" formControlName="privacy" (click)="onPrivacyClick()" />
-                                </div>
-                                <div class="agree-privacypolice-check-txt">
-                                    <p class="first-line">
-                                        {{ 'CONTACT.PRIVACY_I' | translate }}
-                                    </p>
-                                    <a
-                                        class="privacy-link"
-                                        href="/privacy-policy"
-                                        [routerLink]="['/privacy-policy']"
-                                        (click)="rememberReturnAnchor()"
-                                    >
-                                        {{ 'CONTACT.PRIVACY_POLICY' | translate }}
-                                    </a>
-                                    <p class="second-line">
-                                        {{ 'CONTACT.PRIVACY_AND' | translate }}
-                                    </p>
-                                </div>
-                            </label>
-                            <div class="error-slot">
-                                @if (contactForm.get('privacy')?.touched && contactForm.get('privacy')?.invalid) {
-                                    <div class="error-msg">
-                                        {{ 'CONTACT.ERROR_PRIVACY_REQUIRED' | translate }}
-                                    </div>
-                                }
-                            </div>
-                        </div>
-                        <div class="button-container">
-                            <button type="submit" class="btn-contact" [class.btn-valid]="contactForm.valid" [disabled]="!contactForm.valid">
-                                {{ 'CONTACT.BUTTON_SEND' | translate }}
-                            </button>
-                        </div>
-                        @if (formSuccess) {
-                            <div class="success-msg">
-                                {{ 'CONTACT.SUCCESS' | translate }}
-                            </div>
-                        }
-                        @if (formError) {
-                            <div class="error-msg">
-                                {{ 'CONTACT.ERROR' | translate }}
-                            </div>
-                        }
-                    </div>
-                </div>
-                <div class="circle-14-container">
-                    <div class="circle-14">
-                    </div>
-                </div>
-                <button type="button" class="back-to-top" (click)="scrollUp()">
-                    <div class="back-to-top-btn">
-                    </div>
-                </button>
-            </div>
+<form
+  [formGroup]="contactForm"
+  (ngSubmit)="onSubmit()"
+  novalidate
+  aria-labelledby="contact-heading"
+>
+  <div id="contact" class="contact-section">
+    <div class="contact-container">
+      <div class="circle-13-container">
+        <div class="circle-13"></div>
+      </div>
+      <div class="contact-title-and-container-left-right">
+        <div class="title-contact-container">
+          <h2 id="contact-heading" class="title-txt reveal-zoom">
+            {{ 'CONTACT.TITLE' | translate }}
+          </h2>
         </div>
+        <div class="container-left-and-right">
+          <div class="container-left">
+            <div class="got-a-problem-title-container">
+              <p class="got-a-problem-txt">
+                {{ 'CONTACT.SUBTITLE' | translate }}
+              </p>
+            </div>
+            <div class="got-a-problem-title-description-container">
+              <p class="got-a-problem-title-description-txt">
+                {{ 'CONTACT.DESCRIPTION' | translate }}
+              </p>
+            </div>
+            <div class="need-a-contact-me-container">
+              <div class="need-a-contact-me-txt">
+                <span class="need-a-contact-me-question">
+                  {{ 'CONTACT.CALL_TO_ACTION' | translate }}&nbsp;
+                </span>
+                <span class="need-a-contact-me-answer">
+                  {{ 'CONTACT.ANSWER_TO_ACTION' | translate }}
+                </span>
+              </div>
+            </div>
+            <div class="circle-11-container">
+              <div class="circle-11"></div>
+            </div>
+          </div>
+          <div class="container-right">
+            <div class="your-name-container">
+              <input
+                type="text"
+                class="name-textfield"
+                id="name"
+                formControlName="name"
+                style="font-family: 'Poppins'"
+                (focus)="onFocus('name')"
+                (blur)="onBlur('name')"
+                [class.inline-error-active]="showInlineRequired('name')"
+                [placeholder]="
+                  focusedField === 'name'
+                    ? ''
+                    : (showInlineRequired('name')
+                        ? ('CONTACT.ERROR_NAME_REQUIRED' | translate)
+                        : ('CONTACT.PLACEHOLDER_NAME' | translate))
+                "
+              />
+              <div class="error-slot">
+                @if (
+                  !showInlineRequired('name') &&
+                  contactForm.get('name')?.touched &&
+                  contactForm.get('name')?.invalid
+                ) {
+                  <div class="error-msg">
+                    {{ 'CONTACT.ERROR_NAME_REQUIRED' | translate }}
+                  </div>
+                }
+              </div>
+            </div>
+            <div class="your-email-container">
+              <input
+                type="email"
+                class="email-textfield"
+                id="email"
+                formControlName="email"
+                (focus)="onFocus('email')"
+                (blur)="onBlur('email')"
+                [class.inline-error-active]="showInlineRequired('email')"
+                [placeholder]="
+                  focusedField === 'email'
+                    ? ''
+                    : (showInlineRequired('email')
+                        ? ('CONTACT.ERROR_EMAIL_INVALID' | translate)
+                        : ('CONTACT.PLACEHOLDER_EMAIL' | translate))
+                "
+              />
+              <div class="error-slot">
+                @if (
+                  !showInlineRequired('email') &&
+                  contactForm.get('email')?.touched &&
+                  contactForm.get('email')?.errors
+                ) {
+                  <div class="error-msg">
+                    {{ 'CONTACT.ERROR_EMAIL_INVALID' | translate }}
+                  </div>
+                }
+              </div>
+            </div>
+            <div class="your-message-container">
+              <textarea
+                class="message-textfield"
+                id="message"
+                formControlName="message"
+                (focus)="onFocus('message')"
+                (blur)="onBlur('message')"
+                [class.inline-error-active]="showInlineRequired('message')"
+                [placeholder]="
+                  focusedField === 'message'
+                    ? ''
+                    : (showInlineRequired('message')
+                        ? ('CONTACT.ERROR_MESSAGE_REQUIRED' | translate)
+                        : ('CONTACT.PLACEHOLDER_MESSAGE' | translate))
+                "
+              ></textarea>
+              <div class="error-slot">
+                @if (
+                  !showInlineRequired('message') &&
+                  contactForm.get('message')?.touched &&
+                  contactForm.get('message')?.invalid
+                ) {
+                  <div class="error-msg">
+                    {{ 'CONTACT.ERROR_MESSAGE_REQUIRED' | translate }}
+                  </div>
+                }
+              </div>
+            </div>
+            <div class="agree-privacypolice-check">
+              <label for="privacy" class="agree-privacypolice-check-label">
+                <div class="agree-privacypolice-check-div">
+                  <input
+                    class="checkbox"
+                    type="checkbox"
+                    id="privacy"
+                    formControlName="privacy"
+                    (click)="onPrivacyClick()"
+                  />
+                </div>
+                <div class="agree-privacypolice-check-txt">
+                  <p>
+                    {{ 'CONTACT.PRIVACY_I' | translate }}
+                    <a
+                      class="privacy-link"
+                      href="/privacy-policy"
+                      [routerLink]="['/privacy-policy']"
+                      (click)="rememberReturnAnchor()"
+                    >
+                      {{ 'CONTACT.PRIVACY_POLICY' | translate }}
+                    </a>
+                  </p>
+                  <p>
+                    {{ 'CONTACT.PRIVACY_AND' | translate }}
+                  </p>
+                </div>
+              </label>
+              <div class="error-slot">
+                @if (
+                  contactForm.get('privacy')?.touched &&
+                  contactForm.get('privacy')?.invalid
+                ) {
+                  <div class="error-msg">
+                    {{ 'CONTACT.ERROR_PRIVACY_REQUIRED' | translate }}
+                  </div>
+                }
+              </div>
+            </div>
+            <div class="agree-privacypolice-check-mobile">
+              <label for="privacy" class="agree-privacypolice-check-label">
+                <div class="agree-privacypolice-check-div">
+                  <input
+                    class="checkbox"
+                    type="checkbox"
+                    id="privacy"
+                    formControlName="privacy"
+                    (click)="onPrivacyClick()"
+                  />
+                </div>
+                <div class="agree-privacypolice-check-txt">
+                  <p class="first-line">
+                    {{ 'CONTACT.PRIVACY_I' | translate }}
+                  </p>
+                  <a
+                    class="privacy-link"
+                    href="/privacy-policy"
+                    [routerLink]="['/privacy-policy']"
+                    (click)="rememberReturnAnchor()"
+                  >
+                    {{ 'CONTACT.PRIVACY_POLICY' | translate }}
+                  </a>
+                  <p class="second-line">
+                    {{ 'CONTACT.PRIVACY_AND' | translate }}
+                  </p>
+                </div>
+              </label>
+              <div class="error-slot">
+                @if (
+                  contactForm.get('privacy')?.touched &&
+                  contactForm.get('privacy')?.invalid
+                ) {
+                  <div class="error-msg">
+                    {{ 'CONTACT.ERROR_PRIVACY_REQUIRED' | translate }}
+                  </div>
+                }
+              </div>
+            </div>
+            <div class="button-container">
+              <button
+                type="submit"
+                class="btn-contact"
+                [class.btn-valid]="contactForm.valid"
+                [disabled]="!contactForm.valid"
+              >
+                {{ 'CONTACT.BUTTON_SEND' | translate }}
+              </button>
+            </div>
+            @if (formSuccess) {
+              <div class="success-msg">
+                {{ 'CONTACT.SUCCESS' | translate }}
+              </div>
+            }
+            @if (formError) {
+              <div class="error-msg">
+                {{ 'CONTACT.ERROR' | translate }}
+              </div>
+            }
+          </div>
+        </div>
+        <div class="circle-14-container">
+          <div class="circle-14"></div>
+        </div>
+        <button
+          type="button"
+          class="back-to-top"
+          (click)="scrollUp()"
+          aria-label="Scroll back to the top of the page"
+        >
+          <div class="back-to-top-btn"></div>
+        </button>
+      </div>
     </div>
+  </div>
 </form>
