@@ -1,144 +1,140 @@
 <section id="header" class="header-section" role="banner">
-    <div class="header-container">
-        <div class="header-logo-container">
-            <div class="header-img-container">
-                <button
-                    type="button"
-                    class="logo-button"
-                    (click)="onLogoClick($event)"
-                    (keydown)="onLogoKeydown($event)"
-                >
-                    <img class="logo-img" src="assets/img/icon/logo.png" alt="Scroll to the top.">
-                </button>
-            </div>
-        </div>
-        <div class="header-navbar-container">
-            <div class="navbar-desktop" role="navigation" aria-label="Main navigation">
-                <div class="navbar-desktop-links-container">
-                    <a class="navbar-desktop-link" href="#aboutMe">
-                        {{ 'NAV.ABOUT_ME' | translate }}
-                    </a>
-                    <a class="navbar-desktop-link" href="#skillSet">
-                        {{ 'NAV.SKILL_SET' | translate }}
-                    </a>
-                    <a class="navbar-desktop-link" href="#myWork">
-                        {{ 'NAV.MY_WORK' | translate }}
-                    </a>
-                    <a class="navbar-desktop-link" href="#contact">
-                        {{ 'NAV.CONTACT' | translate }}
-                    </a>
-                    <div class="navbar-desktop-link">
-                        <div class="navbar-desktop-de-en-container">
-                            <button
-                                type="button"
-                                class="de"
-                                [ngClass]="{ 'active': currentLanguage === 'de' }"
-                                (click)="switchToGerman()"
-                                (keydown)="onLanguageKeydown($event, 'de')"
-                            >
-                                De
-                            </button>
-                            <div class="cut">
-                                /
-                            </div>
-                            <button
-                                type="button"
-                                class="en"
-                                [ngClass]="{ 'active': currentLanguage === 'en' }"
-                                (click)="switchToEnglish()"
-                                (keydown)="onLanguageKeydown($event, 'en')"
-                            >
-                                En
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div 
-                class="navbar-mobile" 
-                role="navigation" 
-                aria-label="Mobile navigation"
-            >
-                <button
-                    type="button"
-                    class="navbar-mobile-burger-icon"
-                    (click)="openMenu()"
-                    (keydown)="onBurgerKeydown($event)"
-                    aria-label="Open or close the navigation menu"
-                    [attr.aria-expanded]="menuValue ? 'true' : 'false'"
-                    aria-controls="navbar-mobile-links"
-                >
-                    <img 
-                        class="burger-menu-img" 
-                        src="assets/img/icon/burger-menu.png" 
-                        alt="Open or close the burger-menu."
-                    >
-                </button>
-                <div 
-                    id="navbar-mobile-links"
-                    class="navbar-mobile-links-container" 
-                    [class.show]="menuValue" 
-                    [class.hide]="!menuValue"
-                >
-                    <a
-                        class="navbar-mobile-link"
-                        href="#aboutMe"
-                        (click)="closeMenu()"
-                        (keydown.enter)="closeMenu()"
-                    >
-                        {{ 'NAV.ABOUT_ME' | translate }}
-                    </a>
-                    <a
-                        class="navbar-mobile-link"
-                        href="#skillSet"
-                        (click)="closeMenu()"
-                        (keydown.enter)="closeMenu()"
-                    >
-                        {{ 'NAV.SKILL_SET' | translate }}
-                    </a>
-                    <a
-                        class="navbar-mobile-link"
-                        href="#myWork"
-                        (click)="closeMenu()"
-                        (keydown.enter)="closeMenu()"
-                    >
-                        {{ 'NAV.MY_WORK' | translate }}
-                    </a>
-                    <a
-                        class="navbar-mobile-link"
-                        href="#contact"
-                        (click)="closeMenu()"
-                        (keydown.enter)="closeMenu()"
-                    >
-                        {{ 'NAV.CONTACT' | translate }}
-                    </a>
-                    <div class="navbar-mobile-link">
-                        <div class="navbar-mobile-de-en-container">
-                            <button
-                                type="button"
-                                class="de"
-                                [ngClass]="{ 'active': currentLanguage === 'de' }"
-                                (click)="switchToGerman()"
-                                (keydown)="onLanguageKeydown($event, 'de')"
-                            >
-                                De
-                            </button>
-                            <span class="cut">
-                                /
-                            </span>
-                            <button
-                                type="button"
-                                class="en"
-                                [ngClass]="{ 'active': currentLanguage === 'en' }"
-                                (click)="switchToEnglish()"
-                                (keydown)="onLanguageKeydown($event, 'en')"
-                            >
-                                En
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="header-container">
+    <div class="header-logo-container">
+      <div class="header-img-container">
+        <button
+          type="button"
+          class="logo-button"
+          (click)="onLogoClick($event)"
+          (keydown)="onLogoKeydown($event)"
+        >
+          <img class="logo-img" src="assets/img/icon/logo.png" alt="Scroll to the top." />
+        </button>
+      </div>
     </div>
+    <div class="header-navbar-container">
+      <div class="navbar-desktop" role="navigation" aria-label="Main navigation">
+        <div class="navbar-desktop-links-container">
+          <a class="navbar-desktop-link" href="#aboutMe">
+            {{ 'NAV.ABOUT_ME' | translate }}
+          </a>
+          <a class="navbar-desktop-link" href="#skillSet">
+            {{ 'NAV.SKILL_SET' | translate }}
+          </a>
+          <a class="navbar-desktop-link" href="#myWork">
+            {{ 'NAV.MY_WORK' | translate }}
+          </a>
+          <a class="navbar-desktop-link" href="#contact">
+            {{ 'NAV.CONTACT' | translate }}
+          </a>
+          <div class="navbar-desktop-link">
+            <div class="navbar-desktop-de-en-container">
+              <button
+                type="button"
+                class="de"
+                [ngClass]="{ 'active': currentLanguage === 'de' }"
+                (click)="switchToGerman()"
+                (keydown)="onLanguageKeydown($event, 'de')"
+              >
+                De
+              </button>
+              <div class="cut">
+                /
+              </div>
+              <button
+                type="button"
+                class="en"
+                [ngClass]="{ 'active': currentLanguage === 'en' }"
+                (click)="switchToEnglish()"
+                (keydown)="onLanguageKeydown($event, 'en')"
+              >
+                En
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-mobile" role="navigation" aria-label="Mobile navigation">
+        <button
+          type="button"
+          class="navbar-mobile-burger-icon"
+          (click)="openMenu()"
+          (keydown)="onBurgerKeydown($event)"
+          aria-label="Open or close the navigation menu"
+          [attr.aria-expanded]="menuValue ? 'true' : 'false'"
+          aria-controls="navbar-mobile-links"
+        >
+          <img
+            class="burger-menu-img"
+            src="assets/img/icon/burger-menu.png"
+            alt="Open or close the burger-menu."
+          />
+        </button>
+        <div
+          id="navbar-mobile-links"
+          class="navbar-mobile-links-container"
+          [class.show]="menuValue"
+          [class.hide]="!menuValue"
+        >
+          <a
+            class="navbar-mobile-link"
+            href="#aboutMe"
+            (click)="closeMenu()"
+            (keydown.enter)="closeMenu()"
+          >
+            {{ 'NAV.ABOUT_ME' | translate }}
+          </a>
+          <a
+            class="navbar-mobile-link"
+            href="#skillSet"
+            (click)="closeMenu()"
+            (keydown.enter)="closeMenu()"
+          >
+            {{ 'NAV.SKILL_SET' | translate }}
+          </a>
+          <a
+            class="navbar-mobile-link"
+            href="#myWork"
+            (click)="closeMenu()"
+            (keydown.enter)="closeMenu()"
+          >
+            {{ 'NAV.MY_WORK' | translate }}
+          </a>
+          <a
+            class="navbar-mobile-link"
+            href="#contact"
+            (click)="closeMenu()"
+            (keydown.enter)="closeMenu()"
+          >
+            {{ 'NAV.CONTACT' | translate }}
+          </a>
+          <div class="navbar-mobile-link">
+            <div class="navbar-mobile-de-en-container">
+              <button
+                type="button"
+                class="de"
+                [ngClass]="{ 'active': currentLanguage === 'de' }"
+                (click)="switchToGerman()"
+                (keydown)="onLanguageKeydown($event, 'de')"
+              >
+                De
+              </button>
+              <span class="cut">
+                /
+              </span>
+              <button
+                type="button"
+                class="en"
+                [ngClass]="{ 'active': currentLanguage === 'en' }"
+                (click)="switchToEnglish()"
+                (keydown)="onLanguageKeydown($event, 'en')"
+              >
+                En
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
