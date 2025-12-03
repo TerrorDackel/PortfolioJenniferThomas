@@ -1,51 +1,115 @@
+<section class="projects-section" role="region" aria-label="Projects">
+  <div class="first-project-container">
+    <div class="container-left">
+      <div class="project-img-container">
+        <div class="project-img-left">
+          <a
+            class="a-img"
+            [href]="projects[0].livetest"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="project-img"
+              [src]="projects[0].projectImg"
+              [alt]="projects[0].name"
+              [revealOnce]="'reveal-from-left'"
+              [revealDelay]="1000"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container-right">
+      <div
+        class="project-description-container-right"
+        [revealOnce]="'reveal-from-right'"
+        [revealDelay]="1200"
+      >
+        <app-projects-txt-description
+          [name]="projects[0].name"
+          [usedProgramms]="projects[0].usedProgramms"
+          [description]="projects[0].description"
+          [gitLink]="projects[0].gitLink"
+          [livetest]="projects[0].livetest"
+        ></app-projects-txt-description>
+      </div>
+    </div>
+  </div>
 
-<section class="projects-section">
-    <div class="first-project-container">
-        <div class="container-left">
-            <div class="project-img-container">
-                <div class="project-img-left">
-                    <a class="a-img" [href]="projects[0].livetest" target="_blank" rel="noopener noreferrer">
-                        <img class="project-img" [src]="projects[0].projectImg" [alt]="projects[0].name" [revealOnce]="'reveal-from-left'" [revealDelay]="1000" />
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="container-right">
-            <div class="project-description-container-right" [revealOnce]="'reveal-from-right'" [revealDelay]="1200">
-                <app-projects-txt-description [name]="projects[0].name" [usedProgramms]="projects[0].usedProgramms" [description]="projects[0].description" [gitLink]="projects[0].gitLink" [livetest]="projects[0].livetest"></app-projects-txt-description>
-            </div>
-        </div>
+  <div class="second-project-container">
+    <div class="container-left">
+      <div
+        class="project-description-container-left"
+        [revealOnce]="'reveal-from-left'"
+        [revealDelay]="1200"
+      >
+        <app-projects-txt-description
+          [name]="projects[1].name"
+          [usedProgramms]="projects[1].usedProgramms"
+          [description]="projects[1].description"
+          [gitLink]="projects[1].gitLink"
+          [livetest]="projects[1].livetest"
+        ></app-projects-txt-description>
+      </div>
     </div>
-    <div class="second-project-container">
-        <div class="container-left">
-            <div class="project-description-container-left" [revealOnce]="'reveal-from-left'" [revealDelay]="1200">
-                    <app-projects-txt-description [name]="projects[1].name" [usedProgramms]="projects[1].usedProgramms" [description]="projects[1].description" [gitLink]="projects[1].gitLink" [livetest]="projects[1].livetest"></app-projects-txt-description>
-            </div>
+    <div class="container-right">
+      <div class="project-img-container">
+        <div class="project-img-right">
+          <a
+            class="a-img"
+            [href]="projects[1].livetest"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="project-img"
+              [src]="projects[1].projectImg"
+              [alt]="projects[1].name"
+              [revealOnce]="'reveal-from-right'"
+              [revealDelay]="1000"
+            />
+          </a>
         </div>
-        <div class="container-right">
-            <div class="project-img-container">
-                <div class="project-img-right">
-                    <a class="a-img" [href]="projects[1].livetest" target="_blank" rel="noopener noreferrer">
-                        <img class="project-img" [src]="projects[1].projectImg" [alt]="projects[1].name" [revealOnce]="'reveal-from-right'" [revealDelay]="1000" />
-                    </a>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-    <div class="third-project-container">
-        <div class="container-left">
-            <div class="project-img-container">
-                <div class="project-img-left">
-                    <a class="a-img" [href]="projects[2].livetest" target="_blank" rel="noopener noreferrer">
-                        <img class="project-img" [src]="projects[2].projectImg" [alt]="projects[2].name" [revealOnce]="'reveal-from-left'" [revealDelay]="1000" />
-                    </a>
-                </div>
-            </div>
+  </div>
+
+  <div class="third-project-container">
+    <div class="container-left">
+      <div class="project-img-container">
+        <div class="project-img-left">
+          <a
+            class="a-img"
+            [href]="projects[2].livetest"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="project-img"
+              [src]="projects[2].projectImg"
+              [alt]="projects[2].name"
+              [revealOnce]="'reveal-from-left'"
+              [revealDelay]="1000"
+            />
+          </a>
         </div>
-        <div class="container-right">
-            <div class="project-description-container-right" [revealOnce]="'reveal-from-right'" [revealDelay]="1200">
-                <app-projects-txt-description [name]="projects[2].name" [usedProgramms]="projects[2].usedProgramms" [description]="projects[2].description" [gitLink]="projects[2].gitLink" [livetest]="projects[2].livetest"></app-projects-txt-description>
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="container-right">
+      <div
+        class="project-description-container-right"
+        [revealOnce]="'reveal-from-right'"
+        [revealDelay]="1200"
+      >
+        <app-projects-txt-description
+          [name]="projects[2].name"
+          [usedProgramms]="projects[2].usedProgramms"
+          [description]="projects[2].description"
+          [gitLink]="projects[2].gitLink"
+          [livetest]="projects[2].livetest"
+        ></app-projects-txt-description>
+      </div>
+    </div>
+  </div>
 </section>
