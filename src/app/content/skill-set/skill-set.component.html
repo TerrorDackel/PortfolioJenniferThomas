@@ -1,12 +1,17 @@
-<section id="skillSet" class="skill-set-section">
-    <div class="skill-set-container">
-        <div class="header-container">
-            <div class="header-txt reveal-zoom">
-                {{ 'SKILL_SET.HEADER' | translate }}
-            </div>
-        </div>
-        <div class="skill-set-components-container">
-            <app-programm-box></app-programm-box>
-        </div>
+<section
+  id="skillSet"
+  class="skill-set-section"
+  role="region"
+  aria-labelledby="skill-set-heading"
+>
+  <div class="skill-set-container">
+    <div class="header-container">
+      <h2 id="skill-set-heading" class="header-txt reveal-zoom">
+        {{ 'SKILL_SET.HEADER' | translate }}
+      </h2>
     </div>
+    <div class="skill-set-components-container">
+      <app-programm-box></app-programm-box>
+    </div>
+  </div>
 </section>
