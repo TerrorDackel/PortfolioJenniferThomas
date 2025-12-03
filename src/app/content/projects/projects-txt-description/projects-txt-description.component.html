@@ -1,39 +1,39 @@
 <div class="project-infos-section">
-    <div class="project-infos-txt-container">
-        <div class="header-container">
-            <p class="header-txt">
-                {{ name }}
-            </p>
-        </div>
-        <div class="programms-container">
-            <p class="programms-txt">
-                {{ usedProgramms }}
-            </p>
-        </div>
-        <div class="project-description-container">
-            <span class="project-description-txt">
-                {{ description | translate }}
-            </span>
-        </div>
+  <div class="project-infos-txt-container">
+    <div class="header-container">
+      <h3 class="header-txt">
+        {{ name }}
+      </h3>
     </div>
-    <div class="btn-alignment">
-        <div class="livetest-alignment">
-            <div class="livetest-btn-container">
-                <span class="livetest-btn">
-                    <a href="{{ livetest }}" target="_blank" rel="noopener noreferrer">
-                        {{ 'PROJECT.LIVE_TEST' | translate }}
-                    </a>
-                </span>
-            </div>
-        </div>
-        <div class="project-github-btn-container-alignment">
-            <div class="project-github-btn-container">
-                <span class="github-btn">
-                    <a href="{{ gitLink }}" target="_blank" rel="noopener noreferrer">
-                        Github
-                    </a>
-                </span>
-            </div>
-        </div>
+    <div class="programms-container">
+      <p class="programms-txt">
+        {{ usedProgramms }}
+      </p>
     </div>
+    <div class="project-description-container">
+      <span class="project-description-txt">
+        {{ description | translate }}
+      </span>
+    </div>
+  </div>
+  <div class="btn-alignment">
+    <div class="livetest-alignment">
+      <div class="livetest-btn-container">
+        <span class="livetest-btn">
+          <a href="{{ livetest }}" target="_blank" rel="noopener noreferrer">
+            {{ 'PROJECT.LIVE_TEST' | translate }}
+          </a>
+        </span>
+      </div>
+    </div>
+    <div class="project-github-btn-container-alignment">
+      <div class="project-github-btn-container">
+        <span class="github-btn">
+          <a href="{{ gitLink }}" target="_blank" rel="noopener noreferrer">
+            Github
+          </a>
+        </span>
+      </div>
+    </div>
+  </div>
 </div>
