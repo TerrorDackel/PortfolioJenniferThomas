@@ -1,74 +1,100 @@
-<section class="work-together-section">
-    <div id="aboutMe" class="about-me-section">
-        <div class="about-me-circles-container">
-            <div class="circle-placeholder">
-            </div>
-            <div class="circle-5">
-            </div>
-            <div class="circle-6">
-            </div>
-        </div>
-        <div class="about-me-infos-container">
-            <div class="container-left">
-                <div class="lets-work-together-container reveal-zoom">
-                    <p class="lets-work-together-text">
-                        {{ 'WORK_TOGETHER.LETS_WORK' | translate }}
-                    </p>
-                    <p class="lets-work-together-text">
-                        {{ 'WORK_TOGETHER.TOGETHER' | translate }}
-                    </p>
-                </div>
-                <div class="i-am-plus-info-container">
-                    <div class="i-am-container">
-                        <p class="i-am-text">
-                            {{ 'WORK_TOGETHER.I_AM' | translate }}
-                        </p>
-                    </div>
-                    <div class="info-container">
-                        <div class="located-icon-txt-container">
-                            <div class="located-icon-container">
-                                <a href="https://maps.app.goo.gl/jke95m6exwxcVAhdA" target="_blank" class="located-icon-link">
-                                    <img class="located-icon-img-default" src="assets/img/icon/located.png" alt="located icon" />
-                                    <img class="located-icon-img-hover" src="assets/img/icon/located-hover.png" alt="located icon hover" />
-                                </a>
-                            </div>
-                            <p class="located-txt">
-                                {{ 'WORK_TOGETHER.LOCATED' | translate }}
-                            </p>
-                        </div>
-                        <div class="remote-icon-txt-container">
-                            <div class="remote-icon">
-                                <img class="remote-icon-default" src="assets/img/icon/remote.png" alt="remote icon" />
-                                <img class="remote-icon-hover" src="assets/img/icon/remote-hover.png" alt="remote icon hover" />
-                            </div>
-                            <p class="remote-txt">
-                                {{ 'WORK_TOGETHER.REMOTE' | translate }}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container-right">
-                <div class="information-about-me-container">
-                    <p class="imformation-about-me-text">
-                        {{ 'WORK_TOGETHER.ABOUT_ME1' | translate }}
-                    </p>
-                    <p class="imformation-about-me-text">
-                        {{ 'WORK_TOGETHER.ABOUT_ME2' | translate }}
-                    </p>
-                </div>
-                <div class="contact-me-container-alignement">
-                    <div class="send-a-message-container">
-                        <a class="send-a-message-btn" href="#contact">
-                            <p class="send-a-message-btn-text">
-                                {{ 'WORK_TOGETHER.SEND' | translate }}
-                            </p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="about-me-bottom">
-        </div>
+<section
+  class="work-together-section"
+  role="region"
+  aria-labelledby="about-me-heading"
+>
+  <div id="aboutMe" class="about-me-section">
+    <div class="about-me-circles-container">
+      <div class="circle-placeholder">
+      </div>
+      <div class="circle-5">
+      </div>
+      <div class="circle-6">
+      </div>
     </div>
+    <div class="about-me-infos-container">
+      <div class="container-left">
+        <div class="lets-work-together-container reveal-zoom">
+          <h2 id="about-me-heading" class="lets-work-together-text">
+            {{ 'WORK_TOGETHER.LETS_WORK' | translate }}
+          </h2>
+          <p class="lets-work-together-text">
+            {{ 'WORK_TOGETHER.TOGETHER' | translate }}
+          </p>
+        </div>
+        <div class="i-am-plus-info-container">
+          <div class="i-am-container">
+            <p class="i-am-text">
+              {{ 'WORK_TOGETHER.I_AM' | translate }}
+            </p>
+          </div>
+          <div class="info-container">
+            <div class="located-icon-txt-container">
+              <div class="located-icon-container">
+                <a
+                  href="https://maps.app.goo.gl/jke95m6exwxcVAhdA"
+                  target="_blank"
+                  class="located-icon-link"
+                  aria-label="Open my location in Google Maps in a new tab"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    class="located-icon-img-default"
+                    src="assets/img/icon/located.png"
+                    alt=""
+                  />
+                  <img
+                    class="located-icon-img-hover"
+                    src="assets/img/icon/located-hover.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <p class="located-txt">
+                {{ 'WORK_TOGETHER.LOCATED' | translate }}
+              </p>
+            </div>
+            <div class="remote-icon-txt-container">
+              <div class="remote-icon">
+                <img
+                  class="remote-icon-default"
+                  src="assets/img/icon/remote.png"
+                  alt=""
+                />
+                <img
+                  class="remote-icon-hover"
+                  src="assets/img/icon/remote-hover.png"
+                  alt=""
+                />
+              </div>
+              <p class="remote-txt">
+                {{ 'WORK_TOGETHER.REMOTE' | translate }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-right">
+        <div class="information-about-me-container">
+          <p class="imformation-about-me-text">
+            {{ 'WORK_TOGETHER.ABOUT_ME1' | translate }}
+          </p>
+          <p class="imformation-about-me-text">
+            {{ 'WORK_TOGETHER.ABOUT_ME2' | translate }}
+          </p>
+        </div>
+        <div class="contact-me-container-alignement">
+          <div class="send-a-message-container">
+            <a class="send-a-message-btn" href="#contact">
+              <p class="send-a-message-btn-text">
+                {{ 'WORK_TOGETHER.SEND' | translate }}
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-me-bottom">
+    </div>
+  </div>
 </section>
