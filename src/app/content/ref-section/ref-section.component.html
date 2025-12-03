@@ -1,24 +1,39 @@
-<section class="ref-section">
-    <div class="ref-container">
-        <div class="header-and-text-container">
-            <div class="header-container">
-            <p class="header-txt reveal-zoom">
-                {{ 'REF_SECTION.TEAMPLAYER' | translate }}
-            </p>
-            </div>
-            <div class="second-header-container">
-                <p class="second-header-txt">
-                    {{ 'REF_SECTION.COLLEAGUES' | translate }}
-                </p>
-            </div>
-        </div>
-        <div class="ref-posts" dragScrollX>
-            @for (entry of ref; track entry) {
-                <div class="ref-card">
-                    <app-ref [name]="entry.name" [project]="entry.project" [commit]="entry.commit">
-                    </app-ref>
-                </div>
-            }
-        </div>
+<section
+  class="ref-section"
+  role="region"
+  aria-labelledby="ref-section-heading"
+>
+  <div class="ref-container">
+    <div class="header-and-text-container">
+      <div class="header-container">
+        <h2
+          id="ref-section-heading"
+          class="header-txt reveal-zoom"
+        >
+          {{ 'REF_SECTION.TEAMPLAYER' | translate }}
+        </h2>
+      </div>
+      <div class="second-header-container">
+        <h3 class="second-header-txt">
+          {{ 'REF_SECTION.COLLEAGUES' | translate }}
+        </h3>
+      </div>
     </div>
+    <div
+      class="ref-posts"
+      dragScrollX
+      role="list"
+      aria-label="References from colleagues"
+    >
+      @for (entry of ref; track entry) {
+        <div class="ref-card" role="listitem">
+          <app-ref
+            [name]="entry.name"
+            [project]="entry.project"
+            [commit]="entry.commit"
+          ></app-ref>
+        </div>
+      }
+    </div>
+  </div>
 </section>
