@@ -1,264 +1,285 @@
 @use '../../../../styles/mixins' as *
 
 @media (max-width: 700px)
-    .hero-section
-        .hero-container-mobile
-            .hero-top-circle-container
-                margin-right: 0
-                padding-right: 0
-                right: 10%
-            .hero-header-scroll
-                .hero-header-scroll-container
-                    .header-allignement
-                        background-color: transparent
+  .hero-section
+    .hero-container-mobile
+      .hero-top-circle-container
+        margin-right: 0
+        padding-right: 0
+        right: 10%
+      .hero-header-scroll
+        .hero-header-scroll-container
+          .header-allignement
+            background-color: transparent
 
-@media (max-width: 600px)
-    .hero-section
-        .hero-container-mobile
-            .hero-top-circle-container
-                right: 6%
+@media (max-width: 610px)
+  .hero-section
+    .hero-container-mobile
+      .hero-top-circle-container
+        right: 6%
+
+      .hero-img-container
+        img
+          right: 10%
 
 @media (max-width: 550px)
-    .hero-section
-        .hero-container-mobile
-            .hero-top-circle-container
-                right: 3%
+  .hero-section
+    .hero-container-mobile
+      .hero-top-circle-container
+        right: 3%
+
+@media (max-width: 500px)
+  .hero-section
+    .hero-container-mobile
+      .hero-img-container
+        img
+          right: 4%
 
 @media (max-width: 490px)
-    .scroll-responsive-txt
-        max-width: 170px
-        max-height: 30px
-        min-width: 163px
+  .scroll-responsive-txt
+    max-width: 170px
+    max-height: 30px
+    min-width: 163px
 
 @media (max-width: 430px)
-    .hero-section
-        .hero-container-mobile
-            .hero-top-circle-container
-                right: 1%
-            .hero-header-scroll
-                .hero-header-scroll-container
-                    .header-allignement
-                        .header-txt-container
-                            padding: 2rem 0
-                            .header-txt-allignement
-                                .hero-txt-hallo
-                                    @include font-f-s-c-w-lh-ls-a($family: null, $size: 1.7rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
-                                .hero-text-frontend,
-                                .hero-text-developer
-                                    @include font-f-s-c-w-lh-ls-a($family: null, $size: 3rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
+  .hero-section
+    .hero-container-mobile
+      .hero-top-circle-container
+        right: 1%
+      .hero-header-scroll
+        .hero-header-scroll-container
+          .scroll-container
+            .scroll-responsive
+              bottom: 10%
+          .header-allignement
+            .header-txt-container
+              padding: 2rem 0
+              .header-txt-allignement
+                .hero-txt-hallo
+                  @include font-f-s-c-w-lh-ls-a($family: null, $size: 1.7rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
+                .hero-text-frontend,
+                .hero-text-developer
+                  @include font-f-s-c-w-lh-ls-a($family: null, $size: 3rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
 @media (max-width: 376px)
-    .hero-section
-        .hero-container-mobile
-            .hero-top-circle-container
-                right: 0%
-            .hero-header-scroll
-                .hero-header-scroll-container
-                    .header-allignement
-                        .header-txt-container
-                            .header-txt-allignement
-                                .hero-txt-hallo
-                                    @include font-f-s-c-w-lh-ls-a($family: null, $size: 1.4rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
-                                .hero-text-frontend,
-                                .hero-text-developer
-                                    @include font-f-s-c-w-lh-ls-a($family: null, $size: 2.5rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
+  .hero-section
+    .hero-container-mobile
+      .hero-top-circle-container
+        right: 0%
+      .hero-header-scroll
+        .hero-header-scroll-container
+          .scroll-container
+            .scroll-responsive
+              bottom: 8.5%
+              right: -5%
+          .header-allignement
+            .header-txt-container
+              .header-txt-allignement
+                .hero-txt-hallo
+                  @include font-f-s-c-w-lh-ls-a($family: null, $size: 1.4rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
+                .hero-text-frontend,
+                .hero-text-developer
+                  @include font-f-s-c-w-lh-ls-a($family: null, $size: 2.5rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
 @media (max-width: 310px)
-    .hero-section
-        .hero-container-mobile
-            .hero-header-scroll
-                .hero-header-scroll-container
-                    .header-allignement
-                        .header-txt-container
-                            .header-txt-allignement
-                                .hero-txt-hallo
-                                    @include font-f-s-c-w-lh-ls-a($family: null, $size: 1.1rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
-                                .hero-text-frontend,
-                                .hero-text-developer
-                                    @include font-f-s-c-w-lh-ls-a($family: null, $size: 2.5rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
+  .hero-section
+    .hero-container-mobile
+      .hero-header-scroll
+        .hero-header-scroll-container
+          .scroll-container
+            .scroll-responsive
+              bottom: 8.5%
+              right: -17%
+          .header-allignement
+            .header-txt-container
+              .header-txt-allignement
+                .hero-txt-hallo
+                  @include font-f-s-c-w-lh-ls-a($family: null, $size: 1.1rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
+                .hero-text-frontend,
+                .hero-text-developer
+                  @include font-f-s-c-w-lh-ls-a($family: null, $size: 2.5rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
 @media (max-width: 270px)
-    .hero-section
-        .hero-container-mobile
-            .hero-header-scroll
-                .hero-header-scroll-container
-                    .header-allignement
-                        .header-txt-container
-                            .header-txt-allignement
-                                margin-left: -1.5rem
-                                .hero-txt-hallo
-                                    @include font-f-s-c-w-lh-ls-a($family: null, $size: 1rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
-                                .hero-text-frontend,
-                                .hero-text-developer
-                                    @include font-f-s-c-w-lh-ls-a($family: null, $size: 2.5rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
+  .hero-section
+    .hero-container-mobile
+      .hero-header-scroll
+        .hero-header-scroll-container
+          .header-allignement
+            .header-txt-container
+              .header-txt-allignement
+                margin-left: -1.5rem
+                .hero-txt-hallo
+                  @include font-f-s-c-w-lh-ls-a($family: null, $size: 1rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
+                .hero-text-frontend,
+                .hero-text-developer
+                  @include font-f-s-c-w-lh-ls-a($family: null, $size: 2.5rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
 @media (max-width: 250px)
-    .hero-section
-        .hero-container-mobile
-            .hero-header-scroll
-                .hero-header-scroll-container
-                    .header-allignement
-                        .header-txt-container
-                            .header-txt-allignement
-                                margin-left: -1.5rem
-                                .hero-txt-hallo
-                                    @include font-f-s-c-w-lh-ls-a($family: null, $size: 1rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
-                                .hero-text-frontend,
-                                .hero-text-developer
-                                    @include font-f-s-c-w-lh-ls-a($family: null, $size: 2.5rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
+  .hero-section
+    .hero-container-mobile
+      .hero-header-scroll
+        .hero-header-scroll-container
+          .header-allignement
+            .header-txt-container
+              .header-txt-allignement
+                margin-left: -1.5rem
+                .hero-txt-hallo
+                  @include font-f-s-c-w-lh-ls-a($family: null, $size: 1rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
+                .hero-text-frontend,
+                .hero-text-developer
+                  @include font-f-s-c-w-lh-ls-a($family: null, $size: 2.5rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
 @media (min-width: 950px)
-    .hero-section
-        @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
-        @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 100%, $minw: null, $minh: null, $maxw: null, $maxh: null)
-        background: linear-gradient(0deg, rgba(234,240,255,1) 0%, rgba(245,248,255,1) 35%, rgba(255,255,255,1) 100%)
-        overflow: hidden
+  .hero-section
+    @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+    @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 100%, $minw: null, $minh: null, $maxw: null, $maxh: null)
+    background: linear-gradient(0deg, rgba(234,240,255,1) 0%, rgba(245,248,255,1) 35%, rgba(255,255,255,1) 100%)
+    overflow: hidden
 
-        .hero-container-desktop
-            @include flex-d-j-a-g($dir: column, $justify: center, $align: center, $gap: null)
-            @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 100%, $minw: null, $minh: null, $maxw: 1920px, $maxh: null)
-            padding: 0 1rem
+    .hero-container-desktop
+      @include flex-d-j-a-g($dir: column, $justify: center, $align: center, $gap: null)
+      @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 100%, $minw: null, $minh: null, $maxw: 1920px, $maxh: null)
+      padding: 0 1rem
 
-            .hero-top-circle-container
-                @include flex-d-j-a-g($dir: row, $justify: space-between, $align: center, $gap: null)
-                @include size-w-h($w: auto, $h: 100%)
-                padding: 1rem
+      .hero-top-circle-container
+        @include flex-d-j-a-g($dir: row, $justify: space-between, $align: center, $gap: null)
+        @include size-w-h($w: auto, $h: 100%)
+        padding: 1rem
+        position: absolute
+        top: -15%
+        right: 50%
+        z-index: 1
+
+        .circle-3-container
+          @include size-w-h($w: auto, $h: null)
+
+          .circle-3
+            @include circle-size(50rem)
+            @include brandradial-size-x-y-c1-c2-c3()
+
+      .hero-img-header-scroll-iconlist
+        @include flex-d-j-a-g($dir: row, $justify: space-around, $align: flex-start, $gap: null)
+        @include boxsize-w-h-minw-minh-maxw-maxh($w: 100vw, $h: 100%, $minw: null, $minh: null, $maxw: 1920px, $maxh: null)
+        padding: 0
+        z-index: 2
+
+        .hero-img-container
+          @include flex-d-j-a-g($dir: row, $justify: center, $align: flex-end, $gap: null)
+          @include boxsize-w-h-minw-minh-maxw-maxh($w: 49%, $h: 100%, $minw: 200px, $minh: null, $maxw: 550px, $maxh: null)
+          margin-bottom: 0 !important
+          z-index: 2
+
+          .hero-img
+            @include flex-d-j-a-g($dir: row, $justify: center, $align: stretch, $gap: null)
+            @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: 600px)
+            padding: 0
+            object-fit: scale-down
+            overflow: hidden
+            margin-left: 1rem
+
+        .hero-header-scroll-container
+          @include flex-d-j-a-g($dir: column, $justify: flex-end, $align: flex-end, $gap: null)
+          @include boxsize-w-h-minw-minh-maxw-maxh($w: 49%, $h: 80%, $minw: 200px, $minh: null, $maxw: 550px, $maxh: null)
+          margin-bottom: 0 !important
+          margin-top: 9rem
+          z-index: 2
+
+          .header-allignement
+            @include flex-d-j-a-g($dir: column, $justify: flex-start, $align: flex-start, $gap: null)
+            @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 350px, $minw: null, $minh: null, $maxw: 550px, $maxh: null)
+
+            .header-txt-container
+              @include flex-d-j-a-g($dir: row, $justify: flex-end, $align: stretch, $gap: null)
+              @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
+
+              .header-txt-allignement
+                @include flex-d-j-a-g($dir: column, $justify: flex-start, $align: stretch, $gap: null)
+                @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: 510px, $maxh: null)
+                padding: 1rem 6rem
+
+                .hero-txt-hallo
+                  @include flex-d-j-a-g($dir: row, $justify: flex-start, $align: stretch, $gap: null)
+                  @include font-f-s-c-w-lh-ls-a($family: 'Montserrat', $size: clamp(2.25rem, 1.5rem + 2vw, 3.8125rem), $color: #5988FF, $weight: 400, $lineHeight: 1, $letterSpacing: 0, $align: null)
+                  padding: 0
+                  margin: 0
+                  white-space: nowrap
+
+                .hero-text-frontend,
+                .hero-text-developer
+                  @include flex-d-j-a-g($dir: row, $justify: flex-start, $align: stretch, $gap: null)
+                  @include font-f-s-c-w-lh-ls-a($family: 'Baloo 2', $size: clamp(4.5625rem, 2.5rem + 3vw, 9rem), $color: #5988FF, $weight: 700, $lineHeight: 1, $letterSpacing: -0.125rem, $align: null)
+                  padding: 0
+                  margin: 0
+
+          .scroll-container
+            @include flex-d-j-a-g($dir: row, $justify: center, $align: stretch, $gap: null)
+            @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 50%, $minw: null, $minh: null, $maxw: null, $maxh: null)
+
+            .scroll-desktop
+              @include flex-d-j-a-g($dir: column, $justify: center, $align: center, $gap: null)
+              @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 100%, $minw: null, $minh: null, $maxw: null, $maxh: null)
+              z-index: 2
+
+              .scroll-txt
+                @include flex-d-j-a-g($dir: row, $justify: center, $align: stretch, $gap: null)
+                @include size-w-h($w: 10rem, $h: auto)
+                @include font-f-s-c-w-lh-ls-a($family: 'Montserrat', $size: 1.4375rem, $color: #5988FF, $weight: 500, $lineHeight: 1.2, $letterSpacing: 0, $align: null)
+                padding: 0.75rem
                 position: absolute
-                top: -15%
-                right: 50%
-                z-index: 1
+                bottom: 12rem
+                margin-bottom: 1rem
 
-                .circle-3-container
-                    @include size-w-h($w: auto, $h: null)
+              .line-container
+                position: absolute
+                bottom: 0
+                gap: 1.5rem
 
-                    .circle-3
-                        @include circle-size(50rem)
-                        @include brandradial-size-x-y-c1-c2-c3()
+                .line
+                  @include size-w-h($w: 0.1rem, $h: 12rem)
+                  background-color: #5988FF
 
-            .hero-img-header-scroll-iconlist
-                @include flex-d-j-a-g($dir: row, $justify: space-around, $align: flex-start, $gap: null)
-                @include boxsize-w-h-minw-minh-maxw-maxh($w: 100vw, $h: 100%, $minw: null, $minh: null, $maxw: 1920px, $maxh: null)
-                padding: 0
-                z-index: 2
-
-                .hero-img-container
-                    @include flex-d-j-a-g($dir: row, $justify: center, $align: flex-end, $gap: null)
-                    @include boxsize-w-h-minw-minh-maxw-maxh($w: 49%, $h: 100%, $minw: 200px, $minh: null, $maxw: 550px, $maxh: null)
-                    margin-bottom: 0 !important
-                    z-index: 2
-
-                    .hero-img
-                        @include flex-d-j-a-g($dir: row, $justify: center, $align: stretch, $gap: null)
-                        @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: 600px)
-                        padding: 0
-                        object-fit: scale-down
-                        overflow: hidden
-                        margin-left: 1rem
-
-                .hero-header-scroll-container
-                    @include flex-d-j-a-g($dir: column, $justify: flex-end, $align: flex-end, $gap: null)
-                    @include boxsize-w-h-minw-minh-maxw-maxh($w: 49%, $h: 80%, $minw: 200px, $minh: null, $maxw: 550px, $maxh: null)
-                    margin-bottom: 0 !important
-                    margin-top: 9rem
-                    z-index: 2
-
-                    .header-allignement
-                        @include flex-d-j-a-g($dir: column, $justify: flex-start, $align: flex-start, $gap: null)
-                        @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 350px, $minw: null, $minh: null, $maxw: 550px, $maxh: null)
-
-                        .header-txt-container
-                            @include flex-d-j-a-g($dir: row, $justify: flex-end, $align: stretch, $gap: null)
-                            @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
-
-                            .header-txt-allignement
-                                @include flex-d-j-a-g($dir: column, $justify: flex-start, $align: stretch, $gap: null)
-                                @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: 510px, $maxh: null)
-                                padding: 1rem 6rem
-
-                                .hero-txt-hallo
-                                    @include flex-d-j-a-g($dir: row, $justify: flex-start, $align: stretch, $gap: null)
-                                    @include font-f-s-c-w-lh-ls-a($family: 'Montserrat', $size: clamp(2.25rem, 1.5rem + 2vw, 3.8125rem), $color: #5988FF, $weight: 400, $lineHeight: 1, $letterSpacing: 0, $align: null)
-                                    padding: 0
-                                    margin: 0
-                                    white-space: nowrap
-
-                                .hero-text-frontend,
-                                .hero-text-developer
-                                    @include flex-d-j-a-g($dir: row, $justify: flex-start, $align: stretch, $gap: null)
-                                    @include font-f-s-c-w-lh-ls-a($family: 'Baloo 2', $size: clamp(4.5625rem, 2.5rem + 3vw, 9rem), $color: #5988FF, $weight: 700, $lineHeight: 1, $letterSpacing: -0.125rem, $align: null)
-                                    padding: 0
-                                    margin: 0
-
-                    .scroll-container
-                        @include flex-d-j-a-g($dir: row, $justify: center, $align: stretch, $gap: null)
-                        @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 50%, $minw: null, $minh: null, $maxw: null, $maxh: null)
-
-                        .scroll-desktop
-                            @include flex-d-j-a-g($dir: column, $justify: center, $align: center, $gap: null)
-                            @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 100%, $minw: null, $minh: null, $maxw: null, $maxh: null)
-                            z-index: 2
-
-                            .scroll-txt
-                                @include flex-d-j-a-g($dir: row, $justify: center, $align: stretch, $gap: null)
-                                @include size-w-h($w: 10rem, $h: auto)
-                                @include font-f-s-c-w-lh-ls-a($family: 'Montserrat', $size: 1.4375rem, $color: #5988FF, $weight: 500, $lineHeight: 1.2, $letterSpacing: 0, $align: null)
-                                padding: 0.75rem
-                                position: absolute
-                                bottom: 12rem
-                                margin-bottom: 1rem
-
-                            .line-container
-                                position: absolute
-                                bottom: 0
-                                gap: 1.5rem
-
-                                .line
-                                    @include size-w-h($w: 0.1rem, $h: 12rem)
-                                    background-color: #5988FF
-
-        .hero-container-mobile
-            display: none
+    .hero-container-mobile
+      display: none
 
 @media (min-width: 2000px) and (min-height: 1100px)
-    :host
-        height: auto
+  :host
+    height: auto
 
-    .hero-section
-        .hero-container-desktop
-            .hero-top-circle-container
-                top: -45%
-                left: 20%
-                @include size-w-h($w: auto, $h: null)
-                padding: 0
+  .hero-section
+    .hero-container-desktop
+      .hero-top-circle-container
+        top: -45%
+        left: 20%
+        @include size-w-h($w: auto, $h: null)
+        padding: 0
 
-                .circle-3-container
-                    .circle-3
-                        @include circle-size(50rem)
-                        @include brandradial-size-x-y-c1-c2-c3()
+        .circle-3-container
+          .circle-3
+            @include circle-size(50rem)
+            @include brandradial-size-x-y-c1-c2-c3()
 
-            .hero-img-header-scroll-iconlist
-                height: 100%
-                margin-top: 117px
+      .hero-img-header-scroll-iconlist
+        height: 100%
+        margin-top: 117px
 
-                .hero-img-container
-                    height: 100%
+        .hero-img-container
+          height: 100%
 
-                    .hero-img
-                        border-radius: 1rem
-                        @include size-w-h($w: auto, $h: 100%)
-                    
+          .hero-img
+            border-radius: 1rem
+            @include size-w-h($w: auto, $h: 100%)
 
 @media (prefers-reduced-motion: reduce)
-    .reveal-zoom
-        opacity: 1 !important
-        transform: none !important
-        animation: none !important
+  .reveal-zoom
+    opacity: 1 !important
+    transform: none !important
+    animation: none !important
 
 @media (min-height: 1081px)
-    .hero-section
-        .hero-container-desktop
-            .hero-img-header-scroll-iconlist
-                .hero-header-scroll-container
-                    .scroll-container
-                        .scroll-desktop
-                            display: none
+  .hero-section
+    .hero-container-desktop
+      .hero-img-header-scroll-iconlist
+        .hero-header-scroll-container
+          .scroll-container
+            .scroll-desktop
+              display: none
