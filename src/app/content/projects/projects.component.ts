@@ -15,7 +15,7 @@ export class ProjectsComponent {
             name: 'Join',
             usedProgramms: ['Angular | TypeScript | HTML | CSS | Firebase'],
             description: 'PROJECTS.JOIN.DESCRIPTION',
-            gitLink: 'https://github.com/TerrorDackel/DA_Join',
+            gitLink: 'https://github.com/TerrorDackel/Join',
             projectImg: 'assets/img/join.png',
             livetest: 'https://www.join.jennifer-thomas.de/index.html'
         },
