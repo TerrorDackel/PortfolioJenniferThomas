@@ -6,20 +6,20 @@
       .my-work-head-container
         @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
 
-          .container-right
-            display: none
+        .container-right
+          display: none
 
-            .container-left
-              @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
+        .container-left
+          @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
 
-                .header-and-description-container
-                  padding: 1rem 0 0 0
+          .header-and-description-container
+            padding: 1rem 0 0 0
 
-                  .header-container
-                    @include flex-d-j-a-g($dir: row, $justify: center, $align: stretch, $gap: null)
+            .header-container
+              @include flex-d-j-a-g($dir: row, $justify: center, $align: stretch, $gap: null)
 
-                      .header-txt
-                        padding: 0 0 1rem 0
+              .header-txt
+                padding: 0 0 1rem 0
 
 @media (max-width: 500px)
   .my-work-section
@@ -38,11 +38,11 @@
       .my-work-head-container
         @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
 
-          .container-left
-            .header-and-description-container
-              .header-container
-                .header-txt
-                  @include font-f-s-c-w-lh-ls-a($family: null, $size: 3.5rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
+        .container-left
+          .header-and-description-container
+            .header-container
+              .header-txt
+                @include font-f-s-c-w-lh-ls-a($family: null, $size: 3.5rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
 @media (max-width: 380px)
   .my-work-section
@@ -72,8 +72,8 @@
             .header-container
               @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
 
-                .header-txt
-                  @include font-f-s-c-w-lh-ls-a($family: null, $size: 2.6rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
+              .header-txt
+                @include font-f-s-c-w-lh-ls-a($family: null, $size: 2.6rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
 @media (max-width: 260px)
   .my-work-section

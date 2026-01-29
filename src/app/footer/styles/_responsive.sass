@@ -3,48 +3,48 @@
 @media (max-width: 500px)
   .footer-section
     @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
-      @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: 380px)
-        margin: 0
-        margin-bottom: 0
+    @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: 380px)
+    margin: 0
+    margin-bottom: 0
 
-        .footer-container
-          @include flex-d-j-a-g($dir: column, $justify: center, $align: null, $gap: null)
-            @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: 350px)
-            padding: 1rem
+    .footer-container
+      @include flex-d-j-a-g($dir: column, $justify: center, $align: null, $gap: null)
+      @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: 350px)
+      padding: 1rem
 
-            .logo-container
-              @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
-                @include boxsize-w-h-minw-minh-maxw-maxh($w: auto, $h: 100%, $minw: null, $minh: null, $maxw: null, $maxh: 80px)
+      .logo-container
+        @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+        @include boxsize-w-h-minw-minh-maxw-maxh($w: auto, $h: 100%, $minw: null, $minh: null, $maxw: null, $maxh: 80px)
 
-            .created-copyright-impressum-container
-              @include flex-d-j-a-g($dir: row, $justify: center, $align: null, $gap: null)
-                @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 100%, $minw: null, $minh: null, $maxw: auto, $maxh: 30px)
+      .created-copyright-impressum-container
+        @include flex-d-j-a-g($dir: row, $justify: center, $align: null, $gap: null)
+        @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 100%, $minw: null, $minh: null, $maxw: auto, $maxh: 30px)
 
-                .over-copyright-container
-                  display: none
+        .over-copyright-container
+          display: none
 
-                .copyright-container
-                  @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
-                    padding: 0
+        .copyright-container
+          @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
+          padding: 0
 
-                .legal-notice-container
-                  display: none
+        .legal-notice-container
+          display: none
 
-            .footer-iconlist-horizontal
-              @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 100%, $minw: null, $minh: null, $maxw: 200px, $maxh: 40px)
+      .footer-iconlist-horizontal
+        @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 100%, $minw: null, $minh: null, $maxw: 200px, $maxh: 40px)
 
-                .footer-icon-container
-                  @include boxsize-w-h-minw-minh-maxw-maxh($w: auto, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
+        .footer-icon-container
+          @include boxsize-w-h-minw-minh-maxw-maxh($w: auto, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
 
-            .legal-notice-container-mobile
-              @include flex-d-j-a-g($dir: row, $justify: center, $align: flex-start, $gap: null)
-                @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 45px, $minw: null, $minh: null, $maxw: 130px, $maxh: null)
-                text-align: center
+      .legal-notice-container-mobile
+        @include flex-d-j-a-g($dir: row, $justify: center, $align: flex-start, $gap: null)
+        @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 45px, $minw: null, $minh: null, $maxw: 130px, $maxh: null)
+        text-align: center
 
-                a
-                  color: #FFFFFF
-                  text-decoration: none
-                  position: relative
-                  display: inline-block
-                  font-weight: normal
-                  transition: font-weight 0.1s ease
+        a
+          color: #FFFFFF
+          text-decoration: none
+          position: relative
+          display: inline-block
+          font-weight: normal
+          transition: font-weight 0.1s ease

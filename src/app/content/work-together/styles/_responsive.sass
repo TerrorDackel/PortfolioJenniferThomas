@@ -8,6 +8,7 @@
           .information-about-me-container
             padding: 1rem 0 0 0
 
+
 @media (max-width: 1200px)
   .work-together-section
     .about-me-section
@@ -17,6 +18,7 @@
             .info-container
               @include flex-d-j-a-g($dir: column, $justify: null, $align: null, $gap: null)
 
+
 @media (max-width: 950px)
   .work-together-section
     .about-me-section
@@ -24,6 +26,7 @@
         .container-right
           .information-about-me-container
             padding: 2rem 0 0 0
+
 
 @media (max-width: 790px)
   .work-together-section
@@ -33,102 +36,132 @@
           .information-about-me-container
             padding: 3rem 0 0 0
 
+
 @media (max-width: 700px)
   .work-together-section
     padding: 0 1rem
+
     .about-me-section
       height: auto
       margin: 0
+
       .about-me-infos-container
         @include flex-d-j-a-g($dir: column, $justify: center, $align: center, $gap: null)
+        margin: 0
+        height: auto
+        padding: 2rem 1rem
+
+        .container-left
+          padding: 1rem 1rem
+          @include boxsize-w-h-minw-minh-maxw-maxh($w: 90%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
+
+          .lets-work-together-container
+            @include flex-d-j-a-g($dir: column, $justify: center, $align: center, $gap: null)
+            padding: 0
+
+            .lets-work-together-text
+              @include flex-d-j-a-g($justify: center, $align: center)
+              @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: null, $minh: null, $maxw: 290px, $maxh: null)
+              @include font-f-s-c-w-lh-ls-a($size: clamp(64px, 8vw, 121px), $align: center)
+
+          .i-am-plus-info-container
+            .i-am-container
+              .i-am-text
+                font-size: 32px
+
+            .info-container
+              @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 100%, $minw: null, $minh: null, $maxw: null, $maxh: null)
+              padding-bottom: 1rem
+              @include flex-d-j-a-g($dir: row, $justify: center, $align: flex-start, $gap: null)
+
+              .located-icon-txt-container
+                @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: 200px, $minh: null, $maxw: null, $maxh: null)
+                margin-left: 0.5rem
+
+                .located-icon-container
+                  @include flex-d-j-a-g($dir: row, $justify: center, $align: null, $gap: null)
+                  @include boxsize-w-h-minw-minh-maxw-maxh($w: 55px, $h: 55px, $minw: null, $minh: null, $maxw: null, $maxh: null)
+                  padding: 0 1rem
+
+                  .located-icon-link
+                    .located-icon-img-default
+                      @include size-w-h($w: 32px, $h: 40px)
+
+                      .located-icon-img-hover
+                        @include size-w-h($w: 32px, $h: 40px)
+
+                .located-txt
+                  @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: 160px, $minh: null, $maxw: null, $maxh: null)
+                  margin: 0 0 0 0.5rem
+
+              .remote-icon-txt-container
+                @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: 200px, $minh: null, $maxw: null, $maxh: null)
+                margin-left: 0.5rem
+
+                .remote-icon
+                  @include flex-d-j-a-g($dir: row, $justify: center, $align: null, $gap: null)
+                  @include boxsize-w-h-minw-minh-maxw-maxh($w: 55px, $h: 55px, $minw: null, $minh: null, $maxw: null, $maxh: null)
+                  padding: 0 1rem
+
+                  .remote-icon-default
+                    @include size-w-h($w: 52px, $h: 45px)
+
+                  .remote-icon-hover
+                    @include size-w-h($w: 52px, $h: 45px)
+
+                .remote-txt
+                  @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: 160px, $minh: null, $maxw: null, $maxh: null)
+                  margin: 0 0 0 0.5rem
+
+        .container-right
+          @include boxsize-w-h-minw-minh-maxw-maxh($w: 90%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
+          @include flex-d-j-a-g($dir: column, $justify: center, $align: center, $gap: null)
           margin: 0
-          height: auto
-          padding: 2rem 1rem
-          .container-left
-            padding: 1rem 1rem
-            @include boxsize-w-h-minw-minh-maxw-maxh($w: 90%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
-              .lets-work-together-container
-                @include flex-d-j-a-g($dir: column, $justify: center, $align: center, $gap: null)
-                  padding: 0
-                  .lets-work-together-text
-                    @include flex-d-j-a-g($justify: center, $align: center)
-                      @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: null, $minh: null, $maxw: 290px, $maxh: null)
-                        @mixin font-f-s-c-w-lh-ls-a($size: clamp(64px, 8vw, 121px), $align: center)
-                    .i-am-plus-info-container
-                      .i-am-container
-                        .i-am-text
-                          font-size: 32px
-                        .info-container
-                          @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 100%, $minw: null, $minh: null, $maxw: null, $maxh: null)
-                            padding-bottom: 1rem
-                            @include flex-d-j-a-g($dir: row, $justify: center, $align: flex-start, $gap: null)
-                            .located-icon-txt-container
-                              @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: 200px, $minh: null, $maxw: null, $maxh: null)
-                                margin-left: 0.5rem
-                                .located-icon-container
-                                  @include flex-d-j-a-g($dir: row, $justify: center, $align: null, $gap: null)
-                                    @include boxsize-w-h-minw-minh-maxw-maxh($w: 55px, $h: 55px, $minw: null, $minh: null, $maxw: null, $maxh: null)
-                                    padding: 0 1rem
-                                    .located-icon-link
-                                      .located-icon-img-default
-                                        @include size-w-h($w: 32px, $h: 40px)
-                                        .located-icon-img-hover
-                                          @include size-w-h($w: 32px, $h: 40px)
-                                .located-txt
-                                  @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: 160px, $minh: null, $maxw: null, $maxh: null)
-                                    margin: 0 0 0 0.5rem
-                            .remote-icon-txt-container
-                              @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: 200px, $minh: null, $maxw: null, $maxh: null)
-                                margin-left: 0.5rem
-                                .remote-icon
-                                  @include flex-d-j-a-g($dir: row, $justify: center, $align: null, $gap: null)
-                                    @include boxsize-w-h-minw-minh-maxw-maxh($w: 55px, $h: 55px, $minw: null, $minh: null, $maxw: null, $maxh: null)
-                                    padding: 0 1rem
-                                    .remote-icon-default
-                                      @include size-w-h($w: 52px, $h: 45px)
-                                    .remote-icon-hover
-                                      @include size-w-h($w: 52px, $h: 45px)
-                                .remote-txt
-                                  @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: 160px, $minh: null, $maxw: null, $maxh: null)
-                                    margin: 0 0 0 0.5rem
-                .container-right
-                  @include boxsize-w-h-minw-minh-maxw-maxh($w: 90%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
-                    @include flex-d-j-a-g($dir: column, $justify: center, $align: center, $gap: null)
-                    margin: 0
-                    padding: 1rem
-                    .information-about-me-container
-                      @include flex-d-j-a-g($dir: column, $justify: null, $align: null, $gap: null)
-                        margin: 0
-                        padding: 0 1rem
-                        .imformation-about-me-text
-                          @include flex-d-j-a-g($dir: row, $justify: null, $align: null, $gap: 3rem)
-                    .contact-me-container-alignement
-                      @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
-                        @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
-            .about-me-bottom
-              height: 0
+          padding: 1rem
+
+          .information-about-me-container
+            @include flex-d-j-a-g($dir: column, $justify: null, $align: null, $gap: null)
+            margin: 0
+            padding: 0 1rem
+
+            .imformation-about-me-text
+              @include flex-d-j-a-g($dir: row, $justify: null, $align: null, $gap: 3rem)
+
+          .contact-me-container-alignement
+            @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+            @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
+
+        .about-me-bottom
+          height: 0
+
 
 @media (max-width: 600px)
   .work-together-section
     .about-me-section
       .about-me-infos-container
         @include flex-d-j-a-g($dir: column, $justify: center, $align: null, $gap: null)
-          text-align: center
-          padding: 2rem 1rem
-          .container-left
-            .i-am-plus-info-container
-              .info-container
-                @include flex-d-j-a-g($dir: column, $justify: null, $align: center, $gap: null)
-                  .located-icon-txt-container
-                    @include maxsize-w-h($w: 260px, $h: null)
-                      .remote-icon-txt-container
-                        @include maxsize-w-h($w: 260px, $h: null)
-                .container-right
-                  .information-about-me-container
-                    text-align: start
-                    padding: 0 3rem
-                    .imformation-about-me-text
-                      padding: 0 3rem
+        text-align: center
+        padding: 2rem 1rem
+
+        .container-left
+          .i-am-plus-info-container
+            .info-container
+              @include flex-d-j-a-g($dir: column, $justify: null, $align: center, $gap: null)
+
+              .located-icon-txt-container
+                @include maxsize-w-h($w: 260px, $h: null)
+
+                .remote-icon-txt-container
+                  @include maxsize-w-h($w: 260px, $h: null)
+
+        .container-right
+          .information-about-me-container
+            text-align: start
+            padding: 0 3rem
+
+            .imformation-about-me-text
+              padding: 0 3rem
+
 
 @media (max-width: 540px)
   .work-together-section
@@ -137,65 +170,81 @@
         .container-left
           .lets-work-together-container
             padding: 1rem
-            .container-right
-              .information-about-me-container
-                padding: 0 1.5rem
-                .imformation-about-me-text
-                  padding: 0 1.5rem
+
+        .container-right
+          .information-about-me-container
+            padding: 0 1.5rem
+
+            .imformation-about-me-text
+              padding: 0 1.5rem
+
 
 @media (max-width: 385px)
   .work-together-section
     .about-me-infos-container
       @include flex-d-j-a-g($dir: column, $justify: center, $align: null, $gap: null)
-        text-align: center
-        padding: 2rem 1rem
-        .container-left
+      text-align: center
+      padding: 2rem 1rem
+
+      .container-left
+        align-items: center
+
+        .lets-work-together-container
+          @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
           align-items: center
-          .lets-work-together-container
-            @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
-              align-items: center
-              .lets-work-together-text
-                @include boxsize-w-h-minw-minh-maxw-maxh($w: 280px, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
-                  padding: 1rem 0 0 0
-                  text-align: center
-                  justify-content: center
+
+          .lets-work-together-text
+            @include boxsize-w-h-minw-minh-maxw-maxh($w: 280px, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
+            padding: 1rem 0 0 0
+            text-align: center
+            justify-content: center
+
 
 @media (max-width: 320px)
   .work-together-section
     .about-me-section
       .about-me-infos-container
         @include flex-d-j-a-g($dir: column, $justify: center, $align: null, $gap: null)
-          text-align: center
-          padding: 2rem 1rem
-          .container-left
-            align-items: center
-            padding: 0
+        text-align: center
+        padding: 2rem 1rem
+
+        .container-left
+          align-items: center
+          padding: 0
+          @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
+
+          .lets-work-together-container
             @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
-              .lets-work-together-container
-                @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
-                  align-items: center
-                  .lets-work-together-text
-                    font-size: 50px
-                    width: 218px
-                    .i-am-plus-info-container
-                      .info-container
-                        min-width: auto
-                        .located-icon-txt-container
-                          width: 190px
-                          margin: 0 0
-                          padding: 1rem 0
-                          .located-txt
-                            min-width: auto
-                            margin: 0
-                            text-align: start
-                            .remote-icon-txt-container
-                              width: 190px
-                              margin: 0
-                              padding: 1rem
-                              .remote-txt
-                                min-width: auto
-                                margin: 0
-                                text-align: start
+            align-items: center
+
+            .lets-work-together-text
+              font-size: 50px
+              width: 218px
+
+              .i-am-plus-info-container
+                .info-container
+                  min-width: auto
+
+                  .located-icon-txt-container
+                    width: 190px
+                    margin: 0 0
+                    padding: 1rem 0
+
+                    .located-txt
+                      min-width: auto
+                      margin: 0
+                      text-align: start
+
+                      .remote-icon-txt-container
+                        width: 190px
+                        margin: 0
+                        padding: 1rem
+
+                        .remote-txt
+                          min-width: auto
+                          margin: 0
+                          text-align: start
+
 
 @media (max-width: 250px)
   .work-together-section
@@ -203,8 +252,10 @@
       .about-me-circles-container
         .circle-5
           background: none
+
           .circle-6
             background: none
+
 
 @media (max-width: 235px)
   .work-together-section
@@ -214,10 +265,12 @@
           .lets-work-together-container
             .lets-work-together-text
               font-size: 40px
+
               .i-am-plus-info-container
                 .i-am-container
                   .i-am-text
                     font-size: 30px
+
 
 @media (prefers-reduced-motion: reduce)
   .reveal-zoom

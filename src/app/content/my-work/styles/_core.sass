@@ -8,64 +8,64 @@
 
 .my-work-section
   @include flex-d-j-a-g(row, center, stretch)
-    @include size-w-h(100%, auto)
+  @include size-w-h(100%, auto)
+  margin: 0
+
+  .my-work-container
+    @include flex-d-j-a-g(column, center, center)
+    @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
+    padding: 1rem
     margin: 0
 
-    .my-work-container
-      @include flex-d-j-a-g(column, center, center)
-        @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
-        padding: 1rem
-        margin: 0
+    .my-work-head-container
+      @include flex-d-j-a-g(row, center, stretch, 1rem)
+      @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
+      margin: 0
 
-        .my-work-head-container
-          @include flex-d-j-a-g(row, center, stretch, 1rem)
-            @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
-            margin: 0
+      .container-left
+        @include flex-d-j-a-g(column, flex-start, stretch)
+        @include boxsize-w-h-minw-minh-maxw-maxh(50%, auto)
 
-            .container-left
-              @include flex-d-j-a-g(column, flex-start, stretch)
-                @include boxsize-w-h-minw-minh-maxw-maxh(50%, auto)
+        .my-work-circle-7-container
+          @include flex-d-j-a-g(row, flex-end, center)
+          @include boxsize-w-h-minw-minh-maxw-maxh(100%, 110px, 108px, null, null)
 
-                .my-work-circle-7-container
-                  @include flex-d-j-a-g(row, flex-end, center)
-                    @include boxsize-w-h-minw-minh-maxw-maxh(100%, 110px, 108px, null, null)
+          .circle-7
+            display: flex
+            @include circle-size(108px)
+            @include brandradial-size-x-y-c1-c2-c3()
 
-                    .circle-7
-                      display: flex
-                      @include circle-size(108px)
-                        @include brandradial-size-x-y-c1-c2-c3()
+        .header-and-description-container
+          .header-container
+            @include flex-d-j-a-g(row, flex-start, stretch)
+            @include size-w-h(100%, auto)
 
-                .header-and-description-container
-                  .header-container
-                    @include flex-d-j-a-g(row, flex-start, stretch)
-                      @include size-w-h(100%, auto)
-
-                        .header-txt
-                          @include flex-d-j-a-g(row, flex-start, stretch)
-                            margin: 0
-                            @include font-f-s-c-w-lh-ls-a('Baloo 2', clamp(4rem, 4vw + 2rem, 6rem), #5988FF, bold, 100%, 1%)
-
-                    .description-container
-                      @include flex-d-j-a-g(row, flex-start, center)
-                        @include size-w-h(100%, auto)
-
-                        .description-txt
-                          @include flex-d-j-a-g(row, flex-start, stretch)
-                            margin: 0
-                            @include font-f-s-c-w-lh-ls-a('Montserrat', clamp(1rem, 1.5vw + 0.5rem, 1.5rem), #000000, 400, 120%, 0%)
-
-            .container-right
+            .header-txt
               @include flex-d-j-a-g(row, flex-start, stretch)
-                @include boxsize-w-h-minw-minh-maxw-maxh(50%, auto)
+              margin: 0
+              @include font-f-s-c-w-lh-ls-a('Baloo 2', clamp(4rem, 4vw + 2rem, 6rem), #5988FF, bold, 100%, 1%)
 
-                .my-work-circle-8-container
-                  @include flex-d-j-a-g(row, flex-end, flex-end)
-                    @include size-w-h(100%, auto)
+          .description-container
+            @include flex-d-j-a-g(row, flex-start, center)
+            @include size-w-h(100%, auto)
 
-                    .circle-8
-                      display: flex
-                      @include circle-size(183px)
-                        @include brandradial-size-x-y-c1-c2-c3()
+            .description-txt
+              @include flex-d-j-a-g(row, flex-start, stretch)
+              margin: 0
+              @include font-f-s-c-w-lh-ls-a('Montserrat', clamp(1rem, 1.5vw + 0.5rem, 1.5rem), #000000, 400, 120%, 0%)
+
+      .container-right
+        @include flex-d-j-a-g(row, flex-start, stretch)
+        @include boxsize-w-h-minw-minh-maxw-maxh(50%, auto)
+
+        .my-work-circle-8-container
+          @include flex-d-j-a-g(row, flex-end, flex-end)
+          @include size-w-h(100%, auto)
+
+          .circle-8
+            display: flex
+            @include circle-size(183px)
+            @include brandradial-size-x-y-c1-c2-c3()
 
 @keyframes zoomIn
   from

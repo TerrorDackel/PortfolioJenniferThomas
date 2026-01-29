@@ -2,102 +2,103 @@
 
 :host
   @include boxsize-w-h-minw-minh-maxw-maxh(100%)
-    margin-left: 0
-    margin-right: 0
-    margin-bottom: 0
+  margin-left: 0
+  margin-right: 0
+  margin-bottom: 0
 
 .footer-section
   @include flex-d-j-a-g(row, center, center)
-    @include boxsize-w-h-minw-minh-maxw-maxh(100%, 100%, null, null, null, 390px)
-    margin: 0
-    @include brandradial-size-x-y-c1-c2-c3(71.18% 335.57%, 28.82%, -124.4%, #5988FF, #5988FF, #0043F0)
-    bottom: 0
-    right: 0
-    left: 0
+  @include boxsize-w-h-minw-minh-maxw-maxh(100%, 100%, null, null, null, 390px)
+  margin: 0
+  @include brandradial-size-x-y-c1-c2-c3(71.18% 335.57%, 28.82%, -124.4%, #5988FF, #5988FF, #0043F0)
+  bottom: 0
+  right: 0
+  left: 0
 
-    .footer-container
-      @include flex-d-j-a-g(row, space-between, center)
-        @include boxsize-w-h-minw-minh-maxw-maxh(100%, null, null, null, 1920px, 240px)
+  .footer-container
+    @include flex-d-j-a-g(row, space-between, center)
+    @include boxsize-w-h-minw-minh-maxw-maxh(100%, null, null, null, 1920px, 240px)
 
-        .logo-container
-          @include flex-d-j-a-g(row, flex-start, center)
-            @include boxsize-w-h-minw-minh-maxw-maxh(25%, 70px)
-            padding: 2rem
+    .logo-container
+      @include flex-d-j-a-g(row, flex-start, center)
+      @include boxsize-w-h-minw-minh-maxw-maxh(25%, 70px)
+      padding: 2rem
+      color: white
+
+      .logo-img
+        @include flex-d-j-a-g(row, center, center)
+        @include size-w-h(64px, 69px)
+
+        &:hover
+          cursor: pointer
+
+    .created-copyright-impressum-container
+      @include flex-d-j-a-g(column, center, center)
+      @include boxsize-w-h-minw-minh-maxw-maxh(50%, 210px)
+      color: white
+
+      .over-copyright-container
+        @include flex-d-j-a-g(row, center, center)
+        @include boxsize-w-h-minw-minh-maxw-maxh(100%, 50px)
+        padding: 1rem
+        color: white
+
+      .copyright-container
+        @include flex-d-j-a-g(row, center, center)
+        @include boxsize-w-h-minw-minh-maxw-maxh(100%, 50px)
+        padding: 1rem
+
+      .legal-notice-container
+        @include flex-d-j-a-g(row, center, center)
+        @include boxsize-w-h-minw-minh-maxw-maxh(100%, 50px)
+        padding: 1rem
+        @include font-f-s-c-w-lh-ls-a(Montserrat, 1rem, null, 400, 120%, 0)
+
+        a
+          text-decoration: none
+          position: relative
+          display: inline-block
+          font-weight: normal
+          transition: font-weight 0.1s ease
+
+          &:link,
+          &:visited
+            text-decoration: none
             color: white
+            display: inline-block
+            position: relative
 
-            .logo-img
-              @include flex-d-j-a-g(row, center, center)
-                @include size-w-h(64px, 69px)
-                &:hover
-                  cursor: pointer
+            &::after
+              content: ''
+              position: absolute
+              width: 50%
+              height: 2px
+              background: currentColor
+              left: 50%
+              bottom: -2px
+              transform: translateX(-50%)
+              opacity: 0
+              transition: opacity 0.1s ease
 
-        .created-copyright-impressum-container
-          @include flex-d-j-a-g(column, center, center)
-            @include boxsize-w-h-minw-minh-maxw-maxh(50%, 210px)
-            color: white
+            &:hover
+              font-weight: bold
+              cursor: pointer
 
-            .over-copyright-container
-              @include flex-d-j-a-g(row, center, center)
-                @include boxsize-w-h-minw-minh-maxw-maxh(100%, 50px)
-                padding: 1rem
-                color: white
+              &::after
+                opacity: 1
 
-            .copyright-container
-              @include flex-d-j-a-g(row, center, center)
-                @include boxsize-w-h-minw-minh-maxw-maxh(100%, 50px)
-                padding: 1rem
+    .footer-iconlist-horizontal
+      @include flex-d-j-a-g(row, space-around, center)
+      @include boxsize-w-h-minw-minh-maxw-maxh(25%, 30px)
+      padding: 1rem
 
-            .legal-notice-container
-              @include flex-d-j-a-g(row, center, center)
-                @include boxsize-w-h-minw-minh-maxw-maxh(100%, 50px)
-                padding: 1rem
-                @include font-f-s-c-w-lh-ls-a(Montserrat, 1rem, null, 400, 120%, 0)
+      .footer-icon-container
+        @include flex-d-j-a-g(row, center, center)
+        @include size-w-h(30px, 30px)
+        transition: transform 0.1s ease
 
-                a
-                  text-decoration: none
-                  position: relative
-                  display: inline-block
-                  font-weight: normal
-                  transition: font-weight 0.1s ease
+        img:hover
+          transform: scale(1.25)
 
-                  &:link,
-                  &:visited
-                    text-decoration: none
-                    color: white
-                    display: inline-block
-                    position: relative
-
-                    &::after
-                      content: ''
-                      position: absolute
-                      width: 50%
-                      height: 2px
-                      background: currentColor
-                      left: 50%
-                      bottom: -2px
-                      transform: translateX(-50%)
-                      opacity: 0
-                      transition: opacity 0.1s ease
-
-                    &:hover
-                      font-weight: bold
-                      cursor: pointer
-
-                      &::after
-                        opacity: 1
-
-        .footer-iconlist-horizontal
-          @include flex-d-j-a-g(row, space-around, center)
-            @include boxsize-w-h-minw-minh-maxw-maxh(25%, 30px)
-            padding: 1rem
-
-            .footer-icon-container
-              @include flex-d-j-a-g(row, center, center)
-                @include size-w-h(30px, 30px)
-                transition: transform 0.1s ease
-
-                img:hover
-                  transform: scale(1.25)
-
-        .legal-notice-container-mobile
-          display: none
+    .legal-notice-container-mobile
+      display: none

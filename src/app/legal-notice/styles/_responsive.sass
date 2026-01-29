@@ -3,37 +3,39 @@
 @media (max-width: 1050px)
   .legal-notice
     @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1000px, null)
-      margin: 0
-      .txt
-        @include flex-d-j-a-g($dir: column, $align: center)
-          @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $maxw: auto)
-            padding: 0 1rem
-            margin-top: 100px
+    margin: 0
 
-            h2
-              @include boxsize-w-h-minw-minh-maxw-maxh($w:100%, $maxw: auto)
-                @include font-f-s-c-w-lh-ls-a($size: 64px)
+    .txt
+      @include flex-d-j-a-g($dir: column, $align: center)
+      @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $maxw: auto)
+      padding: 0 1rem
+      margin-top: 100px
 
-            .legal-notice-item
-              h4
-                @include font-f-s-c-w-lh-ls-a($size: 28px)
+      h2
+        @include boxsize-w-h-minw-minh-maxw-maxh($w:100%, $maxw: auto)
+        @include font-f-s-c-w-lh-ls-a($size: 64px)
 
-                span
-                  @include font-f-s-c-w-lh-ls-a($size: 1rem)
+      .legal-notice-item
+        h4
+          @include font-f-s-c-w-lh-ls-a($size: 28px)
+
+        span
+          @include font-f-s-c-w-lh-ls-a($size: 1rem)
 
 @media (max-width: 700px)
   .legal-notice
     @include boxsize-w-h-minw-minh-maxw-maxh($w: 90%, $h: auto, $maxw: auto)
-      .txt
-        h2
-          @include font-f-s-c-w-lh-ls-a($size: 42px)
 
-            .legal-notice-item
-              h4
-                @include font-f-s-c-w-lh-ls-a($size: 23px)
+    .txt
+      h2
+        @include font-f-s-c-w-lh-ls-a($size: 42px)
 
-                span
-                  @include font-f-s-c-w-lh-ls-a($size: 1rem)
+      .legal-notice-item
+        h4
+          @include font-f-s-c-w-lh-ls-a($size: 23px)
+
+        span
+          @include font-f-s-c-w-lh-ls-a($size: 1rem)
 
 @media (max-width: 450px)
   .legal-notice
@@ -47,13 +49,13 @@
       h2
         @include font-f-s-c-w-lh-ls-a($size: 26px)
 
-          .legal-notice-item
-            h4
-              @include font-f-s-c-w-lh-ls-a($size: 20px)
-                padding: 0
+      .legal-notice-item
+        h4
+          @include font-f-s-c-w-lh-ls-a($size: 20px)
+          padding: 0
 
-                span
-                  @include font-f-s-c-w-lh-ls-a($size: 1rem)
+        span
+          @include font-f-s-c-w-lh-ls-a($size: 1rem)
 
 @media (max-width: 280px)
   .legal-notice
@@ -61,12 +63,12 @@
       h2
         @include font-f-s-c-w-lh-ls-a($size: 20px)
 
-          .legal-notice-item
-            h4
-              @include font-f-s-c-w-lh-ls-a($size: 18px)
+      .legal-notice-item
+        h4
+          @include font-f-s-c-w-lh-ls-a($size: 18px)
 
-                span
-                  @include font-f-s-c-w-lh-ls-a($size: 1rem)
+        span
+          @include font-f-s-c-w-lh-ls-a($size: 1rem)
 
 @media (prefers-reduced-motion: reduce)
   .reveal-zoom

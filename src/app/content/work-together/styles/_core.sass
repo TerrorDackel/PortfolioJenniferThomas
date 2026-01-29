@@ -2,253 +2,254 @@
 
 :host
   @include flex-d-j-a-g(row, center, null)
-    @include boxsize-w-h-minw-minh-maxw-maxh(100%)
-    margin-left: 0
-    margin-right: 0
+  @include boxsize-w-h-minw-minh-maxw-maxh(100%)
+  margin-left: 0
+  margin-right: 0
 
 a
   text-decoration: none
   @include font-f-s-c-w-lh-ls-a('Poppins', 23px, #5988FF, 400, 120%, 0)
-    &:hover
-      color: #ffff
+
+  &:hover
+    color: #ffff
 
 .work-together-section
   @include flex-d-j-a-g(row, center, null)
-    @include boxsize-w-h-minw-minh-maxw-maxh(100%, 100%)
+  @include boxsize-w-h-minw-minh-maxw-maxh(100%, 100%)
 
-    .about-me-section
-      overflow: hidden
-      @include flex-d-j-a-g(column, null, center)
-        @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
-        margin: 0
-        background-color: none
+  .about-me-section
+    overflow: hidden
+    @include flex-d-j-a-g(column, null, center)
+    @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
+    margin: 0
+    background-color: none
 
-        .about-me-circles-container
-          @include flex-d-j-a-g(row, space-around, null)
-            @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
-            background: White
-            z-index: 5
+    .about-me-circles-container
+      @include flex-d-j-a-g(row, space-around, null)
+      @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
+      background: White
+      z-index: 5
 
-            .circle-placeholder
-              display: flex
-              @include circle-size(1px)
+      .circle-placeholder
+        display: flex
+        @include circle-size(1px)
 
-            .circle-5
-              display: flex
-              @include circle-size(206px)
-                margin-top: -103px
-                @include brandradial-size-x-y-c1-c2-c3()
-                z-index: 0
+      .circle-5
+        display: flex
+        @include circle-size(206px)
+        margin-top: -103px
+        @include brandradial-size-x-y-c1-c2-c3()
+        z-index: 0
 
-            .circle-6
-              display: flex
-              @include circle-size(82px)
-                margin-top: 24.5px
-                @include brandradial-size-x-y-c1-c2-c3()
+      .circle-6
+        display: flex
+        @include circle-size(82px)
+        margin-top: 24.5px
+        @include brandradial-size-x-y-c1-c2-c3()
 
-        .about-me-infos-container
-          @include flex-d-j-a-g(row, center, center)
-            @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
+    .about-me-infos-container
+      @include flex-d-j-a-g(row, center, center)
+      @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
+      margin: 0
+
+      .container-left
+        @include flex-d-j-a-g(column, center, flex-start)
+        @include boxsize-w-h-minw-minh-maxw-maxh(45%, auto, null, null, 620px)
+        padding: 0 1rem 0 3rem
+
+        .lets-work-together-container
+          @include flex-d-j-a-g(column, center, null)
+          @include boxsize-w-h-minw-minh-maxw-maxh(100%)
+          padding: 1rem 0 0 1rem
+
+          .lets-work-together-text
+            @include flex-d-j-a-g(row, flex-start, null)
+            @include boxsize-w-h-minw-minh-maxw-maxh(100%)
             margin: 0
+            @include font-f-s-c-w-lh-ls-a('Baloo 2', clamp(50px, 8vw, 121px), #5988FF, bold, 100%, 1%)
 
-            .container-left
-              @include flex-d-j-a-g(column, center, flex-start)
-                @include boxsize-w-h-minw-minh-maxw-maxh(45%, auto, null, null, 620px)
-                padding: 0 1rem 0 3rem
+        .i-am-plus-info-container
+          @include flex-d-j-a-g(column, null, null)
+          @include boxsize-w-h-minw-minh-maxw-maxh(100%)
 
-                .lets-work-together-container
-                  @include flex-d-j-a-g(column, center, null)
-                    @include boxsize-w-h-minw-minh-maxw-maxh(100%)
-                    padding: 1rem 0 0 1rem
+          .i-am-container
+            @include flex-d-j-a-g(row, center, center)
+            @include boxsize-w-h-minw-minh-maxw-maxh(100%)
 
-                    .lets-work-together-text
-                      @include flex-d-j-a-g(row, flex-start, null)
-                        @include boxsize-w-h-minw-minh-maxw-maxh(100%)
-                        margin: 0
-                        @include font-f-s-c-w-lh-ls-a('Baloo 2', clamp(50px, 8vw, 121px), #5988FF, bold, 100%, 1%)
+            .i-am-text
+              @include flex-d-j-a-g(row, center, null)
+              @include boxsize-w-h-minw-minh-maxw-maxh(100%)
+              @include font-f-s-c-w-lh-ls-a('Baloo 2', 45px, #5988FF, bold, 100%, 1%)
 
-                .i-am-plus-info-container
-                  @include flex-d-j-a-g(column, null, null)
-                    @include boxsize-w-h-minw-minh-maxw-maxh(100%)
+          .info-container
+            @include flex-d-j-a-g(row, flex-start, center)
+            @include boxsize-w-h-minw-minh-maxw-maxh(100%)
 
-                    .i-am-container
-                      @include flex-d-j-a-g(row, center, center)
-                        @include boxsize-w-h-minw-minh-maxw-maxh(100%)
+            .located-icon-txt-container
+              @include flex-d-j-a-g(row, flex-start, center)
+              @include boxsize-w-h-minw-minh-maxw-maxh(45%)
+              min-width: 230px
+              min-height: 55px
+              padding: 0 0.5rem 0 0
 
-                        .i-am-text
-                          @include flex-d-j-a-g(row, center, null)
-                            @include boxsize-w-h-minw-minh-maxw-maxh(100%)
-                            @include font-f-s-c-w-lh-ls-a('Baloo 2', 45px, #5988FF, bold, 100%, 1%)
+              .located-icon-container
+                @include flex-d-j-a-g(row, center, center)
+                @include boxsize-w-h-minw-minh-maxw-maxh(100px, 55px)
 
-                    .info-container
-                      @include flex-d-j-a-g(row, flex-start, center)
-                        @include boxsize-w-h-minw-minh-maxw-maxh(100%)
+                .located-icon-link
+                  position: relative
+                  display: inline-block
+                  @include boxsize-w-h-minw-minh-maxw-maxh(32.5px, 40px)
 
-                        .located-icon-txt-container
-                          @include flex-d-j-a-g(row, flex-start, center)
-                            @include boxsize-w-h-minw-minh-maxw-maxh(45%)
-                            min-width: 230px
-                            min-height: 55px
-                            padding: 0 0.5rem 0 0
+                  img
+                    position: absolute
+                    top: 0
+                    left: 0
+                    @include boxsize-w-h-minw-minh-maxw-maxh(32.5px, 40px)
+                    object-fit: contain
+                    transition: opacity 0.1s ease-in-out
 
-                            .located-icon-container
-                              @include flex-d-j-a-g(row, center, center)
-                                @include boxsize-w-h-minw-minh-maxw-maxh(100px, 55px)
+                  .located-icon-img-default
+                    opacity: 1
+                    z-index: 1
 
-                                .located-icon-link
-                                  position: relative
-                                  display: inline-block
-                                  @include boxsize-w-h-minw-minh-maxw-maxh(32.5px, 40px)
+                  .located-icon-img-hover
+                    opacity: 0
+                    z-index: 2
 
-                                    img
-                                      position: absolute
-                                      top: 0
-                                      left: 0
-                                      @include boxsize-w-h-minw-minh-maxw-maxh(32.5px, 40px)
-                                        object-fit: contain
-                                        transition: opacity 0.1s ease-in-out
+                  &:hover
+                    .located-icon-img-default
+                      opacity: 0
+                      .located-icon-img-hover
+                        opacity: 1
 
-                                    .located-icon-img-default
-                                      opacity: 1
-                                      z-index: 1
+              .located-txt
+                @include flex-d-j-a-g(row, flex-start, center)
+                @include boxsize-w-h-minw-minh-maxw-maxh(100%, 55px)
+                min-width: 160px
+                margin-left: 1rem
+                @include font-f-s-c-w-lh-ls-a('Montserrat', clamp(0.9rem, 0.5vw + 0.5rem, 1.3rem), #5988FF, 400, 120%)
 
-                                    .located-icon-img-hover
-                                      opacity: 0
-                                      z-index: 2
+            .remote-icon-txt-container
+              @include flex-d-j-a-g(row, flex-start, center)
+              @include boxsize-w-h-minw-minh-maxw-maxh(45%)
+              min-width: 230px
+              min-height: 55px
+              padding: 0 0 0 0.5rem
 
-                                    &:hover
-                                      .located-icon-img-default
-                                        opacity: 0
-                                        .located-icon-img-hover
-                                          opacity: 1
+              .remote-icon
+                position: relative
+                display: inline-block
+                @include boxsize-w-h-minw-minh-maxw-maxh(100px, 55px)
 
-                            .located-txt
-                              @include flex-d-j-a-g(row, flex-start, center)
-                                @include boxsize-w-h-minw-minh-maxw-maxh(100%, 55px)
-                                min-width: 160px
-                                margin-left: 1rem
-                                @include font-f-s-c-w-lh-ls-a('Montserrat', clamp(0.9rem, 0.5vw + 0.5rem, 1.3rem), #5988FF, 400, 120%)
+                img
+                  position: absolute
+                  top: 0
+                  left: 0
+                  @include boxsize-w-h-minw-minh-maxw-maxh(52px, 45px)
+                  object-fit: contain
+                  transition: opacity 0.1s ease-in-out
 
-                        .remote-icon-txt-container
-                          @include flex-d-j-a-g(row, flex-start, center)
-                            @include boxsize-w-h-minw-minh-maxw-maxh(45%)
-                            min-width: 230px
-                            min-height: 55px
-                            padding: 0 0 0 0.5rem
+                .remote-icon-default
+                  opacity: 1
+                  z-index: 1
 
-                            .remote-icon
-                              position: relative
-                              display: inline-block
-                              @include boxsize-w-h-minw-minh-maxw-maxh(100px, 55px)
+                .remote-icon-hover
+                  opacity: 0
+                  z-index: 2
 
-                                img
-                                  position: absolute
-                                  top: 0
-                                  left: 0
-                                  @include boxsize-w-h-minw-minh-maxw-maxh(52px, 45px)
-                                    object-fit: contain
-                                    transition: opacity 0.1s ease-in-out
+                &:hover
+                  .remote-icon-default
+                    opacity: 0
+                    .remote-icon-hover
+                      opacity: 1
 
-                                .remote-icon-default
-                                  opacity: 1
-                                  z-index: 1
+              .remote-txt
+                @include flex-d-j-a-g(row, flex-start, center)
+                @include boxsize-w-h-minw-minh-maxw-maxh(100%, 55px)
+                min-width: 160px
+                margin-left: 1rem
+                @include font-f-s-c-w-lh-ls-a('Montserrat', clamp(0.9rem, 0.5vw + 0.5rem, 1.3rem), #5988FF, 400, 120%)
 
-                                .remote-icon-hover
-                                  opacity: 0
-                                  z-index: 2
+      .container-right
+        @include flex-d-j-a-g(column, center, flex-start)
+        @include boxsize-w-h-minw-minh-maxw-maxh(45%, auto, null, null, 620px)
+        padding: 0 3rem 0 1rem
 
-                                &:hover
-                                  .remote-icon-default
-                                    opacity: 0
-                                    .remote-icon-hover
-                                      opacity: 1
+        .information-about-me-container
+          @include flex-d-j-a-g(column, null, null)
+          @include boxsize-w-h-minw-minh-maxw-maxh(100%)
+          z-index: 50
+          background-color: white
+          @include font-f-s-c-w-lh-ls-a('Montserrat', clamp(0.9rem, 1.5vw + 0.5rem, 1.4rem))
 
-                            .remote-txt
-                              @include flex-d-j-a-g(row, flex-start, center)
-                                @include boxsize-w-h-minw-minh-maxw-maxh(100%, 55px)
-                                min-width: 160px
-                                margin-left: 1rem
-                                @include font-f-s-c-w-lh-ls-a('Montserrat', clamp(0.9rem, 0.5vw + 0.5rem, 1.3rem), #5988FF, 400, 120%)
+          .imformation-about-me-text
+            @include flex-d-j-a-g(row, null, null)
+            @include font-f-s-c-w-lh-ls-a('Montserrat', clamp(1rem, 1.5vw + 0.5rem, 1.4rem), #000000, 400, 120%)
 
-            .container-right
-              @include flex-d-j-a-g(column, center, flex-start)
-                @include boxsize-w-h-minw-minh-maxw-maxh(45%, auto, null, null, 620px)
-                padding: 0 3rem 0 1rem
+        .contact-me-container-alignement
+          @include flex-d-j-a-g(row, flex-start, center)
+          @include boxsize-w-h-minw-minh-maxw-maxh(100%)
+          padding: 2rem 0
 
-                .information-about-me-container
-                  @include flex-d-j-a-g(column, null, null)
-                    @include boxsize-w-h-minw-minh-maxw-maxh(100%)
-                    z-index: 50
-                    background-color: white
-                    @include font-f-s-c-w-lh-ls-a('Montserrat', clamp(0.9rem, 1.5vw + 0.5rem, 1.4rem))
+          .send-a-message-container
+            @include flex-d-j-a-g(row, center, center)
+            position: relative
+            overflow: hidden
+            @include boxsize-w-h-minw-minh-maxw-maxh(auto, auto)
+            @include border-w-s-c-r(2px, solid, #5988FF, 10px)
+            @include clickable-prop-dur-ease(all, 0.1s)
+            will-change: transform
+            box-shadow: 5px 5px 15px 0px #00000026
 
-                    .imformation-about-me-text
-                      @include flex-d-j-a-g(row, null, null)
-                        @include font-f-s-c-w-lh-ls-a('Montserrat', clamp(1rem, 1.5vw + 0.5rem, 1.4rem), #000000, 400, 120%)
+            .send-a-message-btn
+              @include flex-d-j-a-g(row, center, center)
 
-                .contact-me-container-alignement
-                  @include flex-d-j-a-g(row, flex-start, center)
-                    @include boxsize-w-h-minw-minh-maxw-maxh(100%)
-                    padding: 2rem 0
+              .send-a-message-btn-text
+                z-index: 2
+                padding: 0 1rem
+                margin: 1rem 0
+                transition: transform 0.1s ease
+                will-change: transform
+                @include font-f-s-c-w-lh-ls-a('Poppins', 1.4375rem, #5988FF, 400, 120%)
 
-                    .send-a-message-container
-                      @include flex-d-j-a-g(row, center, center)
-                        position: relative
-                        overflow: hidden
-                        @include boxsize-w-h-minw-minh-maxw-maxh(auto, auto)
-                        @include border-w-s-c-r(2px, solid, #5988FF, 10px)
-                        @include clickable-prop-dur-ease(all, 0.1s)
-                        will-change: transform
-                        box-shadow: 5px 5px 15px 0px #00000026
+            &::before,
+            &::after
+              content: ''
+              position: absolute
+              @include boxsize-w-h-minw-minh-maxw-maxh(100%, 100%)
+              background-color: #0043F0
+              z-index: 1
+              transform: scale(0)
+              transition: transform 0.1s ease
+              border-radius: inherit
 
-                        .send-a-message-btn
-                          @include flex-d-j-a-g(row, center, center)
+            &::before
+              top: 0
+              left: 0
+              transform-origin: top left
 
-                            .send-a-message-btn-text
-                              z-index: 2
-                              padding: 0 1rem
-                              margin: 1rem 0
-                              transition: transform 0.1s ease
-                              will-change: transform
-                              @include font-f-s-c-w-lh-ls-a('Poppins', 1.4375rem, #5988FF, 400, 120%)
+            &::after
+              bottom: 0
+              right: 0
+              transform-origin: bottom right
 
-                        &::before,
-                        &::after
-                          content: ''
-                          position: absolute
-                          @include boxsize-w-h-minw-minh-maxw-maxh(100%, 100%)
-                            background-color: #0043F0
-                            z-index: 1
-                            transform: scale(0)
-                            transition: transform 0.1s ease
-                            border-radius: inherit
+            &:hover::before,
+            &:hover::after
+              transform: scale(1)
 
-                        &::before
-                          top: 0
-                          left: 0
-                          transform-origin: top left
+            &:hover
+              color: #FFFFFF
+              transform: scale(1.08)
 
-                        &::after
-                          bottom: 0
-                          right: 0
-                          transform-origin: bottom right
+              .send-a-message-btn
+                .send-a-message-btn-text
+                  transform: scale(1.08)
+                  color: #FFFFFF
 
-                        &:hover::before,
-                        &:hover::after
-                          transform: scale(1)
-
-                        &:hover
-                          color: #FFFFFF
-                          transform: scale(1.08)
-
-                          .send-a-message-btn
-                            .send-a-message-btn-text
-                              transform: scale(1.08)
-                              color: #FFFFFF
-
-        .about-me-bottom
-          @include flex-d-j-a-g(row, null, null)
-            @include boxsize-w-h-minw-minh-maxw-maxh(100%, 131px)
+    .about-me-bottom
+      @include flex-d-j-a-g(row, null, null)
+      @include boxsize-w-h-minw-minh-maxw-maxh(100%, 131px)
 
 @keyframes zoomIn
   from
