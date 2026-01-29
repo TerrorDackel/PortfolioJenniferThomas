@@ -1,52 +1,52 @@
 @use '../../../../styles/mixins' as m
 
 :host
-    display: block
-    width: 100%
-    margin-left: 0
-    margin-right: 0
+  display: block
+  width: 100%
+  margin-left: 0
+  margin-right: 0
 
 .ref-section
-    @include m.flex-d-j-a-g(column, flex-start, center)
+  @include m.flex-d-j-a-g(column, flex-start, center)
     @include m.boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
     margin: 0
     background: linear-gradient(128.94deg, #5988FF -33.96%, #5988FF 36.71%, #0043F0 112.25%)
     backdrop-filter: blur(4px)
 
     .ref-container
-        @include m.flex-d-j-a-g(column, flex-start, center)
+      @include m.flex-d-j-a-g(column, flex-start, center)
         @include m.boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
         @include m.font-f-s-c-w-lh-ls-a(null, null, #FFFFFF)
         padding: 1rem
 
         .header-and-text-container
-            @include m.flex-d-j-a-g(column, flex-start, center)
+          @include m.flex-d-j-a-g(column, flex-start, center)
             @include m.boxsize-w-h-minw-minh-maxw-maxh(100%, null, null, null, 1920px)
 
             .header-container
-                @include m.flex-d-j-a-g(row, center, stretch)
+              @include m.flex-d-j-a-g(row, center, stretch)
                 @include m.boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
                 margin: 0
 
                 .header-txt
-                    @include m.boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
+                  @include m.boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
                     @include m.font-f-s-c-w-lh-ls-a('Baloo 2', clamp(4rem, 4vw + 2rem, 6rem), #FFFFFF, bold, 141%, 0, center)
                     margin: 0
                     padding-top: 2rem
 
             .second-header-container
-                @include m.flex-d-j-a-g(row, center, stretch)
+              @include m.flex-d-j-a-g(row, center, stretch)
                 @include m.boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
                 margin: 0
 
                 .second-header-txt
-                    @include m.boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
+                  @include m.boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
                     @include m.font-f-s-c-w-lh-ls-a('Montserrat', clamp(1rem, 4vw + 0.2rem, 2rem), #FFFFFF, normal, 141%, 0, center)
                     margin: 0
                     padding: 1rem
 
         .ref-posts
-            @include m.hide-scrollbar
+          @include m.hide-scrollbar
             overflow-x: auto
             overflow-y: hidden
             @include m.flex-d-j-a-g(row, flex-start, center, 2rem)
@@ -62,17 +62,17 @@
             -ms-overflow-style: none
 
             &::-webkit-scrollbar
-                display: none
+              display: none
 
-            cursor: grab
+              cursor: grab
 
             &.dragging
-                cursor: grabbing
-                scroll-snap-type: none
-                user-select: none
+              cursor: grabbing
+              scroll-snap-type: none
+              user-select: none
 
             .ref-card
-                @include m.flex-d-j-a-g(row, flex-start, stretch)
+              @include m.flex-d-j-a-g(row, flex-start, stretch)
                 flex-shrink: 0
                 @include m.boxsize-w-h-minw-minh-maxw-maxh(100%)
                 max-width: 300px
@@ -81,17 +81,16 @@
                 padding: 0.8rem
 
 @keyframes zoomIn
-    from
-        opacity: 0
-        transform: scale(0.7)
-    to
-        opacity: 1
-        transform: scale(1)
+  from
+    opacity: 0
+    transform: scale(0.7)
+  to
+    opacity: 1
+    transform: scale(1)
 
 .reveal-zoom
-    opacity: 0
-    will-change: transform, opacity
+  opacity: 0
+  will-change: transform, opacity
 
 .reveal-zoom.in-view
-    animation: zoomIn 1s cubic-bezier(.2,.8,.2,1) var(--reveal-delay, 0ms) both
-
+  animation: zoomIn 1s cubic-bezier(.2,.8,.2,1) var(--reveal-delay, 0ms) both

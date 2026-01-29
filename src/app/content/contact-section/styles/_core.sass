@@ -1,259 +1,259 @@
 @use '../../../../styles/mixins' as *
 
 :host
-    display: block
-    width: 100dvw
-    margin-left: 0
-    margin-right: 0
-    background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%)
+  display: block
+  width: 100dvw
+  margin-left: 0
+  margin-right: 0
+  background: linear-gradient(179.99deg, #FFFFFF 12.89%, #EAF0FF 91.39%)
 
 #contact
-    scroll-margin-top: -117px
+  scroll-margin-top: -117px
 
 form
-    display: flex
-    justify-content: center
+  display: flex
+  justify-content: center
 
 .contact-section
-    @include flex-d-j-a-g(row, center, center)
+  @include flex-d-j-a-g(row, center, center)
     max-width: 1920px
     @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
     overflow: hidden
 
     .contact-container
-        @include flex-d-j-a-g(column, center, center)
+      @include flex-d-j-a-g(column, center, center)
         @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, null, 1920px)
         padding: 0 2rem
 
         .circle-13-container
-            @include flex-d-j-a-g(row, center, center)
+          @include flex-d-j-a-g(row, center, center)
             margin-top: 30px
 
             .circle-13
-                display: flex
-                @include circle-size(130px)
+              display: flex
+              @include circle-size(130px)
                 margin-left: 1%
                 @include brandradial-size-x-y-c1-c2-c3()
 
         .contact-title-and-container-left-right
-            @include flex-d-j-a-g(column, center, center)
+          @include flex-d-j-a-g(column, center, center)
             @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, null, 1920px)
 
             .title-contact-container
-                @include flex-d-j-a-g(column, flex-start, flex-start)
+              @include flex-d-j-a-g(column, flex-start, flex-start)
                 @include boxsize-w-h-minw-minh-maxw-maxh(95%, 200px, null, null, null, 1920px)
                 @include minsize-w-h(null, 180px)
                 padding: 0 1rem
 
                 .title-txt
-                    @include boxsize-w-h-minw-minh-maxw-maxh(null, auto, null, null, null, 1920px)
+                  @include boxsize-w-h-minw-minh-maxw-maxh(null, auto, null, null, null, 1920px)
                     @include font-f-s-c-w-lh-ls-a('Baloo 2', 90px, #5988FF, bold, 120%, 0)
 
             .container-left-and-right
-                @include flex-d-j-a-g(row, space-between, stretch)
+              @include flex-d-j-a-g(row, space-between, stretch)
                 @include boxsize-w-h-minw-minh-maxw-maxh(95%, auto, null, null, null, 1700px)
                 margin: 0
                 padding: 0 1rem
 
                 .container-left
-                    @include flex-d-j-a-g(column, flex-start, flex-start)
+                  @include flex-d-j-a-g(column, flex-start, flex-start)
                     @include boxsize-w-h-minw-minh-maxw-maxh(49%, auto, null, null, null, 800px)
                     padding: 0 1rem 0 0
 
                     .got-a-problem-title-container
-                        @include flex-d-j-a-g(row, flex-start, flex-start)
+                      @include flex-d-j-a-g(row, flex-start, flex-start)
                         @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, null, 960px)
                         padding: 0
 
                         .got-a-problem-txt
-                            display: flex
-                            align-items: center
-                            @include boxsize-w-h-minw-minh-maxw-maxh(100%)
+                          display: flex
+                          align-items: center
+                          @include boxsize-w-h-minw-minh-maxw-maxh(100%)
                             @include minsize-w-h(null, 150px)
                             @include font-f-s-c-w-lh-ls-a('Montserrat', 32px, #5988FF, 960, 120%, 0)
                             margin: 0
 
                     .got-a-problem-title-description-container
-                        @include flex-d-j-a-g(row, flex-start, center)
+                      @include flex-d-j-a-g(row, flex-start, center)
                         @include boxsize-w-h-minw-minh-maxw-maxh(97%, auto)
                         @include minsize-w-h(null, 150px)
                         padding: 0
 
                         .got-a-problem-title-description-txt
-                            display: flex
-                            @include font-f-s-c-w-lh-ls-a('Montserrat', 1rem, null, 400, 120%, 0)
+                          display: flex
+                          @include font-f-s-c-w-lh-ls-a('Montserrat', 1rem, null, 400, 120%, 0)
 
                     .need-a-contact-me-container
-                        @include flex-d-j-a-g(row, flex-start, center)
+                      @include flex-d-j-a-g(row, flex-start, center)
                         @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
                         overflow: hidden
 
                         .need-a-contact-me-txt
-                            @include flex-d-j-a-g($justify: flex-start)
+                          @include flex-d-j-a-g($justify: flex-start)
                             @include boxsize-w-h-minw-minh-maxw-maxh(100%)
                             @include font-f-s-c-w-lh-ls-a('Poppins', 0.9rem, #5988FF, 400, 120%, 0)
                             margin: 0
 
                             .need-a-contact-me-question
-                                display: flex
-                                white-space: nowrap
+                              display: flex
+                              white-space: nowrap
 
                             .need-a-contact-me-answer
-                                display: flex
-                                white-space: nowrap
-                                font-weight: bold
+                              display: flex
+                              white-space: nowrap
+                              font-weight: bold
 
                             .circle-11-container
-                                @include flex-d-j-a-g(row, center, stretch)
+                              @include flex-d-j-a-g(row, center, stretch)
                                 @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
                                 left: 242px
 
                                 .circle-11
-                                    display: flex
-                                    @include circle-size(204px)
+                                  display: flex
+                                  @include circle-size(204px)
                                     @include brandradial-size-x-y-c1-c2-c3()
 
                 .container-right
-                    @include flex-d-j-a-g(column, center, flex-start)
+                  @include flex-d-j-a-g(column, center, flex-start)
                     @include boxsize-w-h-minw-minh-maxw-maxh(49%, auto, null, null, null, 800px)
                     padding: 0 1rem 0 0
 
                     .your-name-container,
                     .your-email-container,
                     .your-message-container
-                        @include flex-d-j-a-g(column, flex-start, stretch)
+                      @include flex-d-j-a-g(column, flex-start, stretch)
                         @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
                         padding: 1rem 0
 
                         .name-textfield,
                         .email-textfield,
                         .message-textfield
-                            display: flex
-                            @include boxsize-w-h-minw-minh-maxw-maxh(100%)
+                          display: flex
+                          @include boxsize-w-h-minw-minh-maxw-maxh(100%)
                             @include border-w-s-c-r(1px, solid, #5988FF, 0.5rem)
                             padding: 1rem 0 1rem 1rem
                             background-color: #ffffff
                             font-family: 'Poppins'
 
                         .message-textfield
-                            @include size-w-h(null, 7rem)
+                          @include size-w-h(null, 7rem)
 
                     .your-name-container
-                        height: 80px
+                      height: 80px
 
-                        .error-slot
-                            display: block
-                            align-self: stretch
-                            @include boxsize-w-h-minw-minh-maxw-maxh(100%)
-                            @include minsize-w-h(null, 1.25rem)
+                      .error-slot
+                        display: block
+                        align-self: stretch
+                        @include boxsize-w-h-minw-minh-maxw-maxh(100%)
+                          @include minsize-w-h(null, 1.25rem)
 
                         .error-msg
-                            @include font-f-s-c-w-lh-ls-a('Poppins', 1rem, red, null, null, null, left)
+                          @include font-f-s-c-w-lh-ls-a('Poppins', 1rem, red, null, null, null, left)
                             margin-top: 0.5rem
 
                     .your-email-container
-                        height: 80px
+                      height: 80px
 
-                        .error-slot
-                            display: block
-                            align-self: stretch
-                            @include boxsize-w-h-minw-minh-maxw-maxh(100%)
-                            @include minsize-w-h(null, 1.25rem)
+                      .error-slot
+                        display: block
+                        align-self: stretch
+                        @include boxsize-w-h-minw-minh-maxw-maxh(100%)
+                          @include minsize-w-h(null, 1.25rem)
 
                         .error-msg
-                            @include font-f-s-c-w-lh-ls-a('Poppins', 1rem, red, null, null, null, left)
+                          @include font-f-s-c-w-lh-ls-a('Poppins', 1rem, red, null, null, null, left)
                             margin-top: 0.5rem
 
                     .your-message-container
-                        height: 200px
+                      height: 200px
 
-                        .error-slot
-                            display: block
-                            align-self: stretch
-                            @include boxsize-w-h-minw-minh-maxw-maxh(100%)
-                            @include minsize-w-h(null, 1.25rem)
+                      .error-slot
+                        display: block
+                        align-self: stretch
+                        @include boxsize-w-h-minw-minh-maxw-maxh(100%)
+                          @include minsize-w-h(null, 1.25rem)
 
                         .error-msg
-                            @include font-f-s-c-w-lh-ls-a('Poppins', 1rem, red, null, null, null, left)
+                          @include font-f-s-c-w-lh-ls-a('Poppins', 1rem, red, null, null, null, left)
                             margin-top: 0.5rem
 
                     .agree-privacypolice-check
-                        @include flex-d-j-a-g(column, flex-start, flex-start)
+                      @include flex-d-j-a-g(column, flex-start, flex-start)
                         @include boxsize-w-h-minw-minh-maxw-maxh(auto, 100px)
                         @include minsize-w-h(null, 20px)
                         padding: 0 1rem 0 0
 
                         .agree-privacypolice-check-label
-                            @include flex-d-j-a-g(row, flex-start, center)
+                          @include flex-d-j-a-g(row, flex-start, center)
                             padding: 0
 
                             .agree-privacypolice-check-div
-                                @include flex-d-j-a-g(row, flex-start, flex-start)
+                              @include flex-d-j-a-g(row, flex-start, flex-start)
                                 @include boxsize-w-h-minw-minh-maxw-maxh(20px, 50px)
                                 margin-left: -0.3rem
 
                                 .checkbox
-                                    display: flex
-                                    @include size-w-h(24px)
+                                  display: flex
+                                  @include size-w-h(24px)
                                     &:hover
-                                        cursor: pointer
+                                      cursor: pointer
 
                             .agree-privacypolice-check-txt
-                                display: flex
-                                @include boxsize-w-h-minw-minh-maxw-maxh(null, 50px)
+                              display: flex
+                              @include boxsize-w-h-minw-minh-maxw-maxh(null, 50px)
                                 @include font-f-s-c-w-lh-ls-a('Montserrat', 1rem)
                                 margin: 0
 
                                 p
-                                    white-space: nowrap
-                                    overflow: hidden
-                                    margin: 0 !important
+                                  white-space: nowrap
+                                  overflow: hidden
+                                  margin: 0 !important
 
                                 .privacy-link
-                                    display: inline-block
-                                    color: #5988FF
-                                    text-decoration: none
-                                    margin: 0 3px
-                                    &:hover
-                                        cursor: pointer
+                                  display: inline-block
+                                  color: #5988FF
+                                  text-decoration: none
+                                  margin: 0 3px
+                                  &:hover
+                                    cursor: pointer
 
                             .agree-privacypolice-check-txt
-                                @include font-f-s-c-w-lh-ls-a('Montserrat', 1rem, null, null, 120%)
+                              @include font-f-s-c-w-lh-ls-a('Montserrat', 1rem, null, null, 120%)
                                 overflow-wrap: break-word
 
                         .error-slot
-                            display: block
-                            align-self: stretch
-                            @include boxsize-w-h-minw-minh-maxw-maxh(100%)
+                          display: block
+                          align-self: stretch
+                          @include boxsize-w-h-minw-minh-maxw-maxh(100%)
                             @include minsize-w-h(null, 1.25rem)
 
                         .error-msg
-                            @include font-f-s-c-w-lh-ls-a('Poppins', 1rem, red, null, null, null, left)
+                          @include font-f-s-c-w-lh-ls-a('Poppins', 1rem, red, null, null, null, left)
                             margin-top: 0.5rem
 
                     .agree-privacypolice-check-mobile
-                        display: none
+                      display: none
 
-                        .error-slot
-                            display: block
-                            align-self: stretch
-                            @include boxsize-w-h-minw-minh-maxw-maxh(100%, null, null, 1.25rem, null, null)
+                      .error-slot
+                        display: block
+                        align-self: stretch
+                        @include boxsize-w-h-minw-minh-maxw-maxh(100%, null, null, 1.25rem, null, null)
 
                         .error-msg
-                            @include font-f-s-c-w-lh-ls-a('Poppins', 1rem, red, null, null, null, left)
+                          @include font-f-s-c-w-lh-ls-a('Poppins', 1rem, red, null, null, null, left)
                             margin-top: 0.5rem
 
                     .success-msg
-                        @include font-f-s-c-w-lh-ls-a('Poppins', 1rem, green)
+                      @include font-f-s-c-w-lh-ls-a('Poppins', 1rem, green)
                         margin-top: 0.5rem
 
                     .button-container
-                        @include flex-d-j-a-g(row, center, flex-end)
+                      @include flex-d-j-a-g(row, center, flex-end)
                         @include boxsize-w-h-minw-minh-maxw-maxh(100%, 80px)
 
                         .btn-contact
-                            z-index: 0
-                            @include boxsize-w-h-minw-minh-maxw-maxh(auto, 58px, null, null, null, 181px)
+                          z-index: 0
+                          @include boxsize-w-h-minw-minh-maxw-maxh(auto, 58px, null, null, null, 181px)
                             @include border-w-s-c-r(2px, solid, #BBBBBB, 10px)
                             @include font-f-s-c-w-lh-ls-a('Poppins', 1rem, white, 500)
                             padding: 15px 30px
@@ -263,66 +263,66 @@ form
 
                             &::before,
                             &::after
-                                z-index: -1
-                                content: ''
-                                position: absolute
-                                @include boxsize-w-h-minw-minh-maxw-maxh(100%, 100%)
+                              z-index: -1
+                              content: ''
+                              position: absolute
+                              @include boxsize-w-h-minw-minh-maxw-maxh(100%, 100%)
                                 background-color: #0043F0
                                 transform: scale(0)
                                 transition: transform 0.1s ease
 
                             &::before
-                                top: 0
-                                left: 0
-                                transform-origin: top left
+                              top: 0
+                              left: 0
+                              transform-origin: top left
 
                             &::after
-                                bottom: 0
-                                right: 0
-                                transform-origin: bottom right
+                              bottom: 0
+                              right: 0
+                              transform-origin: bottom right
 
                             &:disabled
-                                background-color: #ccc
-                                border-color: #ccc
-                                cursor: not-allowed
+                              background-color: #ccc
+                              border-color: #ccc
+                              cursor: not-allowed
 
                             &.btn-valid
-                                border-color: #0043F0
-                                cursor: pointer
+                              border-color: #0043F0
+                              cursor: pointer
 
-                                &:hover
-                                    color: #FFFFFF
-                                    transform: scale(1.15)
+                              &:hover
+                                color: #FFFFFF
+                                transform: scale(1.15)
 
                                 &:hover::before,
                                 &:hover::after
-                                    transform: scale(1)
+                                  transform: scale(1)
 
                     .name-textfield.inline-error-active::placeholder,
                     .email-textfield.inline-error-active::placeholder,
                     .message-textfield.inline-error-active::placeholder
-                        color: #E53935
-                        opacity: 1
+                      color: #E53935
+                      opacity: 1
 
                     .name-textfield:-webkit-autofill,
                     .email-textfield:-webkit-autofill,
                     .message-textfield:-webkit-autofill
-                        -webkit-text-fill-color: inherit
-                        -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset
-                        transition: background-color 9999s ease-out 0s
+                      -webkit-text-fill-color: inherit
+                      -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset
+                      transition: background-color 9999s ease-out 0s
 
             .circle-14-container
-                @include flex-d-j-a-g(row, flex-end, stretch)
+              @include flex-d-j-a-g(row, flex-end, stretch)
                 @include boxsize-w-h-minw-minh-maxw-maxh(100%)
                 padding: 1rem
 
                 .circle-14
-                    display: flex
-                    @include circle-size(73px)
+                  display: flex
+                  @include circle-size(73px)
                     @include brandradial-size-x-y-c1-c2-c3()
 
             .back-to-top
-                @include flex-d-j-a-g(row)
+              @include flex-d-j-a-g(row)
                 @include boxsize-w-h-minw-minh-maxw-maxh(100%)
                 padding: 1rem
                 border: none
@@ -330,29 +330,29 @@ form
                 cursor: pointer
 
                 &:focus-visible
-                    outline: 2px solid #0043F0
-                    outline-offset: 4px
+                  outline: 2px solid #0043F0
+                  outline-offset: 4px
 
                 .back-to-top-btn
-                    display: flex
-                    @include size-w-h(40px, 40px)
+                  display: flex
+                  @include size-w-h(40px, 40px)
                     @include bg-url-repeat-pos-size('/assets/img/icon/arrowup.png')
                     @include clickable-prop-dur-ease(background-image, 0.1s)
 
                     &:hover
-                        @include bg-url-repeat-pos-size('/assets/img/icon/arrowup-hover.png')
+                      @include bg-url-repeat-pos-size('/assets/img/icon/arrowup-hover.png')
 
 @keyframes zoomIn
-    from
-        opacity: 0
-        transform: scale(0.7)
-    to
-        opacity: 1
-        transform: scale(1)
+  from
+    opacity: 0
+    transform: scale(0.7)
+  to
+    opacity: 1
+    transform: scale(1)
 
 .reveal-zoom
-    opacity: 0
-    will-change: transform, opacity
+  opacity: 0
+  will-change: transform, opacity
 
 .reveal-zoom.in-view
-    animation: zoomIn 0.5s cubic-bezier(.2,.8,.2,1) var(--reveal-delay, 0ms) both
+  animation: zoomIn 0.5s cubic-bezier(.2,.8,.2,1) var(--reveal-delay, 0ms) both

@@ -1,46 +1,46 @@
 @use '../../../../../styles/mixins' as *
 
 :host
-    @include flex-d-j-a-g(row, center, center)
+  @include flex-d-j-a-g(row, center, center)
     @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
 
 .programm-box-section
-    @include flex-d-j-a-g(row, center, center, 1rem)
+  @include flex-d-j-a-g(row, center, center, 1rem)
     @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
     flex-wrap: wrap
 
     .programm-box-container
-        @include flex-d-j-a-g(column, space-between, center, 1rem)
+      @include flex-d-j-a-g(column, space-between, center, 1rem)
         @include boxsize-w-h-minw-minh-maxw-maxh(null, null, null, null, 90px, 150px)
         padding: 2rem
 
         .programm-img-container
-            @include flex-d-j-a-g(row, center, center)
+          @include flex-d-j-a-g(row, center, center)
             @include size-w-h(70px, 75px)
 
             .programm-icon
-                display: inline-block
-                @include size-w-h(70px, 75px)
+              display: inline-block
+              @include size-w-h(70px, 75px)
                 transition: transform 0.1s ease
                 object-fit: contain
                 @include hover-scale-f(1.15)
 
         .programm-name-container
-            @include flex-d-j-a-g(row, center, center)
+          @include flex-d-j-a-g(row, center, center)
             @include size-w-h(65px, 38px)
 
             .programm-txt
-                @include font-f-s-c-w-lh-ls-a('Montserrat', 16px, #FFFFFF, 400, 120%, 0, center)
+              @include font-f-s-c-w-lh-ls-a('Montserrat', 16px, #FFFFFF, 400, 120%, 0, center)
                 display: inline-block
                 transition: transform 0.1s ease
                 @include hover-scale-f(1.15)
                 &:hover
-                    cursor: default
+                  cursor: default
 
 @keyframes text-pulse
-    0%, 100%
-        transform: scale(1)
-        color: #FFFFFF
-    50%
-        transform: scale(1.5)
-        color: #C2E6FF
+  0%, 100%
+    transform: scale(1)
+    color: #FFFFFF
+  50%
+    transform: scale(1.5)
+    color: #C2E6FF

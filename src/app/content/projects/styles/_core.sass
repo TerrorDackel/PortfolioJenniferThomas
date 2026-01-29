@@ -1,196 +1,192 @@
 @use '../../../../styles/mixins' as *
 
 :host
-    display: flex
-    justify-content: center
-    width: 100dvw
-    margin: 0
+  display: flex
+  justify-content: center
+  width: 100dvw
+  margin: 0
 
 .projects-section
-    @include flex-d-j-a-g(column, center, center)
+  @include flex-d-j-a-g(column, center, center)
     @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px, null)
     padding: 1rem
     margin: 0
 
     .first-project-container
-        @include flex-d-j-a-g(row, center, center)
+      @include flex-d-j-a-g(row, center, center)
         @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, null, null)
         padding: 2rem 1rem 3rem 1rem
         margin: 0
         gap: 1rem
 
         .container-left
-            @include flex-d-j-a-g(row, flex-start, flex-end)
+          @include flex-d-j-a-g(row, flex-start, flex-end)
             @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 620px, null)
 
             .project-img-container
-                @include flex-d-j-a-g(row, flex-start, stretch)
+              @include flex-d-j-a-g(row, flex-start, stretch)
                 @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, null, null)
 
                 .project-img-left
-                    @include flex-d-j-a-g(row, flex-end, center)
+                  @include flex-d-j-a-g(row, flex-end, center)
                     @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 720px, null)
                     transition: transform 0.1s ease
                     transform-origin: left center
 
                     &:hover
-                        transform: scale(1.03)
+                      transform: scale(1.03)
 
                     .a-img
-                        @include flex-d-j-a-g(row, center, center)
+                      @include flex-d-j-a-g(row, center, center)
                         @include boxsize-w-h-minw-minh-maxw-maxh(100%, null, null, null, null, null)
 
                         .project-img
-                            display: block
-                            width: 95%
-                            height: auto
-                            justify-content: center
-                            align-items: center
-                            object-fit: cover
-                            box-shadow: 5px 5px 15px 0px #00000026
+                          display: block
+                          width: 95%
+                          height: auto
+                          justify-content: center
+                          align-items: center
+                          object-fit: cover
+                          box-shadow: 5px 5px 15px 0px #00000026
 
         .container-right
-            @include flex-d-j-a-g(row, flex-end, flex-end)
+          @include flex-d-j-a-g(row, flex-end, flex-end)
             @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 620px, null)
 
             .project-description-container-right
-                @include flex-d-j-a-g(row, flex-end, flex-end)
+              @include flex-d-j-a-g(row, flex-end, flex-end)
                 @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 532px, null)
                 margin: 0
 
                 app-projects-txt-description
-                    @include flex-d-j-a-g(row, center, stretch)
+                  @include flex-d-j-a-g(row, center, stretch)
 
     .second-project-container
-        @include flex-d-j-a-g(row, center, center)
+      @include flex-d-j-a-g(row, center, center)
         @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, null, null)
         padding: 2rem 1rem 3rem 1rem
         margin: 0
         gap: 1rem
 
         .container-left
-            @include flex-d-j-a-g(row, flex-start, flex-end)
+          @include flex-d-j-a-g(row, flex-start, flex-end)
             @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 620px, null)
 
             .project-description-container-left
-                @include flex-d-j-a-g(row, flex-start, flex-end)
+              @include flex-d-j-a-g(row, flex-start, flex-end)
                 @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 532px, null)
                 margin: 0
 
                 app-projects-txt-description
-                    @include flex-d-j-a-g(row, center, stretch)
+                  @include flex-d-j-a-g(row, center, stretch)
 
         .container-right
-            @include flex-d-j-a-g(row, flex-end, flex-end)
+          @include flex-d-j-a-g(row, flex-end, flex-end)
             @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 620px, null)
 
             .project-img-container
-                @include flex-d-j-a-g(row, flex-start, stretch)
+              @include flex-d-j-a-g(row, flex-start, stretch)
                 @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, null, null)
 
                 .project-img-right
-                    @include flex-d-j-a-g(row, flex-start, center)
+                  @include flex-d-j-a-g(row, flex-start, center)
                     @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 720px, null)
                     transition: transform 0.1s ease
                     transform-origin: right center
 
                     &:hover
-                        transform: scale(1.03)
+                      transform: scale(1.03)
 
                     .a-img
-                        @include flex-d-j-a-g(row, center, center)
+                      @include flex-d-j-a-g(row, center, center)
                         @include boxsize-w-h-minw-minh-maxw-maxh(100%, null, null, null, null, null)
 
                         .project-img
-                            display: block
-                            width: 95%
-                            height: auto
-                            justify-content: center
-                            align-items: center
-                            object-fit: cover
-                            box-shadow: 5px 5px 15px 0px #00000026
+                          display: block
+                          width: 95%
+                          height: auto
+                          justify-content: center
+                          align-items: center
+                          object-fit: cover
+                          box-shadow: 5px 5px 15px 0px #00000026
 
     .third-project-container
-        @include flex-d-j-a-g(row, center, center)
+      @include flex-d-j-a-g(row, center, center)
         @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, null, null)
         padding: 2rem 1rem 4rem 1rem
         margin: 0
         gap: 1rem
 
         .container-left
-            @include flex-d-j-a-g(row, flex-start, flex-end)
+          @include flex-d-j-a-g(row, flex-start, flex-end)
             @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 620px, null)
 
             .project-img-container
-                @include flex-d-j-a-g(row, flex-start, stretch)
+              @include flex-d-j-a-g(row, flex-start, stretch)
                 @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, null, null)
 
                 .project-img-left
-                    @include flex-d-j-a-g(row, flex-end, center)
+                  @include flex-d-j-a-g(row, flex-end, center)
                     @include boxsize-w-h-minw-minh-maxw-maxh(100%, 100%, null, null, 720px, null)
                     transition: transform 0.1s ease
                     transform-origin: left center
 
                     &:hover
-                        transform: scale(1.03)
+                      transform: scale(1.03)
 
                     .a-img
-                        @include flex-d-j-a-g(row, center, center)
+                      @include flex-d-j-a-g(row, center, center)
                         @include boxsize-w-h-minw-minh-maxw-maxh(100%, null, null, null, null, null)
 
                         .project-img
-                            display: block
-                            width: 95%
-                            height: auto
-                            justify-content: center
-                            align-items: center
-                            object-fit: cover
-                            box-shadow: 5px 5px 15px 0px #00000026
+                          display: block
+                          width: 95%
+                          height: auto
+                          justify-content: center
+                          align-items: center
+                          object-fit: cover
+                          box-shadow: 5px 5px 15px 0px #00000026
 
         .container-right
-            @include flex-d-j-a-g(row, flex-end, flex-end)
+          @include flex-d-j-a-g(row, flex-end, flex-end)
             @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 620px, null)
 
             .project-description-container-right
-                @include flex-d-j-a-g(row, flex-end, flex-end)
+              @include flex-d-j-a-g(row, flex-end, flex-end)
                 @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 532px, null)
                 margin: 0
 
                 app-projects-txt-description
-                    @include flex-d-j-a-g(row, center, stretch)
+                  @include flex-d-j-a-g(row, center, stretch)
 
-    
-    
 @keyframes proj-slide-in-left
-    from
-        opacity: 0
-        transform: translateX(-600px) scale(.98)
-    to
-        opacity: 1
-        transform: translateX(0) scale(1)
+  from
+    opacity: 0
+    transform: translateX(-600px) scale(.98)
+  to
+    opacity: 1
+    transform: translateX(0) scale(1)
 
 @keyframes proj-slide-in-right
-    from
-        opacity: 0
-        transform: translateX(600px) scale(.98)
-    to
-        opacity: 1
-        transform: translateX(0) scale(1)
+  from
+    opacity: 0
+    transform: translateX(600px) scale(.98)
+  to
+    opacity: 1
+    transform: translateX(0) scale(1)
 
 .reveal-init
-    opacity: 0
-    will-change: transform, opacity
+  opacity: 0
+  will-change: transform, opacity
 
 .reveal-init.reveal-from-left
-    transform: translateX(-600px) scale(.98)
+  transform: translateX(-600px) scale(.98)
 
 .reveal-init.reveal-from-right
-    transform: translateX(600px) scale(.98)
+  transform: translateX(600px) scale(.98)
 
 .reveal-init.in-view.reveal-from-left
-    animation: proj-slide-in-left 600ms cubic-bezier(.2,.8,.2,1) var(--reveal-delay, 0ms) both
+  animation: proj-slide-in-left 600ms cubic-bezier(.2,.8,.2,1) var(--reveal-delay, 0ms) both
 
 .reveal-init.in-view.reveal-from-right
-    animation: proj-slide-in-right 600ms cubic-bezier(.2,.8,.2,1) var(--reveal-delay, 0ms) both
-
-
+  animation: proj-slide-in-right 600ms cubic-bezier(.2,.8,.2,1) var(--reveal-delay, 0ms) both

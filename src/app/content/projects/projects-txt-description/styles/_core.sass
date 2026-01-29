@@ -1,61 +1,61 @@
 @use '../../../../../styles/mixins' as *
 
 :host
-    display: block
-    width: 100%
-    margin: 0
-    justify-content: center
+  display: block
+  width: 100%
+  margin: 0
+  justify-content: center
 
 .project-infos-section
-    @include flex-d-j-a-g(column, flex-end, flex-start)
+  @include flex-d-j-a-g(column, flex-end, flex-start)
     @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
     margin: 0
 
     .project-infos-txt-container
-        @include flex-d-j-a-g(column, flex-start, flex-start)
+      @include flex-d-j-a-g(column, flex-start, flex-start)
         @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
 
         .header-container
-            @include flex-d-j-a-g(row, flex-start, center)
+          @include flex-d-j-a-g(row, flex-start, center)
             @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
             margin: 0
 
             .header-txt
-                @include flex-d-j-a-g(row, flex-start, center)
+              @include flex-d-j-a-g(row, flex-start, center)
                 @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
                 @include font-f-s-c-w-lh-ls-a('Baloo 2', 2.8125rem, #5988FF, bold, 120%, 0)
 
         .programms-container
-            @include flex-d-j-a-g(row, flex-start, center)
+          @include flex-d-j-a-g(row, flex-start, center)
             @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
 
             .programms-txt
-                @include flex-d-j-a-g(row, flex-start, center)
+              @include flex-d-j-a-g(row, flex-start, center)
                 @include font-f-s-c-w-lh-ls-a('Montserrat', 1.4375rem, #5988FF, 400, 120%, 0)
 
         .project-description-container
-            @include flex-d-j-a-g(row, flex-start, center)
+          @include flex-d-j-a-g(row, flex-start, center)
             @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
             margin: 0
 
             .project-description-txt
-                @include flex-d-j-a-g(row, flex-start, center)
+              @include flex-d-j-a-g(row, flex-start, center)
                 @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
                 @include font-f-s-c-w-lh-ls-a('Montserrat', 1rem, #000000, 400, 120%, 0)
                 gap: 1rem
                 padding: 2rem 0
 
     .btn-alignment
-        @include flex-d-j-a-g(row, flex-start, stretch)
+      @include flex-d-j-a-g(row, flex-start, stretch)
         @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
         padding: 0 1rem
 
         .livetest-alignment
-            display: none
+          display: none
 
-            .livetest-btn-container
-                @include flex-d-j-a-g(row, center, center)
-                @include boxsize-w-h-minw-minh-maxw-maxh(auto, auto)
+          .livetest-btn-container
+            @include flex-d-j-a-g(row, center, center)
+              @include boxsize-w-h-minw-minh-maxw-maxh(auto, auto)
                 margin: 0
                 padding: 1rem
                 @include border-w-s-c-r(2px, solid, #5988FF, 10px)
@@ -63,28 +63,28 @@
                 transition: transform 0.1s ease, color 0.1s ease
 
                 .livetest-btn
-                    @include flex-d-j-a-g(row, center, center)
+                  @include flex-d-j-a-g(row, center, center)
                     @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
                     @include font-f-s-c-w-lh-ls-a('Poppins', 1.4375rem, #FFFFFF, 400, 120%, 0)
 
                     a
-                        color: inherit
-                        text-decoration: none
-                        position: relative
-                        z-index: 2
-                        transition: color 0.1s ease
-                        outline: none
+                      color: inherit
+                      text-decoration: none
+                      position: relative
+                      z-index: 2
+                      transition: color 0.1s ease
+                      outline: none
 
                     a:focus-visible
-                        outline: 3px solid #FFFFFF
-                        outline-offset: 3px
-                        text-decoration: underline
+                      outline: 3px solid #FFFFFF
+                      outline-offset: 3px
+                      text-decoration: underline
 
                 &::before,
                 &::after
-                    content: ''
-                    position: absolute
-                    @include boxsize-w-h-minw-minh-maxw-maxh(100%, 100%)
+                  content: ''
+                  position: absolute
+                  @include boxsize-w-h-minw-minh-maxw-maxh(100%, 100%)
                     background-color: #0043F0
                     z-index: 1
                     transform: scale(0)
@@ -92,29 +92,29 @@
                     border-radius: inherit
 
                 &::before
-                    top: 0
-                    left: 0
-                    transform-origin: top left
+                  top: 0
+                  left: 0
+                  transform-origin: top left
 
                 &::after
-                    bottom: 0
-                    right: 0
-                    transform-origin: bottom right
+                  bottom: 0
+                  right: 0
+                  transform-origin: bottom right
 
                 &:hover::before,
                 &:hover::after
-                    transform: scale(1)
+                  transform: scale(1)
 
                 &:hover
-                    color: #FFFFFF
-                    transform: scale(1.08)
+                  color: #FFFFFF
+                  transform: scale(1.08)
 
         .project-github-btn-container-alignment
-            @include flex-d-j-a-g(row, center, center)
+          @include flex-d-j-a-g(row, center, center)
             @include boxsize-w-h-minw-minh-maxw-maxh(auto, auto)
 
             .project-github-btn-container
-                @include flex-d-j-a-g(row, center, center)
+              @include flex-d-j-a-g(row, center, center)
                 position: relative
                 overflow: hidden
                 @include boxsize-w-h-minw-minh-maxw-maxh(auto, auto)
@@ -126,10 +126,10 @@
                 will-change: transform
 
                 .github-btn
-                    z-index: 2
-                    transition: transform 0.1s ease
-                    will-change: transform
-                    @include flex-d-j-a-g(row, center, center)
+                  z-index: 2
+                  transition: transform 0.1s ease
+                  will-change: transform
+                  @include flex-d-j-a-g(row, center, center)
                     font-family: inherit
                     font-weight: inherit
                     font-size: inherit
@@ -137,23 +137,23 @@
                     letter-spacing: inherit
 
                     a
-                        color: inherit
-                        text-decoration: none
-                        z-index: 2
-                        position: relative
-                        transition: color 0.1s ease
-                        outline: none
+                      color: inherit
+                      text-decoration: none
+                      z-index: 2
+                      position: relative
+                      transition: color 0.1s ease
+                      outline: none
 
                     a:focus-visible
-                        outline: 3px solid currentColor
-                        outline-offset: 3px
-                        text-decoration: underline
+                      outline: 3px solid currentColor
+                      outline-offset: 3px
+                      text-decoration: underline
 
                 &::before,
                 &::after
-                    content: ''
-                    position: absolute
-                    @include boxsize-w-h-minw-minh-maxw-maxh(100%, 100%)
+                  content: ''
+                  position: absolute
+                  @include boxsize-w-h-minw-minh-maxw-maxh(100%, 100%)
                     background-color: #0043F0
                     z-index: 1
                     transform: scale(0)
@@ -161,19 +161,19 @@
                     border-radius: inherit
 
                 &::before
-                    top: 0
-                    left: 0
-                    transform-origin: top left
+                  top: 0
+                  left: 0
+                  transform-origin: top left
 
                 &::after
-                    bottom: 0
-                    right: 0
-                    transform-origin: bottom right
+                  bottom: 0
+                  right: 0
+                  transform-origin: bottom right
 
                 &:hover::before,
                 &:hover::after
-                    transform: scale(1)
+                  transform: scale(1)
 
                 &:hover
-                    color: #FFFFFF
-                    transform: scale(1.08)
+                  color: #FFFFFF
+                  transform: scale(1.08)

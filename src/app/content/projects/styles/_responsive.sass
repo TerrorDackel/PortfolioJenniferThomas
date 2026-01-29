@@ -1,161 +1,161 @@
 @use '../../../../styles/mixins' as *
 
 @media (max-width: 800px)
-    .projects-section
-        @include flex-d-j-a-g($dir: column, $justify: center, $align: center, $gap: 0)
-        @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
+  .projects-section
+    @include flex-d-j-a-g($dir: column, $justify: center, $align: center, $gap: 0)
+      @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
         margin: 0
 
         .first-project-container
-            @include flex-d-j-a-g($dir: column, $justify: center, $align: center, $gap: null)
+          @include flex-d-j-a-g($dir: column, $justify: center, $align: center, $gap: null)
             @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
             margin: 0
             padding: 0 1rem
 
             .container-left
-                @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+              @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
                 @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
                 margin: 0
                 padding: 0
 
                 .project-img-container
-                    .project-img-left
-                        transform-origin: center
+                  .project-img-left
+                    transform-origin: center
 
-                        .a-img
-                            .project-img
-                                @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
-                                height: auto
+                    .a-img
+                      .project-img
+                        @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+                          height: auto
 
             .container-right
-                @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+              @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
                 @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
                 margin: 0
                 padding: 0
 
                 .project-description-container-right
-                    @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+                  @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
                     @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
                     margin: 0
 
                     app-projects-txt-description
-                        @include flex-d-j-a-g($dir: row, $justify: center, $align: stretch, $gap: null)
+                      @include flex-d-j-a-g($dir: row, $justify: center, $align: stretch, $gap: null)
 
         .second-project-container
-            @include flex-d-j-a-g($dir: column-reverse, $justify: center, $align: center, $gap: null)
+          @include flex-d-j-a-g($dir: column-reverse, $justify: center, $align: center, $gap: null)
             @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
 
             .container-left
-                @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+              @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
                 @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
                 margin: 0
                 padding: 0
 
                 .project-description-container-left
-                    @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+                  @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
                     margin: 0
 
                     app-projects-txt-description
-                        @include flex-d-j-a-g($dir: row, $justify: center, $align: stretch, $gap: null)
+                    @include flex-d-j-a-g($dir: row, $justify: center, $align: stretch, $gap: null)
 
             .container-right
-                @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+              @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
                 @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
                 margin: 0
                 padding: 0
 
                 .project-img-container
-                    .project-img-right
-                        transform-origin: center
+                  .project-img-right
+                    transform-origin: center
 
-                        .a-img
-                            .project-img
-                                @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
-                                height: auto
+                    .a-img
+                      .project-img
+                        @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+                          height: auto
 
         .third-project-container
-            @include flex-d-j-a-g($dir: column, $justify: center, $align: center, $gap: null)
+          @include flex-d-j-a-g($dir: column, $justify: center, $align: center, $gap: null)
             @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
 
             .container-left
-                @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+              @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
                 @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
                 margin: 0
                 padding: 0
 
                 .project-img-container
-                    .project-img-left
-                        transform-origin: center
+                  .project-img-left
+                    transform-origin: center
 
-                        .a-img
-                            .project-img
-                                @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
-                                height: auto
+                    .a-img
+                      .project-img
+                        @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+                          height: auto
 
             .container-right
-                @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+              @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
                 @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
                 margin: 0
                 padding: 0
 
                 .project-description-container-right
-                    @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+                  @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
                     margin: 0
 
                     app-projects-txt-description
-                        @include flex-d-j-a-g($dir: row, $justify: center, $align: stretch, $gap: null)
+                    @include flex-d-j-a-g($dir: row, $justify: center, $align: stretch, $gap: null)
 
 @media (max-width: 300px)
-    .projects-section
-        .first-project-container
-            .container-left
-                .project-img-container
-                    .project-img-left
-                        @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+  .projects-section
+    .first-project-container
+      .container-left
+        .project-img-container
+          .project-img-left
+            @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
 
-                        .a-img
-                            @include boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
+              .a-img
+                @include boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
 
-                            .project-img
-                                @include boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
-                                padding: 1rem
+                  .project-img
+                    @include boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
+                      padding: 1rem
         .second-project-container
-            .container-left
-                .project-description-container-left
+          .container-left
+            .project-description-container-left
                     app-projects-txt-description
                         // keine Änderungen nötig (Layout bleibt flex/center)
             .container-right
-                .project-img-container
-                    .project-img-right
-                        @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+              .project-img-container
+                .project-img-right
+                  @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
 
-                        .a-img
-                            @include boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
+                    .a-img
+                      @include boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
 
-                            .project-img
-                                @include boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
-                                padding: 1rem
+                        .project-img
+                          @include boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
+                            padding: 1rem
         .third-project-container
-            .container-left
-                .project-img-container
-                    .project-img-left
-                        @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
+          .container-left
+            .project-img-container
+              .project-img-left
+                @include flex-d-j-a-g($dir: row, $justify: center, $align: center, $gap: null)
 
-                        .a-img
-                            @include boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
+                  .a-img
+                    @include boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $h: null, $minw: null, $minh: null, $maxw: null, $maxh: null)
 
-                            .project-img
-                                @include boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
-                                padding: 1rem
+                      .project-img
+                        @include boxsize-w-h-minw-minh-maxw-maxh($w: 95%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
+                          padding: 1rem
 
 @media (prefers-reduced-motion: reduce)
-    .reveal-init
-        opacity: 1 !important
-        transform: none !important
-        animation: none !important
+  .reveal-init
+    opacity: 1 !important
+    transform: none !important
+    animation: none !important
 
 @media screen and (max-width: 1400px)
-    .reveal-init
-        opacity: 1 !important
-        transform: none !important
-        animation: none !important
+  .reveal-init
+    opacity: 1 !important
+    transform: none !important
+    animation: none !important

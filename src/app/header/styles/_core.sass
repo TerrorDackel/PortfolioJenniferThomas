@@ -1,19 +1,19 @@
 @use '../../../styles/mixins' as *
 
 :host
-    @include boxsize-w-h-minw-minh-maxw-maxh(100dvw)
+  @include boxsize-w-h-minw-minh-maxw-maxh(100dvw)
     margin-left: 0
     margin-right: 0
 
 a
-    text-decoration: none
-    @include font-f-s-c-w-lh-ls-a('Montserrat', 26px, #5988FF, 400, 120%, null, null)
+  text-decoration: none
+  @include font-f-s-c-w-lh-ls-a('Montserrat', 26px, #5988FF, 400, 120%, null, null)
 
 a:hover
-    @include font-f-s-c-w-lh-ls-a('Montserrat', 26px, #5988FF, bold, 120%, null, null)
+  @include font-f-s-c-w-lh-ls-a('Montserrat', 26px, #5988FF, bold, 120%, null, null)
 
 .header-section
-    @include flex-d-j-a-g(row, center, center)
+  @include flex-d-j-a-g(row, center, center)
     @include boxsize-w-h-minw-minh-maxw-maxh(100dvw, 117px)
     position: fixed
     top: 0
@@ -24,71 +24,71 @@ a:hover
     z-index: 100
 
     .header-container
-        @include flex-d-j-a-g(row, space-between, center)
+      @include flex-d-j-a-g(row, space-between, center)
         @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
         padding-left: 1rem
         z-index: 6
 
         .header-logo-container
-            @include flex-d-j-a-g(row, center, center)
+          @include flex-d-j-a-g(row, center, center)
 
             .header-img-container
-                @include flex-d-j-a-g(row, center, center)
+              @include flex-d-j-a-g(row, center, center)
                 @include size-w-h(64px, 69px)
 
                 .logo-button
-                    display: flex
-                    align-items: center
-                    justify-content: center
-                    border: none
-                    background: transparent
-                    padding: 0
-                    cursor: pointer
+                  display: flex
+                  align-items: center
+                  justify-content: center
+                  border: none
+                  background: transparent
+                  padding: 0
+                  cursor: pointer
 
                 .logo-img
-                    @include size-w-h(64px, 69px)
+                  @include size-w-h(64px, 69px)
 
                     &:hover
-                        cursor: pointer
+                      cursor: pointer
 
         .header-navbar-container
-            @include flex-d-j-a-g(row, flex-end, center)
+          @include flex-d-j-a-g(row, flex-end, center)
             width: auto
             height: auto
 
             .navbar-desktop
-                @include flex-d-j-a-g(row, flex-end, center)
+              @include flex-d-j-a-g(row, flex-end, center)
                 height: auto
 
                 .navbar-desktop-links-container
-                    display: flex
-                    justify-content: center
-                    align-items: center
-                    gap: 0.5rem
-                    width: 100%
+                  display: flex
+                  justify-content: center
+                  align-items: center
+                  gap: 0.5rem
+                  width: 100%
 
-                    .navbar-desktop-link
-                        display: inline-block
-                        padding: 0.5rem 0.5rem
-                        text-align: center
-                        @include font-f-s-c-w-lh-ls-a('Montserrat', 23px, #5988FF, 400, 120%, 0)
-                        transition: transform 0.1s ease
-                        will-change: transform
-                        white-space: nowrap
+                  .navbar-desktop-link
+                    display: inline-block
+                    padding: 0.5rem 0.5rem
+                    text-align: center
+                    @include font-f-s-c-w-lh-ls-a('Montserrat', 23px, #5988FF, 400, 120%, 0)
+                      transition: transform 0.1s ease
+                      will-change: transform
+                      white-space: nowrap
 
-                        &:hover
-                            text-shadow: 0 0 0.6px #5988FF, 0 0 0.6px #5988FF
-                            cursor: pointer
-                            transform: scale(1.1)
+                      &:hover
+                        text-shadow: 0 0 0.6px #5988FF, 0 0 0.6px #5988FF
+                        cursor: pointer
+                        transform: scale(1.1)
 
                     .navbar-desktop-de-en-container
-                        @include flex-d-j-a-g(row, center, center)
+                      @include flex-d-j-a-g(row, center, center)
 
                         .de,
                         .en
-                            width: 35px
-                            text-align: center
-                            @include font-f-s-c-w-lh-ls-a('Montserrat', 23px, #5988FF, 400, 120%, null, null)
+                          width: 35px
+                          text-align: center
+                          @include font-f-s-c-w-lh-ls-a('Montserrat', 23px, #5988FF, 400, 120%, null, null)
                             transition: transform 0.1s ease, font-weight 0.2s ease
                             transform-origin: center
                             border: none
@@ -97,54 +97,54 @@ a:hover
                             cursor: pointer
 
                             &:hover
-                                text-shadow: 0 0 0.6px #5988FF, 0 0 0.6px #5988FF
-                                transform: scale(1.15)
+                              text-shadow: 0 0 0.6px #5988FF, 0 0 0.6px #5988FF
+                              transform: scale(1.15)
 
                             &.active
-                                font-weight: bold
-                                transform: scale(1.15)
+                              font-weight: bold
+                              transform: scale(1.15)
 
                         .de
-                            padding: 0 6px
+                          padding: 0 6px
 
                         .cut
-                            width: 10px
-                            text-align: center
-                            @include font-f-s-c-w-lh-ls-a('Montserrat', 23px, #5988FF, 400, 120%, null, null)
+                          width: 10px
+                          text-align: center
+                          @include font-f-s-c-w-lh-ls-a('Montserrat', 23px, #5988FF, 400, 120%, null, null)
                             pointer-events: none
 
             .navbar-mobile
-                display: none
-                flex-direction: column
-                width: 100%
-                height: 60px
-                margin-top: 0px
-                z-index: 10
+              display: none
+              flex-direction: column
+              width: 100%
+              height: 60px
+              margin-top: 0px
+              z-index: 10
 
-                .navbar-mobile-burger-icon
-                    @include flex-d-j-a-g(row, flex-end, flex-start)
-                    width: 100%
-                    height: auto
-                    cursor: pointer
-                    border: none
-                    background: transparent
-                    padding: 0
+              .navbar-mobile-burger-icon
+                @include flex-d-j-a-g(row, flex-end, flex-start)
+                  width: 100%
+                  height: auto
+                  cursor: pointer
+                  border: none
+                  background: transparent
+                  padding: 0
 
-                    .burger-menu-img
-                        position: fixed
-                        top: 44px
-                        right: 0px
-                        display: flex
-                        justify-content: flex-end
-                        align-content: center
-                        @include size-w-h(32px, 28px)
-                        margin-right: 30px
+                  .burger-menu-img
+                    position: fixed
+                    top: 44px
+                    right: 0px
+                    display: flex
+                    justify-content: flex-end
+                    align-content: center
+                    @include size-w-h(32px, 28px)
+                      margin-right: 30px
 
                 .navbar-mobile-links-container
-                    position: fixed
-                    top: 117px
-                    right: 0px
-                    @include flex-d-j-a-g(column, center, center)
+                  position: fixed
+                  top: 117px
+                  right: 0px
+                  @include flex-d-j-a-g(column, center, center)
                     backdrop-filter: blur(1rem)
                     background-color: rgba(223, 223, 223, 0.95)
                     color: #5988FF
@@ -159,30 +159,30 @@ a:hover
                     white-space: nowrap
 
                     &.show
-                        opacity: 1
-                        transform: translateY(0)
-                        @include flex-d-j-a-g(column, center, center)
+                      opacity: 1
+                      transform: translateY(0)
+                      @include flex-d-j-a-g(column, center, center)
                         margin: 0 -1rem 0 0
 
                     &.hide
-                        opacity: 0
-                        transform: translateY(-50px)
-                        pointer-events: none
+                      opacity: 0
+                      transform: translateY(-50px)
+                      pointer-events: none
 
                     .navbar-mobile-link
-                        @include flex-d-j-a-g(column, flex-start, center)
+                      @include flex-d-j-a-g(column, flex-start, center)
                         width: 180px
                         height: 40px
                         padding: 1rem 2rem
 
                     .navbar-mobile-de-en-container
-                        @include flex-d-j-a-g(row, flex-start, center, 4px)
+                      @include flex-d-j-a-g(row, flex-start, center, 4px)
 
                         .de,
                         .en
-                            width: 35px
-                            text-align: center
-                            @include font-f-s-c-w-lh-ls-a('Montserrat', 23px, #5988FF, 400, 120%, null, null)
+                          width: 35px
+                          text-align: center
+                          @include font-f-s-c-w-lh-ls-a('Montserrat', 23px, #5988FF, 400, 120%, null, null)
                             transition: transform 0.1s ease, font-weight 0.1s ease
                             transform-origin: center
                             border: none
@@ -191,15 +191,15 @@ a:hover
                             cursor: pointer
 
                             &:hover
-                                text-shadow: 0 0 0.6px #5988FF, 0 0 0.6px #5988FF
-                                transform: scale(1.15)
+                              text-shadow: 0 0 0.6px #5988FF, 0 0 0.6px #5988FF
+                              transform: scale(1.15)
 
                             &.active
-                                text-shadow: 0 0 0.6px #5988FF, 0 0 0.6px #5988FF
-                                transform: scale(1.15)
+                              text-shadow: 0 0 0.6px #5988FF, 0 0 0.6px #5988FF
+                              transform: scale(1.15)
 
                         .cut
-                            width: 10px
-                            text-align: center
-                            @include font-f-s-c-w-lh-ls-a('Montserrat', 23px, #5988FF, 400, 120%, null, null)
+                          width: 10px
+                          text-align: center
+                          @include font-f-s-c-w-lh-ls-a('Montserrat', 23px, #5988FF, 400, 120%, null, null)
                             pointer-events: none

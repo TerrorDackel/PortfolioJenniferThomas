@@ -1,13 +1,13 @@
 @use '../../../../styles/mixins' as *
 
 :host
-    @include flex-d-j-a-g(row, center, center)
+  @include flex-d-j-a-g(row, center, center)
     @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
     margin-left: 0
     margin-right: 0
 
 .skill-set-section
-    @include flex-d-j-a-g(row, center, center)
+  @include flex-d-j-a-g(row, center, center)
     @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto)
     margin: 0
     background: linear-gradient(128.94deg, #5988FF -33.96%, #5988FF 36.71%, #0043F0 112.25%)
@@ -15,17 +15,17 @@
     padding: 1rem
 
     .skill-set-container
-        @include flex-d-j-a-g(column, center, center)
+      @include flex-d-j-a-g(column, center, center)
         @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
         margin-top: 100px
 
         .header-container
-            @include flex-d-j-a-g(column, center, center)
+          @include flex-d-j-a-g(column, center, center)
             @include boxsize-w-h-minw-minh-maxw-maxh(100%, 100%, null, null, 353px, 150px)
             margin: 0
 
             .header-txt
-                @include flex-d-j-a-g(row, center, center)
+              @include flex-d-j-a-g(row, center, center)
                 @include boxsize-w-h-minw-minh-maxw-maxh(100%, 110px)
                 @include font-f-s-c-w-lh-ls-a('Baloo 2', 96px, #FFFFFF, bold, 100%, 0, center)
                 text-align: center
@@ -33,7 +33,7 @@
                 margin-top: 2rem
 
         .skill-set-components-container
-            @include flex-d-j-a-g(row, center, center)
+          @include flex-d-j-a-g(row, center, center)
             @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1920px)
             flex-wrap: wrap
             gap: 24px
@@ -41,18 +41,16 @@
             padding-bottom: 16px
 
 @keyframes zoomIn
-    from
-        opacity: 0
-        transform: scale(0.7)
-    to
-        opacity: 1
-        transform: scale(1)
+  from
+    opacity: 0
+    transform: scale(0.7)
+  to
+    opacity: 1
+    transform: scale(1)
 
 .reveal-zoom
-    opacity: 0
-    will-change: transform, opacity
+  opacity: 0
+  will-change: transform, opacity
 
 .reveal-zoom.in-view
-    animation: zoomIn 1s cubic-bezier(.2,.8,.2,1) var(--reveal-delay, 0ms) both
-
-
+  animation: zoomIn 1s cubic-bezier(.2,.8,.2,1) var(--reveal-delay, 0ms) both

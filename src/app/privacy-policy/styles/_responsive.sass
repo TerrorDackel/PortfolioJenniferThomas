@@ -1,76 +1,76 @@
 @use '../../../styles/mixins' as *
 
 @media (max-width: 1050px)
-    .privacy-policy
-        @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1000px, null)
-        margin: 0
+  .privacy-policy
+    @include boxsize-w-h-minw-minh-maxw-maxh(100%, auto, null, null, 1000px, null)
+      margin: 0
 
-        .txt
-            @include flex-d-j-a-g($dir: column, $align: center)
-            @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $maxw: auto)
+      .txt
+        @include flex-d-j-a-g($dir: column, $align: center)
+          @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $maxw: auto)
             padding: 0 1rem
             margin-top: 100px
 
             .privacy-policy-header
-                @include boxsize-w-h-minw-minh-maxw-maxh($w:100%, $maxw: auto)
+              @include boxsize-w-h-minw-minh-maxw-maxh($w:100%, $maxw: auto)
                 @include font-f-s-c-w-lh-ls-a($size: 64px)
 
             .privacy-policy-item
-                h4
-                    @include font-f-s-c-w-lh-ls-a($size: 28px)
+              h4
+                @include font-f-s-c-w-lh-ls-a($size: 28px)
 
                 span
-                    @include font-f-s-c-w-lh-ls-a($size: 1rem)
+                  @include font-f-s-c-w-lh-ls-a($size: 1rem)
 
 @media (max-width: 700px)
-    .privacy-policy
-        @include boxsize-w-h-minw-minh-maxw-maxh($w: 90%, $h: auto, $maxw: auto)
-        .txt
-            .privacy-policy-header
-                @include font-f-s-c-w-lh-ls-a($size: 42px)
+  .privacy-policy
+    @include boxsize-w-h-minw-minh-maxw-maxh($w: 90%, $h: auto, $maxw: auto)
+      .txt
+        .privacy-policy-header
+          @include font-f-s-c-w-lh-ls-a($size: 42px)
 
             .privacy-policy-item
-                h4
-                    @include font-f-s-c-w-lh-ls-a($size: 23px)
+              h4
+                @include font-f-s-c-w-lh-ls-a($size: 23px)
 
                 span
-                    @include font-f-s-c-w-lh-ls-a($size: 1rem)
+                  @include font-f-s-c-w-lh-ls-a($size: 1rem)
 
 @media (max-width: 450px)
-    .privacy-policy
-        .txt
-            .privacy-policy-header
-                @include font-f-s-c-w-lh-ls-a($size: 32px)
+  .privacy-policy
+    .txt
+      .privacy-policy-header
+        @include font-f-s-c-w-lh-ls-a($size: 32px)
 
 @media (max-width: 350px)
-    .privacy-policy
-        .txt
-            .privacy-policy-header
-                @include font-f-s-c-w-lh-ls-a($size: 26px)
+  .privacy-policy
+    .txt
+      .privacy-policy-header
+        @include font-f-s-c-w-lh-ls-a($size: 26px)
 
-            .privacy-policy-item
-                h4
-                    @include font-f-s-c-w-lh-ls-a($size: 20px)
-                    padding: 0
+          .privacy-policy-item
+            h4
+              @include font-f-s-c-w-lh-ls-a($size: 20px)
+                padding: 0
 
                 span
-                    @include font-f-s-c-w-lh-ls-a($size: 1rem)
+                  @include font-f-s-c-w-lh-ls-a($size: 1rem)
 
 @media (max-width: 280px)
-    .privacy-policy
-        .txt
-            .privacy-policy-header
-                @include font-f-s-c-w-lh-ls-a($size: 20px)
+  .privacy-policy
+    .txt
+      .privacy-policy-header
+        @include font-f-s-c-w-lh-ls-a($size: 20px)
 
-            .privacy-policy-item
-                h4
-                    @include font-f-s-c-w-lh-ls-a($size: 18px)
+          .privacy-policy-item
+            h4
+              @include font-f-s-c-w-lh-ls-a($size: 18px)
 
                 span
-                    @include font-f-s-c-w-lh-ls-a($size: 1rem)
+                  @include font-f-s-c-w-lh-ls-a($size: 1rem)
 
 @media (prefers-reduced-motion: reduce)
-    .reveal-zoom
-        opacity: 1 !important
-        transform: none !important
-        animation: none !important
+  .reveal-zoom
+    opacity: 1 !important
+    transform: none !important
+    animation: none !important

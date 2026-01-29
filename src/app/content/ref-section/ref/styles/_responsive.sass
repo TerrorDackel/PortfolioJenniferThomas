@@ -1,83 +1,83 @@
 @use '../../../../../styles/mixins' as *
-    
+
 @media (max-width: 400px)
-    .ref-component-container
-        padding: 0.75rem
-        max-width: 300px
+  .ref-component-container
+    padding: 0.75rem
+    max-width: 300px
 
-        .ref-description-container
-            max-width: 300px
+    .ref-description-container
+      max-width: 300px
 
-            .description
-                max-width: 280px
-                font-size: 16px
+      .description
+        max-width: 280px
+        font-size: 16px
 
 @media (max-width: 330px)
-    .ref-component-container
-        padding: 0.5rem
-        max-width: 260px
-        gap: 0.75rem
+  .ref-component-container
+    padding: 0.5rem
+    max-width: 260px
+    gap: 0.75rem
 
-        .name-project-container
-            .name
-                font-size: clamp(1.1rem, 4vw, 1.4rem)
+    .name-project-container
+      .name
+        font-size: clamp(1.1rem, 4vw, 1.4rem)
 
-            .project
-                font-size: 1rem
+        .project
+          font-size: 1rem
 
         .ref-description-container
-            max-width: 260px
-            font-size: 16px
+          max-width: 260px
+          font-size: 16px
 
-            .description
-                max-width: 240px
-                font-size: 1rem
-                line-height: 130%
+          .description
+            max-width: 240px
+            font-size: 1rem
+            line-height: 130%
 
 @media (max-width: 310px)
-    .ref-component-container
-        padding: 0.4rem
-        max-width: 230px
-        gap: 0.5rem
+  .ref-component-container
+    padding: 0.4rem
+    max-width: 230px
+    gap: 0.5rem
 
-        .name-project-container
-            .name
-                font-size: clamp(1rem, 5vw, 1.25rem)
+    .name-project-container
+      .name
+        font-size: clamp(1rem, 5vw, 1.25rem)
 
-            .project
-                @include font-f-s-c-w-lh-ls-a($family: 'Montserrat', $size: 0.82rem, $lineHeight: 140%)
+        .project
+          @include font-f-s-c-w-lh-ls-a($family: 'Montserrat', $size: 0.82rem, $lineHeight: 140%)
 
         .ref-description-container
-            max-width: 230px
+          max-width: 230px
+          font-size: 1rem
+
+          .description
+            max-width: 210px
             font-size: 1rem
 
-            .description
-                max-width: 210px
-                font-size: 1rem
-
 @media (max-width: 270px)
-    .ref-component-container
-        padding: 0.3rem
-        max-width: 188px!important
-        gap: 0.1rem
+  .ref-component-container
+    padding: 0.3rem
+    max-width: 188px!important
+    gap: 0.1rem
 
-        .name-project-container
-            .name
-                font-size: 1rem
+    .name-project-container
+      .name
+        font-size: 1rem
 
-            .project
-                font-size: 1rem
+        .project
+          font-size: 1rem
 
         .ref-description-container
-            max-width: 210px
+          max-width: 210px
 
-            .description
-                max-width: 190px
-                @include font-f-s-c-w-lh-ls-a($size: 1rem, $lineHeight: 135%)
-                font-size: 1rem
-                line-height: 135%
+          .description
+            max-width: 190px
+            @include font-f-s-c-w-lh-ls-a($size: 1rem, $lineHeight: 135%)
+              font-size: 1rem
+              line-height: 135%
 
 @media (max-width: 240px)
-    .ref-card
-        max-width: 210px
-        padding: 0 0.5rem
+  .ref-card
+    max-width: 210px
+    padding: 0 0.5rem
