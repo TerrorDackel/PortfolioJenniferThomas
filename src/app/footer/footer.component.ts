@@ -12,6 +12,8 @@ import { setReturnAnchor } from '../utils/scroll-memory';
     styleUrl: './footer.component.sass'
 })
 export class FooterComponent {
+    readonly currentYear = new Date().getFullYear();
+
     constructor(private router: Router) {}
 
     scrollUp(): void {
@@ -28,4 +30,5 @@ export class FooterComponent {
         setReturnAnchor('footer');
         this.router.navigate([path]);
     }
+    
 }
