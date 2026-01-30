@@ -30,5 +30,4 @@ export class FooterComponent {
         setReturnAnchor('footer');
         this.router.navigate([path]);
     }
-    
 }
