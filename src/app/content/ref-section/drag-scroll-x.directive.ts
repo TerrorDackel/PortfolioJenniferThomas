@@ -1,11 +1,12 @@
-
-import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, HostListener, Renderer2, PLATFORM_ID, inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Directive({
     selector: '[dragScrollX]',
     standalone: true
 })
 export class DragScrollXDirective {
+    private platformId = inject(PLATFORM_ID);
     private dragging = false;
     private startX = 0;
     private startScrollLeft = 0;
@@ -15,22 +16,22 @@ export class DragScrollXDirective {
 
     @HostListener('pointerdown', ['$event'])
     onPointerDown(ev: PointerEvent) {
-        /* Only primary button & non-touch to keep mobile swipe native */
+        if (!isPlatformBrowser(this.platformId)) return;
         if (ev.button !== 0 || ev.pointerType === 'touch') return;
 
         this.dragging = true;
         this.pointerId = ev.pointerId;
         this.startX = ev.clientX;
         this.startScrollLeft = this.el.nativeElement.scrollLeft;
-
         this.el.nativeElement.setPointerCapture(this.pointerId);
-        this.r.addClass(this.el.nativeElement, 'dragging'); /* adds CSS state to disable snap and change cursor */
+        this.r.addClass(this.el.nativeElement, 'dragging');
     }
 
     @HostListener('pointermove', ['$event'])
     onPointerMove(ev: PointerEvent) {
+        if (!isPlatformBrowser(this.platformId)) return;
         if (!this.dragging) return;
-        ev.preventDefault(); /* prevent text selection while dragging */
+        ev.preventDefault();
         const dx = ev.clientX - this.startX;
         this.el.nativeElement.scrollLeft = this.startScrollLeft - dx;
     }
@@ -39,6 +40,7 @@ export class DragScrollXDirective {
     @HostListener('pointercancel', ['$event'])
     @HostListener('pointerleave', ['$event'])
     onPointerEnd(_ev: PointerEvent) {
+        if (!isPlatformBrowser(this.platformId)) return;
         if (!this.dragging) return;
         this.dragging = false;
         if (this.pointerId !== null) {
@@ -47,10 +49,11 @@ export class DragScrollXDirective {
         this.pointerId = null;
 
         this.r.removeClass(this.el.nativeElement, 'dragging');
-        this.snapToNearestCard(); /* optional: smooth finish into snap */
+        this.snapToNearestCard();
     }
 
     private snapToNearestCard() {
+        if (!isPlatformBrowser(this.platformId)) return;
         const container = this.el.nativeElement;
         const cards = Array.from(container.querySelectorAll<HTMLElement>('.ref-card'));
         if (!cards.length) return;

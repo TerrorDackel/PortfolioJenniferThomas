@@ -1,4 +1,9 @@
-export function observeAnimationReveal(className: string, delay: number = 0) {
+import { isPlatformBrowser } from '@angular/common';
+
+export function observeAnimationReveal(className: string, delay: number = 0, platformId?: object) {
+    if (platformId && !isPlatformBrowser(platformId)) {
+        return;
+    }
     const elements = document.querySelectorAll(`.${className}`);
 
     const observer = new IntersectionObserver(

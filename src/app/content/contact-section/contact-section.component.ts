@@ -1,7 +1,8 @@
-import { Component, AfterViewInit, inject } from '@angular/core';
+import { Component, AfterViewInit, inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { Router, RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { scrollUp } from '../../utils/scroll-to';
@@ -11,7 +12,7 @@ import { observeAnimationReveal } from '../../utils/scroll-animations';
 @Component({
     selector: 'app-contact-section',
     standalone: true,
-    imports: [TranslatePipe, ReactiveFormsModule, HttpClientModule, CommonModule, RouterModule],
+    imports: [TranslatePipe, ReactiveFormsModule, HttpClientModule, CommonModule],
     templateUrl: './contact-section.component.html',
     styleUrl: './contact-section.component.sass'
 })
@@ -19,6 +20,7 @@ export class ContactSectionComponent implements AfterViewInit {
     private fb = inject(FormBuilder);
     private http = inject(HttpClient);
     private router = inject(Router);
+    private platformId = inject(PLATFORM_ID);
 
     contactForm = this.fb.group(
         {
@@ -40,7 +42,7 @@ export class ContactSectionComponent implements AfterViewInit {
     focusedField: 'name' | 'email' | 'message' | null = null;
 
     ngAfterViewInit(): void {
-        observeAnimationReveal('reveal-zoom', 1000);
+        observeAnimationReveal('reveal-zoom', 1000, this.platformId);
     }
 
     private isEmpty(ctrl: 'name' | 'email' | 'message'): boolean {
@@ -70,6 +72,9 @@ export class ContactSectionComponent implements AfterViewInit {
     }
 
     onPrivacyClick(): void {
+        if (!isPlatformBrowser(this.platformId)) {
+            return;
+        }
         const el = document.activeElement as HTMLElement | null;
         if (el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA')) {
             el.blur();
@@ -138,9 +143,5 @@ export class ContactSectionComponent implements AfterViewInit {
     navigateTo(path: string): void {
         setReturnAnchor('contact');
         this.router.navigate([path]);
-    }
-
-    rememberReturnAnchor(): void {
-        setReturnAnchor('contact');
     }
 }

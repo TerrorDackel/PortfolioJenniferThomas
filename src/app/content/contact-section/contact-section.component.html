@@ -129,25 +129,25 @@
                 }
               </div>
             </div>
-            <div class="agree-privacypolice-check">
-              <label for="privacy" class="agree-privacypolice-check-label">
-                <div class="agree-privacypolice-check-div">
+            <div class="agree-privacy-policy-check">
+              <label for="privacyDesktop" class="agree-privacy-policy-check-label">
+                <div class="agree-privacy-policy-check-div">
                   <input
                     class="checkbox"
                     type="checkbox"
-                    id="privacy"
+                    id="privacyDesktop"
                     formControlName="privacy"
                     (click)="onPrivacyClick()"
                   />
                 </div>
-                <div class="agree-privacypolice-check-txt">
+                <div class="agree-privacy-police-check-txt">
                   <p>
                     {{ 'CONTACT.PRIVACY_I' | translate }}
                     <a
-                      class="privacy-link"
-                      href="/privacy-policy"
-                      [routerLink]="['/privacy-policy']"
-                      (click)="rememberReturnAnchor()"
+                      class="privacy-link"                     role="link"
+                      tabindex="0"
+                      (click)="onPrivacyLinkClick($event)"
+                      (keydown)="onPrivacyLinkKeydown($event)"
                     >
                       {{ 'CONTACT.PRIVACY_POLICY' | translate }}
                     </a>
@@ -168,26 +168,26 @@
                 }
               </div>
             </div>
-            <div class="agree-privacypolice-check-mobile">
-              <label for="privacy" class="agree-privacypolice-check-label">
-                <div class="agree-privacypolice-check-div">
+            <div class="agree-privacy-police-check-mobile">
+              <label for="privacyMobile" class="agree-privacy-police-check-label">
+                <div class="agree-privacy-police-check-div">
                   <input
                     class="checkbox"
                     type="checkbox"
-                    id="privacy"
+                    id="privacyMobile"
                     formControlName="privacy"
                     (click)="onPrivacyClick()"
                   />
                 </div>
-                <div class="agree-privacypolice-check-txt">
+                <div class="agree-privacy-police-check-txt">
                   <p class="first-line">
                     {{ 'CONTACT.PRIVACY_I' | translate }}
                   </p>
                   <a
-                    class="privacy-link"
-                    href="/privacy-policy"
-                    [routerLink]="['/privacy-policy']"
-                    (click)="rememberReturnAnchor()"
+                    class="privacy-link"                    role="link"
+                    tabindex="0"
+                    (click)="onPrivacyLinkClick($event)"
+                    (keydown)="onPrivacyLinkKeydown($event)"
                   >
                     {{ 'CONTACT.PRIVACY_POLICY' | translate }}
                   </a>
@@ -236,6 +236,7 @@
           type="button"
           class="back-to-top"
           (click)="scrollUp()"
+          (keydown)="onBackToTopKeydown($event)"
           aria-label="Scroll back to the top of the page"
         >
           <div class="back-to-top-btn"></div>
