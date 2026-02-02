@@ -44,10 +44,10 @@ Personal portfolio website built with Angular 17 to showcase my work as a junior
 
 | Category | Score | Notes |
 | --- | --- | --- |
-| Performance | N/A (blocked in this environment) | Run Lighthouse locally and replace |
-| Accessibility | N/A (blocked in this environment) | Run Lighthouse locally and replace |
-| Best Practices | N/A (blocked in this environment) | Run Lighthouse locally and replace |
-| SEO | N/A (blocked in this environment) | Run Lighthouse locally and replace |
+| Performance | 71 | Desktop Lighthouse (local run) |
+| Accessibility | 82 | Desktop Lighthouse (local run) |
+| Best Practices | 96 | Desktop Lighthouse (local run) |
+| SEO | 100 | Desktop Lighthouse (local run) |
 
 ---
 
