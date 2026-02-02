@@ -44,10 +44,10 @@ Personal portfolio website built with Angular 17 to showcase my work as a junior
 
 | Category | Score | Notes |
 | --- | --- | --- |
-| Performance | TBD | Replace with latest local Lighthouse run |
-| Accessibility | TBD | Replace with latest local Lighthouse run |
-| Best Practices | TBD | Replace with latest local Lighthouse run |
-| SEO | TBD | Replace with latest local Lighthouse run |
+| Performance | N/A (blocked in this environment) | Run Lighthouse locally and replace |
+| Accessibility | N/A (blocked in this environment) | Run Lighthouse locally and replace |
+| Best Practices | N/A (blocked in this environment) | Run Lighthouse locally and replace |
+| SEO | N/A (blocked in this environment) | Run Lighthouse locally and replace |
 
 ---
 
@@ -115,7 +115,6 @@ npm run build
 # Lint
 npm run lint
 
-# Unit tests (only if configured)
 # Unit tests
 npm test
 ```

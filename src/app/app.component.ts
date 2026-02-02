@@ -1,5 +1,5 @@
-import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -16,9 +16,10 @@ import { filter } from 'rxjs/operators';
 export class AppComponent {
     private translate = inject(TranslateService);
     private router = inject(Router);
+    private platformId = inject(PLATFORM_ID);
 
     constructor() {
-        const savedLang = localStorage.getItem('lang') || 'en';
+        const savedLang = isPlatformBrowser(this.platformId) ? localStorage.getItem('lang') || 'en' : 'en';
 
         this.translate.addLangs(['de', 'en']);
         this.translate.setDefaultLang('en');
@@ -28,7 +29,9 @@ export class AppComponent {
             .pipe(filter((e): e is NavigationEnd => e instanceof NavigationEnd))
             .subscribe(e => {
                 if (['/legal-notice', '/privacy-policy'].includes(e.urlAfterRedirects)) {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    if (isPlatformBrowser(this.platformId)) {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
                 }
             });
     }
