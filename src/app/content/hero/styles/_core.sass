@@ -35,6 +35,7 @@
         .circle-3
           @include circle-size(50rem)
           @include brandradial-size-x-y-c1-c2-c3()
+          z-index: 1
 
     .hero-header-scroll
       @include flex-d-j-a-g(column, flex-start, center)
@@ -100,11 +101,11 @@
         @include flex-d-j-a-g(row, center, stretch)
         @include maxsize-w-h(95%, 60%)
         position: absolute
-        bottom: 0
+        bottom: -1px
         z-index: 2
 
       img
-        max-height: 650px !important
+        max-height: 600px !important
 
   .hero-container-mobile
     .hero-img-container

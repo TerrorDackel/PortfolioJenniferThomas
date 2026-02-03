@@ -60,11 +60,11 @@
 
               .header-txt-alignement
                 .hero-txt-hallo
-                  @include font-f-s-c-w-lh-ls-a($family: null, $size: 1.7rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
+                  @include font-f-s-c-w-lh-ls-a($family: 'Montserrat', $size: 1.7rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
                 .hero-text-frontend,
                 .hero-text-developer
-                  @include font-f-s-c-w-lh-ls-a($family: null, $size: 3rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
+                  @include font-f-s-c-w-lh-ls-a($family: 'Baloo 2', $size: 3rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
 @media (max-width: 376px)
   .hero-section
@@ -83,65 +83,65 @@
             .header-txt-container
               .header-txt-alignement
                 .hero-txt-hallo
-                  @include font-f-s-c-w-lh-ls-a($family: null, $size: 1.4rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
+                  @include font-f-s-c-w-lh-ls-a($family: 'Montserrat', $size: 2rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
                 .hero-text-frontend,
                 .hero-text-developer
-                  @include font-f-s-c-w-lh-ls-a($family: null, $size: 2.5rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
+                  @include font-f-s-c-w-lh-ls-a($family: 'Baloo 2', $size: 2.5rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
-@media (max-width: 310px)
+@media (max-width: 345px) or (max-height: 540px)
+  .hero-section
+    .hero-container-mobile
+      .hero-img-container
+        .hero-img
+          height: 300px
+          margin-right: 2.5rem
+      .hero-header-scroll
+        .hero-header-scroll-container
+          .scroll-container
+            .scroll-responsive
+              bottom: 8.5%
+              right: 0
+
+          .header-alignement
+            .header-txt-container
+              .header-txt-alignement
+                .hero-txt-hallo
+                  @include font-f-s-c-w-lh-ls-a($family: 'Montserrat', $size: 1.8rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
+
+                .hero-text-frontend,
+                .hero-text-developer
+                  @include font-f-s-c-w-lh-ls-a($family: 'Baloo 2', $size: 2.1rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
+
+@media (max-width: 320px)
   .hero-section
     .hero-container-mobile
       .hero-header-scroll
         .hero-header-scroll-container
           .scroll-container
             .scroll-responsive
-              bottom: 8.5%
-              right: -17%
-
-          .header-alignement
-            .header-txt-container
-              .header-txt-alignement
-                .hero-txt-hallo
-                  @include font-f-s-c-w-lh-ls-a($family: null, $size: 1.1rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
-
-                .hero-text-frontend,
-                .hero-text-developer
-                  @include font-f-s-c-w-lh-ls-a($family: null, $size: 2.5rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
-
-@media (max-width: 270px)
-  .hero-section
-    .hero-container-mobile
-      .hero-header-scroll
-        .hero-header-scroll-container
+              .scroll-responsive-txt
+                @include font-f-s-c-w-lh-ls-a($family: 'Poppins', $size: 1rem, $color: #d2cef8, $weight: 400, $lineHeight: 120%, $letterSpacing: 0)
+                width: 155px
+                padding: 0
           .header-alignement
             .header-txt-container
               .header-txt-alignement
                 margin-left: -1.5rem
 
                 .hero-txt-hallo
-                  @include font-f-s-c-w-lh-ls-a($family: null, $size: 1rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
+                  @include font-f-s-c-w-lh-ls-a($family: 'Montserrat', $size: 1.5rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
                 .hero-text-frontend,
                 .hero-text-developer
-                  @include font-f-s-c-w-lh-ls-a($family: null, $size: 2.5rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
+                  @include font-f-s-c-w-lh-ls-a($family: 'Baloo 2', $size: 1.8rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
-@media (max-width: 250px)
-  .hero-section
-    .hero-container-mobile
-      .hero-header-scroll
-        .hero-header-scroll-container
-          .header-alignement
-            .header-txt-container
-              .header-txt-alignement
-                margin-left: -1.5rem
 
-                .hero-txt-hallo
-                  @include font-f-s-c-w-lh-ls-a($family: null, $size: 1rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
-
-                .hero-text-frontend,
-                .hero-text-developer
-                  @include font-f-s-c-w-lh-ls-a($family: null, $size: 2.5rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
+@media (max-width: 500px) or  (max-height: 660px)
+  .hero-img-container
+    .hero-img
+      height: 350px
+      margin-right: 1.5rem
 
 @media (min-width: 950px)
   .hero-section
