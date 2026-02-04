@@ -33,6 +33,7 @@
                 type="button"
                 class="de"
                 [ngClass]="{ 'active': currentLanguage === 'de' }"
+                [attr.aria-pressed]="currentLanguage === 'de'"
                 (click)="switchToGerman()"
                 (keydown)="onLanguageKeydown($event, 'de')"
               >
@@ -45,6 +46,7 @@
                 type="button"
                 class="en"
                 [ngClass]="{ 'active': currentLanguage === 'en' }"
+                [attr.aria-pressed]="currentLanguage === 'en'"
                 (click)="switchToEnglish()"
                 (keydown)="onLanguageKeydown($event, 'en')"
               >
@@ -114,6 +116,7 @@
                 type="button"
                 class="de"
                 [ngClass]="{ 'active': currentLanguage === 'de' }"
+                [attr.aria-pressed]="currentLanguage === 'de'"
                 (click)="switchToGerman()"
                 (keydown)="onLanguageKeydown($event, 'de')"
               >
@@ -126,6 +129,7 @@
                 type="button"
                 class="en"
                 [ngClass]="{ 'active': currentLanguage === 'en' }"
+                [attr.aria-pressed]="currentLanguage === 'en'"
                 (click)="switchToEnglish()"
                 (keydown)="onLanguageKeydown($event, 'en')"
               >

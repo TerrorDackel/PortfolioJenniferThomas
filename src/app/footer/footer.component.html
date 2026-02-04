@@ -1,7 +1,10 @@
 <footer class="footer-section" role="contentinfo">
   <div id="footer" class="footer-container">
     <div class="logo-container">
-      <a (click)="scrollUp()">
+      <a 
+        href="#scrollUp"
+        (click)="$event.preventDefault(); scrollUp()"
+      >
         <img class="logo-img" src="assets/img/icon/logo.png" alt="Scroll to the top." />
       </a>
     </div>
@@ -11,7 +14,10 @@
         © Jennifer Thomas {{ currentYear }}
       </div>
       <div class="legal-notice-container">
-        <a (click)="navigateTo('/legal-notice')">
+        <a 
+          href="legal-notice"
+          (click)="$event.preventDefault(); navigateTo('/legal-notice')"
+        >
           {{ 'FOOTER.LEGAL' | translate }}
         </a>
       </div>
@@ -42,7 +48,10 @@
       </div>
     </div>
     <div class="legal-notice-container-mobile">
-      <a (click)="navigateTo('/legal-notice')">
+      <a 
+        href="legal-notice"
+        (click)="$event.preventDefault(); navigateTo('/legal-notice')"
+      >
         {{ 'FOOTER.LEGAL' | translate }}
       </a>
     </div>
