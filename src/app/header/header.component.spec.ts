@@ -70,6 +70,23 @@ describe('HeaderComponent', () => {
     expect(germanSpy).toHaveBeenCalled();
   });
 
+    it('marks the active language button with aria-pressed', () => {
+      const fixture = TestBed.createComponent(HeaderComponent);
+      const component = fixture.componentInstance;
+      component.currentLanguage = 'de';
+      fixture.detectChanges();
+
+      const germanButtons = fixture.nativeElement.querySelectorAll('button.de');
+      const englishButtons = fixture.nativeElement.querySelectorAll('button.en');
+
+      germanButtons.forEach((button: HTMLButtonElement) => {
+          expect(button.getAttribute('aria-pressed')).toBe('true');
+      });
+      englishButtons.forEach((button: HTMLButtonElement) => {
+          expect(button.getAttribute('aria-pressed')).toBe('false');
+      });
+  });
+
   it('marks the active language button with aria-pressed', () => {
     const fixture = TestBed.createComponent(HeaderComponent);
     const component = fixture.componentInstance;
@@ -99,20 +116,22 @@ describe('HeaderComponent', () => {
       };
     }
     if (!window.scrollTo) {
-      window.scrollTo = () => {};
+      window.scrollTo = () => undefined;
     }
     const rafSpy = spyOn(window, 'requestAnimationFrame').and.callFake(callback => {
       callback(0);
       return 0;
     });
-    const scrollSpy = spyOn(window as any, 'scrollTo');
+      const scrollSpy = spyOn(window, 'scrollTo');
 
     component.scrollUp();
     tick();
 
     expect(navigateSpy).toHaveBeenCalledWith('/');
     expect(rafSpy).toHaveBeenCalled();
-    expect(scrollSpy).toHaveBeenCalledWith({ top: 0, behavior: 'smooth' });
+      const scrollArgs = scrollSpy.calls.mostRecent().args[0] as ScrollToOptions;
+      expect(scrollArgs.top).toBe(0);
+      expect(scrollArgs.behavior).toBe('smooth');
   }));
 
   it('scrolls to the top when already on the home route', () => {
@@ -121,13 +140,15 @@ describe('HeaderComponent', () => {
     spyOnProperty(router, 'url', 'get').and.returnValue('/');
     const navigateSpy = spyOn(router, 'navigateByUrl').and.returnValue(Promise.resolve(true));
     if (!window.scrollTo) {
-      window.scrollTo = () => {};
+      window.scrollTo = () => undefined;
     }
-    const scrollSpy = spyOn(window as any, 'scrollTo');
+      const scrollSpy = spyOn(window, 'scrollTo');
 
     component.scrollUp();
 
     expect(navigateSpy).not.toHaveBeenCalled();
-    expect(scrollSpy).toHaveBeenCalledWith({ top: 0, behavior: 'smooth' });
+      const scrollArgs = scrollSpy.calls.mostRecent().args[0] as ScrollToOptions;
+      expect(scrollArgs.top).toBe(0);
+      expect(scrollArgs.behavior).toBe('smooth');
   });
 });
