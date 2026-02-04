@@ -75,11 +75,13 @@ describe('FooterComponent', () => {
     if (!window.scrollTo) {
       window.scrollTo = () => undefined;
     }
-    const scrollSpy = spyOn(window as any, 'scrollTo');
+      const scrollSpy = spyOn(window, 'scrollTo');
 
     component.scrollUp();
 
     expect(navigateSpy).not.toHaveBeenCalled();
-    expect(scrollSpy).toHaveBeenCalledWith({ top: 0, behavior: 'smooth' });
+      const scrollArgs = scrollSpy.calls.mostRecent().args[0] as ScrollToOptions;
+      expect(scrollArgs.top).toBe(0);
+      expect(scrollArgs.behavior).toBe('smooth');
   });
 });
