@@ -10,7 +10,7 @@
 
       .hero-header-scroll
         .hero-header-scroll-container
-          .header-alignement
+          .header-alignment
             background-color: transparent
 
 @media (max-width: 610px)
@@ -54,11 +54,11 @@
             .scroll-responsive
               bottom: 10%
 
-          .header-alignement
+          .header-alignment
             .header-txt-container
               padding: 2rem 0
 
-              .header-txt-alignement
+              .header-txt-alignment
                 .hero-txt-hallo
                   @include font-f-s-c-w-lh-ls-a($family: 'Montserrat', $size: 1.7rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
@@ -79,9 +79,9 @@
               bottom: 8.5%
               right: 0%
 
-          .header-alignement
+          .header-alignment
             .header-txt-container
-              .header-txt-alignement
+              .header-txt-alignment
                 .hero-txt-hallo
                   @include font-f-s-c-w-lh-ls-a($family: 'Montserrat', $size: 2rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
@@ -103,9 +103,9 @@
               bottom: 8.5%
               right: 0
 
-          .header-alignement
+          .header-alignment
             .header-txt-container
-              .header-txt-alignement
+              .header-txt-alignment
                 .hero-txt-hallo
                   @include font-f-s-c-w-lh-ls-a($family: 'Montserrat', $size: 1.8rem, $color: null, $weight: null, $lineHeight: null, $letterSpacing: null, $align: null)
 
@@ -122,11 +122,10 @@
             .scroll-responsive
               .scroll-responsive-txt
                 @include font-f-s-c-w-lh-ls-a($family: 'Poppins', $size: 1rem, $color: #d2cef8, $weight: 400, $lineHeight: 120%, $letterSpacing: 0)
-                width: 155px
-                padding: 0
-          .header-alignement
+
+          .header-alignment
             .header-txt-container
-              .header-txt-alignement
+              .header-txt-alignment
                 margin-left: -1.5rem
 
                 .hero-txt-hallo
@@ -198,7 +197,7 @@
           margin-top: 9rem
           z-index: 2
 
-          .header-alignement
+          .header-alignment
             @include flex-d-j-a-g($dir: column, $justify: flex-start, $align: flex-start, $gap: null)
             @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: 350px, $minw: null, $minh: null, $maxw: 550px, $maxh: null)
 
@@ -206,7 +205,7 @@
               @include flex-d-j-a-g($dir: row, $justify: flex-end, $align: stretch, $gap: null)
               @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: null, $maxh: null)
 
-              .header-txt-alignement
+              .header-txt-alignment
                 @include flex-d-j-a-g($dir: column, $justify: flex-start, $align: stretch, $gap: null)
                 @include boxsize-w-h-minw-minh-maxw-maxh($w: 100%, $h: auto, $minw: null, $minh: null, $maxw: 510px, $maxh: null)
                 padding: 1rem 6rem
