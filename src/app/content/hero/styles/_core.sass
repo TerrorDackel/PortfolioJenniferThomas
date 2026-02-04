@@ -79,20 +79,24 @@
           .scroll-responsive
             @include size-w-h(auto, null)
             position: absolute
-            bottom: 15%
-            right: 5%
+            bottom: 1rem
+            right: 1rem
             display: block
             z-index: 3
 
             .scroll-responsive-txt
               @include flex-d-j-a-g(row, center, stretch)
-              @include font-f-s-c-w-lh-ls-a('Poppins', 1.4375rem, #d2cef8, 400, 120%, 0)
-              width: 100%
-              padding: 0 0.5rem
+              @include font-f-s-c-w-lh-ls-a('Poppins', clamp(0.1rem, 2.4vw, 1.4rem), #d2cef8, 400, 120%, 0)
+              width: max-content
+              max-width: min(100%, 16rem)
+              padding: 0.3rem 0.3rem
               transform: rotate(90deg)
-              background-color: rgba(39, 42, 252, 0.8)
+              transform-origin: center
+              background-color: rgba(39, 42, 252, 0.95)
               border-radius: 15rem
               border: solid 0.1rem #272afc
+              white-space: nowrap
+              box-sizing: border-box
 
     .hero-img-container
       @include flex-d-j-a-g(row, center, stretch)
